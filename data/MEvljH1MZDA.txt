@@ -1,0 +1,35 @@
+Hey, this is Steve Ramson and this is a video tutorial on how to do the Mission Impossible mask effect.
+I've seen this in the Mission Impossible movies I Still don't quite know how they do it, but this is my method I Found a method that I think works pretty well.
+So for this, you'll need a green screen and two people personally and person B.
+It really helps if they don't look similar.
+Okay, so firstly, shoot person A pulling off a rubber mask but you can buy on eBay Amazon the Internet Simple enough, you'll thank me if you using the green screen later.
+Get person B to watch what person they did and get them wearing the same clothes to copy the head movement done by person A when pulling off the mask.
+Crucially, you've got to get person B to wear the same clothes as person A, use a plain color.
+Use something really simple.
+Try not to use anything with a difficult neckline.
+Anything to hide the neck makes this whole thing easier.
+Shoot a background plate to put behind the character, ideally one that matches the lighting that you have used.
+Okay, step forward.
+Do a rough overlay of your two shots to work out the timing.
+Now, this is really important because before you put this into After Effects or whatever you're going to use for this, you're gonna have to know when to start each clip.
+So if you can get the moment when person B's head turn matches person A's head turn, that's gonna be really, really useful.
+Okay, put this into After Effects and the first thing you're going to do is remove the background if you're using After Effects like I did.
+then the programs called key Light that just remove the green screen straight away.
+Right now, you've got to cut out the head of Person B And aren't you glad you shot this in front of a green screen?
+Because you don't have to cut around the head, you just have to cut them off at the neck.
+so you've got the head of Person B Next, you're gonna line this up with person A. Underneath, you can turn the opacity down to 50% on person B's head so you can see personally underneath, and that's a really useful little trick to line the two up on top of each other.
+You can stretch it and squash it if you have to to make it match, but as long as the person fees features line up kind of on top of the mask of the leaf the person A was wearing and that's going to be really helpful in order to get the hands separately.
+I Just use the after effects rotoscope tool, so now you've got the hand as a separate layer as well.
+This is going to hide all the mess underneath it and make the transition really smooth.
+Next, by keyframing the position and the opacity, you got a carefully blend Person B's face into the mask that person A is pulling off.
+There's no cheap this bit.
+You've got to do this for a while to get it ripe.
+create a mask layer over person B's face, slowly keyframe this away and feather the edge so that you slowly reveal person eight underneath.
+Now there's another trick that I use to try and get this even slicker looking.
+You can use the mesh warp tool, which is something that I found in After Effects - distort person B's face in the same way that person aged mask moves.
+What you want to do here is to manipulate the face in the same way that the mask is going underneath.
+That's pretty much it.
+Then you can add your background back in replacing the green-screen This is still very rough, but I was pretty happy with it as a first test and with a bit of color correction and some other finessing, it's a pretty neat way of doing this effect.
+Give it a go, tell me what you think in the comments if you subscribe to my channel.
+I'll do a few more of these.
+Also, check out my music videos, short films, and other things look at Steve Robinson Calm, thanks for watching you.

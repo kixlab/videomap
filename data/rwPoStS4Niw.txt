@@ -1,0 +1,88 @@
+Hey there guys!
+I'm Zach and this is Zach's editing and today I'm going to be showing you how you can transform your mask past much smoother.
+So a while back I made a tutorial on shape path to changing and had actually morph shapes.
+So here it is that's just a little demo of sort of what I taught you.
+But this is going to be through using masks.
+So instead of using shape paths, we is going to use mask paths.
+So shapes generally don't seem to have as much trouble as morphing like nice and smooth.
+You can see it's sort of working really smoothly, but when you're working with masks, it's often doesn't work very well.
+Say for example, I've just got one mask path and then I've got another mask path up here.
+and then if we just preview what it looks like, when they're actually changing, you can see it looks extremely ugly.
+These points are sort of going everywhere and it just looks really bad.
+But if I just show you what it looks like with the handy little tool is quickly, you can see it's much smoother and you can play around with the settings to sort of tweak it to how you'd like.
+So let's just get into it.
+I'll just delete this composition and I'll just go ahead and create a new one just in the same project.
+So I'll just call it shape morphing through mas.
+Okay, right away.
+I'm just gonna grab that same cyan solid background so we're just going to use text to make the mask.
+They're quite easy to create a mask, but obviously it's just anything that's a mask you can use this concept for.
+So we've got a Zed just going to select it, hit ctrl C to copy it, and ctrl V to paste it, and then we're just going to make it into an ear.
+So now what we've got arm will just quickly hide this.
+So pretty much what we're hitting is like this little hide sort of button and then when we select it in the menu bar, it hides them just just so we can see all of our layers just a bit clearer without that sort of being in the way.
+So we've got these two type layers now we're going to do is right click and we're going to go to create masks from text.
+So now if we do that to both we can see we've got these two outlines and we're just going to do that same hiding to both of these just in case we ever need to go back to them.
+It's good to have them there still.
+So now we've got the Z outlines and the E outlines.
+So if we just drop that down, we can see the mass.
+we've got a mass cure and then we can just hit em just a straight away.
+see that mask path.
+So what we're going to do is we're gonna stop watch this mask path on the Zed and stop watch the mask path on the E. We're going to just select the E mask path that we've just keyframed the keyframe and we're gonna hit Ctrl C Go to a time when you want the Z to have finished morphing into the E and Ctrl V make sure you've got it on selected mask path.
+Then we've got these two points so we can go ahead and delete the E outlines because we don't need that anymore and now if we look between we can see we've got that gross morphing.
+So now what we're going to use is a tool called mask interpolation.
+So if we go to window and then we go down and we look for mask interpolation, I've just got it down right here.
+So what we're going to be doing is select both of the keyframes and then we've got all these different options here.
+So the key frame rates pretty much just how often the keyframes are gonna be.
+Obviously, you generally want it to be every single frame if some reason you don't want it, or if you can have it double just if you want to be a bit more accurate.
+And then we've got the use linear vertex paths.
+So that's pretty much when these keyframes are moving.
+You can see all of them are just moving in a straight line, which is a linear linear line.
+but if we don't want to do that, we'll have that unselected and we'll actually move in a curved line.
+So then we've got these two attributes.
+We've got bending resistance and quality.
+So bending resistance.
+Obviously you can sort of guess what it means.
+it's going to be depending on how much your shape can actually bend and warp.
+So you'll be playing around with these two as you sort of guess and check using a plan.
+Going back on doing it, going back, changing this a bit.
+So then you've got quality and pretty much if your quality is on a hundred percent, then I'll use the different points and sort of figure out which ones will work best with each other.
+But if it's on zero percent then it'll go the number one vertice to where the number one vertice of is the next path.
+So you can see this is the number one vertex because it's got that square.
+Now if we go here, you can see it's moving right there if you look at it and then the number to move to number 2, 3, 2, 3 and so on.
+so you can see It can make it quite ugly because all of a sudden this one is wanting to go over here.
+So generally you'd want your quality higher except you can change it sort of to UM fit your needs.
+Sometimes you might have it just like on 60% quality or whatnot.
+So then we've got the ad mask path vertices.
+so if you have this added you can add more vertices.
+So when it's actually our morphing, it'll have say maybe like 10 along this line or whatever.
+Whatever it thinks will work just so it can become more smooth and sort of.
+it'll look better then.
+this is sort of just an add-on to that.
+So you've got it if you just hover over its ad mask path of vertices until there are nine pixels between the vertices.
+So obviously it's not going to make them any closer than nine pixels.
+but you have a couple of different options.
+You can choose matching method: I Generally just leave it on order.
+It tends to work pretty well.
+Don't actually know what the other two do I Don't often see much but the matching method yeah I Just leave it on auto and it works really well.
+Use one to one vertex.
+Matches is again like if if you had quality on zero percent.
+number one will go to number one, two, two two and so on.
+And first vertices match is just gonna be for the first vertice.
+So if your first vertice matches then it'll definitely go there if you've got it checked, but if you don't then all it will still look for the best one for the first vertice.
+For this one, I can just leave it checked because I know that I want that first vertice to literally just be going there because it literally just goes right there.
+So we've got these three key frames selected.
+You wanted to that you're gonna actually apply the interpolation to?
+we'll hit apply and now where you can see is um, you've got loads of different key frames in there that'll sort of worked out through this.
+so if we just hit the spacebar we can see it looks much better already.
+There's no sort of cutting over each other and yeah, it looks so much better.
+So obviously we can play around with this.
+Say we'll just hit Control Z Say if we put the quality to 0% hit apply, it's going to still not have not be as bad.
+but like obviously it sort of bends if that's sort of what you're looking for.
+So like I said, you can sort of play around with these.
+Even if you go like that, hit apply, just sort of guess and check this.
+Yeah, you can see this.
+loads of different outcomes you can get and then obviously if you really want it I Guess you could go in and change the keyframes.
+but I would not recommend doing that.
+as you can see there's a lot of vertices that are ads.
+Obviously, if we say we want there to be a hundred seventy-six pixels, well just go select them.
+Then you can see it's it's not going to add as many vertices so thanks for watching I Hope you found this tutorial helpful and you're able to make those masks morphing much more smooth.
+And I'll see you in the next video [Music]

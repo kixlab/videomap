@@ -1,0 +1,962 @@
+{
+  "nVbIUDjzWY4": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "27",
+    "task_id": "52907",
+    "sentence_count": 81,
+    "rough_duration": 426.319
+  },
+  "rwmt7Cbuvfs": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "99",
+    "task_id": "52907",
+    "sentence_count": 23,
+    "rough_duration": 154.16
+  },
+  "HnTLh99gcxY": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "35",
+    "task_id": "52907",
+    "sentence_count": 37,
+    "rough_duration": 470.42
+  },
+  "EyP3HVhg1u0": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "95",
+    "task_id": "52906",
+    "sentence_count": 37,
+    "rough_duration": 215.739
+  },
+  "w6zbbdK1ewY": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "17",
+    "task_id": "52906",
+    "sentence_count": 28,
+    "rough_duration": 246.159
+  },
+  "RAidUDTPZ-k": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "10",
+    "task_id": "52907",
+    "sentence_count": 60,
+    "rough_duration": 391.26
+  },
+  "nssig0FNZVU": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "99",
+    "task_id": "52906",
+    "sentence_count": 77,
+    "rough_duration": 563.95
+  },
+  "m2YyhYyleII": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "153",
+    "task_id": "52906",
+    "sentence_count": 47,
+    "rough_duration": 377.889
+  },
+  "u5B1RAufWVM": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "150",
+    "task_id": "52906",
+    "sentence_count": 37,
+    "rough_duration": 316.18
+  },
+  "AEytW9ScgCw": {
+    "category_1": "Cars & Other Vehicles",
+    "category_2": "Motorcycles",
+    "rank": "108",
+    "task_id": "52906",
+    "sentence_count": 41,
+    "rough_duration": 438.83
+  },
+  "95hUxNBeD3E": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "142",
+    "task_id": "61921",
+    "sentence_count": 31,
+    "rough_duration": 229.26
+  },
+  "p3ZrX7XxI80": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "107",
+    "task_id": "57817",
+    "sentence_count": 6,
+    "rough_duration": 194.409
+  },
+  "rgfLL_4_GbI": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "33",
+    "task_id": "57817",
+    "sentence_count": 15,
+    "rough_duration": 129.07
+  },
+  "GLt42ftk1Oc": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "189",
+    "task_id": "57817",
+    "sentence_count": 36,
+    "rough_duration": 301.46
+  },
+  "TL_kIHsftXs": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "121",
+    "task_id": "57817",
+    "sentence_count": 36,
+    "rough_duration": 300.2
+  },
+  "scmMxwWuW88": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "20",
+    "task_id": "69062",
+    "sentence_count": 40,
+    "rough_duration": 288.44
+  },
+  "cpcKsR6DyoM": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "12",
+    "task_id": "35797",
+    "sentence_count": 26,
+    "rough_duration": 243.22
+  },
+  "SPLBLFqPMoA": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "132",
+    "task_id": "99751",
+    "sentence_count": 74,
+    "rough_duration": 298.889
+  },
+  "OMx-pGakIQA": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "85",
+    "task_id": "57817",
+    "sentence_count": 11,
+    "rough_duration": 134.77
+  },
+  "6KdYmouprls": {
+    "category_1": "Food and Entertaining",
+    "category_2": "Recipes",
+    "rank": "180",
+    "task_id": "91148",
+    "sentence_count": 27,
+    "rough_duration": 200.489
+  },
+  "8VIbzKGT2ko": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "15",
+    "task_id": "346",
+    "sentence_count": 23,
+    "rough_duration": 135.51
+  },
+  "AUs8szN5AXc": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "34",
+    "task_id": "346",
+    "sentence_count": 6,
+    "rough_duration": 317.25
+  },
+  "hkkUe8sKsxs": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "9",
+    "task_id": "378",
+    "sentence_count": 40,
+    "rough_duration": 252.96
+  },
+  "voAntzB7EwE": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "15",
+    "task_id": "105445",
+    "sentence_count": 31,
+    "rough_duration": 189.28
+  },
+  "msvmPN_B7mE": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "56",
+    "task_id": "346",
+    "sentence_count": 43,
+    "rough_duration": 296.08
+  },
+  "VaSpHNuERNU": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "18",
+    "task_id": "346",
+    "sentence_count": 37,
+    "rough_duration": 324.72
+  },
+  "JJC8tBPdP1A": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "47",
+    "task_id": "119420",
+    "sentence_count": 13,
+    "rough_duration": 286.629
+  },
+  "YqXktrJMWWM": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "51",
+    "task_id": "26637",
+    "sentence_count": 12,
+    "rough_duration": 128.64
+  },
+  "E5Bh6Z1ZJHs": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "188",
+    "task_id": "119420",
+    "sentence_count": 59,
+    "rough_duration": 562.91
+  },
+  "MSilvc8tAJs": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "56",
+    "task_id": "52086",
+    "sentence_count": 31,
+    "rough_duration": 386.63
+  },
+  "_X1-Burx2hg": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "2",
+    "task_id": "91029",
+    "sentence_count": 38,
+    "rough_duration": 552.07
+  },
+  "Up6-aOwUHAA": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "63",
+    "task_id": "91029",
+    "sentence_count": 27,
+    "rough_duration": 192.38
+  },
+  "sDbrlS0-wIM": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "122",
+    "task_id": "119461",
+    "sentence_count": 35,
+    "rough_duration": 282.27
+  },
+  "JGhPcox2VUM": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "24",
+    "task_id": "91029",
+    "sentence_count": 33,
+    "rough_duration": 276.24
+  },
+  "OrOGA3dYcIU": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "53",
+    "task_id": "119448",
+    "sentence_count": 40,
+    "rough_duration": 322.25
+  },
+  "XzTzzKFKLCA": {
+    "category_1": "Hobbies and Crafts",
+    "category_2": "Crafts",
+    "rank": "137",
+    "task_id": "119420",
+    "sentence_count": 51,
+    "rough_duration": 425.81
+  },
+  "xt0JwuAbzcQ": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "12",
+    "task_id": "88610",
+    "sentence_count": 47,
+    "rough_duration": 282.31
+  },
+  "kGAfBTQ8MXw": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "164",
+    "task_id": "88642",
+    "sentence_count": 63,
+    "rough_duration": 338.42
+  },
+  "m7PHS2pYcHU": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "5",
+    "task_id": "73917",
+    "sentence_count": 48,
+    "rough_duration": 296.84
+  },
+  "DUSCB3ZMllU": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "191",
+    "task_id": "43772",
+    "sentence_count": 24,
+    "rough_duration": 171.34
+  },
+  "HcOA32qj2og": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "29",
+    "task_id": "88642",
+    "sentence_count": 63,
+    "rough_duration": 403.64
+  },
+  "s_5lGFNwf6k": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "37",
+    "task_id": "88610",
+    "sentence_count": 17,
+    "rough_duration": 133.79
+  },
+  "HhotDFPijMk": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "98",
+    "task_id": "88642",
+    "sentence_count": 17,
+    "rough_duration": 161.549
+  },
+  "fWSdmxaeDYw": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "3",
+    "task_id": "88615",
+    "sentence_count": 40,
+    "rough_duration": 206.17
+  },
+  "Qvj4SS_MwMk": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "126",
+    "task_id": "88642",
+    "sentence_count": 25,
+    "rough_duration": 80.24
+  },
+  "dJAn1oVJhbI": {
+    "category_1": "Home and Garden",
+    "category_2": "Gardening",
+    "rank": "1",
+    "task_id": "83193",
+    "sentence_count": 13,
+    "rough_duration": 96.33
+  },
+  "L9SaS9FPisM": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "62",
+    "task_id": "32986",
+    "sentence_count": 43,
+    "rough_duration": 396.34
+  },
+  "ohf6NGQtD-0": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "148",
+    "task_id": "16001",
+    "sentence_count": 47,
+    "rough_duration": 309.97
+  },
+  "EzrAG3LBybI": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "140",
+    "task_id": "15989",
+    "sentence_count": 28,
+    "rough_duration": 178.98
+  },
+  "b3IX5EU3HYs": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "182",
+    "task_id": "32986",
+    "sentence_count": 36,
+    "rough_duration": 204.829
+  },
+  "Bspn6RepEVk": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "155",
+    "task_id": "16001",
+    "sentence_count": 13,
+    "rough_duration": 86.22
+  },
+  "vLEjErfgAxE": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "38",
+    "task_id": "16001",
+    "sentence_count": 71,
+    "rough_duration": 561.18
+  },
+  "edWxUEpASa0": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "193",
+    "task_id": "15994",
+    "sentence_count": 11,
+    "rough_duration": 76.26
+  },
+  "O78_qhy2eQ0": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "128",
+    "task_id": "16001",
+    "sentence_count": 18,
+    "rough_duration": 93.6
+  },
+  "6LfsMKNFMuI": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "112",
+    "task_id": "15989",
+    "sentence_count": 13,
+    "rough_duration": 95.81
+  },
+  "vL2egnIzPJs": {
+    "category_1": "Family Life",
+    "category_2": "Parenting",
+    "rank": "108",
+    "task_id": "32980",
+    "sentence_count": 32,
+    "rough_duration": 291.25
+  },
+  "8tH7Q945gKU": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "72",
+    "task_id": "105557",
+    "sentence_count": 72,
+    "rough_duration": 417.129
+  },
+  "PP_2dUsX4-0": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "118",
+    "task_id": "349",
+    "sentence_count": 31,
+    "rough_duration": 260.72
+  },
+  "Mwih2qgrySI": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "142",
+    "task_id": "105557",
+    "sentence_count": 14,
+    "rough_duration": 95.909
+  },
+  "G92peq5KizA": {
+    "category_1": "Education and Communications",
+    "category_2": "Subjects",
+    "rank": "62",
+    "task_id": "347",
+    "sentence_count": 16,
+    "rough_duration": 100.1
+  },
+  "jMefeL-qX-M": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "81",
+    "task_id": "107941",
+    "sentence_count": 29,
+    "rough_duration": 340.88
+  },
+  "PLdcP55e2bY": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "116",
+    "task_id": "107941",
+    "sentence_count": 22,
+    "rough_duration": 164.14
+  },
+  "Ohv6R87Q-gk": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "157",
+    "task_id": "107941",
+    "sentence_count": 28,
+    "rough_duration": 161.26
+  },
+  "T6inDvsbLw4": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "61",
+    "task_id": "107941",
+    "sentence_count": 12,
+    "rough_duration": 100.67
+  },
+  "SvDApAE8RT4": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "67",
+    "task_id": "107941",
+    "sentence_count": 32,
+    "rough_duration": 330.66
+  },
+  "2XBY4Ysf0IQ": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "87",
+    "task_id": "107941",
+    "sentence_count": 48,
+    "rough_duration": 252.75
+  },
+  "onGm9Gzdd44": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "165",
+    "task_id": "107941",
+    "sentence_count": 64,
+    "rough_duration": 262.639
+  },
+  "OMIrz-6FfAQ": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "57",
+    "task_id": "107941",
+    "sentence_count": 37,
+    "rough_duration": 278.55
+  },
+  "dPIg6_SG99U": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "25",
+    "task_id": "107941",
+    "sentence_count": 87,
+    "rough_duration": 584.67
+  },
+  "7jcdcHPNn6Y": {
+    "category_1": "Sports and Fitness",
+    "category_2": "Individual Sports",
+    "rank": "7",
+    "task_id": "107941",
+    "sentence_count": 22,
+    "rough_duration": 246.72
+  },
+  "dK_SqGrNLXA": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "68",
+    "task_id": "52165",
+    "sentence_count": 7,
+    "rough_duration": 66.01
+  },
+  "V-PrR3E8pC0": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "146",
+    "task_id": "52165",
+    "sentence_count": 12,
+    "rough_duration": 139.71
+  },
+  "0YUo2C07N4M": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "104",
+    "task_id": "52165",
+    "sentence_count": 14,
+    "rough_duration": 106.399
+  },
+  "ju4l1_oNWro": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "128",
+    "task_id": "52165",
+    "sentence_count": 33,
+    "rough_duration": 264.32
+  },
+  "pFedvnYx-rA": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "55",
+    "task_id": "52165",
+    "sentence_count": 29,
+    "rough_duration": 195.58
+  },
+  "QsKD2ASPEwg": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "154",
+    "task_id": "52165",
+    "sentence_count": 11,
+    "rough_duration": 62.079
+  },
+  "UZ6w9WR21JQ": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "140",
+    "task_id": "52165",
+    "sentence_count": 40,
+    "rough_duration": 311.73
+  },
+  "wUnsWTozDew": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "78",
+    "task_id": "52165",
+    "sentence_count": 9,
+    "rough_duration": 106.5
+  },
+  "oXUQQmMKiz4": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "37",
+    "task_id": "52165",
+    "sentence_count": 42,
+    "rough_duration": 345.999
+  },
+  "Lsxv8caDmz8": {
+    "category_1": "Personal Care and Style",
+    "category_2": "Grooming",
+    "rank": "74",
+    "task_id": "52165",
+    "sentence_count": 27,
+    "rough_duration": 250.19
+  },
+  "60FZvBirxmo": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "161",
+    "task_id": "1508",
+    "sentence_count": 12,
+    "rough_duration": 147.22
+  },
+  "5T2gIvzq-Og": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "93",
+    "task_id": "1508",
+    "sentence_count": 15,
+    "rough_duration": 153.83
+  },
+  "Czd4uddOBKs": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "178",
+    "task_id": "1508",
+    "sentence_count": 42,
+    "rough_duration": 234.25
+  },
+  "6UoVTGubpVY": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "170",
+    "task_id": "63684",
+    "sentence_count": 58,
+    "rough_duration": 404.7
+  },
+  "e76KWpbPdfY": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "25",
+    "task_id": "1530",
+    "sentence_count": 71,
+    "rough_duration": 514.15
+  },
+  "Jqg5uyw7dDo": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "145",
+    "task_id": "1508",
+    "sentence_count": 56,
+    "rough_duration": 286.479
+  },
+  "p9cLo4rXgxU": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "149",
+    "task_id": "1508",
+    "sentence_count": 49,
+    "rough_duration": 394.83
+  },
+  "cAI_AG3gFMo": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "177",
+    "task_id": "1508",
+    "sentence_count": 92,
+    "rough_duration": 565.52
+  },
+  "hGDsjrNXM-0": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "121",
+    "task_id": "1508",
+    "sentence_count": 28,
+    "rough_duration": 222.69
+  },
+  "qBZltqjVqPc": {
+    "category_1": "Computers and Electronics",
+    "category_2": "Maintenance and Repair",
+    "rank": "56",
+    "task_id": "1508",
+    "sentence_count": 35,
+    "rough_duration": 252.66
+  },
+  "Hnq1s_JT6a0": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "45",
+    "task_id": "5651",
+    "sentence_count": 48,
+    "rough_duration": 179.65
+  },
+  "rwPoStS4Niw": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "68",
+    "task_id": "5645",
+    "sentence_count": 88,
+    "rough_duration": 486.4
+  },
+  "MEvljH1MZDA": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "15",
+    "task_id": "5643",
+    "sentence_count": 35,
+    "rough_duration": 186.42
+  },
+  "NStfEME-Bxo": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "134",
+    "task_id": "5643",
+    "sentence_count": 24,
+    "rough_duration": 422.77
+  },
+  "vumpEtsECi4": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "27",
+    "task_id": "104872",
+    "sentence_count": 38,
+    "rough_duration": 196.71
+  },
+  "A2oj5MbOScw": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "34",
+    "task_id": "5643",
+    "sentence_count": 33,
+    "rough_duration": 196.7
+  },
+  "rIp3rOnhpyM": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "61",
+    "task_id": "104872",
+    "sentence_count": 69,
+    "rough_duration": 412.5
+  },
+  "qfpjv8zVSUs": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "91",
+    "task_id": "89292",
+    "sentence_count": 23,
+    "rough_duration": 143.94
+  },
+  "B4-AUHheT-U": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "131",
+    "task_id": "10658",
+    "sentence_count": 23,
+    "rough_duration": 120.85
+  },
+  "Q_Rz9PyA4Ak": {
+    "category_1": "Holidays and Traditions",
+    "category_2": "Halloween",
+    "rank": "32",
+    "task_id": "5644",
+    "sentence_count": 45,
+    "rough_duration": 497.909
+  },
+  "MknGryrhE-U": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "66",
+    "task_id": "102809",
+    "sentence_count": 27,
+    "rough_duration": 257.04
+  },
+  "9rK6FrXc05c": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "106",
+    "task_id": "116348",
+    "sentence_count": 49,
+    "rough_duration": 459.13
+  },
+  "lZzb8XTdoaA": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "18",
+    "task_id": "41",
+    "sentence_count": 47,
+    "rough_duration": 547.51
+  },
+  "9Oro5-rsqRA": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "32",
+    "task_id": "1391",
+    "sentence_count": 46,
+    "rough_duration": 473.479
+  },
+  "evnecSuoE3Y": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "132",
+    "task_id": "44",
+    "sentence_count": 38,
+    "rough_duration": 308.96
+  },
+  "5qTtYiwwzBI": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "37",
+    "task_id": "33616",
+    "sentence_count": 36,
+    "rough_duration": 257.68
+  },
+  "3W4otUaH7IE": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "39",
+    "task_id": "44",
+    "sentence_count": 15,
+    "rough_duration": 168.75
+  },
+  "V-Te_U403V0": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "98",
+    "task_id": "44",
+    "sentence_count": 50,
+    "rough_duration": 366.16
+  },
+  "SQXI8pgRhmA": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "16",
+    "task_id": "116586",
+    "sentence_count": 51,
+    "rough_duration": 300.3
+  },
+  "84QY2WFAV2E": {
+    "category_1": "Pets and Animals",
+    "category_2": "Small and Furry",
+    "rank": "51",
+    "task_id": "41",
+    "sentence_count": 14,
+    "rough_duration": 42.719
+  },
+  "jQyxjAjhNC4": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "159",
+    "task_id": "6733",
+    "sentence_count": 18,
+    "rough_duration": 100.32
+  },
+  "UIUFVdGgaPM": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "82",
+    "task_id": "6733",
+    "sentence_count": 38,
+    "rough_duration": 177.06
+  },
+  "OLO20pAroqs": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "193",
+    "task_id": "6733",
+    "sentence_count": 9,
+    "rough_duration": 88.53
+  },
+  "SXdY03m00G4": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "54",
+    "task_id": "6733",
+    "sentence_count": 22,
+    "rough_duration": 106.92
+  },
+  "GIBOqEjyqm0": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "2",
+    "task_id": "62401",
+    "sentence_count": 24,
+    "rough_duration": 125.87
+  },
+  "SRlD-UuxBMM": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "11",
+    "task_id": "6733",
+    "sentence_count": 63,
+    "rough_duration": 361.11
+  },
+  "M-mbFGd7-pA": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "105",
+    "task_id": "6733",
+    "sentence_count": 27,
+    "rough_duration": 197.459
+  },
+  "txwp7AQCYCY": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "48",
+    "task_id": "6733",
+    "sentence_count": 32,
+    "rough_duration": 160.76
+  },
+  "LeP7cnpVOwg": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "67",
+    "task_id": "6733",
+    "sentence_count": 24,
+    "rough_duration": 118.92
+  },
+  "LOQ6ADpx7Us": {
+    "category_1": "Health",
+    "category_2": "Conditions and Treatments",
+    "rank": "8",
+    "task_id": "6733",
+    "sentence_count": 34,
+    "rough_duration": 221.64
+  }
+}
