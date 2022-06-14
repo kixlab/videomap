@@ -4,15 +4,12 @@ from pytube import YouTube
 SAVE_PATH = "./../data_video"
 
 # link of the video to be downloaded
-link = ["https://www.youtube.com/watch?v=xWOoBJUqlbI"]
+video_ids = ["xWOoBJUqlbI"]
 
-for i in link:
+for vid in video_ids:
     try:
-        # object creation using YouTube
-        # which was imported in the beginning
-        yt = YouTube(i)
+        yt = YouTube("youtu.be/"+vid)
     except:
-        # to handle exception
         print("Connection Error")
 
     # filters out all the files with "mp4" extension
