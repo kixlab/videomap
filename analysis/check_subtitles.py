@@ -1,6 +1,6 @@
 from youtube_transcript_api import YouTubeTranscriptApi
 from nltk.tokenize import sent_tokenize
-from rpunct import RestorePuncts
+# from rpunct import RestorePuncts
 
 # Testing functions
 
@@ -29,17 +29,19 @@ def save_as_text(video_id, script):
             f.write('\n')
 
 
-video_id = "nVbIUDjzWY4"
+video_id = "9Jja-kf5z4U"
 transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-transcript = transcript_list.find_generated_transcript([
-    'en'])
+transcript = transcript_list.find_manually_created_transcript([
+    'en-US'])
 transcript = transcript.fetch()
+print(transcript)
 print(transcript[-1]["start"])
 transcript = expand_sentence(transcript)
-rpunct = RestorePuncts()
-transcript = rpunct.punctuate(transcript)
-script_list = tokenize(transcript)
+print(transcript)
+# rpunct = RestorePuncts()
+# transcript = rpunct.punctuate(transcript)
+# script_list = tokenize(transcript)
 # script_list = tokenize(transcript)
 # print(len(script_list))
 
-save_as_text(video_id, script_list)
+# save_as_text(video_id, script_list)
