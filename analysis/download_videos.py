@@ -4,7 +4,7 @@ from pytube import YouTube
 SAVE_PATH = "./../data_video"
 
 # link of the video to be downloaded
-video_ids = ["xWOoBJUqlbI"]
+video_ids = ["yJ7VzfG2ONo", "tb1L7Rsm1U8", "Rcsy2HRuiyA"]
 
 for vid in video_ids:
     try:
@@ -20,7 +20,7 @@ for vid in video_ids:
     d_video = mp4files[0]
     try:
         # downloading the video
-        d_video.download(SAVE_PATH)
+        d_video.download(SAVE_PATH, vid+".mp4")
     except:
         print("Some Error!")
 print('Task Completed!')
