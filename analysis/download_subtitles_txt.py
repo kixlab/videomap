@@ -62,7 +62,7 @@ def save_as_text(video_id, script):
             f.write('\n')
 
 
-def main():
+def download_subtitles_from_howto100m():
     f = open('./../HowTo100M/HowTo100M_v1.csv', 'r')
     rdr = csv.reader(f)
     video_meta_info = {}
@@ -104,6 +104,17 @@ def main():
     with open('./../data_script/0_category.json', 'w') as fp:
         json.dump(video_category_info, fp)
     f.close()
+
+
+def download_subtitles_from_list():
+    video_ids = ["yJ7VzfG2ONo", "tb1L7Rsm1U8", "Rcsy2HRuiyA"]
+    for vid in video_ids:
+        script, duration = generate_transcript(vid)
+        save_as_text(vid, script)
+
+
+def main():
+    download_subtitles_from_list()
 
 
 if __name__ == "__main__":
