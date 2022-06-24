@@ -1,0 +1,41 @@
+[greeting] Subscribe to Motorist Recipe and hit the bell icon to receive updates of all my new recipes.
+[greeting] Hello Friends!
+[greeting, goal] I'm Medora Welcome to Madrid Recipe.com Today I am making stuffed chili cheese toast.
+[description] This is really superb and yummy!
+[description] It gets nice double layer of cheese and it just melt in your mouth and it makes perfect party starter or appetizer or snack dish.
+[description, instruction] It's just yummy So for that here has some bread slices.
+[instruction A] Now with the help of back of spoon I'm going to press it in the middle of this bread just to create some space to be able to fit in our cheese since we are going to make this into a chili cheese toast.
+[outcome] Perfect!
+[instruction B] Similarly, repeat the same process with the other slice of bread.
+[outcome] Perfect.
+[outcome] That looks done.
+[goal] Now let's keep this aside Now take a poll and we are going to make our cheese filling.
+[instruction C] So take some mozzarella cheese in a bowl.
+[instruction D] This is about a cup of mozarella cheese in that goes in some diced tomatoes.
+[effect] Now that is optional but it adds that beautiful color and a little bit of time in this chili cheese toast.
+[instruction E ] I Have decided this tomatoes, then some coriander leaves, finely chopped coriander leaves and now I'm adding green chilies.
+[description] So these are about two to three green chilies thinly sliced.
+[instruction F] Also add a little bit of chili flakes that  is optional but since it's a chili cheese toast it has to be nice and spicy and a little bit of olive oil do this a good mix and here our chilli cheese toast filling it's all ready.
+[instruction G] Now let's take this bread and I'm gonna put a slice of cheese on this bread and this is what will give you the best chili cheese toast.  
+[outcome] Look at that.
+[outcome] it fits in there really well.
+[justification] since this is chili cheese toast.
+[instruction I] I'm going to sprinkle some chili flakes over this cheese slice that is again optional.
+[instruction J] If you don't eat spicy food, you can just keep that out and stuff in this cheese mixture [Music] [Music] And similarly I'm gonna stop my rest of the bread classes now here.
+[transition] I have stuffed all my cheese chili toasts and here this tray is ready now.
+[instruction K] I'm going to pop this in the oven and bake this at 180 degrees Celsius for about 10 to 15 minutes [Applause] and here I have big Midas chili cheese toast for exactly 10 minutes over 180 degree Celsius Ma let's take that out.
+nice and bubbly.
+[outcome] Look at them .
+[outcome] Superb!
+[instruction M] Now let me take one piece and cut data for you.
+[outcome] Look at this.
+[description] it has got that nice perfect golden crust from the sides as well as from the bottle.
+[outcome] Looks nice and crunchy.
+[instruction L] Now let's cut this in half.
+[outcome] Lovely!
+[description] And here our cheese-stuffed chili cheese toast are ready to look nice crunchy, Yummy!
+[description] You get nice spice from this cheese and it's perfectly crispy and you get nice soft juicy texture from the street.
+[outcome] Super!
+[greeting(outro)] So enjoy this chili cheese toast and join with us in yet another episode of Wondrous Recipe.
+[greeting(outro)] Thank you for watching!
+[greeting(outro)] See you sir [Music] you [Music]

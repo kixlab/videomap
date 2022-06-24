@@ -1,0 +1,43 @@
+[music] Hey guys, welcome back to the Bench.
+[greeting] It is yet another amazing day and I have yet another amazing project to share with you guys!
+[tool] I Have here a solid silver flask.
+[description] It was made in Sheffield in the United Kingdom in the year 1900 by James Dixon and Sons silversmiths.
+[description] Now the inside of the lid has a cork and you can't see it, but I'll make sure to add in the high resolution gallery where you can see on the inside.
+[description] It's got a sort of cam mechanism that rides this lip and keeps everything sealed so there's a constant pressure on the cork.
+[description] Both of the cork and the cam mechanism have worn out because the flask is almost a hundred and twenty years old, but we're going to fix that.
+[transition] Follow along.
+[description] You can see here how much where both of the cork and catch mechanism have endured over the years.
+[instruction A] I'll start by using a pair of fine tipped diamond tweezers to remove the old cork.
+[description] It's built in layers rather than a solid piece, which was a bit of an interesting discovery.
+[description] The discoloration that's visible in the deeper layers is the result of microbial growth caused by the layered pork being impossible to sterilize properly.
+[goal] [music] To begin refurbishing the cam mechanism, I need to add some silver here so it's off to the Orion.
+[instruction B] I've got the Orion set to rapid mode using it's a triangle waveform.
+[instruction C] I'll start by tacking the edge of my sheet in place, add two kilowatts of power using 12 millisecond pulses.
+[instruction D] Once I'm satisfied that the sheet won't end or move during the welding process, I'll ramp that up to three kilowatts of power and 15 millisecond pulses to begin my initial welding pass.
+[goal] That's got my silver sheet nicely adhered exactly where I need it.
+[tips] the precise control the Orion gives me over how much and in what manner energy is delivered to the piece actually lets me begin shaping the metal with the Orion itself rather than with abrasives.
+[instruction E] To that end, I'll begin the shaping process by cranking the power up one last time to five kilowatts and increasing my pulse lengths to 25 milliseconds.
+[instruction F, goal] A little more time shaping and a quick trip to the steamer and here we are now: I Want to take a second guys and make a point about something that's very important to us now.
+[description] The blast that I'm working on here is almost a hundred and twenty years old and I don't want to destroy any of the authenticity or anything that is the bona fides of the age of the piece.
+[description] So the name of the game here is minimal invasion I Want to do the absolute least that I possibly can to accomplish what I set out to do.
+[description] and that's what makes the Orion so amazing.
+[goal] I'm going to get into shaping this tab and then we're going to record this bad boy.
+[instruction G] I'll use a fine cut file to shape and re bevel the outside surface of the catch tab once I'm happy with that.
+[instruction H ] a combination of a square file and that same fine cut file will assist in recreating the bottom surface of the catch.
+[tip] I'll have to get up close and personal to do the edge detailing.
+[tip] There's  not a lot of room to work here, which means I'll really have to take my time.
+[outcome] [Music] Mr. a bit more shaping with a fine grit silicon wheel and a quick trip to the steamer, our newly refurbished catch tab is looking good.
+[outcome, goal, instruction I] Check out how perfectly this cork fits our flask I'll have to cut it down to just the right length to fit in here [Music] With a little bit of coaxing, our new pork pops right into place in its new home.
+[instruction I] A quick twist and untwist of the top to check the new fit shows me that it's perfect and this flask is ready for another century of service.
+[outcome] And there you have it guys!
+[outcome] I Am super thrilled with the way that this came out and it is so cool.
+[description] It's a hundred and twenty years old.
+[description] It's solid silver I mean you can taste the character when you just look at it.
+[outcome] It's amazing!
+[recap] I'm really happy that I found out about the way that the corks go in and layers.
+[recap] so I took all of that old nacelle, all of the gross Ness and we've replaced it with a solid piece of natural cork.
+[recap] We've preserved the integrity of the piece and the piece itself will last for another hundred years.
+[greeting(outro)] We always want to hear what you guys have to tell us down in the comment section.
+[greeting(outro)] And of course, if there's something you'd like to see, let us know.
+[greeting(outro)] I Always hope you'll hit that like and subscribe button and until the next time we see you, it is always a pleasure having you with us here at the Mansion.
+[Music]

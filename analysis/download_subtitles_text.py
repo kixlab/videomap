@@ -1,6 +1,6 @@
 from youtube_transcript_api import YouTubeTranscriptApi
-from nltk.tokenize import sent_tokenize
-from rpunct import RestorePuncts
+# from nltk.tokenize import sent_tokenize
+# from rpunct import RestorePuncts
 import csv
 import json
 
@@ -31,23 +31,23 @@ def generate_transcript(video_id):
             transcript = transcript_list.find_generated_transcript(['en-US'])
             # transcript = transcript_list.find_manually_created_transcript(['en-US'])
             transcript = transcript.fetch()
-            duration = transcript[-1]["start"]
-            transcript = expand_sentence(transcript)
-            rpunct = RestorePuncts()
-            transcript = rpunct.punctuate(transcript)
-            script_list = tokenize(transcript)
-            return script_list, duration
+            # duration = transcript[-1]["start"]
+            # transcript = expand_sentence(transcript)
+            # rpunct = RestorePuncts()
+            # transcript = rpunct.punctuate(transcript)
+            # transcript = tokenize(transcript)
+            return transcript
         except:
             try:
                 transcript = transcript_list.find_generated_transcript([
                     'en'])
                 transcript = transcript.fetch()
-                duration = transcript[-1]["start"]
-                transcript = expand_sentence(transcript)
-                rpunct = RestorePuncts()
-                transcript = rpunct.punctuate(transcript)
-                script_list = tokenize(transcript)
-                return script_list, duration
+                # duration = transcript[-1]["start"]
+                # transcript = expand_sentence(transcript)
+                # rpunct = RestorePuncts()
+                # transcript = rpunct.punctuate(transcript)
+                # transcript = tokenize(transcript)
+                return transcript
             except:
                 return "error", 0
 
@@ -60,6 +60,11 @@ def save_as_text(video_id, script):
         for sentence in script:
             f.write(sentence)
             f.write('\n')
+
+
+def save_as_json(video_id, script):
+    with open('./../data_script/'+video_id+'.json', 'w') as f:
+        json.dump(script, f)
 
 
 def download_subtitles_from_howto100m():
@@ -107,10 +112,11 @@ def download_subtitles_from_howto100m():
 
 
 def download_subtitles_from_list():
-    video_ids = ["yJ7VzfG2ONo", "tb1L7Rsm1U8", "Rcsy2HRuiyA"]
+    video_ids = ["yJ7VzfG2ONo"]
+    # video_ids = ["yJ7VzfG2ONo", "tb1L7Rsm1U8", "Rcsy2HRuiyA"]
     for vid in video_ids:
-        script, duration = generate_transcript(vid)
-        save_as_text(vid, script)
+        script = generate_transcript(vid)
+        save_as_json(vid, script)
 
 
 def main():
