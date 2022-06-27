@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "youtube-dl": "^3.5.0",
+    "youtube-dl-exec": "^2.0.12"
+  }
+}

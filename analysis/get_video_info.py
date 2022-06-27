@@ -17,7 +17,7 @@ def get_duration_and_date(vid):
     duration = ""
     pl_response = pl_request.execute()
     for item in pl_response['items']:
-        print(item.keys())
+        # print(item.keys())
         if 'snippet' in item:
             # publishedAt: '2010-10-31T03:29:25Z'
             published = item['snippet']['publishedAt']
@@ -46,9 +46,10 @@ def parse_duration(duration):
 def get_videos_from_howto100m():
     f = open('./../HowTo100M/HowTo100M_v1.csv', 'r')
     rdr = csv.reader(f)
+    video_info = []
     count = 0
     for line in rdr:
-        if count == 0:
+        if count < 9822:
             count += 1
             continue
         vid = line[0]
@@ -62,6 +63,9 @@ def get_videos_from_howto100m():
         published = published[:4]
         if published > "2017" and duration >= 300:
             print(vid, category, duration, published)
+            video_info.append([vid, category, duration, published])
+        count += 1
+    return video_info
 
 
 def get_videos_from_list():
@@ -76,8 +80,17 @@ def get_videos_from_list():
         published = published[:4]
 
 
+def save_to_text(video_info):
+    with open('video_info.txt', 'w') as f:
+        for line in video_info:
+            f.write(line)
+            f.write('\n')
+
+
 def main():
-    get_videos_from_list()
+    video_info = get_videos_from_howto100m()
+    save_to_text(video_info)
+    # get_videos_from_list()
 
 
 if __name__ == "__main__":
