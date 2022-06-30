@@ -1,5 +1,5 @@
-with open('HowTo100M_v1_filtered.txt', 'w') as wf:
-    with open('HowTo100M_v1_merged.txt', 'r') as f:
+with open('HowTo100M_v2_filtered.txt', 'w') as wf:
+    with open('HowTo100M_v2_merged.txt', 'r') as f:
         for line in f.readlines():
             info = line.split(",")
             if len(info) != 4:
