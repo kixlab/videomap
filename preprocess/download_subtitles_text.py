@@ -122,7 +122,7 @@ def download_subtitles_from_howto100m():
 
 
 def download_subtitles_from_list():
-    video_ids = ["PyWZYHy17As"]
+    video_ids = ["BotYnPhByWg", "djvLEfwwQPU"]
     # video_ids = ["yJ7VzfG2ONo", "tb1L7Rsm1U8", "Rcsy2HRuiyA"]
     for vid in video_ids:
         script = generate_transcript(vid)
