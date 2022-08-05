@@ -1,0 +1,71 @@
+Start,End,Script,P1,P2,Final,Match,
+16.49,19.82,"Welcome, sciatica low back pain.",greeting,Greeting,,,
+20.51,23.61,The sciatic nerve is the size of my thumb,background info,Background Info,,,
+23.71,29.2,"The longest nerve of the body stemming from the lower back, making its way under the buttocks",background info,Background Info,,,
+29.43,35.68,The back of the thigh outside of the thigh and below the knee to the entire lower leg,background info,Background Info,,,
+35.73,40.74,"Foot and toes burning, tingling, numbness, cramping, heaviness",background info,Background Info,,,
+41.09,47.58,You don't have to have low back pain to have burning or pain or discomfort or weakness into your lower extremities,background info,Background Info,,,
+48.01,50.5,I want to show you my 4.,goal,Goal,,,
+50.9,56.15,Favorite stretches four favorite stretches to help combat sciatica,goal,Goal,,,
+56.5,61.01,Realize that most sciatica does not come just from the disk,briefing,Background Info,,,x
+61.06,68.74,"Even though you may have a herniated disk, a bulging disk or disc degeneration from improper positioning and posture quite common.",background info,Background Info,,,
+69.39,75.57,With a nerve makes its way out of the lower back going into the buttocks around the piriformis muscle,background info,Background Info,,,
+75.71,84.58,"When that area becomes contracted and shortened, it can inflamed that lower buttocks area, affecting that sciatic nerve root",background info,Background Info,,,
+84.95,96.32,"So I'm going to show you 4 safe, great stretches you should be doing for lower back sciatic type pain and hopefully will take you out of this major distress",goal,Goal,,,
+96.39,99.67,The first one is the piriformis stretch I've showed this many times.,transition,Instruction,,,x
+99.76,104.47,"In many of my videos, but it is so important that you don't want to miss this stretch",transition,Side Note,,,x
+104.52,105.24,Very simple,side note,Side Note,,,
+105.25,108.13,We're going to stretch our left side our left buttocks,instruction,Instruction,,,
+108.27,109.61,We're going to lean back,instruction,Instruction,,,
+110.04,113.07,We're going to bend this knee,instruction,Instruction,,,
+113.12,121.08,"Our left knee and put it behind our right knee just like this, and we're going to grab underneath the leg and we're going to pull straight back",instruction,Instruction,,,
+121.12,122.65,I'm going to come a little different angle.,transition,Description,,,x
+123.44,125.51,OK left knee is bent,instruction,Description,,,x
+125.57,130.09,Grab underneath the right thigh and pull straight back OK,instruction,Instruction,,,
+130.1,131.4,Become a different angle here.,transition,Description,,,x
+132.47,135.3,OK left knee is bent behind the right knee,instruction,Description,,,x
+135.31,142.9,The right the ankle the left left ankle is behind the right knee and we're gonna pull straight back,instruction,Instruction,,,
+142.91,146.62,Hold it about 2530 seconds and you can do both sides,early instruction,Instruction,,,x
+146.77,149.22,The second stretch we're working the left side,subgoal,Instruction,,,x
+149.29,155.02,We're gonna take our left foot and put it on the other side of our right knee just like this,early instruction,Instruction,,,x
+155.57,162.66,Now we're just going to grab with both hands the outside of the left knee and we're just going to pull it all the way over.,instruction,Instruction,,,
+163.01,165.64,Are you going to hold it there a good 30 seconds?,instruction,Instruction,,,
+166.37,169.46,Beautiful this whole that pull it all the way over,instruction,Instruction,,,
+169.67,171.08,That's the right side,description,Instruction,,,x
+171.13,173.78,Take the right foot over the left knee,instruction,Instruction,,,
+173.99,175.6,Both hands and justice,instruction,Instruction,,,
+175.61,176.5,Pull it over,instruction,Instruction,,,
+176.51,180.62,Try to sit up as straight as you can and you'll feel the whole outside of the buttocks,instruction,Instruction,,,
+180.71,185.64,Just release the third exercise is just taking the side involved,transition,Instruction,,,
+185.65,186.8,This is my left side,description,Description,,,
+186.81,188.38,I'm going to work my left buttocks,subgoal,Instruction,,,x
+188.81,194.02,"OK, we're going to bend that knee in front of us just like this as I show you here",instruction,Instruction,,,
+194.09,196.5,Keep that back leg straight as possible.,instruction,Instruction,,,
+196.57,198.59,Keeping your knee obviously behind you,instruction,Instruction,,,
+198.84,209.53,"Keeping that back straight and all we're going to do is just lean our body forward, and if you can't go all the way down, just go down to the point to where you really feel that left buttocks burn",instruction,Instruction,,,
+210.02,210.69,Right side,transition,Instruction,,,x
+210.7,221.19,"Now got the right knee bent, left leg straight behind us arms resting on the floor and just leading forward leaning forward far as you can",instruction,Instruction,,,
+221.24,226.04,"If you can go down all the way down, great, hold it there good 30 seconds and.",instruction,Instruction,,,
+226.69,237.03,"Relax, the last exercise is taking a ball that you have",transition,Instruction,,,x
+,,"a tennis ball, a golf ball, a softball anything that's hard and firm lacrosse ball.",tool (multiple),Tool (multiple),,,
+237.86,250.81,Something that we can put pressure and need that muscle and the way we're going to do this is a modification of the piriformis stretch but a little different and what we're going to do is we're going to work the left side OK,justification,Briefing,,,x
+251.18,254.72,We're going to bend that left knee behind this.,instruction,Instruction,,,
+255.96,260.59,"Right knee, we're just like this, we'll put that left ankle behind the right knee",instruction,Instruction,,,
+260.66,268.31,"We're not going to really pull up much like we did before, but we're going to leave it like this and we're going to put the ball in that area",instruction,Instruction,,,
+268.32,271.21,That's giving us problem that lower buttocks area to release that muscle,instruction,Instruction,,,
+271.32,274.08,"And once it's in there, we're going to pull up a little bit",instruction,Instruction,,,
+274.14,276.84,But we're just kind of kind of roll little circles.,instruction,Instruction,,,
+277.6,280.59,"Good, it's just going to roll over that point",instruction,Instruction,,,
+280.6,282.43,You can reposition it a different area.,instruction,Instruction,,,
+283.12,291.35,And roll over that point and,instruction,Instruction,,,
+,,the reason why we're bending this knee a little bit is that we want to take tension off the external rotators,justification,Justification,,,
+291.4,299.44,"OK, so as we do it, we're kind of taking tension off that muscle in the buttocks, as we're rolling that ball and little circles",description,Instruction,,,x
+299.45,300.29,You can do that,side note,Instruction,,,x
+300.68,304.43,"Be a little creative, 30 seconds a minute, 2 minutes",side note,Instruction,,,x
+304.7,308.73,Just get to that area until you release that tight trigger point,tip,Instruction,,,x
+308.84,313.02,So these are four great stretch exercises you can do to help.,reflection,Description,,,x
+313.09,319.27,Combat that sciatic lower back discomfort when those muscles contract are squeezing on those nerves,reflection,Description,,,x
+319.42,323.25,We want to get them to relax so we can give you lots of relief,reflection,Description,,,x
+323.34,324.59,I ask you to share this video,outro,Outro,,,
+324.6,328.33,"Subscribe and most important, make it a great day.",outro,Outro,,,
+328.99,330.46,I'm doctor Alan Mandel.,outro,Outro,,,

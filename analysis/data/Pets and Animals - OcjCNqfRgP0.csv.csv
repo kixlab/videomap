@@ -1,0 +1,55 @@
+Start,End,Script,P1,P2,Final,Match,
+0.63,10.66,"So hi guys, it's Lanie and ",greeting,Greeting,,,
+,,today I'm going to be showing you how to make DIY hamster treats and ,goal,Goal,,,
+,,I'm so excited about this.,side note,Side Note,,,
+11.78,19.59,"Because I love baking and this involves baking, so I'm also very sorry about the lighting",side note,Side Note,,,
+19.6,21.49,Kind of like 9:00 o'clock at night,side note,Side Note,,,
+21.5,26.25,Right now it was probably best so that we could try it out on chip,side note,Side Note,,,
+26.34,28.71,"So yeah, I hope you like the video",greeting,Side Note,,,x
+28.8,30.09,Let's get started,side note,Transition,,,x
+30.16,41.77,"The things I'm using are two bowls, a half, a cup of pellets, 1/3 cup of all-purpose flour, a fork.",tool,Tool,,,
+42.63,46.02,A cookie cutter and lastly a Benihana,tool,Tool,,,
+46.79,52.14,So the first thing I'm doing is preheating my oven to 350 degrees.,instruction,Instruction,,,
+52.76,59.43,So the first thing you want to do is pour your pellets into a plastic bag,instruction,Instruction,,,
+59.84,66.78,"Oh yeah, and by the way, the pellets I'm using are the new garden select Oxbow pellets.",tool,Side Note,,,x
+67.58,69.65,Now I'm shutting the bag.,instruction,Instruction,,,
+70.99,77.8,And now I'm going to just crush up all these pellets until they're in like a fine powdery.,instruction,Instruction,,,
+79.19,80.4,Consistency.,description,Instruction,,,x
+90.72,99.66,"So I finally completed crushing all these pellets up and they don't have to be completely crushed, just taking my bowl and I'm just going to put them in there.",description,Instruction,,,x
+104.67,106.99,So this is what they should look like.,outcome,Description,,,x
+109.58,114.28,So now you're going to add the third cup of flour to that.,instruction,Instruction,,,
+119.84,122.96,So by now it should look something like this.,description,Description,,,
+124.13,126.77,So now I'm just going to set this whole side.,instruction,Instruction,,,
+127.47,129.12,And get my new bowl,instruction,Instruction,,,
+129.43,135.14,So now I'm peeling my banana and just putting it inside the bowl,instruction,Instruction,,,
+135.53,141,So now I'm just going to use the fork and just kind of smash it.,instruction,Instruction,,,
+148.92,153.27,This is what it will probably look like when you finish mashing it up,outcome,Description,,,x
+153.42,160.75,So now you're just going to take your dry bowl and you're just going to.,instruction,Instruction,,,
+162.93,165.47,Put the banana into that.,instruction,Instruction,,,
+168.66,178.97,"Ohh, now you want to mix both ingredients together until it forms a dough consistency.",instruction,Instruction,,,
+184.93,189.48,So I'm I'm getting kind of impatient using the fork,side note,Side Note,,,
+189.49,192.04,I think I'm just going to go in with my hands now.,tool (optional),Side Note,,,x
+202.3,206.97,So my dough is basically completely needed.,outcome,Instruction,,,x
+208.48,212.3,So I'm just going to put it down on the table.,instruction,Instruction,,,
+213.47,214.54,And just.,side note,Instruction,,,x
+215.26,217.21,Flatten it completely out.,instruction,Instruction,,,
+218.6,226.14,So I have finished kind of flattening it out and now I'm going to take my heart-shaped cookie cutter.,instruction,Instruction,,,
+226.8,227.84,And just start.,instruction,Instruction,,,
+228.92,230.18,Cutting little.,instruction,Instruction,,,
+233.26,234.54,Cookies out.,instruction,Instruction,,,
+237.74,255.35,"So I just have this extra crumbly dough that is kind of hardened so it's not very useful anymore, so I'm just going to throw this away and ",description,Instruction,,,x
+,,then we're going to put our little hearts onto a baking sheet and bake them for 30 minutes.,early instruction,Early Instruction,,,
+262.91,268.2,"So this is totally optional, but I'm just putting a little.",instruction (optional),Instruction (optional),,,
+269.17,273.7,Pumpkin seed and all of my little treats.,instruction (optional),Instruction (optional),,,
+294.18,300.99,So I have chip out right now and we are going to go ahead and try his the treats on him,description,Description,,,
+301.05,303.59,He is and here's the treat.,description,Side Note,,,x
+305.4,306.77,You like your treat buddy.,side note,Side Note,,,
+329.41,330.02,Funny.,side note,Side Note,,,
+331.76,332.1,You know?,side note,Side Note,,,
+333.4,335.4,Should be 2/2 hi.,side note,Side Note,,,
+339.41,340.98,He loves the thing so much.,side note,Side Note,,,
+344.56,346.62,He just got out of the sand bath.,side note,Side Note,,,
+347.63,349.87,And he has gotten sand all over me,side note,Side Note,,,
+350.33,352.82,"Sorry buddy, you're not gonna be able to touch that.",side note,Side Note,,,
+371.52,372.92,Bring this thing everywhere.,side note,Side Note,,,
+377.3,379.71,We decided where to eat it.,side note,Side Note,,,
