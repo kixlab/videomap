@@ -1,3 +1,8 @@
 /HowTo100M
 /data_video
 /sentencify_text/bert-restore-punctuation
+/STT/google
+/STT/audio
+/STT/azure/bert-restore-punctuation
+/STT/azure/transcript
+/STT/azure/final

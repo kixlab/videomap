@@ -1,0 +1,722 @@
+[
+    {
+        "video_id": "kz5dJ9SCu4M",
+        "total": 328.655,
+        "no_audio": 2.855,
+        "portion": 0.009
+    },
+    {
+        "video_id": "Cvv1wiqKMHc",
+        "total": 430.219,
+        "no_audio": 6.519,
+        "portion": 0.015
+    },
+    {
+        "video_id": "ZT1dvq6yacQ",
+        "total": 442.247,
+        "no_audio": 10.347,
+        "portion": 0.023
+    },
+    {
+        "video_id": "Df9F8ettY8k",
+        "total": 419.12,
+        "no_audio": 11.52,
+        "portion": 0.027
+    },
+    {
+        "video_id": "mj1Fu3-XQpI",
+        "total": 483.579,
+        "no_audio": 13.079,
+        "portion": 0.027
+    },
+    {
+        "video_id": "uUBVc8Ugz0k",
+        "total": 637.852,
+        "no_audio": 18.152,
+        "portion": 0.028
+    },
+    {
+        "video_id": "2OoebJA2mnE",
+        "total": 431.566,
+        "no_audio": 11.966,
+        "portion": 0.028
+    },
+    {
+        "video_id": "N3c81EPZ51Q",
+        "total": 355.265,
+        "no_audio": 12.965,
+        "portion": 0.036
+    },
+    {
+        "video_id": "ntYwKXN82QU",
+        "total": 366.086,
+        "no_audio": 13.286,
+        "portion": 0.036
+    },
+    {
+        "video_id": "m0H56KpKLHA",
+        "total": 320.76,
+        "no_audio": 13.26,
+        "portion": 0.041
+    },
+    {
+        "video_id": "S0luUzNRtq0",
+        "total": 335.528,
+        "no_audio": 15.028,
+        "portion": 0.045
+    },
+    {
+        "video_id": "ZmTxw3UbMO4",
+        "total": 454.647,
+        "no_audio": 20.547,
+        "portion": 0.045
+    },
+    {
+        "video_id": "R7fBwFAq7TI",
+        "total": 461.706,
+        "no_audio": 22.806,
+        "portion": 0.049
+    },
+    {
+        "video_id": "0fxL8v2dMho",
+        "total": 466.675,
+        "no_audio": 26.875,
+        "portion": 0.058
+    },
+    {
+        "video_id": "-xCtbeecgKQ",
+        "total": 359.956,
+        "no_audio": 20.956,
+        "portion": 0.058
+    },
+    {
+        "video_id": "BotYnPhByWg",
+        "total": 329.352,
+        "no_audio": 19.852,
+        "portion": 0.06
+    },
+    {
+        "video_id": "AbhW9YbQ0fM",
+        "total": 310.59,
+        "no_audio": 19.09,
+        "portion": 0.061
+    },
+    {
+        "video_id": "Nu_By3eTpoc",
+        "total": 340.358,
+        "no_audio": 22.358,
+        "portion": 0.066
+    },
+    {
+        "video_id": "5AU2vJU-QJM",
+        "total": 360.374,
+        "no_audio": 25.474,
+        "portion": 0.071
+    },
+    {
+        "video_id": "EYL1tYGwYY0",
+        "total": 364.6,
+        "no_audio": 26.2,
+        "portion": 0.072
+    },
+    {
+        "video_id": "PyWZYHy17As",
+        "total": 466.071,
+        "no_audio": 35.671,
+        "portion": 0.077
+    },
+    {
+        "video_id": "wvC3_Rs4mXs",
+        "total": 456.644,
+        "no_audio": 36.144,
+        "portion": 0.079
+    },
+    {
+        "video_id": "-szevr-BRZE",
+        "total": 417.17,
+        "no_audio": 37.17,
+        "portion": 0.089
+    },
+    {
+        "video_id": "WIIjq2GexIw",
+        "total": 519.012,
+        "no_audio": 46.012,
+        "portion": 0.089
+    },
+    {
+        "video_id": "Vrz25x3qnTY",
+        "total": 392.557,
+        "no_audio": 37.957,
+        "portion": 0.097
+    },
+    {
+        "video_id": "0TLQg_b1v5Q",
+        "total": 345.188,
+        "no_audio": 35.588,
+        "portion": 0.103
+    },
+    {
+        "video_id": "mQjCKgEPs8k",
+        "total": 417.17,
+        "no_audio": 42.97,
+        "portion": 0.103
+    },
+    {
+        "video_id": "T1j7Yq5-cIs",
+        "total": 471.551,
+        "no_audio": 49.251,
+        "portion": 0.104
+    },
+    {
+        "video_id": "nnzPJv5XIws",
+        "total": 454.368,
+        "no_audio": 49.268,
+        "portion": 0.108
+    },
+    {
+        "video_id": "yYOysPt5gic",
+        "total": 372.727,
+        "no_audio": 40.227,
+        "portion": 0.108
+    },
+    {
+        "video_id": "JNznnqX6SsE",
+        "total": 327.634,
+        "no_audio": 35.734,
+        "portion": 0.109
+    },
+    {
+        "video_id": "8cV5x4jP7EU",
+        "total": 678.951,
+        "no_audio": 76.251,
+        "portion": 0.112
+    },
+    {
+        "video_id": "73lxEIKyX8M",
+        "total": 306.503,
+        "no_audio": 34.203,
+        "portion": 0.112
+    },
+    {
+        "video_id": "kPGwDxo5Yf4",
+        "total": 412.851,
+        "no_audio": 46.751,
+        "portion": 0.113
+    },
+    {
+        "video_id": "dKUomyn1TYQ",
+        "total": 382.711,
+        "no_audio": 43.811,
+        "portion": 0.114
+    },
+    {
+        "video_id": "0SMzqWV6xxs",
+        "total": 426.086,
+        "no_audio": 51.286,
+        "portion": 0.12
+    },
+    {
+        "video_id": "dJ_qCDWNvXU",
+        "total": 388.238,
+        "no_audio": 47.938,
+        "portion": 0.123
+    },
+    {
+        "video_id": "IICwmc4WX2E",
+        "total": 363.299,
+        "no_audio": 46.499,
+        "portion": 0.128
+    },
+    {
+        "video_id": "ZY11rbwCaMM",
+        "total": 374.677,
+        "no_audio": 48.377,
+        "portion": 0.129
+    },
+    {
+        "video_id": "rqBiByEbMHc",
+        "total": 408.346,
+        "no_audio": 53.546,
+        "portion": 0.131
+    },
+    {
+        "video_id": "WcD8bG2VB_s",
+        "total": 345.095,
+        "no_audio": 45.895,
+        "portion": 0.133
+    },
+    {
+        "video_id": "bxXXCP0AE5A",
+        "total": 459.802,
+        "no_audio": 62.502,
+        "portion": 0.136
+    },
+    {
+        "video_id": "djvLEfwwQPU",
+        "total": 390.792,
+        "no_audio": 53.792,
+        "portion": 0.138
+    },
+    {
+        "video_id": "Rcsy2HRuiyA",
+        "total": 444.941,
+        "no_audio": 61.641,
+        "portion": 0.139
+    },
+    {
+        "video_id": "WoDZQRGyuHA",
+        "total": 569.4,
+        "no_audio": 80.1,
+        "portion": 0.141
+    },
+    {
+        "video_id": "SXQHgJHYQgc",
+        "total": 449.26,
+        "no_audio": 63.26,
+        "portion": 0.141
+    },
+    {
+        "video_id": "ZORD4y7dL08",
+        "total": 324.801,
+        "no_audio": 45.801,
+        "portion": 0.141
+    },
+    {
+        "video_id": "EnjZHOb6qNE",
+        "total": 363.299,
+        "no_audio": 53.099,
+        "portion": 0.146
+    },
+    {
+        "video_id": "2YGEDsl7PO8",
+        "total": 441.876,
+        "no_audio": 65.076,
+        "portion": 0.147
+    },
+    {
+        "video_id": "b2EZggyT5O4",
+        "total": 387.68,
+        "no_audio": 57.88,
+        "portion": 0.149
+    },
+    {
+        "video_id": "BzxPDw6ezEc",
+        "total": 339.011,
+        "no_audio": 50.511,
+        "portion": 0.149
+    },
+    {
+        "video_id": "bg3orsnRCVE",
+        "total": 455.901,
+        "no_audio": 68.301,
+        "portion": 0.15
+    },
+    {
+        "video_id": "h281yamVFDc",
+        "total": 452.603,
+        "no_audio": 68.103,
+        "portion": 0.15
+    },
+    {
+        "video_id": "yu-G9kEKdTo",
+        "total": 495.096,
+        "no_audio": 75.296,
+        "portion": 0.152
+    },
+    {
+        "video_id": "oe7Cz-dxSBY",
+        "total": 381.55,
+        "no_audio": 57.95,
+        "portion": 0.152
+    },
+    {
+        "video_id": "7IcOJEEObA0",
+        "total": 370.312,
+        "no_audio": 56.712,
+        "portion": 0.153
+    },
+    {
+        "video_id": "ihCwjLj31hY",
+        "total": 442.526,
+        "no_audio": 67.526,
+        "portion": 0.153
+    },
+    {
+        "video_id": "XFYHIg8U--4",
+        "total": 476.334,
+        "no_audio": 73.334,
+        "portion": 0.154
+    },
+    {
+        "video_id": "mwpb65gm1e0",
+        "total": 446.334,
+        "no_audio": 73.334,
+        "portion": 0.164
+    },
+    {
+        "video_id": "8DgsLNa3ums",
+        "total": 364.321,
+        "no_audio": 59.721,
+        "portion": 0.164
+    },
+    {
+        "video_id": "uMgpr6X5asI",
+        "total": 481.396,
+        "no_audio": 85.196,
+        "portion": 0.177
+    },
+    {
+        "video_id": "A_qivvTkijw",
+        "total": 448.61,
+        "no_audio": 82.61,
+        "portion": 0.184
+    },
+    {
+        "video_id": "UZJ0nmB3epQ",
+        "total": 388.609,
+        "no_audio": 73.609,
+        "portion": 0.189
+    },
+    {
+        "video_id": "VEplLGXFLFw",
+        "total": 412.99,
+        "no_audio": 79.19,
+        "portion": 0.192
+    },
+    {
+        "video_id": "k0koOhfXv_s",
+        "total": 429.616,
+        "no_audio": 84.616,
+        "portion": 0.197
+    },
+    {
+        "video_id": "Eeu5uL6r2rg",
+        "total": 438.253,
+        "no_audio": 90.853,
+        "portion": 0.207
+    },
+    {
+        "video_id": "1Ni8KOzRzuI",
+        "total": 307.246,
+        "no_audio": 64.246,
+        "portion": 0.209
+    },
+    {
+        "video_id": "ntwi2Unh3JQ",
+        "total": 556.582,
+        "no_audio": 118.682,
+        "portion": 0.213
+    },
+    {
+        "video_id": "XN3N5K2axpw",
+        "total": 400.591,
+        "no_audio": 87.091,
+        "portion": 0.217
+    },
+    {
+        "video_id": "kNsjE4HO7tE",
+        "total": 657.171,
+        "no_audio": 145.071,
+        "portion": 0.221
+    },
+    {
+        "video_id": "Czi_ZirnzRo",
+        "total": 301.163,
+        "no_audio": 70.563,
+        "portion": 0.234
+    },
+    {
+        "video_id": "7oXrT1CqLCY",
+        "total": 473.78,
+        "no_audio": 116.48,
+        "portion": 0.246
+    },
+    {
+        "video_id": "T622Ec77ZPY",
+        "total": 333.857,
+        "no_audio": 84.657,
+        "portion": 0.254
+    },
+    {
+        "video_id": "z1Xv6Pa0toE",
+        "total": 436.582,
+        "no_audio": 111.282,
+        "portion": 0.255
+    },
+    {
+        "video_id": "zMqzjMrxNR0",
+        "total": 336.922,
+        "no_audio": 88.122,
+        "portion": 0.262
+    },
+    {
+        "video_id": "ygRQRgR11Zg",
+        "total": 434.585,
+        "no_audio": 115.485,
+        "portion": 0.266
+    },
+    {
+        "video_id": "AnWGek4P_dY",
+        "total": 412.479,
+        "no_audio": 110.979,
+        "portion": 0.269
+    },
+    {
+        "video_id": "_Yb6xLqvsf0",
+        "total": 564.849,
+        "no_audio": 152.749,
+        "portion": 0.27
+    },
+    {
+        "video_id": "tb1L7Rsm1U8",
+        "total": 405.56,
+        "no_audio": 114.36,
+        "portion": 0.282
+    },
+    {
+        "video_id": "KLLqGcgxQEw",
+        "total": 426.643,
+        "no_audio": 121.043,
+        "portion": 0.284
+    },
+    {
+        "video_id": "yeT52sDtYEU",
+        "total": 306.271,
+        "no_audio": 87.571,
+        "portion": 0.286
+    },
+    {
+        "video_id": "mZZJYDfmgeg",
+        "total": 411.179,
+        "no_audio": 117.979,
+        "portion": 0.287
+    },
+    {
+        "video_id": "r6JmI35r5E8",
+        "total": 494.771,
+        "no_audio": 142.971,
+        "portion": 0.289
+    },
+    {
+        "video_id": "VDMOFa8iRqo",
+        "total": 540.143,
+        "no_audio": 157.943,
+        "portion": 0.292
+    },
+    {
+        "video_id": "bQKTjz0JKhg",
+        "total": 368.547,
+        "no_audio": 112.347,
+        "portion": 0.305
+    },
+    {
+        "video_id": "Xh_Awznyc7s",
+        "total": 332.324,
+        "no_audio": 105.624,
+        "portion": 0.318
+    },
+    {
+        "video_id": "QzS7Z80poKo",
+        "total": 330.141,
+        "no_audio": 106.241,
+        "portion": 0.322
+    },
+    {
+        "video_id": "eyD2iwXOeFM",
+        "total": 603.672,
+        "no_audio": 201.372,
+        "portion": 0.334
+    },
+    {
+        "video_id": "jGsEBwiKnCI",
+        "total": 745.686,
+        "no_audio": 254.386,
+        "portion": 0.341
+    },
+    {
+        "video_id": "xTARWxkTJw0",
+        "total": 487.015,
+        "no_audio": 167.515,
+        "portion": 0.344
+    },
+    {
+        "video_id": "cGn_oZPotZA",
+        "total": 371.798,
+        "no_audio": 133.398,
+        "portion": 0.359
+    },
+    {
+        "video_id": "sij_wNj0doI",
+        "total": 440.018,
+        "no_audio": 161.518,
+        "portion": 0.367
+    },
+    {
+        "video_id": "ta5IB2wy6ic",
+        "total": 318.206,
+        "no_audio": 117.706,
+        "portion": 0.37
+    },
+    {
+        "video_id": "4WaXJs9RR3E",
+        "total": 312.68,
+        "no_audio": 115.58,
+        "portion": 0.37
+    },
+    {
+        "video_id": "HFp5uH12wkc",
+        "total": 600.514,
+        "no_audio": 225.414,
+        "portion": 0.375
+    },
+    {
+        "video_id": "-6tnn1G1dRg",
+        "total": 373.052,
+        "no_audio": 140.352,
+        "portion": 0.376
+    },
+    {
+        "video_id": "e3StC_4qemI",
+        "total": 589.833,
+        "no_audio": 226.133,
+        "portion": 0.383
+    },
+    {
+        "video_id": "jHsbUTwIl1A",
+        "total": 495.328,
+        "no_audio": 191.028,
+        "portion": 0.386
+    },
+    {
+        "video_id": "Ag6D8RGQnjw",
+        "total": 391.86,
+        "no_audio": 160.26,
+        "portion": 0.409
+    },
+    {
+        "video_id": "jhAklPzn0XQ",
+        "total": 449.724,
+        "no_audio": 184.424,
+        "portion": 0.41
+    },
+    {
+        "video_id": "sM81wJ7GDrI",
+        "total": 493.796,
+        "no_audio": 203.696,
+        "portion": 0.413
+    },
+    {
+        "video_id": "GFd7kLvhc2Q",
+        "total": 437.603,
+        "no_audio": 181.703,
+        "portion": 0.415
+    },
+    {
+        "video_id": "eDG1c6a6uqc",
+        "total": 351.736,
+        "no_audio": 147.836,
+        "portion": 0.42
+    },
+    {
+        "video_id": "QP6eCND84w0",
+        "total": 852.637,
+        "no_audio": 360.537,
+        "portion": 0.423
+    },
+    {
+        "video_id": "s4coMAU80U4",
+        "total": 409.507,
+        "no_audio": 173.407,
+        "portion": 0.423
+    },
+    {
+        "video_id": "CdZQF4DDAxM",
+        "total": 519.105,
+        "no_audio": 221.205,
+        "portion": 0.426
+    },
+    {
+        "video_id": "yJ7VzfG2ONo",
+        "total": 327.773,
+        "no_audio": 140.873,
+        "portion": 0.43
+    },
+    {
+        "video_id": "HCi5TT5JNCU",
+        "total": 445.684,
+        "no_audio": 201.084,
+        "portion": 0.451
+    },
+    {
+        "video_id": "OcjCNqfRgP0",
+        "total": 392.278,
+        "no_audio": 182.478,
+        "portion": 0.465
+    },
+    {
+        "video_id": "1dALzTPQWJg",
+        "total": 412.294,
+        "no_audio": 191.594,
+        "portion": 0.465
+    },
+    {
+        "video_id": "2xXPSfQBP-w",
+        "total": 544.879,
+        "no_audio": 265.879,
+        "portion": 0.488
+    },
+    {
+        "video_id": "2Xyfgwj92v0",
+        "total": 889.556,
+        "no_audio": 437.256,
+        "portion": 0.492
+    },
+    {
+        "video_id": "bwxvH99sLqw",
+        "total": 386.101,
+        "no_audio": 190.501,
+        "portion": 0.493
+    },
+    {
+        "video_id": "om0a083q2Jo",
+        "total": 403.516,
+        "no_audio": 209.116,
+        "portion": 0.518
+    },
+    {
+        "video_id": "xgy-swzccho",
+        "total": 374.166,
+        "no_audio": 198.666,
+        "portion": 0.531
+    },
+    {
+        "video_id": "CxdRXDN1fkA",
+        "total": 331.813,
+        "no_audio": 182.913,
+        "portion": 0.551
+    },
+    {
+        "video_id": "brUJ0h5GqrU",
+        "total": 666.18,
+        "no_audio": 370.88,
+        "portion": 0.557
+    },
+    {
+        "video_id": "lLhaKBvgyNQ",
+        "total": 450.653,
+        "no_audio": 258.253,
+        "portion": 0.573
+    },
+    {
+        "video_id": "5PdAtcoWWeM",
+        "total": 390.653,
+        "no_audio": 244.153,
+        "portion": 0.625
+    },
+    {
+        "video_id": "RhB72g8K2Aw",
+        "total": 571.304,
+        "no_audio": 379.404,
+        "portion": 0.664
+    }
+]
