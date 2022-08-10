@@ -38,4 +38,4 @@ for filename in os.listdir(ROOT_DIR):
             frames = [df_default, df]
             df_default = pd.concat(frames, ignore_index=True)
 print(df_default)
-df_default.to_csv("label_data", encoding='utf-8', index=False)
+df_default.to_csv("label_data.csv", encoding='utf-8', index=False)
