@@ -1,3 +1,4 @@
+from analysis.create_dataset import ROOT_DIR
 from sklearn.metrics import cohen_kappa_score
 import csv
 import os
@@ -13,14 +14,15 @@ def transform_step(code):
     return code
 
 
+ROOT_DIR = "./data/csv"
 taxonomy = {"goal": 0, "motivation": 1, "briefing": 2, "reflection": 3, "subgoal": 4, "instruction": 5, "tool": 6, "description": 7, "effect": 8,
             "justification": 9, "background info": 10, "tip": 11, "greeting": 12, "outro": 13, "side note": 14, "transition": 15, "filler": 16, "outcome": 17, "": 18}
 total_score = 0
 file_count = 0
-for filename in os.listdir("./data"):
+for filename in os.listdir(ROOT_DIR):
     first_coder = []
     second_coder = []
-    with open(os.path.join("./data", filename), 'r') as csv_file:
+    with open(os.path.join(ROOT_DIR, filename), 'r') as csv_file:
         if not "csv" in filename:
             continue
         csv_reader = csv.reader(csv_file, delimiter=',')
