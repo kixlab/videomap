@@ -1,4 +1,3 @@
-from analysis.create_dataset import ROOT_DIR
 from sklearn.metrics import cohen_kappa_score
 import csv
 import os
