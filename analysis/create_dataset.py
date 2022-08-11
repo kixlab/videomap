@@ -13,7 +13,7 @@ label_set = ["goal", "motivation", "briefing", "reflection", "subgoal", "instruc
              "early instruction", "late instruction",
              "subgoal (optional)", "instruction (optional)", "instruction (multiple)", "early instruction (optional)", "early instruction (multiple)", "late instruction (optional)", "late instruction (multiple)", "tool (optional), tool (multiple)"]
 ROOT_DIR = "./data/xls"
-column_names = ['Script', 'Final']
+column_names = ['Video ID', 'Category', 'Script', 'Final']
 df_default = pd.DataFrame(columns=column_names)
 for filename in os.listdir(ROOT_DIR):
     xls = pd.ExcelFile(os.path.join(ROOT_DIR, filename))
@@ -35,7 +35,12 @@ for filename in os.listdir(ROOT_DIR):
                     print(
                         f"{filename} - {vid} has an incorrect label: {label.strip()} ")
             # merge into one dataframe
+            df_meta = pd.DataFrame(index=range(len(df.index)), columns=[
+                                   'Video ID', 'Category'])
+            df_meta['Video ID'] = vid
+            df_meta['Category'] = filename
+            df = pd.concat([df_meta, df], axis=1)
             frames = [df_default, df]
             df_default = pd.concat(frames, ignore_index=True)
-print(df_default)
+# print(df_default)
 df_default.to_csv("label_data.csv", encoding='utf-8', index=False)
