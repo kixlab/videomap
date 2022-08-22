@@ -6,6 +6,8 @@ import os
 def transform_step(code):
     if "instruction" in code:
         return "instruction"
+    elif "tool specification" in code:
+        return code
     elif "tool" in code:
         return "tool"
     elif "subgoal" in code:
@@ -14,8 +16,11 @@ def transform_step(code):
 
 
 ROOT_DIR = "./data/csv"
-taxonomy = {"goal": 0, "motivation": 1, "briefing": 2, "reflection": 3, "subgoal": 4, "instruction": 5, "tool": 6, "description": 7, "effect": 8,
-            "justification": 9, "background info": 10, "tip": 11, "greeting": 12, "outro": 13, "side note": 14, "transition": 15, "filler": 16, "outcome": 17, "": 18}
+# taxonomy_old = {"goal": 0, "motivation": 1, "briefing": 2, "opening": 3, "subgoal": 4, "instruction": 5, "tool": 6, "warning": 7, "effect": 8,
+# "justification": 9, "tip": 10, "status": 11, "context": 12, "external resource": 13, "side note": 14, "self-promo": 15, "filler": 16, "bridge": 17, "closing": 18, "outcome": 19, "reflection": 20, "": 21}
+
+taxonomy = {"goal": 0, "motivation": 1, "briefing": 2, "opening": 3, "subgoal": 4, "instruction": 5, "tool": 6, "warning": 7, "effect": 8,
+            "justification": 9, "tip": 10, "status": 11, "context": 12, "tool specification": 13, "side note": 14, "self-promo": 15, "filler": 16, "bridge": 17, "closing": 18, "outcome": 19, "reflection": 20, "": 21}
 total_score = 0
 file_count = 0
 for filename in os.listdir(ROOT_DIR):
