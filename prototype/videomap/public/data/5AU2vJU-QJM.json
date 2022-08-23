@@ -1,0 +1,590 @@
+[
+    {
+        "Start": 6.4,
+        "End": 7.51,
+        "Script": "i'm sick",
+        "Final": "side note"
+    },
+    {
+        "Start": 7.76,
+        "End": 9.53,
+        "Script": "hey guys my name is courtney budzyn",
+        "Final": "greeting"
+    },
+    {
+        "Start": 9.54,
+        "End": 13.25,
+        "Script": "if you are new here and this is what's for din you haven't noticed",
+        "Final": "greeting"
+    },
+    {
+        "Start": 13.38,
+        "End": 14.73,
+        "Script": "i'm a little under the weather",
+        "Final": "side note"
+    },
+    {
+        "Start": 14.8,
+        "End": 18.77,
+        "Script": "it is that time of year when everyone's got the sniffles the coffee magdoff fees",
+        "Final": "motivation"
+    },
+    {
+        "Start": 18.78,
+        "End": 20.83,
+        "Script": "and the gurgle mix hurdles in their belly",
+        "Final": "motivation"
+    },
+    {
+        "Start": 23.65,
+        "End": 28.34,
+        "Script": "and when that happens to me the first thing i do is i make a giant pot of soup",
+        "Final": "motivation"
+    },
+    {
+        "Start": 28.35,
+        "End": 32.52,
+        "Script": "so today i'm gonna be showing you guys how to make a delicious creamy potato broccoli",
+        "Final": "goal"
+    },
+    {
+        "Start": 32.53,
+        "End": 35.02,
+        "Script": "and cheddar soup that is too die for",
+        "Final": "goal"
+    },
+    {
+        "Start": 35.03,
+        "End": 37.68,
+        "Script": "it is so creamy it is so delicious",
+        "Final": "briefing"
+    },
+    {
+        "Start": 37.69,
+        "End": 42.78,
+        "Script": "and it's not overly heavy but it still packs a really good you know punch of flavor",
+        "Final": "briefing"
+    },
+    {
+        "Start": 43.29,
+        "End": 46.06,
+        "Script": "so without further ado let's get started right",
+        "Final": "transition"
+    },
+    {
+        "Start": 46.07,
+        "End": 49.06,
+        "Script": "so first things first we are going to chop up our broccoli",
+        "Final": "instruction"
+    },
+    {
+        "Start": 49.07,
+        "End": 59.98,
+        "Script": "so basically all i do is just glide a knife over the stems of the broccoli and i make sure that i don't cut off too much of the stem because i like to use a little bit of the stem if there is a really thick stem",
+        "Final": "instruction"
+    },
+    {
+        "Start": 59.99,
+        "End": 61.6,
+        "Script": "how many times are we going to say stem",
+        "Final": "side note"
+    },
+    {
+        "Start": 61.93,
+        "End": 66.76,
+        "Script": "if there's a thick piece of stem i like to just chop that up and add that to the pot as well",
+        "Final": "instruction"
+    },
+    {
+        "Start": 66.89,
+        "End": 68.74,
+        "Script": "so what we're going to do is blanch this",
+        "Final": "subgoal"
+    },
+    {
+        "Start": 68.75,
+        "End": 73.02,
+        "Script": "so i have a pot of boiling hot water and i'm going to add a little bit of salt",
+        "Final": "instruction"
+    },
+    {
+        "Start": 73.06,
+        "End": 75.2,
+        "Script": "and then we're going to go ahead and add in our broccoli",
+        "Final": "instruction"
+    },
+    {
+        "Start": 75.21,
+        "End": 80.44,
+        "Script": "now blanching provides an amazing color as well as cooking it really really quickly",
+        "Final": "justification"
+    },
+    {
+        "Start": 80.49,
+        "End": 83.56,
+        "Script": "so i'm only going to cook this for about three minutes",
+        "Final": "instruction"
+    },
+    {
+        "Start": 83.64,
+        "End": 84.89,
+        "Script": "i don't want to overcook it",
+        "Final": "justification"
+    },
+    {
+        "Start": 84.9,
+        "End": 87.15,
+        "Script": "i do not like mushy broccoli soup",
+        "Final": "justification"
+    },
+    {
+        "Start": 87.16,
+        "End": 89.25,
+        "Script": "i just don't find that to be appealing at all",
+        "Final": "justification"
+    },
+    {
+        "Start": 89.32,
+        "End": 92.05,
+        "Script": "so after the three minutes i go ahead and take a slotted spoon",
+        "Final": "instruction"
+    },
+    {
+        "Start": 92.06,
+        "End": 95.25,
+        "Script": "and then i put the broccoli into a bowl full of ice water",
+        "Final": "instruction"
+    },
+    {
+        "Start": 95.3,
+        "End": 97.15,
+        "Script": "that way it stops the cooking process",
+        "Final": "effect"
+    },
+    {
+        "Start": 97.22,
+        "End": 103.19,
+        "Script": "and before you drain the liquid out of your pot you want to make sure you reserve a little bit of that broccoli juice",
+        "Final": "instruction"
+    },
+    {
+        "Start": 103.2,
+        "End": 106.61,
+        "Script": "if that's what you wanna call it because it has flavor in that",
+        "Final": "justification"
+    },
+    {
+        "Start": 106.62,
+        "End": 108.35,
+        "Script": "it's like a stack of broccoli stack",
+        "Final": "description"
+    },
+    {
+        "Start": 108.42,
+        "End": 111.31,
+        "Script": "so i went ahead and drained my pot and dried it out",
+        "Final": "late instruction"
+    },
+    {
+        "Start": 111.38,
+        "End": 115.38,
+        "Script": "and to that i'm going to add a slab of butter over medium the heat to that",
+        "Final": "instruction"
+    },
+    {
+        "Start": 115.39,
+        "End": 120.1,
+        "Script": "we're going to add some chopped up onion and season that with salt and pepper",
+        "Final": "instruction"
+    },
+    {
+        "Start": 120.15,
+        "End": 125.35,
+        "Script": "give that a good stir and we want to cook this for about three to four minutes until they start to soften",
+        "Final": "instruction"
+    },
+    {
+        "Start": 125.83,
+        "End": 130.34,
+        "Script": "next we're going to add some chopped up garlic of course and some seasonings",
+        "Final": "instruction"
+    },
+    {
+        "Start": 130.35,
+        "End": 135.28,
+        "Script": "i'm using italian seasoning and cayenne pepper my two favorite things in the entire universe",
+        "Final": "tool"
+    },
+    {
+        "Start": 135.45,
+        "End": 141.84,
+        "Script": "it's really nice to add seasonings at this point because it really helps to bring out the flavor when you add it when you're sauteing",
+        "Final": "justification"
+    },
+    {
+        "Start": 141.89,
+        "End": 145.93,
+        "Script": "now i only cook that for a minute and then i'm going to dad are thickening agent",
+        "Final": "instruction"
+    },
+    {
+        "Start": 145.94,
+        "End": 148.89,
+        "Script": "now i'm using flour so we're making a room here",
+        "Final": "instruction"
+    },
+    {
+        "Start": 148.94,
+        "End": 157.49,
+        "Script": "add your flour and then continue stirring so that you can incorporate all the flour in with the liquid and you wanna keep stirring so that it doesn't burn to the bottom",
+        "Final": "instruction"
+    },
+    {
+        "Start": 157.53,
+        "End": 162.93,
+        "Script": "cook it for about two minutes to cook out the raw flour taste and then we can start adding our liquids",
+        "Final": "instruction"
+    },
+    {
+        "Start": 162.94,
+        "End": 168.93,
+        "Script": "so i'm adding my chicken stock and then i have my whisk ready and just going to go ahead and whisk that in",
+        "Final": "instruction"
+    },
+    {
+        "Start": 169,
+        "End": 173.53,
+        "Script": "making sure to get all the clumps out and then i can slowly start adding in my milk",
+        "Final": "instruction"
+    },
+    {
+        "Start": 173.6,
+        "End": 177.34,
+        "Script": "now you can use cream you can use half and half whatever floats your boat",
+        "Final": "tool"
+    },
+    {
+        "Start": 177.41,
+        "End": 182.23,
+        "Script": "and also don't forget to add your broccoli water so we're going to season once again with salt and pepper",
+        "Final": "instruction"
+    },
+    {
+        "Start": 182.27,
+        "End": 186.54,
+        "Script": "make sure everything's nice and incorporated and then you can add your chopped up potatoes",
+        "Final": "instruction"
+    },
+    {
+        "Start": 186.69,
+        "End": 188.8,
+        "Script": "now i just went ahead and cubed my potatoes",
+        "Final": "late instruction"
+    },
+    {
+        "Start": 188.81,
+        "End": 189.68,
+        "Script": "these are not cooked",
+        "Final": "description"
+    },
+    {
+        "Start": 189.69,
+        "End": 193.18,
+        "Script": "we're going to cook these in the soup as it brings up to a boil",
+        "Final": "description"
+    },
+    {
+        "Start": 193.27,
+        "End": 200.54,
+        "Script": "that way you're not overcooking your potatoes because all of your liquids in here are cold and so everything's going to come up to temperature at the same time",
+        "Final": "justification"
+    },
+    {
+        "Start": 200.55,
+        "End": 202.68,
+        "Script": "so you're not going to have water logged potatoes",
+        "Final": "justification"
+    },
+    {
+        "Start": 203.05,
+        "End": 207.33,
+        "Script": "now you want to cook your potatoes for about five to six minutes",
+        "Final": "instruction"
+    },
+    {
+        "Start": 207.43,
+        "End": 210.2,
+        "Script": "we want them to be almost fork tender",
+        "Final": "description"
+    },
+    {
+        "Start": 210.24,
+        "End": 213.82,
+        "Script": "you want to be able to pierce it but you don't want them to be all the way done",
+        "Final": "description"
+    },
+    {
+        "Start": 213.93,
+        "End": 217,
+        "Script": "if you do cook them too much then it'll just make the soup thicker",
+        "Final": "justification"
+    },
+    {
+        "Start": 217.01,
+        "End": 221.94,
+        "Script": "it's not really a big deal so once it's to that point i'm going to add a little bit of cream cheese",
+        "Final": "instruction"
+    },
+    {
+        "Start": 221.95,
+        "End": 225.18,
+        "Script": "yes i know it's a little bit decadent but man is it so good",
+        "Final": "side note"
+    },
+    {
+        "Start": 225.25,
+        "End": 226.28,
+        "Script": "trust me on this",
+        "Final": "side note"
+    },
+    {
+        "Start": 226.79,
+        "End": 229.06,
+        "Script": "and of course i'm going to add some cheddar cheese",
+        "Final": "instruction"
+    },
+    {
+        "Start": 229.07,
+        "End": 230.86,
+        "Script": "now i know it's the orange cheddar",
+        "Final": "side note"
+    },
+    {
+        "Start": 230.87,
+        "End": 231.62,
+        "Script": "cheese",
+        "Final": "side note"
+    },
+    {
+        "Start": 231.67,
+        "End": 234.56,
+        "Script": "they didn't have white cheddar at the grocery store for some reason",
+        "Final": "side note"
+    },
+    {
+        "Start": 234.57,
+        "End": 238.52,
+        "Script": "i don't know what their deal is but it's going to be orange cheddar today",
+        "Final": "side note"
+    },
+    {
+        "Start": 238.59,
+        "End": 242.31,
+        "Script": "give that all a good stir and that will slowly start to melt together",
+        "Final": "instruction"
+    },
+    {
+        "Start": 242.35,
+        "End": 244.26,
+        "Script": "now you can go ahead and add your broccoli",
+        "Final": "instruction"
+    },
+    {
+        "Start": 244.33,
+        "End": 248.08,
+        "Script": "now this step is really dependent on what you like",
+        "Final": "instruction"
+    },
+    {
+        "Start": 248.13,
+        "End": 252.9,
+        "Script": "i personally like broccoli soup that has a little bit of crunchiness left to the broccoli",
+        "Final": "instruction"
+    },
+    {
+        "Start": 252.95,
+        "End": 257.18,
+        "Script": "i don't like the broccoli to be mushy so you can cook it as long as you want",
+        "Final": "instruction"
+    },
+    {
+        "Start": 257.19,
+        "End": 262.98,
+        "Script": "it's totally up to you but i like to cook it for maybe another five to eight minutes and it",
+        "Final": "instruction"
+    },
+    {
+        "Start": 262.99,
+        "End": 263.25,
+        "Script": "taste",
+        "Final": "instruction"
+    },
+    {
+        "Start": 263.26,
+        "End": 263.62,
+        "Script": "test it",
+        "Final": "instruction"
+    },
+    {
+        "Start": 263.63,
+        "End": 267.22,
+        "Script": "if it's where i want it then you're ready to serve and that is it",
+        "Final": "outcome"
+    },
+    {
+        "Start": 267.23,
+        "End": 273.77,
+        "Script": "you have a delicious creamy cheddar potato and broccoli soup that is perfect for the flu season",
+        "Final": "outcome"
+    },
+    {
+        "Start": 274,
+        "End": 285.61,
+        "Script": "yeah yeah now i'm not going to lie my throat is so sore it feels like there's a thousand people doing rug burn all over my throat and i just want to take the whole pot and just dump it down my throat",
+        "Final": "side note"
+    },
+    {
+        "Start": 285.86,
+        "End": 289.47,
+        "Script": "so without further ado we're going in for the taste test",
+        "Final": "transition"
+    },
+    {
+        "Start": 290.3,
+        "End": 292.13,
+        "Script": "wow holy cannoli",
+        "Final": "side note"
+    },
+    {
+        "Start": 292.14,
+        "End": 292.71,
+        "Script": "pants",
+        "Final": "side note"
+    },
+    {
+        "Start": 292.78,
+        "End": 297.95,
+        "Script": "i don't know what that means but it tastes real good has a ton of flavor it's not too heavy",
+        "Final": "outcome"
+    },
+    {
+        "Start": 297.96,
+        "End": 302.15,
+        "Script": "it feels so yeah but on my throat",
+        "Final": "outcome"
+    },
+    {
+        "Start": 302.16,
+        "End": 302.7,
+        "Script": "like",
+        "Final": "outcome"
+    },
+    {
+        "Start": 302.76,
+        "End": 305.33,
+        "Script": "i can't even explain how good it feels on my throat",
+        "Final": "outcome"
+    },
+    {
+        "Start": 305.34,
+        "End": 310.39,
+        "Script": "so with that being said i'm going to shut up now so i can finish my soup and maybe my nose will drain",
+        "Final": "side note"
+    },
+    {
+        "Start": 310.4,
+        "End": 315.29,
+        "Script": "and i won't sound like a hat a goose anymore because i hate when i'm plugged up",
+        "Final": "side note"
+    },
+    {
+        "Start": 315.3,
+        "End": 317.41,
+        "Script": "i don't know why it sound like a full on goose",
+        "Final": "side note"
+    },
+    {
+        "Start": 317.42,
+        "End": 318.6,
+        "Script": "like just want",
+        "Final": "side note"
+    },
+    {
+        "Start": 319.46,
+        "End": 322,
+        "Script": "it's really really not a good look for me",
+        "Final": "side note"
+    },
+    {
+        "Start": 322.04,
+        "End": 325.42,
+        "Script": "so if you do want to recreate this recipe just look below in the description box",
+        "Final": "outro"
+    },
+    {
+        "Start": 325.43,
+        "End": 328.01,
+        "Script": "i'll leave all the measurements as well as written instructions",
+        "Final": "outro"
+    },
+    {
+        "Start": 328.08,
+        "End": 331.6,
+        "Script": "and if you did like this video don't forget to smack that like one",
+        "Final": "outro"
+    },
+    {
+        "Start": 331.61,
+        "End": 336.03,
+        "Script": "and also if you're not subscribed already please don't forget to subscribe and hit the little bell notification",
+        "Final": "outro"
+    },
+    {
+        "Start": 336.04,
+        "End": 338.82,
+        "Script": "that way you get notified every single time i upload a video",
+        "Final": "outro"
+    },
+    {
+        "Start": 338.83,
+        "End": 339.45,
+        "Script": "you know the deal",
+        "Final": "outro"
+    },
+    {
+        "Start": 339.46,
+        "End": 340.82,
+        "Script": "i'd say this every single time",
+        "Final": "outro"
+    },
+    {
+        "Start": 340.83,
+        "End": 342.32,
+        "Script": "whatever but blames it",
+        "Final": "outro"
+    },
+    {
+        "Start": 342.39,
+        "End": 343.2,
+        "Script": "just do it",
+        "Final": "outro"
+    },
+    {
+        "Start": 345.15,
+        "End": 346.12,
+        "Script": "do it",
+        "Final": "outro"
+    },
+    {
+        "Start": 346.43,
+        "End": 350.12,
+        "Script": "so as always thank you guys so much for hanging out with me and we'll see you next time",
+        "Final": "outro"
+    },
+    {
+        "Start": 350.17,
+        "End": 352.89,
+        "Script": "boost k",
+        "Final": "outro"
+    }
+]
