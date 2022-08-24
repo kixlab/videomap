@@ -26,7 +26,8 @@ import operator
 
 # vids_total = vids_annotation + vids_creation
 
-new_vids = ['YmHGiLGINV4', 'u00iLnvVgFc', 'cvZMHEu_Ojk', '1oiCLxngvBo', 'mmGVeV-BvhU']
+# new_vids = ['YmHGiLGINV4', 'u00iLnvVgFc', 'cvZMHEu_Ojk', '1oiCLxngvBo', 'mmGVeV-BvhU']
+new_vids = ['T5MbMuoNQ1k', 'ynmdOz_D1R4']
 
 def video_duration (path):
     audio = AudioSegment.from_file(path)
@@ -110,6 +111,6 @@ if __name__ == "__main__":
         print (len(sorted_distribution_list))
 
 
-        output_file = './new_selected_portion_analysis_include(0816).json'
+        output_file = './new_selected_portion_analysis_include(0823).json'
         with open (output_file, "w") as json_file:
             json.dump (sorted_distribution_list, json_file)

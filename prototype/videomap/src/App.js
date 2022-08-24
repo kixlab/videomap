@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
+import db from "./service/firebase";
+import { doc, addDoc, collection } from "firebase/firestore";
 import YouTube from 'react-youtube';
 import './App.css';
 
@@ -28,11 +30,19 @@ function App() {
         setSelectedIndex (0);
         setScriptLoaded (true);
       });
-  }
+  };
 
   useEffect(()=>{
-    getData()
-  }, [videoId])
+    getData();
+  }, [videoId]);
+
+  const writeData = () => {
+    // const logRef = collection(db, 'Log');
+    // return addDoc(logRef, {
+    //         aa: [{ name: 'aa' }]
+    //     });
+};
+
 
   const onKeyPress = (e) => {
     console.log (e.keyCode)
@@ -73,6 +83,7 @@ function App() {
       }
     };
   }, [video, videoTime, scriptLoaded, selectedIndex]);
+
 
   // video related
   const onGetCurrentTime = useCallback(() => {
