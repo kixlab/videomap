@@ -4,8 +4,18 @@ import { FormControl, FormLabel, FormControlLabel, Radio,  RadioGroup } from "@m
 import './Script.css';
 
 
-function SentenceBox ({item}) {
+function SentenceBox ({item, typeLevel}) {
     const styles = {
+        // high type
+        'greeting': {background: 'yellow'},
+        'overview': {background: 'green '},
+        'step': {background: 'purple'},
+        'supplementary': {background: 'white'},
+        'explanation': {background: 'lightblue'},
+        'description': {background: 'yellow'},
+        'conclusion': {background: 'blue'},
+        'misc.': {background: 'lightcyan'},
+        // low type
         'opening': {background: 'rgb(249, 235, 188)'},
         'goal': {background: 'yellow'},
         'motivation': {background: 'grey'},
@@ -32,7 +42,9 @@ function SentenceBox ({item}) {
     return (
         <div className="sentence_box">
             <div className="type_box">
-                <span className="type" style={styles[item.Final]}>{item.Final}</span>
+                <span className="type" style={typeLevel == 'low' ? styles[item.Low_type] : styles[item.High_type]}>
+                    {typeLevel == 'low' ? item.Low_type : item.High_type}
+                </span>
             </div>
             <span className="text">{item.Script}</span>
         </div>
@@ -56,9 +68,9 @@ function Script({
         video.seekTo (script[index].Start);
     };
 
-    const handleButtonClick = (value) => {
-        setTypeLevel (value);
-    }
+    const handleRadioClick = (event) => {
+        setTypeLevel(event.target.value);
+      };
 
     return(
         <div className="script_wrapper">
@@ -68,6 +80,8 @@ function Script({
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"
                     name="row-radio-buttons-group"
+                    defaultValue={"low"}
+                    onChange={handleRadioClick}
                 >
                     <FormControlLabel value="high" control={<Radio />} label="HIGH" />
                     <FormControlLabel value="low" control={<Radio />} label="LOW" />
@@ -77,7 +91,7 @@ function Script({
                 {script &&
                     script.map ((item, ind) => (
                     <div key={ind} className={selectedIndex == ind ? "selected" : "default"} onClick={() => handleSentenceClick(ind)}>
-                        <SentenceBox item={item} />
+                        <SentenceBox item={item} typeLevel = {typeLevel} />
                     </div>))
                 }
             </div>

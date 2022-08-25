@@ -58,7 +58,8 @@ save_root = './transcript/'
 # vids_creation_2 = ['yJ7VzfG2ONo', 'JNznnqX6SsE', 'dKUomyn1TYQ', 'A_qivvTkijw', 'S0luUzNRtq0', 'eyD2iwXOeFM', 'Cvv1wiqKMHc', 'EnjZHOb6qNE', 'r6JmI35r5E8', 'ta5IB2wy6ic', 'rqBiByEbMHc', '2YGEDsl7PO8']
 # vids_creation_3 = ['tb1L7Rsm1U8', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '8DgsLNa3ums', 'N3c81EPZ51Q', 'e3StC_4qemI', 'Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'XFYHIg8U--4', 'm0H56KpKLHA', '1dALzTPQWJg']
 
-new_vids = ['YmHGiLGINV4', 'u00iLnvVgFc', 'cvZMHEu_Ojk', '1oiCLxngvBo', 'mmGVeV-BvhU']
+# new_vids = ['YmHGiLGINV4', 'u00iLnvVgFc', 'cvZMHEu_Ojk', '1oiCLxngvBo', 'mmGVeV-BvhU']
+
 # download video from youtube
 def download_mp3(fp, vid):
     try:
@@ -204,7 +205,10 @@ if __name__ == "__main__":
 
     #                 recognize_from_file (vid, audio_category_dir, save_category_dir)
 
-    # audio_path = '/Users/sangkyung/Desktop/Starlab/videomap/STT/audio/New'
+
+    new_vids = ['T5MbMuoNQ1k', 'ynmdOz_D1R4']
+    # audio_path = '/Users/sangkyung/Desktop/Starlab/videomap/STT/audio/Hobbies and Crafts'
+
     # for vid in new_vids:
     #     fp = audio_path + '/' + vid + '.mp3'
     #     download_mp3 (audio_path, vid)
