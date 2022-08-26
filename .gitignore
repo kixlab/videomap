@@ -6,3 +6,5 @@
 /STT/azure/bert-restore-punctuation
 /STT/azure/transcript
 /STT/azure/final
+/postprocess/data/transcript/
+/postprocess/data/processed/
