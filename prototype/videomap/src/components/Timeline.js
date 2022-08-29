@@ -3,10 +3,10 @@ import { Tooltip } from "@material-ui/core";
 
 import './Timeline.css';
 
-function LabelBox ({item, colorPalette}) {
+function LabelBox ({item, colorPalette, duration}) {
 
     const calWidth = (start, end) => {
-        var width = (end-start)/439*850;
+        var width = (end-start)/duration*850;
         return width;
     } 
 
@@ -57,7 +57,7 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
             {script &&
                 script.map ((item, ind) => (
                 <div key={ind}>
-                    <LabelBox item={item} colorPalette={colorPalette} />
+                    <LabelBox item={item} colorPalette={colorPalette} duration={duration} />
                 </div>))
             } 
             </div>
