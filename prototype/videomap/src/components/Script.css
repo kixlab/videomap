@@ -40,6 +40,13 @@
   font-size: 15px;
 }
 
+.time {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50px;
+}
+
 .text {
   display: flex;
   justify-content: flex-start;

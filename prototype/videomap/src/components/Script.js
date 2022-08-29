@@ -50,6 +50,19 @@ function SentenceBox ({item, typeLevel}) {
         'filler': {background: 'lightgray'}
     }
 
+    const transTime = (timestamp) => {
+        var seconds = parseFloat(timestamp)
+        var minute = Math.floor(seconds / 60);
+        var second = Math.floor(seconds - minute * 60);
+        // if (minute < 10){
+        //     minute = "0"+minute
+        // }
+        if (second < 10){
+            second = "0"+second
+        }
+        return "(" + minute + ":" + second + ")"
+    }
+
     return (
         <div className="sentence_box">
             <div className="type_box">
@@ -57,6 +70,7 @@ function SentenceBox ({item, typeLevel}) {
                     {typeLevel == 'low' ? item.Low_type : item.High_type}
                 </div>
             </div>
+            <div className="time">{transTime(item.Start)}</div>
             <div className="text">{item.Script}</div>
         </div>
     )
