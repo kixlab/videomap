@@ -50,9 +50,9 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
 
     return(
         <div className="timeline_wrapper">
-            {/* <Tooltip title={posToTime (position)} placement="top"> */}
+            <Tooltip title={posToTime (position)} placement="top">
                 <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/>
-            {/* </Tooltip> */}
+            </Tooltip>
             <div className="label_timeline">
             {script &&
                 script.map ((item, ind) => (
