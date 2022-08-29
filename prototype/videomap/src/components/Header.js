@@ -1,32 +1,83 @@
 import React, { useState } from "react"
-import { TextField, Button } from "@material-ui/core";
+import { Box, FormControl, InputLabel, Select, MenuItem, TextField, Button } from "@material-ui/core";
+import { KeyboardArrowDown, KeyboardArrowUp } from "@material-ui/icons"
 
 import './Header.css';
 
-function Header({videoId, setVideoId}){
+function Header({videoId, setVideoId, userId, setUserId, taskId, setTaskId}){
     const [inputVideoId, setInputVideoId] = useState(videoId);
+    const [inputUserId, setInputUserId] = useState(userId);
+    const [inputTaskId, setInputTaskId] = useState(taskId);
 
-    const handleInputChange = event => {
+    const [showInput, setShowInput] = useState (true);
+
+    const handleInputVideoIdChange = event => {
         setInputVideoId(event.target.value);
     };
 
-    const clickChangeButton = () => {
+    const handleInputUserIdChange = event => {
+        setInputUserId(event.target.value);
+    };
+
+    const handleInputTaskIdChange = event => {
+        setInputTaskId(event.target.value);
+    };
+
+    const clickVideoIdChangeButton = () => {
         setVideoId(inputVideoId);
+    };
+
+    const clickSubmitButton = () => {
+        if (inputUserId === "" || inputTaskId === "") return;
+        setUserId (inputUserId);
+        setTaskId (inputTaskId);
+        clickShowHide();
+    };
+
+    const clickShowHide = () => {
+        setShowInput (!showInput);
     }
 
     return(
         <div className="header_wrapper">
-            <h1>VIDEO MAP</h1>
-            <TextField 
-                InputLabelProps={{ shrink: true }}
-                id="outlined-basic" 
-                label="VIDEO ID" 
-                variant="outlined" 
-                size="small"
-                value={inputVideoId}
-                onChange={handleInputChange}
-            />
-            <Button variant="contained" onClick={clickChangeButton} style={{marginLeft: "5px"}}>Submit</Button>
+            <h3>VIDEO MAP</h3>
+            <div>
+                <TextField 
+                    InputLabelProps={{ shrink: true }}
+                    id="outlined-basic" 
+                    label="VIDEO ID" 
+                    variant="outlined" 
+                    size="small"
+                    value={inputVideoId}
+                    onChange={handleInputVideoIdChange}
+                />
+                <Button variant="contained" onClick={clickVideoIdChangeButton} style={{marginLeft: "5px"}}>Change</Button>
+            </div>
+            {showInput &&
+                <div className="bottom_input_wrapper">
+                    <TextField 
+                        InputLabelProps={{ shrink: true }}
+                        id="outlined-basic" 
+                        label="USER ID" 
+                        variant="outlined" 
+                        size="small"
+                        value={inputUserId}
+                        onChange={handleInputUserIdChange}
+                    />
+                    <TextField 
+                        InputLabelProps={{ shrink: true }}
+                        id="outlined-basic" 
+                        label="TASK ID" 
+                        variant="outlined" 
+                        size="small"
+                        value={inputTaskId}
+                        onChange={handleInputTaskIdChange}
+                    />
+                    <Button variant="contained" onClick={clickSubmitButton} style={{marginLeft: "5px"}}>Submit</Button>
+                </div>
+            }
+            {showInput ? <KeyboardArrowUp onClick={clickShowHide} /> : <KeyboardArrowDown onClick={clickShowHide} />}
+
         </div>
     )
 }

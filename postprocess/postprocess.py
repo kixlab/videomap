@@ -1,5 +1,6 @@
 import os
 import json
+from pydub import AudioSegment
 from re import L
 import gspread
 from gspread.cell import Cell
@@ -7,6 +8,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 ROOT_DIR = './data/transcript/'
 SAVE_DIR = './data/processed/'
+AUDIO_DIR = './data/audio/'
 
 type_hierarchy = {
     "greeting": ["opening", "closing"],
@@ -162,15 +164,26 @@ def match_script_ts (ws_dict, ts):
 def write_json (fp, script):
     with open(fp, "w") as json_file:
         json.dump(script, json_file)
+        
 
+def video_duration (path):
+    audio = AudioSegment.from_file(path)
+    audio.duration_seconds == (len(audio) / 1000.0)
+    return audio.duration_seconds
 
-def simplify_script (script):
-    for line in script:
+def simplify_script (script, duration):
+    for i, line in enumerate (script):
         low_label = line['low_label'].strip()
         if '(' in low_label:
             line['low_label'] = low_label.split ('(')[0].strip()
         elif 'tool specification' == low_label:
             line['low_label'] = 'tool spec.'
+
+        if (i == len(script)-1):
+            next_start = duration
+        else:
+            next_start = script[i+1]['start'] 
+        line['next_start'] = next_start
 
     return script   
 
@@ -187,6 +200,8 @@ if __name__ == "__main__":
         save_category_dir = SAVE_DIR + category + '/'
         if not os.path.exists (SAVE_DIR + category):
             os.makedirs (SAVE_DIR + category)
+
+        audio_category_dir = AUDIO_DIR + category + '/'
  
         for ws in worksheet_list:
             if (ws.title in vids):
@@ -194,6 +209,7 @@ if __name__ == "__main__":
                 ws_dicts = ws.get_all_records()
 
                 ts_path = category_dir + ws.title + '_ts.json'
+                
                 with open (ts_path, 'r') as t:
                     ts = json.load (t)
                 
@@ -201,7 +217,9 @@ if __name__ == "__main__":
                 processed_script = match_script_ts (ws_dicts, ts_modified)
 
                 # simplified script version for interface
-                simplifed_script = simplify_script (processed_script)
+                audio_path = audio_category_dir + ws.title + '.wav'
+                duration = video_duration (audio_path)
+                simplifed_script = simplify_script (processed_script, duration)
                 
                 save_fp = save_category_dir + ws.title + '.json'
                 simplified_save_fp = save_category_dir + ws.title + '(simplified).json'
