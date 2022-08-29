@@ -37,7 +37,7 @@ function SentenceBox ({item, typeLevel}) {
         //description
         'status': {background: '#A8D0C6'},
         'context': {background: '#A8D0C6'},
-        'tool specification': {background: '#A8D0C6'},
+        'tool spec.': {background: '#A8D0C6'},
         //greeting-outro
         'closing': {background: '#DAF283'},
         //conclusion
@@ -66,12 +66,12 @@ function SentenceBox ({item, typeLevel}) {
     return (
         <div className="sentence_box">
             <div className="type_box">
-                <div className="type" style={typeLevel == 'low' ? styles[item.Low_type] : styles[item.High_type]}>
-                    {typeLevel == 'low' ? item.Low_type : item.High_type}
+                <div className="type" style={typeLevel == 'low' ? styles[item.low_label] : styles[item.high_label]}>
+                    {typeLevel == 'low' ? item.low_label : item.high_label}
                 </div>
             </div>
-            <div className="time">{transTime(item.Start)}</div>
-            <div className="text">{item.Script}</div>
+            <div className="time">{transTime(item.start)}</div>
+            <div className="text">{item.script}</div>
         </div>
     )
 }

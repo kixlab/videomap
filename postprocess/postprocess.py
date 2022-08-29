@@ -5,10 +5,6 @@ import gspread
 from gspread.cell import Cell
 from oauth2client.service_account import ServiceAccountCredentials
 
-# -------------------------------------- #
-# upload stt results for annotating study #
-# -------------------------------------- #
-
 ROOT_DIR = './data/transcript/'
 SAVE_DIR = './data/processed/'
 
@@ -168,6 +164,17 @@ def write_json (fp, script):
         json.dump(script, json_file)
 
 
+def simplify_script (script):
+    for line in script:
+        low_label = line['low_label'].strip()
+        if '(' in low_label:
+            line['low_label'] = low_label.split ('(')[0].strip()
+        elif 'tool specification' == low_label:
+            line['low_label'] = 'tool spec.'
+
+    return script   
+
+
 if __name__ == "__main__":
     for category in annotation_url_list.keys():
         print ('-' * 30)
@@ -192,9 +199,16 @@ if __name__ == "__main__":
                 
                 ts_modified = check_script_ts (ws_dicts, ts)
                 processed_script = match_script_ts (ws_dicts, ts_modified)
+
+                # simplified script version for interface
+                simplifed_script = simplify_script (processed_script)
                 
                 save_fp = save_category_dir + ws.title + '.json'
+                simplified_save_fp = save_category_dir + ws.title + '(simplified).json'
                 write_json (save_fp, processed_script)
+                write_json (simplified_save_fp, simplifed_script)
+
+
 
 
 

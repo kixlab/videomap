@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import db from "./service/firebase";
-import { doc, addDoc, collection } from "firebase/firestore";
+import { ref, set } from "firebase/database";
 import YouTube from 'react-youtube';
 import './App.css';
 
@@ -14,13 +14,21 @@ function App() {
 
   const [scriptLoaded, setScriptLoaded] = useState (false);
 
-  const [videoId, setVideoId] = useState ('mQjCKgEPs8k');
+  const [videoId, setVideoId] = useState ('Eeu5uL6r2rg');
   const [videoTime, setVideoTime] = useState (0);
 
   const [script, setScript] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState (-1);
+
+  // database
+  const logData=(userId, name, email)=>{
+    set(ref(db, '/' + userId), {
+      username: name,
+      email: email,
+    });
+  }
   
-  const getData=()=>{
+  const getScript=()=>{
     fetch(process.env.PUBLIC_URL + `/data/${videoId}.json`)
       .then(function (response){
         return response.json();
@@ -33,7 +41,7 @@ function App() {
   };
 
   useEffect(()=>{
-    getData();
+    getScript();
   }, [videoId]);
 
   const writeData = () => {
