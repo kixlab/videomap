@@ -13,16 +13,22 @@ function App() {
   const [video, setVideo] = useState (null);
   const [started, setStarted] = useState(false);
 
-  const [scriptLoaded, setScriptLoaded] = useState (false);
-
   const [videoId, setVideoId] = useState ('Eeu5uL6r2rg');
   const [videoTime, setVideoTime] = useState (0);
   const [duration, setDuration] = useState (0);
 
+  const [scriptLoaded, setScriptLoaded] = useState (false);
   const [script, setScript] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState (-1);
 
-  // colors
+  // for log
+  // Task Id
+  // 0 for search, 1 for skim and summary, 2 for following
+  const [userId, setUserId] = useState("");
+  const [taskId, setTaskId] = useState("");
+  const [initialTimeInfo, setInitialTimeInfo] = useState (null);
+
+   // colors
   const colorPalette = {
     // high-level type
     'greeting':'yellow',
@@ -70,10 +76,15 @@ function App() {
 }
 
   // database
-  const logData=(userId, name, email)=>{
-    set(ref(db, '/' + userId), {
-      username: name,
-      email: email,
+  const logData=(action, video_ts, user_ts, meta)=>{
+    console.log (videoId, userId, taskId);
+    if (videoId === "" || userId === "" || taskId === "") return;
+
+    set(ref(db, '/Log' + '/' + userId + '/' + videoId + '/' + taskId), {
+      action: action, // pause, play, jump
+      video_timestamp: video_ts,
+      user_timestamp: user_ts, 
+      meta: meta // optional, format: {source: keyboard/click, location: playbar/script}
     });
   }
   
@@ -100,12 +111,12 @@ function App() {
     if (keyCode == 38) {  // up arrow
         if (selectedIndex > 0) {
           ind = selectedIndex-1;
-          handleIndexChange (ind)
+          handleIndexChange (ind);
         } 
       } else if (keyCode == 40) { // down arrow
         if (selectedIndex < script.length-1) {
           ind = selectedIndex+1;
-          handleIndexChange (ind)
+          handleIndexChange (ind);
         }
     } else if (keyCode == 37) {
       vt = videoTime - 5;
@@ -150,6 +161,7 @@ function App() {
   const onPlay = () => {
     if (!started) {
       setStarted(true);
+      setInitialTimeInfo (new Date().getTime());
       const interval = setInterval(() => {
         const time = onGetCurrentTime();
         setVideoTime(time);
@@ -169,7 +181,7 @@ function App() {
   height: '500',
   width: '850',
   playerVars: {
-      autoplay: 1,
+      autoplay: 0,
       },
   };
 
@@ -178,6 +190,10 @@ function App() {
       <Header 
         videoId={videoId}
         setVideoId={setVideoId}
+        userId={userId}
+        setUserId={setUserId}
+        taskId={taskId}
+        setTaskId={setTaskId}
       />
       <div className='body_wrapper'>
         <div className="video_wrapper">
@@ -206,6 +222,8 @@ function App() {
             videoTime={videoTime}
             setVideoTime={setVideoTime}
             colorPalette={colorPalette}
+            logData={logData}
+            initialTimeInfo={initialTimeInfo}
           />
         </div>
       </div>

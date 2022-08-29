@@ -11,7 +11,7 @@ function LabelBox ({item, colorPalette}) {
     } 
 
     return (
-        <div className="label_box" style={{width: calWidth(item.start, item.end), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
+        <div className="label_box" style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { FormControl, FormLabel, FormControlLabel, Radio,  RadioGroup } from "@material-ui/core";
 
 import './Script.css';
@@ -36,19 +36,34 @@ function Script({
     video, 
     videoTime, 
     setVideoTime,
-    colorPalette
+    colorPalette,
+    logData,
+    initialTimeInfo
 }){
+    const itemRef = useRef({});
+    const currentScroll = useRef({ scrollTop: 0, scrollBottom: 300 });
     const [typeLevel, setTypeLevel] = useState ('low');
 
     const handleSentenceClick = (index) => {
         setSelectedIndex (index);
         setVideoTime (script[index].start);
         video.seekTo (script[index].start);
+        const user_ts = new Date().getTime() - initialTimeInfo;
+        const meta = {source: "click", location: "script"};
+        logData ("jump", videoTime, user_ts, meta);
     };
 
-    const handleRadioClick = (event) => {
-        setTypeLevel(event.target.value);
-      };
+    // const handleRadioClick = (event) => {
+    //     setTypeLevel(event.target.value);
+    // };
+
+    // TODO: onscroll on first rendering doesn't work
+    const onScroll = (e) => {
+        currentScroll.current = {
+          scrollTop: e.target.scrollTop,
+          scrollBottom: e.target.scrollTop + 35.5
+        };
+    };
 
     return(
         <div className="script_window">
@@ -65,11 +80,11 @@ function Script({
                     <FormControlLabel value="low" control={<Radio />} label="LOW" />
                 </RadioGroup>
             </FormControl> */}
-            <div className="script_block">
+            <div className="script_block" onScroll={onScroll}>
                 {script &&
                     script.map ((item, ind) => (
                     <div key={ind} className={selectedIndex == ind ? "selected" : "default"} onClick={() => handleSentenceClick(ind)}>
-                        <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette}/>
+                        <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} />
                     </div>))
                 }
             </div>
