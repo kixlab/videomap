@@ -1,48 +1,51 @@
-.script_wrapper {
-    display: inline-block;
-    width: 50%;
-
+.script_window {
+  float: left;
+  max-width: 1000px;
 }
 
 .script_block {
-    background-color: #ededed;
-    max-height: 500px;
-    overflow-y: auto;
-    padding: 10px 0;
+  /* background-color: #ededed; */
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .default {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .selected {
-    background-color: lightgray;
-    cursor: pointer;
+  background-color: rgb(231, 229, 229);
+  cursor: pointer;
 }
 
 .sentence_box {
-    margin: 5px 0;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
 }
 
 .type_box {
-    display: inline-block;
-    width: 100px;
-    text-align: center;
-    margin: 5px 0;
-    vertical-align: top;
+  /* display: inline-block; */
+  width: 100px;
+  text-align: left;
+  margin: 5px 0;
+  vertical-align: top;
 }
 
 .type {
-    width: fit-content; 
-    border-radius: 7px;
-    padding: 3px 2px;
-    float: left;
-    font-size: 15px;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 4px;
+  float: left;
+  font-size: 15px;
 }
 
 .text {
-    display: inline-block;
-    width: 80%;
-    text-align: left;
-    font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* display: inline-block; */
+  width: 80%;
+  text-align: left;
+  font-size: 15px;
 }

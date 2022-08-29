@@ -16,37 +16,48 @@ function SentenceBox ({item, typeLevel}) {
         'conclusion': {background: 'blue'},
         'misc.': {background: 'lightcyan'},
         // low type
-        'opening': {background: 'rgb(249, 235, 188)'},
-        'goal': {background: 'yellow'},
-        'motivation': {background: 'grey'},
-        'briefing': {background: 'grey'},
-        'subgoal': {background: 'green '},
-        'instruction': {background: 'yellow'},
-        'tool': {background: 'blue'},
-        'justification': {background: 'purple'},
-        'effect': {background: 'white'},
-        'warning': {background: 'yellow'},
-        'tip': {background: 'blue'},
-        'status': {background: 'lightblue'},
-        'context': {background: 'lightgreen'},
-        'closing': {background: 'yellow'},
-        'outcome': {background: 'coral'},
-        'reflection': {background: 'lightcoral'},
-        'external resource': {background: 'darkorange'},
-        'side note': {background: 'orange'},
-        'self-promo': {background: 'yellow'},
-        'bridge': {background: 'cyan'},
-        'filler': {background: 'lightcyan'}
+        //greeting
+        'opening': {background: '#DAF283'},
+        //overview
+        'goal': {background: '#F6BD60'},
+        'motivation': {background: '#F6BD60'},
+        'briefing': {background: '#F6BD60'},
+        //step
+        'subgoal': {background: '#F5A7A6 '},
+        'instruction': {background: '#F5A7A6'},
+        'tool': {background: '#F5A7A6'},
+        'tool (multiple)': {background: '#F5A7A6'},
+        'tool (optional)': {background: '#F5A7A6'},
+        //explanation
+        'justification': {background: '#FFF5AB'},
+        'effect': {background: '#FFF5AB'},
+        //supplementary
+        'warning': {background: '#C7B4C4'},
+        'tip': {background: '#C7B4C4'},
+        //description
+        'status': {background: '#A8D0C6'},
+        'context': {background: '#A8D0C6'},
+        'tool specification': {background: '#A8D0C6'},
+        //greeting-outro
+        'closing': {background: '#DAF283'},
+        //conclusion
+        'outcome': {background: '#DCC8E6'},
+        'reflection': {background: '#DCC8E6'},
+        //misc
+        'side note': {background: 'lightgray'},
+        'self-promo': {background: 'lightgray'},
+        'bridge': {background: 'lightgray'},
+        'filler': {background: 'lightgray'}
     }
 
     return (
         <div className="sentence_box">
             <div className="type_box">
-                <span className="type" style={typeLevel == 'low' ? styles[item.Low_type] : styles[item.High_type]}>
+                <div className="type" style={typeLevel == 'low' ? styles[item.Low_type] : styles[item.High_type]}>
                     {typeLevel == 'low' ? item.Low_type : item.High_type}
-                </span>
+                </div>
             </div>
-            <span className="text">{item.Script}</span>
+            <div className="text">{item.Script}</div>
         </div>
     )
 }
@@ -73,8 +84,8 @@ function Script({
       };
 
     return(
-        <div className="script_wrapper">
-            <FormControl>
+        <div className="script_window">
+            {/* <FormControl>
                 <FormLabel id="demo-row-radio-buttons-group-label">LEVEL</FormLabel>
                 <RadioGroup
                     row
@@ -86,7 +97,7 @@ function Script({
                     <FormControlLabel value="high" control={<Radio />} label="HIGH" />
                     <FormControlLabel value="low" control={<Radio />} label="LOW" />
                 </RadioGroup>
-            </FormControl>
+            </FormControl> */}
             <div className="script_block">
                 {script &&
                     script.map ((item, ind) => (

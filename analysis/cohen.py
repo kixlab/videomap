@@ -20,7 +20,7 @@ ROOT_DIR = "./data/csv"
 # "justification": 9, "tip": 10, "status": 11, "context": 12, "external resource": 13, "side note": 14, "self-promo": 15, "filler": 16, "bridge": 17, "closing": 18, "outcome": 19, "reflection": 20, "": 21}
 
 taxonomy = {"goal": 0, "motivation": 1, "briefing": 2, "opening": 3, "subgoal": 4, "instruction": 5, "tool": 6, "warning": 7, "effect": 8,
-            "justification": 9, "tip": 10, "status": 11, "context": 12, "tool specification": 13, "side note": 14, "self-promo": 15, "filler": 16, "bridge": 17, "closing": 18, "outcome": 19, "reflection": 20, "": 21, "advertisement": 22}
+            "justification": 9, "tip": 10, "status": 11, "context": 12, "tool specification": 13, "side note": 14, "self-promo": 15, "filler": 16, "bridge": 17, "closing": 18, "outcome": 19, "reflection": 20, "": 21}
 total_score = 0
 file_count = 0
 for filename in os.listdir(ROOT_DIR):

@@ -2,7 +2,23 @@
   text-align: center;
 }
 
+.body_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .video_wrapper {
-  display: inline-block;
   width: 50%;
+  /* padding-left: 100px; */
+}
+
+.script_wrapper {
+  width: 50%;
+  margin-left: 20px;
+  /* padding-right: 100px; */
+}
+
+.player {
+  float: right;
 }

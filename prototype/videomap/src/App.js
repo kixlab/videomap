@@ -75,7 +75,7 @@ function App() {
     video.seekTo (script[index].Start)
   };
 
-  useEffect(() => {
+  useEffect(() => { //TODO: update?
     if (video && scriptLoaded) {
       document.addEventListener('keydown', onKeyPress);
       return function cleanup() {
@@ -111,8 +111,8 @@ function App() {
   };
 
   const opts = {
-  height: '468',
-  width: '768',
+  height: '500',
+  width: '850',
   playerVars: {
       autoplay: 1,
       },
@@ -124,22 +124,27 @@ function App() {
         videoId={videoId}
         setVideoId={setVideoId}
       />
-      <div className="video_wrapper">
-        <YouTube 
-            videoId={videoId} 
-            opts={opts} 
-            onReady={onReady}
-            onPlay={onPlay}
-        />
+      <div className='body_wrapper'>
+        <div className="video_wrapper">
+          <YouTube 
+              className='player'
+              videoId={videoId} 
+              opts={opts} 
+              onReady={onReady}
+              onPlay={onPlay}
+          />
+        </div>
+        <div className='script_wrapper'>
+          <Script 
+            script={script}
+            selectedIndex={selectedIndex}
+            setSelectedIndex={setSelectedIndex}
+            video={video}
+            videoTime={videoTime}
+            setVideoTime={setVideoTime}
+          />
+        </div>
       </div>
-      <Script 
-        script={script}
-        selectedIndex={selectedIndex}
-        setSelectedIndex={setSelectedIndex}
-        video={video}
-        videoTime={videoTime}
-        setVideoTime={setVideoTime}
-      />
     </div>
   );
 }
