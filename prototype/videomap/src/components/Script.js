@@ -84,13 +84,12 @@ function Script({
     videoTime, 
     setVideoTime
 }){
-
     const [typeLevel, setTypeLevel] = useState ('low');
 
     const handleSentenceClick = (index) => {
         setSelectedIndex (index);
-        setVideoTime (script[index].Start);
-        video.seekTo (script[index].Start);
+        setVideoTime (script[index].start);
+        video.seekTo (script[index].start);
     };
 
     const handleRadioClick = (event) => {

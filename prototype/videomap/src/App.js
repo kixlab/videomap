@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import db from "./service/firebase";
-import { ref, set } from "firebase/database";
+import { ref, set, get } from "firebase/database";
 import YouTube from 'react-youtube';
 import './App.css';
 
 // components
 import Header from './components/Header';
 import Script from './components/Script';
+import Timeline from './components/Timeline';
 
 function App() {
   const [video, setVideo] = useState (null);
@@ -16,6 +17,7 @@ function App() {
 
   const [videoId, setVideoId] = useState ('Eeu5uL6r2rg');
   const [videoTime, setVideoTime] = useState (0);
+  const [duration, setDuration] = useState (0);
 
   const [script, setScript] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState (-1);
@@ -44,16 +46,8 @@ function App() {
     getScript();
   }, [videoId]);
 
-  const writeData = () => {
-    // const logRef = collection(db, 'Log');
-    // return addDoc(logRef, {
-    //         aa: [{ name: 'aa' }]
-    //     });
-};
-
 
   const onKeyPress = (e) => {
-    console.log (e.keyCode)
     const keyCode = e.keyCode;
     let ind, vt;
     if (keyCode == 38) {  // up arrow
@@ -78,9 +72,9 @@ function App() {
   };
 
   const handleIndexChange = (index) => {
-    setSelectedIndex (index)
-    setVideoTime (script[index].Start)
-    video.seekTo (script[index].Start)
+    setSelectedIndex (index);
+    setVideoTime (script[index].start);
+    video.seekTo (script[index].start);
   };
 
   useEffect(() => { //TODO: update?
@@ -102,6 +96,7 @@ function App() {
 
   const onReady = (event) => {
       setVideo (event.target);
+      setDuration (onGetDuration());
       // event.target.pauseVideo();
   };
 
@@ -117,6 +112,11 @@ function App() {
       };
     }
   };
+
+  const onGetDuration = () => {
+    if (video === null) return 0
+    return video.getDuration();
+  }
 
   const opts = {
   height: '500',
@@ -140,6 +140,12 @@ function App() {
               opts={opts} 
               onReady={onReady}
               onPlay={onPlay}
+          />
+          <Timeline
+            video={video}
+            videoTime={videoTime}
+            duration={duration}
+            setVideoTime={setVideoTime}
           />
         </div>
         <div className='script_wrapper'>

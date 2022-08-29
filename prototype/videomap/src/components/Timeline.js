@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from "react"
+import { Tooltip } from "@material-ui/core";
+
+import './Timeline.css';
+
+function Timeline({video, videoTime, duration, setVideoTime}){
+    const [position, setPosition] = useState(0);
+
+    useEffect(() => {
+    }, [videoTime])
+  
+    const handleMouseMove = event => {
+        setPosition(event.clientX - event.target.offsetLeft);
+    };
+
+    const getProgressLength=()=>{
+        if (duration == 0) return 0;
+        return videoTime * 850 / duration;
+    }
+
+    const handleTimelineClick=()=>{
+        const newTime = position * duration / 850;
+        setVideoTime (newTime);
+        video.seekTo (newTime);
+    }
+
+    const posToTime = (pos) => {
+        var time = pos * duration / 850;
+        var min = (Math.floor(time /  60)).toString();
+        var sec = (Math.floor(time - min * 60)).toString();
+        if (sec.length == 1) {
+          sec = 0 + sec;
+        }
+        return min + ':' + sec;  
+    }
+
+
+    return(
+        <div className="timeline_wrapper">
+            <Tooltip title={posToTime (position)} placement="top">
+                <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/>
+            </Tooltip>
+            <div className="progressbar" style={{width: `${getProgressLength()}px`}} />
+        </div>
+
+    )
+}
+
+export default Timeline;
+

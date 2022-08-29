@@ -1,0 +1,19 @@
+.timeline_wrapper {
+    float: right;
+    margin-top: 10px;
+
+}
+
+.timeline {
+    background-color: lightgray;
+    width: 850px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.progressbar {
+    background-color: black;
+    border-radius: 5px;
+    height: 20px;
+}
