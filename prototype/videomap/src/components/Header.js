@@ -26,7 +26,7 @@ function Header({videoId, setVideoId}){
                 value={inputVideoId}
                 onChange={handleInputChange}
             />
-            <Button variant="contained" onClick={clickChangeButton} style={{marginLeft: "5px"}}>Submit</Button>
+            <Button variant="contained" onClick={clickChangeButton} style={{marginLeft: "10px"}}>Submit</Button>
         </div>
     )
 }

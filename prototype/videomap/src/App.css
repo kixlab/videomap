@@ -9,14 +9,14 @@
 }
 
 .video_wrapper {
-  width: 50%;
-  /* padding-left: 100px; */
+  display: flex;
+  flex-direction: column;
 }
 
 .script_wrapper {
   width: 50%;
   margin-left: 20px;
-  /* padding-right: 100px; */
+  margin-right: 20px;
 }
 
 .player {

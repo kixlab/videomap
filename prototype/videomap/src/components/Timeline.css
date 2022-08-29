@@ -1,19 +1,38 @@
 .timeline_wrapper {
-    float: right;
-    margin-top: 10px;
-
+  /* float: right; */
+  margin-top: 10px;
+  position: relative;
 }
 
 .timeline {
-    background-color: lightgray;
-    width: 850px;
-    height: 20px;
-    border-radius: 5px;
-    cursor: pointer;
+  /* background-color: lightgray; */
+  width: 850px;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.label_timeline {
+  width: 850px;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 10;
+}
+
+.label_box {
+  /* background-color: aquamarine; */
+  /* z-index: 10; */
 }
 
 .progressbar {
-    background-color: black;
-    border-radius: 5px;
-    height: 20px;
+  background-color: black;
+  border-radius: 5px;
+  height: 20px;
 }

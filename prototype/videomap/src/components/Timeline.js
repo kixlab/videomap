@@ -3,7 +3,20 @@ import { Tooltip } from "@material-ui/core";
 
 import './Timeline.css';
 
-function Timeline({video, videoTime, duration, setVideoTime}){
+function LabelBox ({item, colorPalette}) {
+
+    const calWidth = (start, end) => {
+        var width = (end-start)/439*850;
+        return width;
+    } 
+
+    return (
+        <div className="label_box" style={{width: calWidth(item.start, item.end), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
+        </div>
+    )
+}
+
+function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette}){
     const [position, setPosition] = useState(0);
 
     useEffect(() => {
@@ -37,9 +50,17 @@ function Timeline({video, videoTime, duration, setVideoTime}){
 
     return(
         <div className="timeline_wrapper">
-            <Tooltip title={posToTime (position)} placement="top">
+            {/* <Tooltip title={posToTime (position)} placement="top"> */}
                 <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/>
-            </Tooltip>
+            {/* </Tooltip> */}
+            <div className="label_timeline">
+            {script &&
+                script.map ((item, ind) => (
+                <div key={ind}>
+                    <LabelBox item={item} colorPalette={colorPalette} />
+                </div>))
+            } 
+            </div>
             <div className="progressbar" style={{width: `${getProgressLength()}px`}} />
         </div>
 
