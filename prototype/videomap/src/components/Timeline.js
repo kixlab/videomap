@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Tooltip, Box } from "@material-ui/core";
 
 import './Timeline.css';
 import pinImage from './../image/placeholder.png';
+// import Button from 'react-bootstrap/Button';
+// import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+// import Tooltip from 'react-bootstrap/Tooltip';
 
 function LabelBox ({item, colorPalette, duration}) {
 
@@ -11,18 +14,25 @@ function LabelBox ({item, colorPalette, duration}) {
         return width;
     } 
 
+    const transTime = (timestamp) => {
+        var seconds = parseFloat(timestamp)
+        var minute = Math.floor(seconds / 60);
+        var second = Math.floor(seconds - minute * 60);
+        if (second < 10){
+            second = "0"+second
+        }
+        return "(" + minute + ":" + second + ")"
+    }
+
     return (
-        <Tooltip title="hello" placement="right">
         <div className="label_box" style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
-            {/* <div>{item.low_label}</div> */}
+            <span class="tooltiptext">{item.low_label}<br/>{transTime(item.start)}</span>
         </div>
-        </Tooltip>
     )
 }
 
 function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette}){
     const [position, setPosition] = useState(0);
-
     useEffect(() => {
     }, [videoTime])
   
@@ -54,14 +64,10 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
 
     return(
         <div className="timeline_wrapper">
-            {/* <Tooltip title={posToTime (position)} placement="top"> */}
-                <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/>
-                {/* </Tooltip> */}
+            <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/>
             <div className="label_timeline">
             {script &&
                 script.map ((item, ind) => (
-
-           
                 <div key={ind}>
                     <LabelBox item={item} colorPalette={colorPalette} duration={duration} />
                 </div>
@@ -70,7 +76,7 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
             </div>
             <div className="progressbar_wrapper">
                 <div className="progressbar" style={{width: `${getProgressLength()}px`}} />
-                <div className="pin"><img src={pinImage} width="50px"></img></div>
+                <div className="pin"><img src={pinImage} width="30px"></img></div>
             </div>
         </div>
 

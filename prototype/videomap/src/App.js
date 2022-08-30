@@ -158,6 +158,8 @@ function App() {
   const syncScript = (currentTime) => {
     for (var i = 0; i < script.length; i++) {
       if (currentTime >= script[i]['start'] && currentTime <= script[i]['end']) {
+        var target_sentence = document.getElementById(i);
+        target_sentence.scrollIntoView({behavior: 'auto', block: 'center'})
         setSelectedIndex (i);
         return;
       }

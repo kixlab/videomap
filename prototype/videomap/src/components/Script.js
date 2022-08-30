@@ -84,7 +84,7 @@ function Script({
             <div className="script_block" onScroll={onScroll}>
                 {script &&
                     script.map ((item, ind) => (
-                    <div key={ind} className={selectedIndex == ind ? "selected" : "default"} onClick={() => handleSentenceClick(ind)}>
+                    <div key={ind} id={ind} className={selectedIndex == ind ? "selected" : "default"} onClick={() => handleSentenceClick(ind)}>
                         <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} />
                     </div>))
                 }

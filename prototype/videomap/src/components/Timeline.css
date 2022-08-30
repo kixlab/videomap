@@ -27,11 +27,6 @@
   /* z-index: 10; */
 }
 
-.label_box {
-  /* background-color: aquamarine; */
-  /* z-index: 10; */
-}
-
 .progressbar_wrapper {
   display: flex;
   flex-direction: row;
@@ -46,7 +41,47 @@
 }
 
 .pin {
-  margin-left: -26px;
-  margin-top: -30px;
+  margin-left: -15px;
+  margin-top: -25px;
   z-index: 20;
+}
+
+.label_box {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+}
+
+.label_box .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-bottom: 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 11;
+}
+
+.label_box:hover .tooltiptext {
+  visibility: visible;
+}
+.label_box .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
 }
