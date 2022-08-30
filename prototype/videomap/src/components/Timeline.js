@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Tooltip } from "@material-ui/core";
 
 import './Timeline.css';
+import pinImage from './../image/pin.png';
 
 function LabelBox ({item, colorPalette, duration}) {
 
@@ -61,7 +62,10 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
                 </div>))
             } 
             </div>
-            <div className="progressbar" style={{width: `${getProgressLength()}px`}} />
+            <div className="progressbar_wrapper">
+                <div className="progressbar" style={{width: `${getProgressLength()}px`}} />
+                <div className="pin"><img src={pinImage} width="50px"></img></div>
+            </div>
         </div>
 
     )

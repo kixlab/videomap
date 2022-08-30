@@ -1,6 +1,6 @@
 .timeline_wrapper {
   /* float: right; */
-  margin-top: 10px;
+  margin-top: 20px;
   position: relative;
 }
 
@@ -19,7 +19,7 @@
   height: 20px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 5px;
+  /* margin-top: 10px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -32,10 +32,21 @@
   /* z-index: 10; */
 }
 
+.progressbar_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 .progressbar {
-  background-color: black;
+  /* background-color: black; */
   border-radius: 5px;
   height: 20px;
-  /* position: absolute; */
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.pin {
+  margin-left: -25px;
+  margin-top: -28px;
+  z-index: 20;
 }
