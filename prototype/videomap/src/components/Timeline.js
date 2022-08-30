@@ -7,49 +7,12 @@ import pinImage from './../image/placeholder.png';
 // import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 // import Tooltip from 'react-bootstrap/Tooltip';
 
-function LabelBox ({item, colorPalette, duration}) {
+function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPosition, video}) {
 
     const calWidth = (start, end) => {
         var width = (end-start)/duration*850;
         return width;
     } 
-
-    const transTime = (timestamp) => {
-        var seconds = parseFloat(timestamp)
-        var minute = Math.floor(seconds / 60);
-        var second = Math.floor(seconds - minute * 60);
-        if (second < 10){
-            second = "0"+second
-        }
-        return "(" + minute + ":" + second + ")"
-    }
-
-    return (
-        <div className="label_box" style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
-            <span class="tooltiptext">{item.low_label}<br/>{transTime(item.start)}</span>
-        </div>
-    )
-}
-
-function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette}){
-    const [position, setPosition] = useState(0);
-    useEffect(() => {
-    }, [videoTime])
-  
-    const handleMouseMove = event => {
-        setPosition(event.clientX - event.target.offsetLeft - 300);
-    };
-
-    const getProgressLength=()=>{
-        if (duration == 0) return 0;
-        return videoTime * 850 / duration;
-    }
-
-    const handleTimelineClick=()=>{
-        const newTime = position * duration / 850;
-        setVideoTime (newTime);
-        video.seekTo (newTime);
-    }
 
     const posToTime = (pos) => {
         var time = pos * duration / 850;
@@ -60,16 +23,46 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
         }
         return min + ':' + sec;  
     }
+  
+    const handleMouseMove = event => {
+        // console.log(event.clinetX);
+        // console.log(event.target.offsetLeft);
+        setPosition(event.clientX - 300);
+    };
+
+    const handleTimelineClick=()=>{
+        const newTime = position * duration / 850;
+        setVideoTime (newTime);
+        video.seekTo (newTime);
+    }
+
+    return (
+        <div className="label_box" onClick={handleTimelineClick} onMouseMove={handleMouseMove} style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
+            <span class="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
+        </div>
+    )
+}
+
+function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette}){
+    const [position, setPosition] = useState(0);
+    useEffect(() => {
+    }, [videoTime])
+
+    const getProgressLength=()=>{
+        if (duration == 0) return 0;
+        return videoTime * 850 / duration;
+    }
+
 
 
     return(
         <div className="timeline_wrapper">
-            <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/>
+            {/* <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/> */}
             <div className="label_timeline">
             {script &&
                 script.map ((item, ind) => (
                 <div key={ind}>
-                    <LabelBox item={item} colorPalette={colorPalette} duration={duration} />
+                    <LabelBox item={item} colorPalette={colorPalette} duration={duration} position={position} setVideoTime={setVideoTime} setPosition={setPosition} video={video} />
                 </div>
                 ))
             } 

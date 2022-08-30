@@ -11,7 +11,7 @@
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  z-index: 10;
+  z-index: 11;
 }
 
 .label_timeline {
