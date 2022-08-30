@@ -7,7 +7,7 @@ import pinImage from './../image/placeholder.png';
 // import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 // import Tooltip from 'react-bootstrap/Tooltip';
 
-function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPosition, video, syncScript}) {
+function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPosition, video}) {
 
     const calWidth = (start, end) => {
         var width = (end-start)/duration*850;
@@ -34,7 +34,6 @@ function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPos
         const newTime = position * duration / 850;
         setVideoTime (newTime);
         video.seekTo (newTime);
-        // syncScript (newTime);
     }
 
     return (
@@ -44,7 +43,7 @@ function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPos
     )
 }
 
-function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette, syncScript}){
+function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette}){
     const [position, setPosition] = useState(0);
     useEffect(() => {
     }, [videoTime])
@@ -63,7 +62,7 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
             {script &&
                 script.map ((item, ind) => (
                 <div key={ind}>
-                    <LabelBox item={item} colorPalette={colorPalette} duration={duration} position={position} setVideoTime={setVideoTime} setPosition={setPosition} video={video} syncScript={syncScript}/>
+                    <LabelBox item={item} colorPalette={colorPalette} duration={duration} position={position} setVideoTime={setVideoTime} setPosition={setPosition} video={video}/>
                 </div>
                 ))
             } 
