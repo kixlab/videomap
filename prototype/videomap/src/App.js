@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import db from "./service/firebase";
-import { ref, set, update, child, push } from "firebase/database";
+import { ref, update } from "firebase/database";
 import YouTube from 'react-youtube';
 import './App.css';
 import { colorPalette } from "./colors";
@@ -31,26 +31,20 @@ function App() {
   const [logIndex, setLogIndex] = useState (0);
 
   // database
-
-  // const createData=(inputUserId, inputTaskId)=>{
-  //   console.log (videoId, inputUserId, inputTaskId)
-  //   if (videoId === "" || inputUserId === "" || inputTaskId === "") return;
-  //   console.log ('enter')
-  //   set(ref(db, '/Log' + '/' + inputUserId + '/' + videoId + '/' + inputTaskId), {});
-  // }
-
-  const logData=(action, video_timestamp, user_timestamp, meta)=>{
+  const logData=(action, video_timestamp, meta)=>{
     if (videoId === "" || userId === "" || taskId === "") return;
 
     const save_path = '/Log' + '/' + userId + '/' + videoId + '/' + taskId
-    const newLogKey = push (child(ref(db), save_path)).key; //TODO: key -> index
+    const user_timestamp = (new Date().getTime() / 1000).toFixed(2) - initialTimeInfo;
     const updates = {};
-    updates[save_path + '/' + newLogKey] = {
+    updates[save_path + '/' + logIndex] = {
       action: action,
       video_timestamp: video_timestamp,
       user_timestamp: user_timestamp,
       meta: meta
     }
+    const nextLogIndex = logIndex + 1;
+    setLogIndex (nextLogIndex);
 
     return update (ref (db), updates);
   }
@@ -71,36 +65,85 @@ function App() {
     getScript();
   }, [videoId]);
 
+  const logKeyPress = (keyCode, scriptIndex = -1) => {
+    var video_timestamp = {};
+    var meta = {};
+    if (keyCode === "up" || keyCode === "down") {
+      const currLine = script[scriptIndex]
+      video_timestamp = {from: videoTime, to: currLine.start};
+      meta = {
+        source: "keyboard",
+        key: keyCode,
+        low_label: currLine.low_label,
+        high_label: currLine.high_label
+      };
+    } else {
+      video_timestamp = keyCode === "left" 
+                      ? {from: videoTime, to: videoTime - 5}
+                      : {from: videoTime, to: videoTime + 5};
+      meta = {
+        source: "keyboard",
+        key: keyCode
+      };
+    }
+
+    logData ("jump", video_timestamp, meta);
+  }
+
   const onKeyPress = (e) => {
     const keyCode = e.keyCode;
-    console.log (e.keyCode);
     let ind, vt;
-    if (keyCode == 38) {  // up arrow
+
+    // up arrow
+    if (keyCode == 38) {
       if (selectedIndex > 0) {
         ind = selectedIndex-1;
+        // logging
+        logKeyPress ("up", ind);
         handleIndexChange (ind);
       } 
-    } else if (keyCode == 40) { // down arrow
+
+    // down arrow
+    } else if (keyCode == 40) { 
       if (selectedIndex < script.length-1) {
         ind = selectedIndex+1;
+        // logging
+        logKeyPress ("down", ind);
         handleIndexChange (ind);
       }
+
+    // left arrow
     } else if (keyCode == 37) {
+      // logging
+      logKeyPress ("left");
       vt = videoTime - 5;
       setVideoTime (vt);
       video.seekTo (vt);
+
+    // right arrow
     } else if (keyCode == 39) {
+      // logging
+      logKeyPress ("right", ind);
       vt = videoTime + 5;
       setVideoTime (vt);
       video.seekTo (vt);
-    } else if (keyCode == 32) { // space 
+
+    // space 
+    } else if (keyCode == 32) { 
       const currentStatus = video.getPlayerState();
+
       if (currentStatus == 0 || currentStatus == 2 || currentStatus == 5) {
         video.playVideo();
+        // logging
+        const meta = {source: "keyboard", key: "space"};
+        logData ("play", videoTime, meta);
       } else if (currentStatus == 1) {
         video.pauseVideo();
-      }
-    }
+        // logging
+        const meta = {source: "keyboard", key: "space"};
+        logData ("pause", videoTime, meta);
+      };
+    };
   };
 
   const handleIndexChange = (index) => {
@@ -151,7 +194,7 @@ function App() {
   const onPlay = () => {
     if (!started) {
       setStarted(true);
-      setInitialTimeInfo (new Date().getTime());
+      setInitialTimeInfo ((new Date().getTime() / 1000).toFixed(2));
       const interval = setInterval(() => {
         const time = onGetCurrentTime();
         setVideoTime(time);
@@ -202,6 +245,7 @@ function App() {
             setVideoTime={setVideoTime}
             script={script}
             colorPalette={colorPalette}
+            logData={logData}
           />
         </div>
         <div className='script_wrapper'>
@@ -214,7 +258,6 @@ function App() {
             setVideoTime={setVideoTime}
             colorPalette={colorPalette}
             logData={logData}
-            initialTimeInfo={initialTimeInfo}
           />
         </div>
       </div>
