@@ -127,7 +127,7 @@ function App() {
   useEffect(() => {
     if (selectedIndex !== -1){
       var target_sentence = document.getElementById(selectedIndex);
-      target_sentence.scrollIntoView({behavior: 'auto', block: 'center'})
+      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
     }
   }, [selectedIndex]);
   

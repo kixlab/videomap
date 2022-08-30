@@ -35,8 +35,8 @@ export const colorPalette = {
     //greeting-outro
     'closing':'#DAF283',
     //conclusion
-    'outcome':'#DCC8E6',
-    'reflection':'#DCC8E6',
+    'outcome':'#b19bbd',
+    'reflection':'#b19bbd',
     //misc
     'side note':'lightgray',
     'self-promo':'lightgray',
