@@ -19,10 +19,11 @@
 .script_wrapper {
   /* float: left; */
   /* width: 50%; */
-  margin-left: 20px;
+  margin-left: 5px;
   margin-right: 20px;
 }
 
 .player {
   float: right;
+  margin-right: 15px;
 }
