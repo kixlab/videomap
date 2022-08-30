@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react"
 import './Script.css';
 
 
-function SentenceBox ({item, typeLevel, colorPalette}) {
+function SentenceBox ({item, typeLevel, colorPalette, setHoverLabel}) {
 
     const transTime = (timestamp) => {
         var seconds = parseFloat(timestamp)
@@ -15,11 +15,21 @@ function SentenceBox ({item, typeLevel, colorPalette}) {
         return "(" + minute + ":" + second + ")"
     }
 
+    const updateHoverLabel = (label) => {
+        if (!label){
+            setHoverLabel("");
+        }
+        else {
+            setHoverLabel(label);
+        }
+    }
+
     return (
         <div className="sentence_box">
             <div className="type_box">
-                <div className="type" style={{backgroundColor: colorPalette[item.low_label] }}>
+                <div className="type" style={{backgroundColor: colorPalette[item.low_label] }} onMouseOver={() => updateHoverLabel(item.low_label)} onMouseLeave={() => updateHoverLabel(false)}>
                    {item.low_label}
+                   {/* <span className="tooltiptext">{item.low_label}<br/>{"definition"}</span> */}
                 </div>
             </div>
             <div className="time">{transTime(item.start)}</div>
@@ -37,6 +47,7 @@ function Script({
     setVideoTime,
     colorPalette,
     logData,
+    setHoverLabel,
 }){
     const itemRef = useRef({});
     const currentScroll = useRef({ scrollTop: 0, scrollBottom: 300 });
@@ -94,7 +105,7 @@ function Script({
                 {script &&
                     script.map ((item, ind) => (
                     <div key={ind} id={ind} className={selectedIndex == ind ? "selected" : "default"} onClick={() => handleSentenceClick(ind)}>
-                        <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} />
+                        <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} setHoverLabel={setHoverLabel}/>
                     </div>))
                 }
             </div>

@@ -4,6 +4,8 @@ import { ref, update } from "firebase/database";
 import YouTube from 'react-youtube';
 import './App.css';
 import { colorPalette } from "./colors";
+import { category } from "./category";
+import { definition } from "./definition";
 
 // components
 import Header from './components/Header';
@@ -21,6 +23,7 @@ function App() {
   const [scriptLoaded, setScriptLoaded] = useState (false);
   const [script, setScript] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState (-1);
+  const [hoverLabel, setHoverLabel] = useState("");
 
   // for log
   // Task Id
@@ -127,9 +130,11 @@ function App() {
       vt = videoTime + 5;
       setVideoTime (vt);
       video.seekTo (vt);
-
     // space 
     } else if (keyCode == 32) { 
+      if(e.target == document.body) {
+        e.preventDefault();
+      }
       const currentStatus = video.getPlayerState();
 
       if (currentStatus == 0 || currentStatus == 2 || currentStatus == 5) {
@@ -245,6 +250,7 @@ function App() {
             setVideoTime={setVideoTime}
             script={script}
             colorPalette={colorPalette}
+            setHoverLabel={setHoverLabel}
             logData={logData}
           />
         </div>
@@ -258,9 +264,20 @@ function App() {
             setVideoTime={setVideoTime}
             colorPalette={colorPalette}
             logData={logData}
+            initialTimeInfo={initialTimeInfo}
           />
         </div>
       </div>
+      {hoverLabel && 
+        <div className='info_wrapper'>
+          <div style={{fontWeight: 500, backgroundColor: colorPalette[hoverLabel]}}>
+            <span>{category[hoverLabel]}</span>
+          </div>
+          <div style={{marginTop: "5px"}}>
+            {definition[hoverLabel]}
+          </div>
+        </div>
+      }
     </div>
   );
 }
