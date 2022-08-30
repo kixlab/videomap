@@ -132,12 +132,12 @@ function App() {
       vt = videoTime - 5;
       setVideoTime (vt);
       video.seekTo (vt);
-      syncScript (vt);
+      // syncScript (vt);
     } else if (keyCode == 39) {
       vt = videoTime + 5;
       setVideoTime (vt);
       video.seekTo (vt);
-      syncScript (vt);
+      // syncScript (vt);
     }
   };
 
@@ -145,7 +145,7 @@ function App() {
     setSelectedIndex (index);
     setVideoTime (script[index].start);
     video.seekTo (script[index].start);
-    syncScript (script[index].start);
+    // syncScript (script[index].start);
   };
 
   useEffect(() => { //TODO: update?
@@ -157,15 +157,27 @@ function App() {
     };
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
+  useEffect(() => {
+    if (selectedIndex !== -1){
+      var target_sentence = document.getElementById(selectedIndex);
+      target_sentence.scrollIntoView({behavior: 'auto', block: 'center'})
+    }
+  }, [selectedIndex]);
 
   const syncScript = (currentTime) => {
     for (var i = 0; i < script.length; i++) {
       if (currentTime >= script[i]['start'] && currentTime <= script[i]['end']) {
         var target_sentence = document.getElementById(i);
-        // console.log(paused);
-        // if (!paused){
         target_sentence.scrollIntoView({behavior: 'auto', block: 'center'})
-        // }
+        setSelectedIndex (i);
+        return;
+      }
+    }
+  }
+  
+  const updateIndex = (currentTime) => {
+    for (var i = 0; i < script.length; i++) {
+      if (currentTime >= script[i]['start'] && currentTime <= script[i]['end']) {
         setSelectedIndex (i);
         return;
       }
@@ -177,6 +189,7 @@ function App() {
     if (video === null) return 0;
     const currentTime = video.getCurrentTime();  // TODO: round2
     // syncScript (currentTime);
+    updateIndex (currentTime);
     return currentTime;
   }, [video]);
 

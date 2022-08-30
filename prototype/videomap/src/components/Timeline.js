@@ -34,7 +34,7 @@ function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPos
         const newTime = position * duration / 850;
         setVideoTime (newTime);
         video.seekTo (newTime);
-        syncScript (newTime);
+        // syncScript (newTime);
     }
 
     return (
