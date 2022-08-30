@@ -42,7 +42,7 @@ function LabelBox ({
     };
 
     const handleTimelineClick=()=>{
-        const newTime = (position * duration / 850).toFixed(2);
+        const newTime = (position * duration / 850).toFixed(3);
         // logging
         const video_timestamp = {
             from: videoTime,

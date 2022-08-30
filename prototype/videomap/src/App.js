@@ -15,6 +15,7 @@ import Timeline from './components/Timeline';
 function App() {
   const [video, setVideo] = useState (null);
   const [started, setStarted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState (false);
 
   const [videoId, setVideoId] = useState ('Eeu5uL6r2rg');
   const [videoTime, setVideoTime] = useState (0);
@@ -37,8 +38,8 @@ function App() {
   const logData=(action, video_timestamp, meta, firstLog=false)=>{
     if (videoId === "" || userId === "" || taskId === "") return;
 
-    const save_path = '/Log' + '/' + userId + '/' + videoId + '/' + taskId
-    const user_timestamp = firstLog ? 0 : (new Date().getTime() / 1000 - initialTimeInfo).toFixed(2);
+    const save_path = '/Log' + '/' + userId + '/' + videoId + '/' + taskId;
+    const user_timestamp = firstLog ? 0 : (new Date().getTime() / 1000 - initialTimeInfo).toFixed(3);
     const updates = {};
     updates[save_path + '/' + logIndex] = {
       action: action,
@@ -82,8 +83,8 @@ function App() {
       };
     } else {
       video_timestamp = keyCode === "left" 
-                      ? {from: videoTime, to: videoTime - 5}
-                      : {from: videoTime, to: videoTime + 5};
+                      ? {from: videoTime, to: (parseFloat(videoTime) - 5).toFixed(3)}
+                      : {from: videoTime, to: (parseFloat(videoTime) + 5).toFixed(3)};
       meta = {
         source: "keyboard",
         key: keyCode
@@ -119,7 +120,7 @@ function App() {
     } else if (keyCode == 37) {
       // logging
       logKeyPress ("left");
-      vt = videoTime - 5;
+      vt = (parseFloat(videoTime) - 5).toFixed(3);
       setVideoTime (vt);
       video.seekTo (vt);
 
@@ -127,7 +128,7 @@ function App() {
     } else if (keyCode == 39) {
       // logging
       logKeyPress ("right", ind);
-      vt = videoTime + 5;
+      vt = (parseFloat(videoTime) + 5).toFixed(3);
       setVideoTime (vt);
       video.seekTo (vt);
     // space 
@@ -175,7 +176,7 @@ function App() {
   // video related
   const onGetCurrentTime = useCallback(() => {
     if (video === null) return 0;
-    const currentTime = video.getCurrentTime().toFixed(2);
+    const currentTime = video.getCurrentTime().toFixed(3);
     updateIndex (currentTime);
     return currentTime;
   }, [video]);
@@ -188,19 +189,23 @@ function App() {
 
   const onPause = () => {
     // logging
+    setIsPlaying (false);
     logData ("pause", videoTime, {});
   }
 
   const onPlay = () => {
     // logging
-    logData ("play", videoTime, {}, !started);
+    if (!isPlaying) {
+      logData ("play", videoTime, {}, !started);
+      setIsPlaying (true);
+    };
     if (!started) {
       setStarted(true);
       setInitialTimeInfo (new Date().getTime() / 1000);
       const interval = setInterval(() => {
         const time = onGetCurrentTime();
         setVideoTime(time);
-      }, 100);
+      }, 10);
       return () => {
         clearInterval(interval);
       };
