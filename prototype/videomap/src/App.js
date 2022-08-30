@@ -31,6 +31,7 @@ function App() {
   const [userId, setUserId] = useState("");
   const [taskId, setTaskId] = useState("");
   const [initialTimeInfo, setInitialTimeInfo] = useState (null);
+  const [logIndex, setLogIndex] = useState (0);
 
   // database
 
@@ -75,17 +76,18 @@ function App() {
 
   const onKeyPress = (e) => {
     const keyCode = e.keyCode;
+    console.log (e.keyCode);
     let ind, vt;
     if (keyCode == 38) {  // up arrow
-        if (selectedIndex > 0) {
-          ind = selectedIndex-1;
-          handleIndexChange (ind);
-        } 
-      } else if (keyCode == 40) { // down arrow
-        if (selectedIndex < script.length-1) {
-          ind = selectedIndex+1;
-          handleIndexChange (ind);
-        }
+      if (selectedIndex > 0) {
+        ind = selectedIndex-1;
+        handleIndexChange (ind);
+      } 
+    } else if (keyCode == 40) { // down arrow
+      if (selectedIndex < script.length-1) {
+        ind = selectedIndex+1;
+        handleIndexChange (ind);
+      }
     } else if (keyCode == 37) {
       vt = videoTime - 5;
       setVideoTime (vt);
@@ -94,6 +96,13 @@ function App() {
       vt = videoTime + 5;
       setVideoTime (vt);
       video.seekTo (vt);
+    } else if (keyCode == 32) { // space 
+      const currentStatus = video.getPlayerState();
+      if (currentStatus == 0 || currentStatus == 2 || currentStatus == 5) {
+        video.playVideo();
+      } else if (currentStatus == 1) {
+        video.pauseVideo();
+      }
     }
   };
 
@@ -131,7 +140,7 @@ function App() {
   // video related
   const onGetCurrentTime = useCallback(() => {
     if (video === null) return 0;
-    const currentTime = video.getCurrentTime();  // TODO: round2
+    const currentTime = video.getCurrentTime().toFixed(2);
     updateIndex (currentTime);
     return currentTime;
   }, [video]);
