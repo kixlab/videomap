@@ -97,6 +97,9 @@ function App() {
       setVideoTime (vt);
       video.seekTo (vt);
     } else if (keyCode == 32) { // space 
+      if(e.target == document.body) {
+        e.preventDefault();
+      }
       const currentStatus = video.getPlayerState();
       if (currentStatus == 0 || currentStatus == 2 || currentStatus == 5) {
         video.playVideo();
