@@ -4,7 +4,18 @@ import { Tooltip, Box } from "@material-ui/core";
 import './Timeline.css';
 import pinImage from './../image/custom_pin.png';
 
-function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPosition, video, setHoverLabel}) {
+function LabelBox ({
+    item, 
+    colorPalette, 
+    duration, 
+    position, 
+    setVideoTime, 
+    setPosition,  
+    video, 
+    videoTime, 
+    setHoverLabel, 
+    logData
+}) {
 
     const calWidth = (start, end) => {
         var width = (end-start)/duration*850;
@@ -28,7 +39,19 @@ function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPos
     };
 
     const handleTimelineClick=()=>{
-        const newTime = position * duration / 850;
+        const newTime = (position * duration / 850).toFixed(2);
+        // logging
+        const video_timestamp = {
+            from: videoTime,
+            to: newTime
+        }
+        const meta = {
+            source: "mouse", 
+            location: "timeline",
+        };
+        logData ("jump", video_timestamp, meta);
+
+
         setVideoTime (newTime);
         video.seekTo (newTime);
     }
@@ -49,7 +72,16 @@ function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPos
     )
 }
 
-function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette, setHoverLabel}){
+function Timeline({
+    video, 
+    videoTime, 
+    duration, 
+    setVideoTime, 
+    script, 
+    colorPalette, 
+    setHoverLabel, 
+    logData
+}){
     const [position, setPosition] = useState(0);
     useEffect(() => {
     }, [videoTime])
@@ -59,8 +91,6 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
         return videoTime * 850 / duration;
     }
 
-
-
     return(
         <div className="timeline_wrapper">
             {/* <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/> */}
@@ -68,7 +98,18 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
             {script &&
                 script.map ((item, ind) => (
                 <div key={ind}>
-                    <LabelBox item={item} colorPalette={colorPalette} duration={duration} position={position} setVideoTime={setVideoTime} setPosition={setPosition} video={video} setHoverLabel={setHoverLabel}/>
+                    <LabelBox 
+                        item={item} 
+                        colorPalette={colorPalette} 
+                        duration={duration} 
+                        position={position} 
+                        setVideoTime={setVideoTime} 
+                        setPosition={setPosition} 
+                        video={video}
+                        videoTime={videoTime}
+                        setHoverLabel={setHoverLabel}
+                        logData={logData}
+                    />
                 </div>
                 ))
             } 

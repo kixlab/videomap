@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react"
-import { FormControl, FormLabel, FormControlLabel, Radio,  RadioGroup } from "@material-ui/core";
 
 import './Script.css';
 
@@ -48,21 +47,31 @@ function Script({
     setVideoTime,
     colorPalette,
     logData,
-    initialTimeInfo,
-    setHoverLabel
+    setHoverLabel,
 }){
     const itemRef = useRef({});
     const currentScroll = useRef({ scrollTop: 0, scrollBottom: 300 });
     const [typeLevel, setTypeLevel] = useState ('low');
 
     const handleSentenceClick = (index) => {
+        // logging
+        const currLine = script[index];
+        const newTime = script[index].start;
+        const video_timestamp = {
+            from: videoTime,
+            to: newTime
+        }
+        const meta = {
+            source: "mouse", 
+            location: "script",
+            low_label: currLine.low_label,
+            high_label: currLine.high_label
+        };
+        logData ("jump", video_timestamp, meta);
+
         setSelectedIndex (index);
-        setVideoTime (script[index].start);
-        video.seekTo (script[index].start);
-        // database logging
-        const user_ts = new Date().getTime() - initialTimeInfo;
-        const meta = {source: "click", location: "script"};
-        logData ("jump", videoTime, user_ts, meta);
+        setVideoTime (newTime);
+        video.seekTo (newTime);
     };
 
     // const handleRadioClick = (event) => {
