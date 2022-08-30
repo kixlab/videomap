@@ -265,6 +265,7 @@ function App() {
             colorPalette={colorPalette}
             logData={logData}
             initialTimeInfo={initialTimeInfo}
+            setHoverLabel={setHoverLabel}
           />
         </div>
       </div>
