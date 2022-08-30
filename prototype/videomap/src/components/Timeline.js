@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Tooltip } from "@material-ui/core";
+import { Tooltip, Box } from "@material-ui/core";
 
 import './Timeline.css';
 import pinImage from './../image/pin.png';
@@ -51,7 +51,7 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
 
     return(
         <div className="timeline_wrapper">
-            <Tooltip title={posToTime (position)} placement="top">
+            <Tooltip title={posToTime (position)} followCursor>
                 <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/>
             </Tooltip>
             <div className="label_timeline">

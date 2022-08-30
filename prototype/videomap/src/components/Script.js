@@ -48,6 +48,7 @@ function Script({
         setSelectedIndex (index);
         setVideoTime (script[index].start);
         video.seekTo (script[index].start);
+        // database logging
         const user_ts = new Date().getTime() - initialTimeInfo;
         const meta = {source: "click", location: "script"};
         logData ("jump", videoTime, user_ts, meta);

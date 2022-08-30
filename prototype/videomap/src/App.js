@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import db from "./service/firebase";
-import { ref, set, get } from "firebase/database";
+import { ref, set, update, child, push } from "firebase/database";
 import YouTube from 'react-youtube';
 import './App.css';
 
@@ -74,18 +74,29 @@ function App() {
     'bridge':'lightgray',
     'filler':'lightgray'
 }
-
   // database
-  const logData=(action, video_ts, user_ts, meta)=>{
-    console.log (videoId, userId, taskId);
+
+  // const createData=(inputUserId, inputTaskId)=>{
+  //   console.log (videoId, inputUserId, inputTaskId)
+  //   if (videoId === "" || inputUserId === "" || inputTaskId === "") return;
+  //   console.log ('enter')
+  //   set(ref(db, '/Log' + '/' + inputUserId + '/' + videoId + '/' + inputTaskId), {});
+  // }
+
+  const logData=(action, video_timestamp, user_timestamp, meta)=>{
     if (videoId === "" || userId === "" || taskId === "") return;
 
-    set(ref(db, '/Log' + '/' + userId + '/' + videoId + '/' + taskId), {
-      action: action, // pause, play, jump
-      video_timestamp: video_ts,
-      user_timestamp: user_ts, 
-      meta: meta // optional, format: {source: keyboard/click, location: playbar/script}
-    });
+    const save_path = '/Log' + '/' + userId + '/' + videoId + '/' + taskId
+    const newLogKey = push (child(ref(db), save_path)).key; //TODO: key -> index
+    const updates = {};
+    updates[save_path + '/' + newLogKey] = {
+      action: action,
+      video_timestamp: video_timestamp,
+      user_timestamp: user_timestamp,
+      meta: meta
+    }
+
+    return update (ref (db), updates);
   }
   
   const getScript=()=>{
@@ -103,7 +114,6 @@ function App() {
   useEffect(()=>{
     getScript();
   }, [videoId]);
-
 
   const onKeyPress = (e) => {
     const keyCode = e.keyCode;
@@ -145,10 +155,20 @@ function App() {
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
 
+  const syncScript = (currentTime) => {
+    for (var i = 0; i < script.length; i++) {
+      if (currentTime >= script[i]['start'] && currentTime <= script[i]['end']) {
+        setSelectedIndex (i);
+        return;
+      }
+    }
+  }
+
   // video related
   const onGetCurrentTime = useCallback(() => {
     if (video === null) return 0;
-    const currentTime = Math.floor(video.getCurrentTime()); //int
+    const currentTime = video.getCurrentTime();  // TODO: round2
+    syncScript (currentTime);
     return currentTime;
   }, [video]);
 
@@ -165,7 +185,7 @@ function App() {
       const interval = setInterval(() => {
         const time = onGetCurrentTime();
         setVideoTime(time);
-      }, 1000);
+      }, 100);
       return () => {
         clearInterval(interval);
       };
@@ -193,7 +213,7 @@ function App() {
         userId={userId}
         setUserId={setUserId}
         taskId={taskId}
-        setTaskId={setTaskId}
+        setTaskId={setTaskId}å
       />
       <div className='body_wrapper'>
         <div className="video_wrapper">
