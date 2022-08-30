@@ -38,7 +38,7 @@ function App() {
     if (videoId === "" || userId === "" || taskId === "") return;
 
     const save_path = '/Log' + '/' + userId + '/' + videoId + '/' + taskId
-    const user_timestamp = (new Date().getTime() / 1000).toFixed(2) - initialTimeInfo;
+    const user_timestamp = (new Date().getTime() / 1000 - initialTimeInfo).toFixed(2);
     const updates = {};
     updates[save_path + '/' + logIndex] = {
       action: action,
@@ -199,7 +199,7 @@ function App() {
   const onPlay = () => {
     if (!started) {
       setStarted(true);
-      setInitialTimeInfo ((new Date().getTime() / 1000).toFixed(2));
+      setInitialTimeInfo (new Date().getTime() / 1000);
       const interval = setInterval(() => {
         const time = onGetCurrentTime();
         setVideoTime(time);
