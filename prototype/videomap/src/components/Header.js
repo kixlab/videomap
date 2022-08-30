@@ -72,11 +72,12 @@ function Header({videoId, setVideoId, userId, setUserId, taskId, setTaskId}){
                         size="small"
                         value={inputTaskId}
                         onChange={handleInputTaskIdChange}
+                        style={{marginLeft: "5px"}}
                     />
                     <Button variant="contained" onClick={clickSubmitButton} style={{marginLeft: "5px"}}>Submit</Button>
                 </div>
             }
-            {showInput ? <KeyboardArrowUp onClick={clickShowHide} /> : <KeyboardArrowDown onClick={clickShowHide} />}
+            {showInput ? <KeyboardArrowUp onClick={clickShowHide} style={{cursor: "pointer"}}/> : <KeyboardArrowDown onClick={clickShowHide} style={{cursor: "pointer"}} />}
 
         </div>
     )

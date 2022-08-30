@@ -23,7 +23,7 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
     }, [videoTime])
   
     const handleMouseMove = event => {
-        setPosition(event.clientX - event.target.offsetLeft);
+        setPosition(event.clientX - event.target.offsetLeft - 300);
     };
 
     const getProgressLength=()=>{

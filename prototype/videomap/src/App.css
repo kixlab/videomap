@@ -5,16 +5,20 @@
 .body_wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .video_wrapper {
+  /* width: 50%; */
+  margin-left: 300px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .script_wrapper {
-  width: 50%;
+  /* float: left; */
+  /* width: 50%; */
   margin-left: 20px;
   margin-right: 20px;
 }
