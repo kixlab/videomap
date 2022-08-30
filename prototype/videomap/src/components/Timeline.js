@@ -2,10 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { Tooltip, Box } from "@material-ui/core";
 
 import './Timeline.css';
-import pinImage from './../image/placeholder.png';
-// import Button from 'react-bootstrap/Button';
-// import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-// import Tooltip from 'react-bootstrap/Tooltip';
+import pinImage from './../image/custom_pin.png';
 
 function LabelBox ({
     item, 
@@ -119,7 +116,7 @@ function Timeline({
             </div>
             <div className="progressbar_wrapper">
                 <div className="progressbar" style={{width: `${getProgressLength()}px`}} />
-                <div className="pin"><img src={pinImage} width="30px"></img></div>
+                <div className="pin"><img src={pinImage} width="10px" height="50px"></img></div>
             </div>
         </div>
 
