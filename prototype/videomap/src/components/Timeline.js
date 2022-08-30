@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Tooltip, Box } from "@material-ui/core";
 
 import './Timeline.css';
-import pinImage from './../image/pin.png';
+import pinImage from './../image/placeholder.png';
 
 function LabelBox ({item, colorPalette, duration}) {
 
@@ -12,8 +12,11 @@ function LabelBox ({item, colorPalette, duration}) {
     } 
 
     return (
+        <Tooltip title="hello" placement="right">
         <div className="label_box" style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
+            {/* <div>{item.low_label}</div> */}
         </div>
+        </Tooltip>
     )
 }
 
@@ -51,15 +54,18 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
 
     return(
         <div className="timeline_wrapper">
-            <Tooltip title={posToTime (position)} followCursor>
+            {/* <Tooltip title={posToTime (position)} placement="top"> */}
                 <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/>
-            </Tooltip>
+                {/* </Tooltip> */}
             <div className="label_timeline">
             {script &&
                 script.map ((item, ind) => (
+
+           
                 <div key={ind}>
                     <LabelBox item={item} colorPalette={colorPalette} duration={duration} />
-                </div>))
+                </div>
+                ))
             } 
             </div>
             <div className="progressbar_wrapper">
