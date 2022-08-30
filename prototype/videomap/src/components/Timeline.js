@@ -7,7 +7,7 @@ import pinImage from './../image/placeholder.png';
 // import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 // import Tooltip from 'react-bootstrap/Tooltip';
 
-function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPosition, video}) {
+function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPosition, video, syncScript}) {
 
     const calWidth = (start, end) => {
         var width = (end-start)/duration*850;
@@ -34,16 +34,17 @@ function LabelBox ({item, colorPalette, duration, position, setVideoTime, setPos
         const newTime = position * duration / 850;
         setVideoTime (newTime);
         video.seekTo (newTime);
+        syncScript (newTime);
     }
 
     return (
         <div className="label_box" onClick={handleTimelineClick} onMouseMove={handleMouseMove} style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
-            <span class="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
+            <span className="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
         </div>
     )
 }
 
-function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette}){
+function Timeline({video, videoTime, duration, setVideoTime, script, colorPalette, syncScript}){
     const [position, setPosition] = useState(0);
     useEffect(() => {
     }, [videoTime])
@@ -62,7 +63,7 @@ function Timeline({video, videoTime, duration, setVideoTime, script, colorPalett
             {script &&
                 script.map ((item, ind) => (
                 <div key={ind}>
-                    <LabelBox item={item} colorPalette={colorPalette} duration={duration} position={position} setVideoTime={setVideoTime} setPosition={setPosition} video={video} />
+                    <LabelBox item={item} colorPalette={colorPalette} duration={duration} position={position} setVideoTime={setVideoTime} setPosition={setPosition} video={video} syncScript={syncScript}/>
                 </div>
                 ))
             } 

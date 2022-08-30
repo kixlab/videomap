@@ -38,7 +38,8 @@ function Script({
     setVideoTime,
     colorPalette,
     logData,
-    initialTimeInfo
+    initialTimeInfo,
+    syncScript
 }){
     const itemRef = useRef({});
     const currentScroll = useRef({ scrollTop: 0, scrollBottom: 300 });
@@ -48,6 +49,7 @@ function Script({
         setSelectedIndex (index);
         setVideoTime (script[index].start);
         video.seekTo (script[index].start);
+        syncScript (script[index].start);
         // database logging
         const user_ts = new Date().getTime() - initialTimeInfo;
         const meta = {source: "click", location: "script"};

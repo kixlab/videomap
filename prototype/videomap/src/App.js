@@ -132,10 +132,12 @@ function App() {
       vt = videoTime - 5;
       setVideoTime (vt);
       video.seekTo (vt);
+      syncScript (vt);
     } else if (keyCode == 39) {
       vt = videoTime + 5;
       setVideoTime (vt);
       video.seekTo (vt);
+      syncScript (vt);
     }
   };
 
@@ -143,6 +145,7 @@ function App() {
     setSelectedIndex (index);
     setVideoTime (script[index].start);
     video.seekTo (script[index].start);
+    syncScript (script[index].start);
   };
 
   useEffect(() => { //TODO: update?
@@ -159,7 +162,10 @@ function App() {
     for (var i = 0; i < script.length; i++) {
       if (currentTime >= script[i]['start'] && currentTime <= script[i]['end']) {
         var target_sentence = document.getElementById(i);
-        // target_sentence.scrollIntoView({behavior: 'auto', block: 'center'})
+        // console.log(paused);
+        // if (!paused){
+        target_sentence.scrollIntoView({behavior: 'auto', block: 'center'})
+        // }
         setSelectedIndex (i);
         return;
       }
@@ -170,7 +176,7 @@ function App() {
   const onGetCurrentTime = useCallback(() => {
     if (video === null) return 0;
     const currentTime = video.getCurrentTime();  // TODO: round2
-    syncScript (currentTime);
+    // syncScript (currentTime);
     return currentTime;
   }, [video]);
 
@@ -204,6 +210,7 @@ function App() {
   width: '850',
   playerVars: {
       autoplay: 0,
+      controls: 0,
       },
   };
 
@@ -233,6 +240,7 @@ function App() {
             setVideoTime={setVideoTime}
             script={script}
             colorPalette={colorPalette}
+            syncScript={syncScript}
           />
         </div>
         <div className='script_wrapper'>
@@ -246,6 +254,7 @@ function App() {
             colorPalette={colorPalette}
             logData={logData}
             initialTimeInfo={initialTimeInfo}
+            syncScript={syncScript}
           />
         </div>
       </div>
