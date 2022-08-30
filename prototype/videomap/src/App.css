@@ -19,11 +19,21 @@
 .script_wrapper {
   /* float: left; */
   /* width: 50%; */
-  margin-left: 5px;
+  /* margin-left: 5px; */
   margin-right: 20px;
 }
 
 .player {
   float: right;
   margin-right: 15px;
+}
+
+.info_wrapper {
+  padding: 5px;
+  margin: auto;
+  margin-top: 20px;
+  width: 350px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
 }
