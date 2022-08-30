@@ -34,11 +34,11 @@ function App() {
   const [logIndex, setLogIndex] = useState (0);
 
   // database
-  const logData=(action, video_timestamp, meta)=>{
+  const logData=(action, video_timestamp, meta, firstLog=false)=>{
     if (videoId === "" || userId === "" || taskId === "") return;
 
     const save_path = '/Log' + '/' + userId + '/' + videoId + '/' + taskId
-    const user_timestamp = (new Date().getTime() / 1000 - initialTimeInfo).toFixed(2);
+    const user_timestamp = firstLog ? 0 : (new Date().getTime() / 1000 - initialTimeInfo).toFixed(2);
     const updates = {};
     updates[save_path + '/' + logIndex] = {
       action: action,
@@ -136,18 +136,8 @@ function App() {
         e.preventDefault();
       }
       const currentStatus = video.getPlayerState();
-
-      if (currentStatus == 0 || currentStatus == 2 || currentStatus == 5) {
-        video.playVideo();
-        // logging
-        const meta = {source: "keyboard", key: "space"};
-        logData ("play", videoTime, meta);
-      } else if (currentStatus == 1) {
-        video.pauseVideo();
-        // logging
-        const meta = {source: "keyboard", key: "space"};
-        logData ("pause", videoTime, meta);
-      };
+      if (currentStatus == 0 || currentStatus == 2 || currentStatus == 5) video.playVideo();
+      else if (currentStatus == 1) video.pauseVideo();
     };
   };
 
@@ -196,7 +186,14 @@ function App() {
       // event.target.pauseVideo();
   };
 
+  const onPause = () => {
+    // logging
+    logData ("pause", videoTime, {});
+  }
+
   const onPlay = () => {
+    // logging
+    logData ("play", videoTime, {}, !started);
     if (!started) {
       setStarted(true);
       setInitialTimeInfo (new Date().getTime() / 1000);
@@ -207,7 +204,7 @@ function App() {
       return () => {
         clearInterval(interval);
       };
-    }
+    };
   };
 
   const onGetDuration = () => {
@@ -242,6 +239,7 @@ function App() {
               opts={opts} 
               onReady={onReady}
               onPlay={onPlay}
+              onPause={onPause}
           />
           <Timeline
             video={video}
