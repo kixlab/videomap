@@ -27,6 +27,9 @@ function App() {
   const [selectedIndex, setSelectedIndex] = useState (-1);
   const [hoverLabel, setHoverLabel] = useState("");
 
+  // filter
+  const [selectedLabels, setSelectedLabels] = useState (['instruction']);
+
   // for log
   // Task Id
   // 0 for search, 1 for skim and summary, 2 for following
@@ -158,12 +161,13 @@ function App() {
     };
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
-  useEffect(() => {
-    if (selectedIndex !== -1){
-      var target_sentence = document.getElementById(selectedIndex);
-      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
-    }
-  }, [selectedIndex]);
+  // TODO: fix bug
+  // useEffect(() => {
+  //   if (selectedIndex !== -1){
+  //     var target_sentence = document.getElementById(selectedIndex);
+  //     target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
+  //   }
+  // }, [selectedIndex]);
   
   const updateIndex = (currentTime) => {
     for (var i = 0; i < script.length; i++) {
@@ -273,6 +277,7 @@ function App() {
             logData={logData}
             initialTimeInfo={initialTimeInfo}
             setHoverLabel={setHoverLabel}
+            selectedLabels={selectedLabels}
           />
         </div>
       </div>

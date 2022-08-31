@@ -41,6 +41,7 @@ function LabelBox ({
     const handleTimelineClick=()=>{
         const newTime = (position * duration / 850).toFixed(3);
         // logging
+        // TODO: logging에 label추가하기
         const video_timestamp = {
             from: videoTime,
             to: newTime

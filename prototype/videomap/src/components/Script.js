@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 
 import './Script.css';
 
@@ -48,10 +48,27 @@ function Script({
     colorPalette,
     logData,
     setHoverLabel,
+    selectedLabels
 }){
     const itemRef = useRef({});
     const currentScroll = useRef({ scrollTop: 0, scrollBottom: 300 });
     const [typeLevel, setTypeLevel] = useState ('low');
+    const [filteredScript, setFilteredScript] = useState(script);
+
+    useEffect(() => {
+        if (script.length > 0 && selectedLabels.length > 0) {
+            filterScript();
+        }
+    }, [selectedLabels, script])
+
+    
+    const filterScript = () => {
+        const filtered = script.filter (item => selectedLabels.includes (item.low_label));
+        setFilteredScript (filtered);
+        setSelectedIndex (filtered[0].index);
+        console.log (filtered)
+        console.log (filtered[0].index)
+    }
 
     const handleSentenceClick = (index) => {
         // logging
@@ -102,9 +119,9 @@ function Script({
                 </RadioGroup>
             </FormControl> */}
             <div className="script_block" onScroll={onScroll}>
-                {script &&
-                    script.map ((item, ind) => (
-                    <div key={ind} id={ind} className={selectedIndex == ind ? "selected" : "default"} onClick={() => handleSentenceClick(ind)}>
+                {filterScript &&
+                    filteredScript.map ((item, ind) => (
+                    <div key={ind} id={ind} className={selectedIndex == item.index ? "selected" : "default"} onClick={() => handleSentenceClick(item.index)}>
                         <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} setHoverLabel={setHoverLabel}/>
                     </div>))
                 }
