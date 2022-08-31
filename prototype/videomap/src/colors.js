@@ -22,12 +22,12 @@ export const colorPalette = {
     'tool':'#F5A7A6',
     'tool (multiple)':'#F5A7A6',
     'tool (optional)':'#F5A7A6',
-    //explanation
-    'justification':'#FFF5AB',
-    'effect':'#FFF5AB',
     //supplementary
     'warning':'#C7B4C4',
     'tip':'#C7B4C4',
+    //explanation
+    'justification':'#FFF5AB',
+    'effect':'#FFF5AB',
     //description
     'status':'#A8D0C6',
     'context':'#A8D0C6',
