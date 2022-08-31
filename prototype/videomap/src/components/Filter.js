@@ -26,7 +26,7 @@ const Filter = ({colorPalette}) => {
     const onClickGroup = (target, selected = "") => {
         if (selected == ""){
             if (target.style.border === 'none'){// unselect -> select
-                updateSelected(target);
+                updateSelected(target, "2px solid black");
             }
             else {// select -> unselect
                 updateSelected(target, "none");
