@@ -38,7 +38,7 @@ function LabelBox ({
         setPosition(event.clientX - 300);
     };
 
-    const handleTimelineClick=()=>{
+    const handleTimelineClick=(item)=>{
         const newTime = (position * duration / 850).toFixed(3);
         // logging
         // TODO: logging에 label추가하기
@@ -49,6 +49,8 @@ function LabelBox ({
         const meta = {
             source: "mouse", 
             location: "timeline",
+            low_label: item.low_label,
+            high_label: item.high_label 
         };
         logData ("jump", video_timestamp, meta);
 
@@ -67,7 +69,7 @@ function LabelBox ({
     }
 
     return (
-        <div className="label_box" onClick={handleTimelineClick} onMouseMove={handleMouseMove} onMouseOver={() => updateHoverLabel(item.low_label)} onMouseLeave={() => updateHoverLabel(false)} style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
+        <div className="label_box" onClick={()=>handleTimelineClick(item)} onMouseMove={handleMouseMove} onMouseOver={() => updateHoverLabel(item.low_label)} onMouseLeave={() => updateHoverLabel(false)} style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
             <span className="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
         </div>
     )

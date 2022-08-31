@@ -29,6 +29,7 @@ function App() {
 
   // filter
   const [selectedLabels, setSelectedLabels] = useState (['instruction']);
+  const [filteredScript, setFilteredScript] = useState ([]);
 
   // for log
   // Task Id
@@ -66,12 +67,27 @@ function App() {
         setScript (jsonFile);
         setSelectedIndex (0);
         setScriptLoaded (true);
+        // filter
+        setFilteredScript (jsonFile);
       });
   };
 
   useEffect(()=>{
     getScript();
   }, [videoId]);
+
+  // filter script
+  const filterScript = () => {
+    const filtered = script.filter (item => selectedLabels.includes (item.low_label));
+    setFilteredScript (filtered);
+    setSelectedIndex (filtered[0].index);
+}
+
+  useEffect(() => {
+    if (script.length > 0 && selectedLabels.length > 0) {
+        filterScript();
+    }
+}, [selectedLabels])
 
   const logKeyPress = (keyCode, scriptIndex = -1) => {
     var video_timestamp = {};
@@ -98,14 +114,30 @@ function App() {
     logData ("jump", video_timestamp, meta);
   }
 
+  const getNextIndex = (script, currentIndex) => {
+    for (var i = 0; i < script.length; i++) {
+      if (script[i].index === currentIndex) {
+        return script[i+1].index;
+      }
+    }
+  };
+
+  const getPreviousIndex = (script, currentIndex) => {
+    for (var i = 0; i < script.length; i++) {
+      if (script[i].index === currentIndex) {
+        return script[i-1].index;
+      }
+    }
+  }
+
   const onKeyPress = (e) => {
     const keyCode = e.keyCode;
     let ind, vt;
 
     // up arrow
     if (keyCode == 38) {
-      if (selectedIndex > 0) {
-        ind = selectedIndex-1;
+      if (selectedIndex > filteredScript[0].index) {
+        ind = getPreviousIndex (filteredScript, selectedIndex);
         // logging
         logKeyPress ("up", ind);
         handleIndexChange (ind);
@@ -113,13 +145,12 @@ function App() {
 
     // down arrow
     } else if (keyCode == 40) { 
-      if (selectedIndex < script.length-1) {
-        ind = selectedIndex+1;
+      if (selectedIndex < filteredScript[filteredScript.length-1].index) {
+        ind = getNextIndex (filteredScript, selectedIndex);
         // logging
         logKeyPress ("down", ind);
         handleIndexChange (ind);
       }
-
     // left arrow
     } else if (keyCode == 37) {
       // logging
@@ -233,6 +264,7 @@ function App() {
 
   return (
     <div className="App">
+      <div onClick={()=>setSelectedLabels("instruction")}>click</div>
       <Header 
         videoId={videoId}
         setVideoId={setVideoId}
@@ -277,7 +309,7 @@ function App() {
             logData={logData}
             initialTimeInfo={initialTimeInfo}
             setHoverLabel={setHoverLabel}
-            selectedLabels={selectedLabels}
+            filteredScript={filteredScript}
           />
         </div>
       </div>
