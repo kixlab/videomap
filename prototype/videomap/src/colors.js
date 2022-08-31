@@ -1,13 +1,13 @@
 export const colorPalette = {
     // high-level type
-    'greeting':'yellow',
-    'overview':'green ',
-    'step':'purple',
-    'supplementary':'white',
-    'explanation':'lightblue',
-    'description':'yellow',
-    'conclusion':'blue',
-    'misc.':'lightcyan',
+    'greeting':'#DAF283',
+    'overview':'#F6BD60 ',
+    'step':'#F5A7A6',
+    'supplementary':'#C7B4C4',
+    'explanation':'#FFF5AB',
+    'description':'#A8D0C6',
+    'conclusion':'#b19bbd',
+    'misc':'lightgray',
     
     // low-level type
     //greeting

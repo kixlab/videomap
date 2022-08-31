@@ -11,6 +11,7 @@ import { definition } from "./definition";
 import Header from './components/Header';
 import Script from './components/Script';
 import Timeline from './components/Timeline';
+import Filter from './components/Filter';
 
 function App() {
   const [video, setVideo] = useState (null);
@@ -234,8 +235,11 @@ function App() {
         userId={userId}
         setUserId={setUserId}
         taskId={taskId}
-        setTaskId={setTaskId}å
+        setTaskId={setTaskId}
       />
+      <div>
+        <Filter colorPalette={colorPalette}/>
+      </div>
       <div className='body_wrapper'>
         <div className="video_wrapper">
           <YouTube 

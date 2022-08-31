@@ -1,0 +1,27 @@
+.filter_wrapper {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.filter_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter_high_label {
+  background-color: aliceblue;
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+}
+
+.filter_label {
+  background-color: aliceblue;
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+}
