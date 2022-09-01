@@ -6,7 +6,7 @@ import { definition } from "../definition";
 import { BorderStyle } from "@material-ui/icons";
 
 const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
-
+    //TODO: logging
     const onClickGroup = (target, selected = "") => {
         if (selected == ""){
             if (target.classList.contains("selected")){ //unselect
