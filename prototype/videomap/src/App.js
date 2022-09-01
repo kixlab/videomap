@@ -257,6 +257,7 @@ function App() {
     else if (processedScript[selectedIndex].end - 0.2 <= time){
       console.log("jumping");
       var ind = selectedIndex + 1;
+    
       while (!processedScript[ind].use) {
         ind += 1
       };
@@ -298,9 +299,9 @@ function App() {
   }
 
   // on every video time change, call jumptime
-  // useEffect (() => {
-  //   if (filteredScript.length > 0) jumpTime (videoTime);
-  // }, [videoTime]);
+  useEffect (() => {
+    if (filteredScript.length > 0) jumpTime (videoTime);
+  }, [videoTime]);
 
 
   const onPlay = () => {
@@ -316,7 +317,7 @@ function App() {
         const time = onGetCurrentTime();
         setVideoTime(time);
         updateIndex (time);
-        jumpTime (time);
+        // jumpTime (time);
       }, 10);
       return () => {
         clearInterval(interval);
