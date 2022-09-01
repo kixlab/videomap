@@ -118,7 +118,7 @@ function Timeline({
             else item['use'] = false;
             return item;
         });
-        console.log (processed);
+        // console.log (processed);
         setProcessedScript (processed);
     }
 

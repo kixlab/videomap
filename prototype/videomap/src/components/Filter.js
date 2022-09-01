@@ -6,6 +6,27 @@ import { definition } from "../definition";
 import { BorderStyle } from "@material-ui/icons";
 
 const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
+    const [selectStatus, setSelectStatus] = useState({'greeting_intro':1, 'overview':3, 'step': 3, 'supplementary':2, 'explanation':2, 'description':3, 'greeting_outro': 1, 'conclusion':2, 'misc':4});
+
+    const fullSelectStatus = {'greeting_intro':1, 'overview':3, 'step': 3, 'supplementary':2, 'explanation':2, 'description':3, 'greeting_outro': 1, 'conclusion':2, 'misc':4};
+
+
+    useEffect(()=>{
+        for (var key in selectStatus){
+            if (selectStatus[key] == 0){
+                const target = document.getElementById(key);
+                onUnselectGroup(target);
+                target.classList.remove("selected");
+            }
+            else if(selectStatus[key] == fullSelectStatus[key]){
+                const target = document.getElementById(key);
+                onSelectGroup(target);
+                target.classList.add("selected");
+            }
+        }
+    }, [selectStatus]);
+
+
     //TODO: logging
     const onClickGroup = (target, selected = "") => {
         if (selected == ""){
@@ -36,49 +57,85 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
             }
         }
         if (select == "unselect") {
-            target.style.backgroundColor = "white";
-            target.style.color = "black";
+            onUnselectGroup(target);
             updateSelectedLabelList(label_list, "remove")
         }
         else {
-            target.style.backgroundColor = "rgb(82, 82, 82)";
-            target.style.color = colorPalette[target.innerText];
-            target.style.border = "3px solid rgb(82, 82, 82)";
+            onSelectGroup(target);
             updateSelectedLabelList(label_list, "add")
         }
     }
 
+    const onSelectGroup = (target) => {
+        target.style.backgroundColor = "rgb(82, 82, 82)";
+        target.style.color = colorPalette[target.innerText];
+        target.style.border = "3px solid rgb(82, 82, 82)";
+
+    }
+
+    const onUnselectGroup = (target) => {
+        target.style.backgroundColor = "white";
+        target.style.color = "black";
+    }
+
     const onClickLabel = (target, select="") => {
         if (select == ""){
-            if (target.classList.contains("selected")){ // unselect
+            if (target.classList.contains("selected")){ //unselect
                 target.style.border = "3px solid " + colorPalette[target.children[0].id];
                 target.style.backgroundColor = "white";
                 target.classList.toggle("selected");
-                updateSelectedLabel(target.children[0].id, "remove")
+                updateSelectedLabel(target.children[0].id, "remove");
+                const group_label = target.parentElement.children[0].id;
+                updateGroupCount (group_label, -1);
             }
             else { //select
-                target.style.backgroundColor = colorPalette[target.children[0].id];
-                target.classList.toggle("selected");
-                updateSelectedLabel(target.children[0].id, "add")
+                if (target.children[0]){
+                    target.style.backgroundColor = colorPalette[target.children[0].id];
+                    target.classList.toggle("selected");
+                    updateSelectedLabel(target.children[0].id, "add");
+                    const group_label = target.parentElement.children[0].id;
+                    updateGroupCount (group_label, 1);
+                }
             }
         }
         else {
-            if (select == "select"){
+            if (select == "select"){ //select
                 target.style.backgroundColor = colorPalette[target.children[0].id];
                 target.classList.add("selected");
-                updateSelectedLabel(target.children[0].id, "add")
+                updateSelectedLabel(target.children[0].id, "add");
+                // const group_label = target.parentElement.children[0].id;
+                // updateGroupCount (group_label, 1);
             }
-            else {
+            else { //unselect
                 target.style.border = "3px solid " + colorPalette[target.children[0].id];
                 target.style.backgroundColor = "white";
                 target.classList.remove("selected");
                 updateSelectedLabel(target.children[0].id, "remove");
+                // const group_label = target.parentElement.children[0].id;
+                // updateGroupCount (group_label, -1);
             }
 
         }
     };
 
+    const updateGroupCount = (label, add, force = false) => {
+        if (force){ 
+            const currGroupCountState = {...selectStatus}
+            currGroupCountState[label] =  add;
+            setSelectStatus(currGroupCountState);
+
+        }
+        else {
+            const currGroupCountState = {...selectStatus}
+            currGroupCountState[label] = selectStatus[label] + add;
+            setSelectStatus(currGroupCountState);
+        }
+    }
+
     const updateSelectedLabelList = (label_list, selectStyle) => {
+        const example = label_list[0];
+        const group_label = document.getElementById(example).parentElement.parentElement.children[0].id;
+
         if (selectStyle == "add") {
             // https://www.samanthaming.com/tidbits/87-5-ways-to-append-item-to-array/
             const label_set = new Set(selectedLabels);
@@ -87,6 +144,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
             const final_labels = [...labels]
             // const labels = selectedLabels.concat(label_list);
             setSelectedLabels(final_labels);
+            updateGroupCount(group_label, label_list.length, true);
         }
         else {
             const label_set = new Set(selectedLabels);
@@ -94,6 +152,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
             const labels = new Set([...label_set].filter(x => !remove_label_set.has(x)));
             const final_labels = [...labels];
             setSelectedLabels(final_labels);
+            updateGroupCount(group_label, 0, true);
         }
     }
 
@@ -152,7 +211,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                 </div>
                 <div className="class">
                     <div className="group">
-                        <div className="group_label selected" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['greeting']}}>
+                        <div className="group_label selected" id="greeting_intro" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['greeting']}}>
                             Greeting
                         </div>
                         <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['greeting'], borderColor: colorPalette['greeting']}}>
@@ -161,7 +220,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                         </div>
                     </div>
                     <div className="group">
-                        <div className="group_label selected" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['overview']}}>
+                        <div className="group_label selected" id="overview"  onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['overview']}}>
                             Overview
                         </div>
                         <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['overview'], borderColor: colorPalette['overview']}}>
@@ -185,7 +244,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                 </div>
                 <div className="class">          
                 <div className="group">
-                    <div className="group_label selected" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['step']}}>
+                    <div className="group_label selected" id="step"  onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['step']}}>
                         Step
                     </div>
                     <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['step'], borderColor: colorPalette['step']}}>
@@ -202,7 +261,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                 </div>
                 <div className="group">
-                    <div className="group_label selected" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['supplementary']}}>
+                    <div className="group_label selected" id="supplementary"  onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['supplementary']}}>
                         Supplementary
                     </div>
                     <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['supplementary'], borderColor: colorPalette['supplementary']}}>
@@ -215,7 +274,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                 </div>
                 <div className="group">
-                    <div className="group_label selected" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['explanation']}}>
+                    <div className="group_label selected" id="explanation"  onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['explanation']}}>
                         Explanation
                     </div>
                     <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['explanation'], borderColor: colorPalette['explanation']}}>
@@ -228,7 +287,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                 </div>
                 <div className="group">
-                    <div className="group_label selected" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['description']}}>
+                    <div className="group_label selected" id="description"  onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['description']}}>
                         Description
                     </div>
                     <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['description'], borderColor: colorPalette['description']}}>
@@ -252,7 +311,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                 </div>
                 <div className="class">       
                 <div className="group">
-                    <div className="group_label selected" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['greeting']}}>
+                    <div className="group_label selected" id="greeting_outro"  onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['greeting']}}>
                         Greeting
                     </div>
                     <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['greeting'], borderColor: colorPalette['greeting']}}>
@@ -261,7 +320,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                 </div>
                 <div className="group">
-                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['conclusion']}}>
+                    <div className="group_label" id="conclusion"  onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['conclusion']}}>
                         Conclusion
                     </div>
                     <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['conclusion'], borderColor: colorPalette['conclusion']}}>
@@ -281,7 +340,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                 </div>
                 <div className="class">
                 <div className="group">
-                    <div className="group_label selected" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['misc']}}>
+                    <div className="group_label selected" id="misc" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['misc']}}>
                         Misc.
                     </div>
                     <div className="label selected" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['misc'], borderColor: colorPalette['misc']}}>
