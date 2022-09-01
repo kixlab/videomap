@@ -104,23 +104,8 @@ function Timeline({
     processedScript
 }){
     const [position, setPosition] = useState(0);
-
     useEffect(() => {
     }, [videoTime]);
-
-    useEffect(() => {
-        processScript ();
-    }, [script, selectedLabels]);
-
-    const processScript = () => {
-        const processed = script.map (item => {
-            if (selectedLabels.includes (labelInfo[item.low_label])) item['use'] = true;
-            else item['use'] = false;
-            return item;
-        });
-        // console.log (processed);
-        setProcessedScript (processed);
-    }
 
     const getProgressLength=()=>{
         if (duration == 0) return 0;
