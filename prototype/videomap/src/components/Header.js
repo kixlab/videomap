@@ -9,7 +9,7 @@ function Header({videoId, setVideoId, userId, setUserId, taskId, setTaskId}){
     const [inputUserId, setInputUserId] = useState(userId);
     const [inputTaskId, setInputTaskId] = useState(taskId);
 
-    const [showInput, setShowInput] = useState (true);
+    const [showInput, setShowInput] = useState (false);
 
     const handleInputVideoIdChange = event => {
         setInputVideoId(event.target.value);
@@ -40,7 +40,8 @@ function Header({videoId, setVideoId, userId, setUserId, taskId, setTaskId}){
 
     return(
         <div className="header_wrapper">
-            <h3>VIDEO MAP</h3>
+            {/* <h3>VIDEO MAP</h3> */}
+            {showInput &&
             <div>
                 <TextField 
                     InputLabelProps={{ shrink: true }}
@@ -52,8 +53,7 @@ function Header({videoId, setVideoId, userId, setUserId, taskId, setTaskId}){
                     onChange={handleInputVideoIdChange}
                 />
                 <Button variant="contained" onClick={clickVideoIdChangeButton} style={{marginLeft: "5px"}}>Change</Button>
-            </div>
-            {showInput &&
+            
                 <div className="bottom_input_wrapper">
                     <TextField 
                         InputLabelProps={{ shrink: true }}
@@ -75,6 +75,7 @@ function Header({videoId, setVideoId, userId, setUserId, taskId, setTaskId}){
                         style={{marginLeft: "5px"}}
                     />
                     <Button variant="contained" onClick={clickSubmitButton} style={{marginLeft: "5px"}}>Submit</Button>
+                </div>
                 </div>
             }
             {showInput ? <KeyboardArrowUp onClick={clickShowHide} style={{cursor: "pointer"}}/> : <KeyboardArrowDown onClick={clickShowHide} style={{cursor: "pointer"}} />}

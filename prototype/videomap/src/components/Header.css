@@ -1,5 +1,6 @@
 .header_wrapper {
-  height: 200px;
+  /* height: 200px; */
+  margin-top: 50px;
 }
 
 .bottom_input_wrapper {

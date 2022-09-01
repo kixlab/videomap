@@ -66,15 +66,48 @@ const Filter = ({colorPalette}) => {
             console.log(target.innerText);
         }
     };
+
+    const onClickSelectAll = () => {
+        const groups = document.getElementsByClassName("group_label");
+        for (var i = 0; i < groups.length; i++) {
+          var group = groups[i];
+          onClickGroup(group, "select");
+        }
+    }
+
+    const onClickUnselectAll = () => {
+        const groups = document.getElementsByClassName("group_label");
+        for (var i = 0; i < groups.length; i++) {
+          var group = groups[i];
+          onClickGroup(group, "unselect");
+        }
+
+    }
+
+    const onMouseEnter = (e) => {
+        e.target.style.backgroundColor = "black";
+        e.target.style.color = "white";
+    }
+
+    const onMouseLeave = (e) => {
+        e.target.style.backgroundColor = "white";
+        e.target.style.color = "black";
+    }
+
     return (
         <div className="filter_wrapper">
+            <div className="select">
+                <div className="selectBtn" onClick={()=>onClickSelectAll()} onMouseEnter={(e)=>onMouseEnter(e)} onMouseLeave={(e)=>onMouseLeave(e)}>Select All</div>
+                <div className="selectBtn" onClick={()=>onClickUnselectAll()} onMouseEnter={(e)=>onMouseEnter(e)} onMouseLeave={(e)=>onMouseLeave(e)}>Unselect All</div>
+            </div>
+            <div className="label_wrapper">
             <div className="category"> 
-                <div className="category_label" onClick={(e)=>onClickClass(e.target)} >
+                <div className="category_label" >
                     Intro
                 </div>
                 <div className="class">
                     <div className="group">
-                        <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                        <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['greeting']}}>
                             Greeting
                         </div>
                         <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['greeting']}}>
@@ -82,7 +115,7 @@ const Filter = ({colorPalette}) => {
                         </div>
                     </div>
                     <div className="group">
-                        <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                        <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['overview']}}>
                             Overview
                         </div>
                         <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['overview']}}>
@@ -98,12 +131,12 @@ const Filter = ({colorPalette}) => {
                 </div>          
             </div>
             <div className="category"> 
-                <div className="category_label" onClick={(e)=>onClickClass(e.target)}>
+                <div className="category_label">
                     Procedure
                 </div>
                 <div className="class">          
                 <div className="group">
-                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['step']}}>
                         Step
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['step']}}>
@@ -117,7 +150,7 @@ const Filter = ({colorPalette}) => {
                     </div>
                 </div>
                 <div className="group">
-                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['supplementary']}}>
                         Supplementary
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['supplementary']}}>
@@ -128,7 +161,7 @@ const Filter = ({colorPalette}) => {
                     </div>
                 </div>
                 <div className="group">
-                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['explanation']}}>
                         Explanation
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['explanation']}}>
@@ -139,7 +172,7 @@ const Filter = ({colorPalette}) => {
                     </div>
                 </div>
                 <div className="group">
-                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['description']}}>
                         Description
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['description']}}>
@@ -155,12 +188,12 @@ const Filter = ({colorPalette}) => {
                 </div>
             </div>
             <div className="category"> 
-                <div className="category_label" onClick={(e)=>onClickClass(e.target)}>
+                <div className="category_label">
                     Outro
                 </div>
                 <div className="class">       
                 <div className="group">
-                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['greeting']}}>
                         Greeting
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['greeting']}}>
@@ -168,7 +201,7 @@ const Filter = ({colorPalette}) => {
                     </div>
                 </div>
                 <div className="group">
-                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['conclusion']}}>
                         Conclusion
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['conclusion']}}>
@@ -181,12 +214,12 @@ const Filter = ({colorPalette}) => {
             </div>
             </div>
             <div className="category"> 
-                <div className="category_label" onClick={(e)=>onClickClass(e.target)}>
+                <div className="category_label">
                     Misc.
                 </div>
                 <div className="class">
                 <div className="group">
-                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)}>
+                    <div className="group_label" onClick={(e)=>onClickGroup(e.target)} style={{color: colorPalette['misc']}}>
                         Misc.
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['misc']}}>
@@ -203,6 +236,7 @@ const Filter = ({colorPalette}) => {
                     </div>
                 </div>
                 </div>
+            </div>
             </div>
         </div>
     )
