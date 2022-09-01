@@ -18,8 +18,8 @@ export const definition = {
     'warning':'Actions that should be avoided',
     'tip':'Information that makes instructions easier, faster, or more efficient',
     //description
-    'status':'Description the current state/phase of the object/target',
-    'context':'Description the method or setting',
+    'status':'Description of the current state/phase of the object/target',
+    'context':'Description of the method or setting',
     'tool spec.':'Description of the tool, equipment, and ingredients that will be used during the task',
     //greeting-outro
     'closing':'Parting remarks and wrap-up',

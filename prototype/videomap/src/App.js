@@ -5,7 +5,7 @@ import YouTube from 'react-youtube';
 import './App.css';
 import { colorPalette } from "./colors";
 import { category } from "./category";
-import { definition } from "./definition";
+import { labelInfo } from "./labelInfo";
 
 // components
 import Header from './components/Header';
@@ -25,7 +25,6 @@ function App() {
   const [scriptLoaded, setScriptLoaded] = useState (false);
   const [script, setScript] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState (-1);
-  const [hoverLabel, setHoverLabel] = useState("");
 
   // filter
   const [selectedLabels, setSelectedLabels] = useState (["Opening", "Goal", "Motivation", "Briefing", "Subgoal", "Instruction", "Tool", "Justification", "Effect", "Tip", "Warning", "Status", "Context", "Tool spec.", "Closing", "Outcome", "Reflection", "Side note", "Self-promo", "Bridge", "Filler"]);
@@ -262,6 +261,20 @@ function App() {
       },
   };
 
+  const showLabelInfo = (label) => {
+    const trueLabel = labelInfo[label];
+    const target = document.getElementById(trueLabel);
+    target.style.visibility = "visible";
+    target.parentElement.style.boxShadow = "0 0 25px rgb(34, 58, 164), 0 0 5px rgb(124, 144, 255)";
+  };
+
+  const hideLabelInfo = (label) => {
+    const trueLabel = labelInfo[label];
+    const target = document.getElementById(trueLabel);
+    target.style.visibility = "hidden";
+    target.parentElement.style.boxShadow = "none";
+  };
+
   return (
     <div className="App">
       <div onClick={()=>setSelectedLabels("instruction")}>click</div>
@@ -274,7 +287,11 @@ function App() {
         setTaskId={setTaskId}
       />
       <div>
-        <Filter colorPalette={colorPalette} selectedLabels={selectedLabels} setSelectedLabels={setSelectedLabels}/>
+        <Filter 
+          colorPalette={colorPalette} 
+          selectedLabels={selectedLabels} 
+          setSelectedLabels={setSelectedLabels}
+          />
       </div>
       <div className='body_wrapper'>
         <div className="video_wrapper">
@@ -293,8 +310,9 @@ function App() {
             setVideoTime={setVideoTime}
             script={script}
             colorPalette={colorPalette}
-            setHoverLabel={setHoverLabel}
             logData={logData}
+            showLabelInfo={showLabelInfo}
+            hideLabelInfo={hideLabelInfo}
           />
         </div>
         <div className='script_wrapper'>
@@ -308,12 +326,13 @@ function App() {
             colorPalette={colorPalette}
             logData={logData}
             initialTimeInfo={initialTimeInfo}
-            setHoverLabel={setHoverLabel}
             filteredScript={filteredScript}
+            showLabelInfo={showLabelInfo}
+            hideLabelInfo={hideLabelInfo}
           />
         </div>
       </div>
-      {hoverLabel && 
+      {/* {hoverLabel && 
         <div className='info_wrapper'>
           <div style={{fontWeight: 500, backgroundColor: colorPalette[hoverLabel]}}>
             <span>{category[hoverLabel]}</span>
@@ -322,7 +341,7 @@ function App() {
             {definition[hoverLabel]}
           </div>
         </div>
-      }
+      } */}
     </div>
   );
 }

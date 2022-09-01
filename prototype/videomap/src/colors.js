@@ -4,9 +4,9 @@ export const colorPalette = {
     'overview':'#F6BD60 ',
     'step':'#F5A7A6',
     'supplementary':'#b19bbd',
-    'explanation':'#FFF5AB',
+    'explanation':'#b0e3ff',
     'description':'#A8D0C6',
-    'conclusion':'#b0e3ff',
+    'conclusion':'#abc7ff',
     'misc':'lightgray',
     
     // low-level type
@@ -26,8 +26,8 @@ export const colorPalette = {
     'warning':'#b19bbd',
     'tip':'#b19bbd',
     //explanation
-    'justification':'#FFF5AB',
-    'effect':'#FFF5AB',
+    'justification':'#b0e3ff',
+    'effect':'#b0e3ff',
     //description
     'status':'#A8D0C6',
     'context':'#A8D0C6',
@@ -35,8 +35,8 @@ export const colorPalette = {
     //greeting-outro
     'closing':'#DAF283',
     //conclusion
-    'outcome':'#b0e3ff',
-    'reflection':'#b0e3ff',
+    'outcome':'#abc7ff',
+    'reflection':'#abc7ff',
     //misc
     'side note':'lightgray',
     'self-promo':'lightgray',

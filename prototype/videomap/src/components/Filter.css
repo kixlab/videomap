@@ -72,10 +72,11 @@
   height: 30px;
   text-align: center;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.708);
+  background-color: rgba(19, 19, 19, 0.708);
   /* color: white; */
   border: 2px solid black;
   font-weight: 600;
+  /* box-shadow: 2px 2px black; */
 }
 
 .label {
@@ -88,4 +89,44 @@
   text-align: center;
   cursor: pointer;
   border: 2px solid black;
+  position: relative;
+  /* display: inline-block; */
+}
+
+.label .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  /* border: 2px solid black; */
+  /* border-left: 8px solid rgba(255, 30, 0, 0.6); */
+  /* border: 2px double black; */
+  text-align: center;
+  /* border-radius: 10px; */
+  padding: 5px 2px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+  font-weight: 550;
+  /* background-color: rgb(70, 81, 149); */
+  background-color: black;
+  color: white;
+}
+
+/* .label .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+} */
+
+.label:hover .tooltiptext {
+  visibility: visible;
+}
+
+.label:hover {
+  box-shadow: 0 0 25px rgb(34, 58, 164), 0 0 5px rgb(124, 144, 255);
 }

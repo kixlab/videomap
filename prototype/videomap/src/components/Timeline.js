@@ -13,8 +13,9 @@ function LabelBox ({
     setPosition,  
     video, 
     videoTime, 
-    setHoverLabel, 
-    logData
+    logData,
+    showLabelInfo,
+    hideLabelInfo
 }) {
 
     const calWidth = (start, end) => {
@@ -32,13 +33,13 @@ function LabelBox ({
         return min + ':' + sec;  
     }
   
-    const handleMouseMove = event => {
+    const handleMouseMove = (event) => {
         // console.log(event.clinetX);
         // console.log(event.target.offsetLeft);
         setPosition(event.clientX - 300);
     };
 
-    const handleTimelineClick=(item)=>{
+    const handleTimelineClick = (item) =>{
         const newTime = (position * duration / 850).toFixed(3);
         // logging
         // TODO: logging에 label추가하기
@@ -60,16 +61,16 @@ function LabelBox ({
     }
 
     const updateHoverLabel = (label) => {
-        if (!label){
-            setHoverLabel("");
-        }
-        else {
-            setHoverLabel(label);
-        }
+        // if (!label){
+        //     setHoverLabel("");
+        // }
+        // else {
+        //     setHoverLabel(label);
+        // }
     }
 
     return (
-        <div className="label_box" onClick={()=>handleTimelineClick(item)} onMouseMove={handleMouseMove} onMouseOver={() => updateHoverLabel(item.low_label)} onMouseLeave={() => updateHoverLabel(false)} style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
+        <div className="label_box" onClick={()=>handleTimelineClick(item)} onMouseMove={(e)=>handleMouseMove(e)} onMouseEnter={() => showLabelInfo(item.low_label)} onMouseLeave={() => hideLabelInfo(item.low_label)} style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
             <span className="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
         </div>
     )
@@ -82,8 +83,9 @@ function Timeline({
     setVideoTime, 
     script, 
     colorPalette, 
-    setHoverLabel, 
-    logData
+    logData,
+    showLabelInfo,
+    hideLabelInfo
 }){
     const [position, setPosition] = useState(0);
     useEffect(() => {
@@ -110,8 +112,9 @@ function Timeline({
                         setPosition={setPosition} 
                         video={video}
                         videoTime={videoTime}
-                        setHoverLabel={setHoverLabel}
                         logData={logData}
+                        showLabelInfo={showLabelInfo}
+                        hideLabelInfo={hideLabelInfo}
                     />
                 </div>
                 ))

@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react"
 import './Script.css';
 
 
-function SentenceBox ({item, typeLevel, colorPalette, setHoverLabel}) {
+function SentenceBox ({item, typeLevel, colorPalette, showLabelInfo, hideLabelInfo}) {
 
     const transTime = (timestamp) => {
         var seconds = parseFloat(timestamp)
@@ -16,18 +16,18 @@ function SentenceBox ({item, typeLevel, colorPalette, setHoverLabel}) {
     }
 
     const updateHoverLabel = (label) => {
-        if (!label){
-            setHoverLabel("");
-        }
-        else {
-            setHoverLabel(label);
-        }
+        // if (!label){
+        //     setHoverLabel("");
+        // }
+        // else {
+        //     setHoverLabel(label);
+        // }
     }
 
     return (
         <div className="sentence_box">
             <div className="type_box">
-                <div className="type" style={{backgroundColor: colorPalette[item.low_label] }} onMouseOver={() => updateHoverLabel(item.low_label)} onMouseLeave={() => updateHoverLabel(false)}>
+                <div className="type" style={{backgroundColor: colorPalette[item.low_label] }} onMouseEnter={() => showLabelInfo(item.low_label)} onMouseLeave={() => hideLabelInfo(item.low_label)}>
                    {item.low_label}
                    {/* <span className="tooltiptext">{item.low_label}<br/>{"definition"}</span> */}
                 </div>
@@ -47,8 +47,9 @@ function Script({
     setVideoTime,
     colorPalette,
     logData,
-    setHoverLabel,
-    filteredScript
+    filteredScript,
+    showLabelInfo,
+    hideLabelInfo
 }){
     const itemRef = useRef({});
     const currentScroll = useRef({ scrollTop: 0, scrollBottom: 300 });
@@ -107,7 +108,7 @@ function Script({
                 {filteredScript &&
                     filteredScript.map ((item, ind) => (
                     <div key={ind} id={ind} className={selectedIndex == item.index ? "selected" : "default"} onClick={() => handleSentenceClick(item.index)}>
-                        <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} setHoverLabel={setHoverLabel}/>
+                        <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} showLabelInfo={showLabelInfo} hideLabelInfo={hideLabelInfo}/>
                     </div>))
                 }
             </div>

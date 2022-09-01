@@ -1,9 +1,11 @@
-import React, { useState, useRef } from "react"
-import { Button } from "@material-ui/core";
+import React, { useState, useEffect, useRef } from "react"
+import { Tooltip, Box } from "@material-ui/core";
 
 import './Filter.css';
+import { definition } from "../definition";
 
 const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
+
     const onClickClass = (target) => {
         if (target.style.border === 'none'){// unselect -> select
             target.style.border = "2px solid black";
@@ -43,6 +45,12 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     };
 
     const updateSelected = (target, selectStyle) => {
+        // if (selectStyle == "none"){
+        //     target.style.boxShadow = selectStyle;
+        // }
+        // else {
+        //     target.style.boxShadow = "2px 2px black";
+        // }
         target.style.border = selectStyle;
         var el = target.nextSibling;
         el.style.border = selectStyle;
@@ -123,12 +131,12 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
 
     }
 
-    const onMouseEnter = (e) => {
+    const onSelect = (e) => {
         e.target.style.backgroundColor = "black";
         e.target.style.color = "white";
     }
 
-    const onMouseLeave = (e) => {
+    const onUnselect = (e) => {
         e.target.style.backgroundColor = "white";
         e.target.style.color = "black";
     }
@@ -136,8 +144,8 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     return (
         <div className="filter_wrapper">
             <div className="select">
-                <div className="selectBtn" onClick={()=>onClickSelectAll()} onMouseEnter={(e)=>onMouseEnter(e)} onMouseLeave={(e)=>onMouseLeave(e)}>Select All</div>
-                <div className="selectBtn" onClick={()=>onClickUnselectAll()} onMouseEnter={(e)=>onMouseEnter(e)} onMouseLeave={(e)=>onMouseLeave(e)}>Unselect All</div>
+                <div className="selectBtn" onClick={()=>onClickSelectAll()} onMouseEnter={(e)=>onSelect(e)} onMouseLeave={(e)=>onUnselect(e)}>Select All</div>
+                <div className="selectBtn" onClick={()=>onClickUnselectAll()} onMouseEnter={(e)=>onSelect(e)} onMouseLeave={(e)=>onUnselect(e)}>Unselect All</div>
             </div>
             <div className="label_wrapper">
             <div className="category"> 
@@ -151,6 +159,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                         </div>
                         <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['greeting']}}>
                             Opening
+                            <span className="tooltiptext" id="opening">{definition['opening']}</span>
                         </div>
                     </div>
                     <div className="group">
@@ -159,12 +168,15 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                         </div>
                         <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['overview']}}>
                             Goal
+                            <span className="tooltiptext" id="goal">{definition['goal']}</span>
                         </div>
                         <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['overview']}}>
                             Motivation
+                            <span className="tooltiptext" id="motivation">{definition['motivation']}</span>
                         </div>
                         <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['overview']}}>
                             Briefing
+                            <span className="tooltiptext" id="briefing">{definition['briefing']}</span>
                         </div>
                     </div>
                 </div>          
@@ -180,12 +192,15 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['step']}}>
                         Subgoal
+                            <span className="tooltiptext" id="subgoal">{definition['subgoal']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['step']}}>
                         Instruction
+                            <span className="tooltiptext" id="instruction">{definition['instruction']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['step']}}>
                         Tool
+                            <span className="tooltiptext" id="tool">{definition['tool']}</span>
                     </div>
                 </div>
                 <div className="group">
@@ -194,9 +209,11 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['supplementary']}}>
                         Tip
+                            <span className="tooltiptext" id="tip">{definition['tip']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['supplementary']}}>
                         Warning
+                            <span className="tooltiptext" id="warning">{definition['warning']}</span>
                     </div>
                 </div>
                 <div className="group">
@@ -205,9 +222,11 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['explanation']}}>
                         Justification
+                            <span className="tooltiptext" id="justification">{definition['justification']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['explanation']}}>
                         Effect
+                            <span className="tooltiptext" id="effect">{definition['effect']}</span>
                     </div>
                 </div>
                 <div className="group">
@@ -216,12 +235,15 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['description']}}>
                         Status
+                            <span className="tooltiptext" id="status">{definition['status']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['description']}}>
                         Context
+                            <span className="tooltiptext" id="context">{definition['context']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['description']}}>
                         Tool Spec.
+                            <span className="tooltiptext" id="tool-spec">{definition['tool spec.']}</span>
                     </div>
                 </div>
                 </div>
@@ -237,6 +259,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['greeting']}}>
                         Closing
+                            <span className="tooltiptext" id="closing">{definition['closing']}</span>
                     </div>
                 </div>
                 <div className="group">
@@ -245,9 +268,11 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['conclusion']}}>
                         Outcome
+                            <span className="tooltiptext" id="outcome">{definition['outcome']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['conclusion']}}>
                         Reflection
+                            <span className="tooltiptext" id="reflection">{definition['reflection']}</span>
                     </div>
                 </div>
             </div>
@@ -263,15 +288,19 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['misc']}}>
                         Side Note
+                            <span className="tooltiptext" id="side-note">{definition['side note']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['misc']}}>
                         Self-promotion
+                            <span className="tooltiptext" id="self-promo">{definition['self-promo']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['misc']}}>
                         Bridge
+                            <span className="tooltiptext" id="bridge">{definition['bridge']}</span>
                     </div>
                     <div className="label" onClick={(e)=>onClickLabel(e.target)} style={{backgroundColor: colorPalette['misc']}}>
                         Filler
+                            <span className="tooltiptext" id="filler">{definition['filler']}</span>
                     </div>
                 </div>
                 </div>
