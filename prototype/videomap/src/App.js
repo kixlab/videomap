@@ -29,6 +29,7 @@ function App() {
   // filter
   const [selectedLabels, setSelectedLabels] = useState (["opening", "goal", "motivation", "briefing", "subgoal", "instruction", "tool", "justification", "effect", "tip", "warning", "status", "context", "tool-spec", "closing", "outcome", "reflection", "side-note", "self-promo", "bridge", "filler"]);
   const [filteredScript, setFilteredScript] = useState ([]);
+  const [processedScript, setProcessedScript] = useState([]);
 
   // for log
   // Task Id
@@ -64,10 +65,9 @@ function App() {
       })
       .then(function (jsonFile) {
         setScript (jsonFile);
-        setSelectedIndex (0);
         setScriptLoaded (true);
         // filter
-        setFilteredScript (jsonFile);
+        processScript (jsonFile);
       });
   };
 
@@ -76,18 +76,34 @@ function App() {
   }, [videoId]);
 
   // filter script
-  const filterScript = () => {
-    const filtered = script.filter (item => selectedLabels.includes (labelInfo[item.low_label]));
+  const processScript = (inputScript=[]) => {
+    const useScript = inputScript.length == 0 ? script : inputScript;
+    const processed = useScript.map (item => {
+        if (selectedLabels.includes (labelInfo[item.low_label])) item['use'] = true;
+        else item['use'] = false;
+        return item;
+    });
+    const filtered = processed.filter (item => item.use == true);
     const newIndex = filtered.length > 0 ? filtered[0].index : -1;
+
+    setProcessedScript (processed);
     setFilteredScript (filtered);
     setSelectedIndex (newIndex);
-}
+  }
+
+  // const filterScript = () => {
+  //   const filtered = script.filter (item => selectedLabels.includes (labelInfo[item.low_label]));
+  //   const newIndex = filtered.length > 0 ? filtered[0].index : -1;
+  //   setFilteredScript (filtered);
+  //   setSelectedIndex (newIndex);
+  // }
 
   useEffect(() => {
     if (script.length > 0) {
-        filterScript();
+        // filterScript();
+        processScript();
     }
-}, [selectedLabels])
+  }, [selectedLabels])
 
   const logKeyPress = (keyCode, scriptIndex = -1) => {
     var video_timestamp = {};
@@ -193,16 +209,17 @@ function App() {
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
   // TODO: fix bug
-  // useEffect(() => {
-  //   if (selectedIndex !== -1){
-  //     var target_sentence = document.getElementById(selectedIndex);
-  //     target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
-  //   }
-  // }, [selectedIndex]);
+  useEffect(() => {
+    console.log (selectedIndex);
+    if (selectedIndex !== -1){
+      var target_sentence = document.getElementById(selectedIndex);
+      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
+    }
+  }, [selectedIndex]);
   
   const updateIndex = (currentTime) => {
-    for (var i = 0; i < script.length; i++) {
-      if (currentTime >= script[i]['start'] && currentTime <= script[i]['end']) {
+    for (var i = 0; i < processedScript.length; i++) {
+      if (currentTime >= processedScript[i]['start'] && currentTime <= processedScript[i]['end'] && i != selectedIndex && processedScript[i]['use'] == true) {
         setSelectedIndex (i);
         return;
       }
@@ -314,7 +331,7 @@ function App() {
             showLabelInfo={showLabelInfo}
             hideLabelInfo={hideLabelInfo}
             selectedLabels={selectedLabels}
-            filteredScript={filteredScript}
+            processedScript={processedScript}
           />
         </div>
         <div className='script_wrapper'>
