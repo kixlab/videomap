@@ -27,7 +27,7 @@ function App() {
   const [selectedIndex, setSelectedIndex] = useState (-1);
 
   // filter
-  const [selectedLabels, setSelectedLabels] = useState (["Opening", "Goal", "Motivation", "Briefing", "Subgoal", "Instruction", "Tool", "Justification", "Effect", "Tip", "Warning", "Status", "Context", "Tool spec.", "Closing", "Outcome", "Reflection", "Side note", "Self-promo", "Bridge", "Filler"]);
+  const [selectedLabels, setSelectedLabels] = useState (["opening", "goal", "motivation", "briefing", "subgoal", "instruction", "tool", "justification", "effect", "tip", "warning", "status", "context", "tool spec.", "closing", "outcome", "reflection", "side note", "self-promo", "bridge", "filler"]);
   const [filteredScript, setFilteredScript] = useState ([]);
 
   // for log

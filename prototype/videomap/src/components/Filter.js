@@ -45,22 +45,16 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     };
 
     const updateSelected = (target, selectStyle) => {
-        // if (selectStyle == "none"){
-        //     target.style.boxShadow = selectStyle;
-        // }
-        // else {
-        //     target.style.boxShadow = "2px 2px black";
-        // }
         target.style.border = selectStyle;
         var el = target.nextSibling;
         el.style.border = selectStyle;
         var label_list = [];
-        label_list.push(el.innerText);
+        label_list.push(el.children[0].id);
         while (el){
             el = el.nextSibling;
             if (el){
                 el.style.border = selectStyle;
-                label_list.push(el.innerText);
+                label_list.push(el.children[0].id);
             }
         }
         if (selectStyle == "none") {
@@ -74,11 +68,11 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     const onClickLabel = (target) => {
         if (target.style.border === 'none'){// unselect -> select
             target.style.border = "2px solid black";
-            updateSelectedLabels(target.innerText, "add")
+            updateSelectedLabels(target.children[0].id, "add")
         }
         else {// select -> unselect
             target.style.border = 'none';
-            updateSelectedLabels(target.innerText, "remove")
+            updateSelectedLabels(target.children[0].id, "remove")
         }
     };
 
@@ -118,7 +112,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
           var group = groups[i];
           onClickGroup(group, "select");
         }
-        setSelectedLabels(["Opening", "Goal", "Motivation", "Briefing", "Subgoal", "Instruction", "Tool", "Justification", "Effect", "Tip", "Warning", "Status", "Context", "Tool spec.", "Closing", "Outcome", "Reflection", "Side note", "Self-promo", "Bridge", "Filler"]);
+        setSelectedLabels(["opening", "goal", "motivation", "briefing", "subgoal", "instruction", "tool", "justification", "effect", "tip", "warning", "status", "context", "tool spec.", "closing", "outcome", "reflection", "side note", "self-promo", "bridge", "filler"]);
     }
 
     const onClickUnselectAll = () => {

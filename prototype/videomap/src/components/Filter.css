@@ -91,6 +91,9 @@
   border: 2px solid black;
   position: relative;
   /* display: inline-block; */
+  /* font-weight: 600; */
+
+  /* box-shadow: 2px 2px black; */
 }
 
 .label .tooltiptext {
