@@ -56,7 +56,7 @@ function Script({
     const [typeLevel, setTypeLevel] = useState ('low');
 
     useEffect (() => {
-        console.log (filteredScript)
+        // console.log (filteredScript)
     }, [filteredScript])
 
     const handleSentenceClick = (index) => {

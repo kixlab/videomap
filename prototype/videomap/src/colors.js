@@ -8,6 +8,15 @@ export const colorPalette = {
     'description':'#A8D0C6',
     'conclusion':'#abc7ff',
     'misc':'lightgray',
+
+    'Greeting':'#DAF283',
+    'Overview':'#F6BD60 ',
+    'Step':'#F5A7A6',
+    'Supplementary':'#b19bbd',
+    'Explanation':'#b0e3ff',
+    'Description':'#A8D0C6',
+    'Conclusion':'#abc7ff',
+    'Misc.':'lightgray',
     
     // low-level type
     //greeting
@@ -41,5 +50,9 @@ export const colorPalette = {
     'side note':'lightgray',
     'self-promo':'lightgray',
     'bridge':'lightgray',
-    'filler':'lightgray'
+    'filler':'lightgray',
+
+
+    'tool-spec':'#A8D0C6',
+    'side-note':'lightgray',
 }

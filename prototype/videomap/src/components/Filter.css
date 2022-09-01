@@ -72,9 +72,9 @@
   height: 30px;
   text-align: center;
   cursor: pointer;
-  background-color: rgba(19, 19, 19, 0.708);
+  background-color: rgb(82, 82, 82);
+  border: 3px solid rgb(82, 82, 82);
   /* color: white; */
-  border: 2px solid black;
   font-weight: 600;
   /* box-shadow: 2px 2px black; */
 }
@@ -88,7 +88,7 @@
   height: 30px;
   text-align: center;
   cursor: pointer;
-  border: 2px solid black;
+  border: 3px solid;
   position: relative;
   /* display: inline-block; */
   /* font-weight: 600; */
