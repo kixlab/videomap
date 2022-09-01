@@ -101,9 +101,9 @@ function Timeline({
     showLabelInfo,
     hideLabelInfo,
     selectedLabels,
+    processedScript
 }){
     const [position, setPosition] = useState(0);
-    const [processedScript, setProcessedScript] = useState([]);
 
     useEffect(() => {
     }, [videoTime]);

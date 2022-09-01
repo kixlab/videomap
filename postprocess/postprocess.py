@@ -54,7 +54,7 @@ creation_url_list = {
     "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/14yvQZPG3dHeoZvnP_D1hEVxjciakYGcMCWJw0u0H5XE/edit#gid=0",
 }
 
-vids = ['GFd7kLvhc2Q', 'Eeu5uL6r2rg', '2xXPSfQBP-w', 'pn81__TovpY', 'sij_wNj0doI', 'CdZQF4DDAxM']
+vids = ['6CJryveLzvI']
 
 scope = [
     'https://spreadsheets.google.com/feeds',
@@ -184,6 +184,7 @@ def simplify_script (script, duration):
         else:
             next_start = script[i+1]['start'] 
         line['next_start'] = next_start
+        line['index'] = i
 
     return script   
 
