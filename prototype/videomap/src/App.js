@@ -78,12 +78,12 @@ function App() {
   // filter script
   const filterScript = () => {
     // for case insensitive comparison
-    const cmpSelectedLabels = selectedLabels.map (item => item.toLowerCase());
-    const filtered = script.filter (item => cmpSelectedLabels.includes (item.low_label));
+    // const cmpSelectedLabels = selectedLabels.map (item => item.toLowerCase());
+    console.log (selectedLabels)
+    const filtered = script.filter (item => selectedLabels.includes (labelInfo[item.low_label]));
     setFilteredScript (filtered);
 
     const newIndex = filtered.length > 0 ? filtered[0].index : -1;
-    console.log (newIndex);
     setSelectedIndex (newIndex);
 }
 

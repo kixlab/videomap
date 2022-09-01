@@ -86,7 +86,6 @@ function Timeline({
     showLabelInfo,
     hideLabelInfo,
     selectedLabels,
-    filteredScript
 }){
     const [position, setPosition] = useState(0);
     useEffect(() => {
