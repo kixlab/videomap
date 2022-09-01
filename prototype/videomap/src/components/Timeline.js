@@ -81,7 +81,11 @@ function LabelBox ({
             onMouseLeave={() => hideLabelInfo(item.low_label)} 
             style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor: item.use ? colorPalette[item.low_label] : "white", cursor: !item.use && "default" }}
         >
-            <span className="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
+            {item.use 
+                ? <span className="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
+                : <span className="tooltiptext">{posToTime(position)}</span>
+            }
+            
         </div>
     )
 }
@@ -126,7 +130,7 @@ function Timeline({
     return(
         <div className="timeline_wrapper">
             {/* <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/> */}
-            <div className="label_timeline">
+            <div className="label_timeline" style={{border: selectedLabels.length == 0 && "1px solid black"}}>
             {processedScript &&
                 processedScript.map ((item, ind) => (
                 <div key={ind}>

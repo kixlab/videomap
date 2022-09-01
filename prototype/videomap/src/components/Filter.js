@@ -5,7 +5,7 @@ import './Filter.css';
 import { definition } from "../definition";
 
 const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
-
+    // TODO: logging
     const onClickClass = (target) => {
         if (target.style.border === 'none'){// unselect -> select
             target.style.border = "2px solid black";
