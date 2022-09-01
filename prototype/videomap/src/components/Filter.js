@@ -3,7 +3,7 @@ import { Button } from "@material-ui/core";
 
 import './Filter.css';
 
-const Filter = ({colorPalette}) => {
+const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     const onClickClass = (target) => {
         if (target.style.border === 'none'){// unselect -> select
             target.style.border = "2px solid black";
@@ -46,26 +46,59 @@ const Filter = ({colorPalette}) => {
         target.style.border = selectStyle;
         var el = target.nextSibling;
         el.style.border = selectStyle;
-        console.log(el.innerText);
+        var label_list = [];
+        label_list.push(el.innerText);
         while (el){
             el = el.nextSibling;
             if (el){
                 el.style.border = selectStyle;
-                console.log(el.innerText);
+                label_list.push(el.innerText);
             }
+        }
+        if (selectStyle == "none") {
+            updateSelectedLabelList(label_list, "remove")
+        }
+        else {
+            updateSelectedLabelList(label_list, "add")
         }
     }
 
     const onClickLabel = (target) => {
         if (target.style.border === 'none'){// unselect -> select
             target.style.border = "2px solid black";
-            console.log(target.innerText);
+            updateSelectedLabels(target.innerText, "add")
         }
         else {// select -> unselect
             target.style.border = 'none';
-            console.log(target.innerText);
+            updateSelectedLabels(target.innerText, "remove")
         }
     };
+
+    const updateSelectedLabelList = (label_list, selectStyle) => {
+        if (selectStyle == "add") {
+            // https://www.samanthaming.com/tidbits/87-5-ways-to-append-item-to-array/
+            const labels = selectedLabels.concat(label_list);
+            setSelectedLabels(labels);
+        }
+        else {
+            const label_set = new Set(selectedLabels);
+            const remove_label_set = new Set(label_list);
+            const labels = new Set([...label_set].filter(x => !remove_label_set.has(x)));
+            const final_labels = [...labels];
+            setSelectedLabels(final_labels);
+        }
+    }
+
+    const updateSelectedLabels = (label, selectStyle) => {
+        if (selectStyle == "add") {
+            const labels = [...selectedLabels, label];
+            setSelectedLabels(labels);
+        }
+        else {
+            const labels = selectedLabels.filter(item => item!=label);
+            setSelectedLabels(labels);
+        }
+    }
 
     const onClickSelectAll = () => {
         const groups = document.getElementsByClassName("group_label");
@@ -73,6 +106,7 @@ const Filter = ({colorPalette}) => {
           var group = groups[i];
           onClickGroup(group, "select");
         }
+        setSelectedLabels(["Opening", "Goal", "Motivation", "Briefing", "Subgoal", "Instruction", "Tool", "Justification", "Effect", "Tip", "Warning", "Status", "Context", "Tool spec.", "Closing", "Outcome", "Reflection", "Side note", "Self-promo", "Bridge", "Filler"]);
     }
 
     const onClickUnselectAll = () => {
@@ -81,6 +115,7 @@ const Filter = ({colorPalette}) => {
           var group = groups[i];
           onClickGroup(group, "unselect");
         }
+        setSelectedLabels([]);
 
     }
 

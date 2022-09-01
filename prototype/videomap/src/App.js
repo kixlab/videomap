@@ -28,7 +28,7 @@ function App() {
   const [hoverLabel, setHoverLabel] = useState("");
 
   // filter
-  const [selectedLabels, setSelectedLabels] = useState (['instruction']);
+  const [selectedLabels, setSelectedLabels] = useState (["Opening", "Goal", "Motivation", "Briefing", "Subgoal", "Instruction", "Tool", "Justification", "Effect", "Tip", "Warning", "Status", "Context", "Tool spec.", "Closing", "Outcome", "Reflection", "Side note", "Self-promo", "Bridge", "Filler"]);
   const [filteredScript, setFilteredScript] = useState ([]);
 
   // for log
@@ -80,7 +80,7 @@ function App() {
   const filterScript = () => {
     const filtered = script.filter (item => selectedLabels.includes (item.low_label));
     setFilteredScript (filtered);
-    setSelectedIndex (filtered[0].index);
+    // setSelectedIndex (filtered[0].index); //TODO: error
 }
 
   useEffect(() => {
@@ -274,7 +274,7 @@ function App() {
         setTaskId={setTaskId}
       />
       <div>
-        <Filter colorPalette={colorPalette}/>
+        <Filter colorPalette={colorPalette} selectedLabels={selectedLabels} setSelectedLabels={setSelectedLabels}/>
       </div>
       <div className='body_wrapper'>
         <div className="video_wrapper">
