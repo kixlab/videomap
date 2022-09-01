@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Tooltip, Box } from "@material-ui/core";
+import { labelInfo } from "../labelInfo";
 
 import './Timeline.css';
 import pinImage from './../image/custom_pin.png';
+
 
 function LabelBox ({
     item, 
@@ -40,6 +42,8 @@ function LabelBox ({
     };
 
     const handleTimelineClick = (item) =>{
+        if (!item.use) return false;
+
         const newTime = (position * duration / 850).toFixed(3);
         // logging
         const video_timestamp = {
@@ -69,7 +73,14 @@ function LabelBox ({
     }
 
     return (
-        <div className="label_box" onClick={()=>handleTimelineClick(item)} onMouseMove={(e)=>handleMouseMove(e)} onMouseEnter={() => showLabelInfo(item.low_label)} onMouseLeave={() => hideLabelInfo(item.low_label)} style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor:colorPalette[item.low_label]}}>
+        <div 
+            className="label_box" 
+            onClick={()=>handleTimelineClick(item)} 
+            onMouseMove={(e)=>handleMouseMove(e)} 
+            onMouseEnter={() => showLabelInfo(item.low_label)} 
+            onMouseLeave={() => hideLabelInfo(item.low_label)} 
+            style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor: item.use ? colorPalette[item.low_label] : "white", cursor: !item.use && "default" }}
+        >
             <span className="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
         </div>
     )
@@ -88,8 +99,24 @@ function Timeline({
     selectedLabels,
 }){
     const [position, setPosition] = useState(0);
+    const [processedScript, setProcessedScript] = useState([]);
+
     useEffect(() => {
     }, [videoTime]);
+
+    useEffect(() => {
+        processScript ();
+    }, [script, selectedLabels]);
+
+    const processScript = () => {
+        const processed = script.map (item => {
+            if (selectedLabels.includes (labelInfo[item.low_label])) item['use'] = true;
+            else item['use'] = false;
+            return item;
+        });
+        console.log (processed);
+        setProcessedScript (processed);
+    }
 
     const getProgressLength=()=>{
         if (duration == 0) return 0;
@@ -100,8 +127,8 @@ function Timeline({
         <div className="timeline_wrapper">
             {/* <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/> */}
             <div className="label_timeline">
-            {script &&
-                script.map ((item, ind) => (
+            {processedScript &&
+                processedScript.map ((item, ind) => (
                 <div key={ind}>
                     <LabelBox 
                         item={item} 
