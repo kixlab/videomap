@@ -115,6 +115,7 @@ function Script({
                         <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} showLabelInfo={showLabelInfo} hideLabelInfo={hideLabelInfo}/>
                     </div>))
                 }
+                {/* {!filteredScript && <div>Please select at least one label.</div>} */}
             </div>
         </div>
     )

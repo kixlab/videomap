@@ -174,6 +174,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
         for (var i = 0; i < groups.length; i++) {
           var group = groups[i];
           onClickGroup(group, "select");
+          setSelectStatus({'greeting_intro':1, 'overview':3, 'step': 3, 'supplementary':2, 'explanation':2, 'description':3, 'greeting_outro': 1, 'conclusion':2, 'misc':4});
         }
         setSelectedLabels(["opening", "goal", "motivation", "briefing", "subgoal", "instruction", "tool", "justification", "effect", "tip", "warning", "status", "context", "tool-spec", "closing", "outcome", "reflection", "side-note", "self-promo", "bridge", "filler"]);
     }
@@ -183,7 +184,9 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
         for (var i = 0; i < groups.length; i++) {
           var group = groups[i];
           onClickGroup(group, "unselect");
+          setSelectStatus({'greeting_intro':0, 'overview':0, 'step': 0, 'supplementary':0, 'explanation':0, 'description':0, 'greeting_outro': 0, 'conclusion':0, 'misc':0});
         }
+        
         setSelectedLabels([]);
 
     }
