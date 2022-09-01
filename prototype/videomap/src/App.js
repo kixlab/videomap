@@ -226,10 +226,16 @@ function App() {
     return currentTime;
   }, [video]);
 
+  const checkTime = () => {
+    console.log(videoTime);
+    // jumpTime (videoTime);
+  }
+
   const onReady = (event) => {
       setVideo (event.target);
       setDuration (onGetDuration());
       // event.target.pauseVideo();
+      // setInterval(checkTime, 1000);
   };
 
   const onPause = () => {
@@ -240,37 +246,61 @@ function App() {
 
   
   const jumpTime = (time) => {
-    console.log (selectedIndex);
+    // console.log(time);
+    // console.log(processedScript[selectedIndex].start);
+    if (time < processedScript[selectedIndex].start){
+      console.log("early");
+      const vt = processedScript[selectedIndex].start
+      setVideoTime (vt);
+      video.seekTo (vt);
+    }
+    else if (processedScript[selectedIndex].end - 0.2 <= time){
+      console.log("jumping");
+      var ind = selectedIndex + 1;
+      while (!processedScript[ind].use) {
+        ind += 1
+      };
+      if (processedScript[ind].start > time) {
+        // console.log ("jump time!!!!")
+        // console.log (ind)
+        const vt = processedScript[ind].start
+        setVideoTime (vt);
+        video.seekTo (vt);
+      }
+
+    }
+    // console.log (selectedIndex);
+
     // last segment in the filtered script
     if (selectedIndex >= filteredScript[filteredScript.length-1].index) {
       console.log ("after last element")
       return;
     };
 
-    console.log (processedScript)
-    console.log (selectedIndex)
-    console.log (time)
-    if (processedScript[selectedIndex].new_start < time) {
-      console.log (time)
-      var ind = selectedIndex + 1;
-      while (!processedScript[ind].use) {
-        ind += 1
-      };
-      if (processedScript[ind].start > time) {
-        console.log ("jump time!!!!")
-        console.log (ind)
-        const vt = processedScript[ind].start
-        setVideoTime (vt);
-        video.seekTo (vt);
-      }
-    }
+    // // console.log (processedScript)
+    // // console.log (selectedIndex)
+    // // console.log (time)
+    // if (processedScript[selectedIndex].new_start < time) {
+    //   // console.log (time)
+    //   var ind = selectedIndex + 1;
+    //   while (!processedScript[ind].use) {
+    //     ind += 1
+    //   };
+    //   if (processedScript[ind].start > time) {
+    //     // console.log ("jump time!!!!")
+    //     // console.log (ind)
+    //     const vt = processedScript[ind].start
+    //     setVideoTime (vt);
+    //     video.seekTo (vt);
+    //   }
+    // }
 
   }
 
   // on every video time change, call jumptime
-  useEffect (() => {
-    if (filteredScript.length > 0) jumpTime (videoTime);
-  }, [videoTime]);
+  // useEffect (() => {
+  //   if (filteredScript.length > 0) jumpTime (videoTime);
+  // }, [videoTime]);
 
 
   const onPlay = () => {
@@ -286,7 +316,7 @@ function App() {
         const time = onGetCurrentTime();
         setVideoTime(time);
         updateIndex (time);
-        // jumpTime (time);
+        jumpTime (time);
       }, 10);
       return () => {
         clearInterval(interval);
