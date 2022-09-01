@@ -77,13 +77,18 @@ function App() {
 
   // filter script
   const filterScript = () => {
-    const filtered = script.filter (item => selectedLabels.includes (item.low_label));
+    // for case insensitive comparison
+    const cmpSelectedLabels = selectedLabels.map (item => item.toLowerCase());
+    const filtered = script.filter (item => cmpSelectedLabels.includes (item.low_label));
     setFilteredScript (filtered);
-    // setSelectedIndex (filtered[0].index); //TODO: error
+
+    const newIndex = filtered.length > 0 ? filtered[0].index : -1;
+    console.log (newIndex);
+    setSelectedIndex (newIndex);
 }
 
   useEffect(() => {
-    if (script.length > 0 && selectedLabels.length > 0) {
+    if (script.length > 0) {
         filterScript();
     }
 }, [selectedLabels])
@@ -277,7 +282,6 @@ function App() {
 
   return (
     <div className="App">
-      <div onClick={()=>setSelectedLabels("instruction")}>click</div>
       <Header 
         videoId={videoId}
         setVideoId={setVideoId}
@@ -313,6 +317,8 @@ function App() {
             logData={logData}
             showLabelInfo={showLabelInfo}
             hideLabelInfo={hideLabelInfo}
+            selectedLabels={selectedLabels}
+            filteredScript={filteredScript}
           />
         </div>
         <div className='script_wrapper'>

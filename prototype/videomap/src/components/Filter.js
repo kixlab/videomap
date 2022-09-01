@@ -66,6 +66,8 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     }
 
     const onClickLabel = (target) => {
+        console.log(target)
+        console.log (target.style.border)
         if (target.style.border === 'none'){// unselect -> select
             target.style.border = "2px solid black";
             updateSelectedLabels(target.children[0].id, "add")
@@ -98,10 +100,12 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     const updateSelectedLabels = (label, selectStyle) => {
         if (selectStyle == "add") {
             const labels = [...selectedLabels, label];
+            console.log (labels);
             setSelectedLabels(labels);
         }
         else {
             const labels = selectedLabels.filter(item => item!=label);
+            console.log (labels);
             setSelectedLabels(labels);
         }
     }

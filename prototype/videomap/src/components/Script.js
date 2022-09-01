@@ -55,6 +55,10 @@ function Script({
     const currentScroll = useRef({ scrollTop: 0, scrollBottom: 300 });
     const [typeLevel, setTypeLevel] = useState ('low');
 
+    useEffect (() => {
+        console.log (filteredScript)
+    }, [filteredScript])
+
     const handleSentenceClick = (index) => {
         // logging
         const currLine = script[index];

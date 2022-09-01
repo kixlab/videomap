@@ -42,7 +42,6 @@ function LabelBox ({
     const handleTimelineClick = (item) =>{
         const newTime = (position * duration / 850).toFixed(3);
         // logging
-        // TODO: logging에 label추가하기
         const video_timestamp = {
             from: videoTime,
             to: newTime
@@ -85,11 +84,13 @@ function Timeline({
     colorPalette, 
     logData,
     showLabelInfo,
-    hideLabelInfo
+    hideLabelInfo,
+    selectedLabels,
+    filteredScript
 }){
     const [position, setPosition] = useState(0);
     useEffect(() => {
-    }, [videoTime])
+    }, [videoTime]);
 
     const getProgressLength=()=>{
         if (duration == 0) return 0;
