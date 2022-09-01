@@ -116,7 +116,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
           var group = groups[i];
           onClickGroup(group, "select");
         }
-        setSelectedLabels(["opening", "goal", "motivation", "briefing", "subgoal", "instruction", "tool", "justification", "effect", "tip", "warning", "status", "context", "tool spec.", "closing", "outcome", "reflection", "side note", "self-promo", "bridge", "filler"]);
+        setSelectedLabels(["opening", "goal", "motivation", "briefing", "subgoal", "instruction", "tool", "justification", "effect", "tip", "warning", "status", "context", "tool-spec", "closing", "outcome", "reflection", "side-note", "self-promo", "bridge", "filler"]);
     }
 
     const onClickUnselectAll = () => {
