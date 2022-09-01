@@ -91,13 +91,6 @@ function App() {
     setSelectedIndex (newIndex);
   }
 
-  // const filterScript = () => {
-  //   const filtered = script.filter (item => selectedLabels.includes (labelInfo[item.low_label]));
-  //   const newIndex = filtered.length > 0 ? filtered[0].index : -1;
-  //   setFilteredScript (filtered);
-  //   setSelectedIndex (newIndex);
-  // }
-
   useEffect(() => {
     if (script.length > 0) {
         // filterScript();
@@ -209,13 +202,13 @@ function App() {
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
   // TODO: fix bug
-  useEffect(() => {
-    console.log (selectedIndex);
-    if (selectedIndex !== -1){
-      var target_sentence = document.getElementById(selectedIndex);
-      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
-    }
-  }, [selectedIndex]);
+  // useEffect(() => {
+  //   console.log (selectedIndex);
+  //   if (selectedIndex !== -1){
+  //     var target_sentence = document.getElementById(selectedIndex);
+  //     target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
+  //   }
+  // }, [selectedIndex]);
   
   const updateIndex = (currentTime) => {
     for (var i = 0; i < processedScript.length; i++) {
@@ -230,7 +223,6 @@ function App() {
   const onGetCurrentTime = useCallback(() => {
     if (video === null) return 0;
     const currentTime = video.getCurrentTime().toFixed(3);
-    updateIndex (currentTime);
     return currentTime;
   }, [video]);
 
@@ -246,6 +238,41 @@ function App() {
     logData ("pause", videoTime, {});
   }
 
+  
+  const jumpTime = (time) => {
+    console.log (selectedIndex);
+    // last segment in the filtered script
+    if (selectedIndex >= filteredScript[filteredScript.length-1].index) {
+      console.log ("after last element")
+      return;
+    };
+
+    console.log (processedScript)
+    console.log (selectedIndex)
+    console.log (time)
+    if (processedScript[selectedIndex].new_start < time) {
+      console.log (time)
+      var ind = selectedIndex + 1;
+      while (!processedScript[ind].use) {
+        ind += 1
+      };
+      if (processedScript[ind].start > time) {
+        console.log ("jump time!!!!")
+        console.log (ind)
+        const vt = processedScript[ind].start
+        setVideoTime (vt);
+        video.seekTo (vt);
+      }
+    }
+
+  }
+
+  // on every video time change, call jumptime
+  useEffect (() => {
+    if (filteredScript.length > 0) jumpTime (videoTime);
+  }, [videoTime]);
+
+
   const onPlay = () => {
     // logging
     if (!isPlaying) {
@@ -258,6 +285,8 @@ function App() {
       const interval = setInterval(() => {
         const time = onGetCurrentTime();
         setVideoTime(time);
+        updateIndex (time);
+        // jumpTime (time);
       }, 10);
       return () => {
         clearInterval(interval);
