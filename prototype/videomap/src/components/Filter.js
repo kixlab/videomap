@@ -77,8 +77,12 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     const updateSelectedLabelList = (label_list, selectStyle) => {
         if (selectStyle == "add") {
             // https://www.samanthaming.com/tidbits/87-5-ways-to-append-item-to-array/
-            const labels = selectedLabels.concat(label_list);
-            setSelectedLabels(labels);
+            const label_set = new Set(selectedLabels);
+            const add_label_set = new Set(label_list)
+            const labels = new Set([...label_set, ...add_label_set]);
+            const final_labels = [...labels]
+            // const labels = selectedLabels.concat(label_list);
+            setSelectedLabels(final_labels);
         }
         else {
             const label_set = new Set(selectedLabels);
