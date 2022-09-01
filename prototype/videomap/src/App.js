@@ -271,8 +271,8 @@ function App() {
   const hideLabelInfo = (label) => {
     const trueLabel = labelInfo[label];
     const target = document.getElementById(trueLabel);
-    target.style.visibility = "hidden";
-    target.parentElement.style.boxShadow = "none";
+    target.style.visibility = "";
+    target.parentElement.style.boxShadow = "";
   };
 
   return (
