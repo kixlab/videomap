@@ -206,10 +206,13 @@ function App() {
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
   useEffect(() => {
-    if (selectedIndex !== -1){
+    if (video && selectedIndex !== -1){
       var target_sentence = document.getElementsByClassName(selectedIndex)[0];
-      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
+      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'});
+      // setVideoTime (script[selectedIndex].start);
+      // video.seekTo (script[selectedIndex].start);
     }
+    
   }, [selectedIndex]);
   
   // TODO logic change?
@@ -251,7 +254,7 @@ function App() {
       }
     };
     // if next element is also in use, don't jump
-    if (processedScript[selectedIndex+1].use) return;
+    if (selectedIndex < processedScript.length-1 && processedScript[selectedIndex+1].use) return;
     if (time < processedScript[selectedIndex].start){
       const vt = processedScript[selectedIndex].start
       setVideoTime (vt);

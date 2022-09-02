@@ -58,18 +58,8 @@ function LabelBox ({
         logData ("jump", video_timestamp, meta);
 
         setSelectedIndex (item.index);
-
-        // setVideoTime (newTime);
+        setVideoTime (newTime);
         video.seekTo (newTime);
-    }
-
-    const updateHoverLabel = (label) => {
-        // if (!label){
-        //     setHoverLabel("");
-        // }
-        // else {
-        //     setHoverLabel(label);
-        // }
     }
 
     return (
