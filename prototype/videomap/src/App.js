@@ -97,10 +97,6 @@ function App() {
         // filterScript();
         processScript();
     }
-    if (video && selectedLabels.length == 0) {
-      setIsPlaying (false);
-      video.stopVideo();
-    }
   }, [videoId, selectedLabels])
 
   const logKeyPress = (keyCode, scriptIndex = -1) => {
@@ -253,7 +249,7 @@ function App() {
           return [i, true];
         } else {
           var ind = i+1;
-          while (!processedScript[ind].use) {
+          while (ind < processedScript.length && !processedScript[ind].use) {
             ind += 1;
           }
           return [ind, false];
@@ -272,7 +268,7 @@ function App() {
       // play 되지 말아야할 초과 index -> 바로 멈춤
       if (selInd > filteredScript[filteredScript.length-1].index) {
         setIsPlaying (false);
-        video.stopVideo();
+        video.pauseVideo();
         return;
       }
 
@@ -280,7 +276,7 @@ function App() {
       if (selInd == filteredScript[filteredScript.length-1].index) {
         if (time >= processedScript[selInd].end - 0.2) {
           setIsPlaying (false);
-          video.stopVideo();
+          video.pauseVideo();
           return;
         }
       }
@@ -305,7 +301,7 @@ function App() {
       // play 되지 말아야할 초과 index -> 바로 멈춤
       if (selInd > filteredScript[filteredScript.length-1].index) {
         setIsPlaying (false);
-        video.stopVideo();
+        video.pauseVideo();
         return;
       }
       const vt = processedScript[selInd].start;
