@@ -99,9 +99,12 @@ function Timeline({
 }){
     const [position, setPosition] = useState(0);
     useEffect(() => {
-    }, [videoId, videoTime]);
+    }, [videoTime]);
 
     const getProgressLength=()=>{
+        console.log (duration)
+        console.log (videoTime)
+        console.log (videoTime * 850 / duration)
         if (duration == 0) return 0;
         return videoTime * 850 / duration;
     }

@@ -18,7 +18,7 @@ function App() {
   const [started, setStarted] = useState(false);
   const [isPlaying, setIsPlaying] = useState (false);
 
-  const [videoId, setVideoId] = useState ('6CJryveLzvI');
+  const [videoId, setVideoId] = useState ('_Yb6xLqvsf0');
   const [videoTime, setVideoTime] = useState (0);
   const [duration, setDuration] = useState (0);
 
@@ -73,7 +73,6 @@ function App() {
 
   useEffect(()=>{
     getScript();
-    setStarted (false);
   }, [videoId]);
 
   // filter script
@@ -293,7 +292,7 @@ function App() {
           ind += 1;
         }
         if (processedScript[ind].start > time) {
-          const vt = processedScript[ind].start
+          const vt = processedScript[ind].start;
           video.seekTo (vt);
         }
       }

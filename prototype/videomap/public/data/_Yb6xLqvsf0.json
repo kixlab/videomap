@@ -1,0 +1,1010 @@
+[
+    {
+        "start": 15.7,
+        "end": 17.59,
+        "script": "hello everyone this is a smart if",
+        "low_label": "opening",
+        "high_label": "greeting",
+        "next_start": 17.6,
+        "index": 0
+    },
+    {
+        "start": 17.6,
+        "end": 19.11,
+        "script": "today welcoming you",
+        "low_label": "opening",
+        "high_label": "greeting",
+        "next_start": 19.12,
+        "index": 1
+    },
+    {
+        "start": 19.12,
+        "end": 21.95,
+        "script": "my new tutorial illustrator tutorial",
+        "low_label": "opening",
+        "high_label": "greeting",
+        "next_start": 22.24,
+        "index": 2
+    },
+    {
+        "start": 22.24,
+        "end": 30.77,
+        "script": "and today i'll show you a special technique which one is totally special and about the image tracing",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 30.82,
+        "index": 3
+    },
+    {
+        "start": 30.82,
+        "end": 33.04,
+        "script": "ok ok let's see",
+        "low_label": "bridge",
+        "high_label": "misc.",
+        "next_start": 33.12,
+        "index": 4
+    },
+    {
+        "start": 33.12,
+        "end": 35.51,
+        "script": "let's first go to the file and then new",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 35.52,
+        "index": 5
+    },
+    {
+        "start": 35.52,
+        "end": 42.53,
+        "script": "take a new outboard which is nineteen twenty or five hundred by five hundred",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 42.6,
+        "index": 6
+    },
+    {
+        "start": 42.6,
+        "end": 44.53,
+        "script": "you can take a thousand by thousand",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 44.54,
+        "index": 7
+    },
+    {
+        "start": 44.54,
+        "end": 45.4,
+        "script": "whatever you can tell",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 45.88,
+        "index": 8
+    },
+    {
+        "start": 45.88,
+        "end": 53.31,
+        "script": "ok hit the create button it'll get a new artboard and after that go to the file and then open",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 55.22,
+        "index": 9
+    },
+    {
+        "start": 55.22,
+        "end": 58.75,
+        "script": "and then take a portrait",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 58.82,
+        "index": 10
+    },
+    {
+        "start": 58.82,
+        "end": 67.08,
+        "script": "this one is portrayed i downloaded from the internet and i'll give you the download link of this image",
+        "low_label": "tool spec.",
+        "high_label": "step",
+        "next_start": 67.29,
+        "index": 11
+    },
+    {
+        "start": 67.29,
+        "end": 70.0,
+        "script": "ok today's tutorial is specially for that",
+        "low_label": "bridge",
+        "high_label": "misc.",
+        "next_start": 70.11,
+        "index": 12
+    },
+    {
+        "start": 70.11,
+        "end": 77.71,
+        "script": "one thing is that this one is the pixel graphics or raster graphics and i want to make it in a vector graphics",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 78.11,
+        "index": 13
+    },
+    {
+        "start": 78.11,
+        "end": 85.28,
+        "script": "this one is too much easy and for the very much efficient for your design",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 85.42,
+        "index": 14
+    },
+    {
+        "start": 85.42,
+        "end": 91.28,
+        "script": "if you want to make it suppose you want to print this one in your t shirt or other things",
+        "low_label": "motivation",
+        "high_label": "overview",
+        "next_start": 91.75,
+        "index": 15
+    },
+    {
+        "start": 91.75,
+        "end": 94.14,
+        "script": "you must have to make it in a vector",
+        "low_label": "motivation",
+        "high_label": "overview",
+        "next_start": 94.6,
+        "index": 16
+    },
+    {
+        "start": 94.6,
+        "end": 100.91,
+        "script": "so i administrating the special thing and amazing thing either stator",
+        "low_label": "motivation",
+        "high_label": "overview",
+        "next_start": 101.1,
+        "index": 17
+    },
+    {
+        "start": 101.1,
+        "end": 103.31,
+        "script": "ok at first you have to select this one",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 103.46,
+        "index": 18
+    },
+    {
+        "start": 103.46,
+        "end": 111.93,
+        "script": "for this work you have to customize your arbor work space into the tracing",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 112.67,
+        "index": 19
+    },
+    {
+        "start": 112.67,
+        "end": 117.28,
+        "script": "and you'll get these additional layers or windows",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 117.95,
+        "index": 20
+    },
+    {
+        "start": 117.95,
+        "end": 121.7,
+        "script": "at first select these images and turn on the preview options",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 122.43,
+        "index": 21
+    },
+    {
+        "start": 122.43,
+        "end": 131.28,
+        "script": "and from that tracing options you have to select the i faded photo",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 132.36,
+        "index": 22
+    },
+    {
+        "start": 132.36,
+        "end": 133.81,
+        "script": "some of this one is a faded photo",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 134.46,
+        "index": 23
+    },
+    {
+        "start": 134.46,
+        "end": 138.89,
+        "script": "it will take time to just analyze your things",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 139.28,
+        "index": 24
+    },
+    {
+        "start": 139.28,
+        "end": 148.73,
+        "script": "ok and and automatically it will just make victor if you press the expand option",
+        "low_label": "effect",
+        "high_label": "explanation",
+        "next_start": 148.94,
+        "index": 25
+    },
+    {
+        "start": 148.94,
+        "end": 152.36,
+        "script": "ok you can just reduce the noise",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 156.26,
+        "index": 26
+    },
+    {
+        "start": 156.26,
+        "end": 160.27,
+        "script": "ok no need to add noise that's why i'm making this one",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 160.59,
+        "index": 27
+    },
+    {
+        "start": 160.59,
+        "end": 163.78,
+        "script": "ok like that and zooming this one",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 163.93,
+        "index": 28
+    },
+    {
+        "start": 163.93,
+        "end": 167.66,
+        "script": "if you want to make it cartoon you can do that easily",
+        "low_label": "subgoal",
+        "high_label": "description",
+        "next_start": 167.95,
+        "index": 29
+    },
+    {
+        "start": 167.95,
+        "end": 169.83,
+        "script": "you can add paths",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 171.6,
+        "index": 30
+    },
+    {
+        "start": 171.6,
+        "end": 172.41,
+        "script": "ok",
+        "low_label": "filler",
+        "high_label": "misc.",
+        "next_start": 172.42,
+        "index": 31
+    },
+    {
+        "start": 172.42,
+        "end": 174.02,
+        "script": "this one is making parts",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 175.18,
+        "index": 32
+    },
+    {
+        "start": 175.18,
+        "end": 175.55,
+        "script": "oh ok",
+        "low_label": "filler",
+        "high_label": "misc.",
+        "next_start": 177.38,
+        "index": 33
+    },
+    {
+        "start": 177.38,
+        "end": 181.72,
+        "script": "and this one is like a paint but if you zoom it out it will like that",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 181.73,
+        "index": 34
+    },
+    {
+        "start": 181.73,
+        "end": 187.33,
+        "script": "ok if you need a corner you can make it corner easily",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 187.38,
+        "index": 35
+    },
+    {
+        "start": 187.38,
+        "end": 189.09,
+        "script": "it's fun actually",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 189.18,
+        "index": 36
+    },
+    {
+        "start": 189.18,
+        "end": 193.71,
+        "script": "you can play with it and this one is amazing for you",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 194.06,
+        "index": 37
+    },
+    {
+        "start": 194.06,
+        "end": 197.12,
+        "script": "ok it's like a cartoon image",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 198.02,
+        "index": 38
+    },
+    {
+        "start": 198.02,
+        "end": 199.29,
+        "script": "ok cartoon",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 199.69,
+        "index": 39
+    },
+    {
+        "start": 199.69,
+        "end": 206.78,
+        "script": "but if you add noise what is happening up there and let's see what is happening up there",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 207.62,
+        "index": 40
+    },
+    {
+        "start": 207.62,
+        "end": 209.3,
+        "script": "ok but it's smooth",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 209.31,
+        "index": 41
+    },
+    {
+        "start": 209.31,
+        "end": 213.22,
+        "script": "curves filter ok that means it's look like a cartoon ",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 213.23,
+        "index": 42
+    },
+    {
+        "start": 213.23,
+        "end": 215.57,
+        "script": "but i don't add noise",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 216.23,
+        "index": 43
+    },
+    {
+        "start": 216.23,
+        "end": 223.02,
+        "script": "ok ok it's taking time",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 223.03,
+        "index": 44
+    },
+    {
+        "start": 223.03,
+        "end": 225.18,
+        "script": "actually it's more smooth",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 225.63,
+        "index": 45
+    },
+    {
+        "start": 225.63,
+        "end": 235.91,
+        "script": "ok but you can make it high when it's working",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 237.32,
+        "index": 46
+    },
+    {
+        "start": 237.32,
+        "end": 244.8,
+        "script": "but if i give the paths low what is happening",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 244.81,
+        "index": 47
+    },
+    {
+        "start": 244.81,
+        "end": 245.54,
+        "script": "let's see",
+        "low_label": "bridge",
+        "high_label": "misc.",
+        "next_start": 247.51,
+        "index": 48
+    },
+    {
+        "start": 247.51,
+        "end": 249.22,
+        "script": "it's like experiment",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 249.29,
+        "index": 49
+    },
+    {
+        "start": 249.29,
+        "end": 251.7,
+        "script": "ok you have to give birth like that",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 251.71,
+        "index": 50
+    },
+    {
+        "start": 251.71,
+        "end": 252.95,
+        "script": "sixty five percent",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 256.66,
+        "index": 51
+    },
+    {
+        "start": 256.66,
+        "end": 258.93,
+        "script": "i'm showing you all the options here",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 259.59,
+        "index": 52
+    },
+    {
+        "start": 259.59,
+        "end": 259.91,
+        "script": "ok",
+        "low_label": "filler",
+        "high_label": "misc.",
+        "next_start": 261.44,
+        "index": 53
+    },
+    {
+        "start": 261.44,
+        "end": 262.75,
+        "script": "and corners",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 262.76,
+        "index": 54
+    },
+    {
+        "start": 262.76,
+        "end": 266.56,
+        "script": "you have to remember the corners and making it zero",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 269.06,
+        "index": 55
+    },
+    {
+        "start": 269.06,
+        "end": 271.58,
+        "script": "if i remove the corners what will happen",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 273.35,
+        "index": 56
+    },
+    {
+        "start": 273.35,
+        "end": 274.06,
+        "script": "it is better",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 275.59,
+        "index": 57
+    },
+    {
+        "start": 275.59,
+        "end": 278.05,
+        "script": "i think pats give like that",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 282.16,
+        "index": 58
+    },
+    {
+        "start": 282.16,
+        "end": 285.37,
+        "script": "oh ok that's good",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 287.11,
+        "index": 59
+    },
+    {
+        "start": 287.11,
+        "end": 291.9,
+        "script": "the colors if you need to add color you can give it like that",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 296.43,
+        "index": 60
+    },
+    {
+        "start": 296.43,
+        "end": 298.08,
+        "script": "ok nice nice",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 298.91,
+        "index": 61
+    },
+    {
+        "start": 298.91,
+        "end": 304.74,
+        "script": "but i think this one is good if i analyze this one",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 309.76,
+        "index": 62
+    },
+    {
+        "start": 309.76,
+        "end": 311.05,
+        "script": "it's totally cartoon",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 311.1,
+        "index": 63
+    },
+    {
+        "start": 311.1,
+        "end": 313.72,
+        "script": "so i have to give the colors more",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 315.63,
+        "index": 64
+    },
+    {
+        "start": 315.63,
+        "end": 321.3,
+        "script": "if you add colors it will work will be more natural",
+        "low_label": "effect",
+        "high_label": "explanation",
+        "next_start": 323.11,
+        "index": 65
+    },
+    {
+        "start": 323.11,
+        "end": 326.06,
+        "script": "ok this one is natural like well paint",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 327.7,
+        "index": 66
+    },
+    {
+        "start": 327.7,
+        "end": 330.35,
+        "script": "ok full down automatically",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 330.36,
+        "index": 67
+    },
+    {
+        "start": 330.36,
+        "end": 337.74,
+        "script": "if you give automatically it will just initial pixel customize path smoothing",
+        "low_label": "effect",
+        "high_label": "explanation",
+        "next_start": 337.81,
+        "index": 68
+    },
+    {
+        "start": 337.81,
+        "end": 339.76,
+        "script": "it will automatically look like that",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 339.77,
+        "index": 69
+    },
+    {
+        "start": 339.77,
+        "end": 344.02,
+        "script": "but i don't want to do this automatically full done",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 344.03,
+        "index": 70
+    },
+    {
+        "start": 344.03,
+        "end": 350.82,
+        "script": "i'll give the full tone and it will get the tone in a full options",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 353.07,
+        "index": 71
+    },
+    {
+        "start": 353.07,
+        "end": 354.62,
+        "script": "ok that's nice",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 355.11,
+        "index": 72
+    },
+    {
+        "start": 355.11,
+        "end": 358.64,
+        "script": "and color or grayscale black and white or whatever you can do",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 359.43,
+        "index": 73
+    },
+    {
+        "start": 359.43,
+        "end": 361.78,
+        "script": "and the tracing result",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 361.79,
+        "index": 74
+    },
+    {
+        "start": 361.79,
+        "end": 367.55,
+        "script": "tracing you can just image source you can watch and custom here",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 368.25,
+        "index": 75
+    },
+    {
+        "start": 368.25,
+        "end": 372.21,
+        "script": "i faded photo and i'm giving the high faded photo",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 372.29,
+        "index": 76
+    },
+    {
+        "start": 372.29,
+        "end": 376.73,
+        "script": "what is happening when i'm giving the high faded photo the game",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 377.8,
+        "index": 77
+    },
+    {
+        "start": 377.8,
+        "end": 378.54,
+        "script": "it's working",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 379.43,
+        "index": 78
+    },
+    {
+        "start": 379.43,
+        "end": 379.93,
+        "script": "oh ok",
+        "low_label": "filler",
+        "high_label": "misc.",
+        "next_start": 383.15,
+        "index": 79
+    },
+    {
+        "start": 383.15,
+        "end": 387.31,
+        "script": "ok this one is almost the same but some just difference",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 387.6,
+        "index": 80
+    },
+    {
+        "start": 387.6,
+        "end": 390.79,
+        "script": "ok after that you have to press the expand option",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 390.86,
+        "index": 81
+    },
+    {
+        "start": 390.86,
+        "end": 396.83,
+        "script": "if you press the expand option it will be vector ok",
+        "low_label": "effect",
+        "high_label": "explanation",
+        "next_start": 397.25,
+        "index": 82
+    },
+    {
+        "start": 397.25,
+        "end": 399.17,
+        "script": "and then ungroup this one",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 399.24,
+        "index": 83
+    },
+    {
+        "start": 399.24,
+        "end": 406.1,
+        "script": "after ungroup this one you can reduce this portion this portion",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 406.45,
+        "index": 84
+    },
+    {
+        "start": 406.45,
+        "end": 409.1,
+        "script": "carefully you have to delete the potions",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 409.19,
+        "index": 85
+    },
+    {
+        "start": 409.19,
+        "end": 415.53,
+        "script": "ok ok i like that",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 424.63,
+        "index": 86
+    },
+    {
+        "start": 424.63,
+        "end": 425.04,
+        "script": "oh ok",
+        "low_label": "filler",
+        "high_label": "misc.",
+        "next_start": 427.99,
+        "index": 87
+    },
+    {
+        "start": 427.99,
+        "end": 429.18,
+        "script": "this one is victor",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 429.19,
+        "index": 88
+    },
+    {
+        "start": 429.19,
+        "end": 432.71,
+        "script": "now you can work with these vector",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 432.86,
+        "index": 89
+    },
+    {
+        "start": 432.86,
+        "end": 438.99,
+        "script": "you can print it out on your collaterals or other things",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 439.54,
+        "index": 90
+    },
+    {
+        "start": 439.54,
+        "end": 441.79,
+        "script": "ok it's victor not pixel",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 443.19,
+        "index": 91
+    },
+    {
+        "start": 443.19,
+        "end": 446.92,
+        "script": "it's fun when you are working with the vectors",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 449.46,
+        "index": 92
+    },
+    {
+        "start": 449.46,
+        "end": 454.81,
+        "script": "this one is the basic technique actually to make the pixel or raster graphics to vector graphics",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 455.22,
+        "index": 93
+    },
+    {
+        "start": 455.22,
+        "end": 464.99,
+        "script": "it's for you and this one is too much useful in this one is useful for your work",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 466.58,
+        "index": 94
+    },
+    {
+        "start": 466.58,
+        "end": 473.96,
+        "script": "you can easily and this one pint out on your t shirt near collaterals or other things",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 474.01,
+        "index": 95
+    },
+    {
+        "start": 474.01,
+        "end": 476.21,
+        "script": "it will give a proper color",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 478.12,
+        "index": 96
+    },
+    {
+        "start": 478.12,
+        "end": 480.79,
+        "script": "we can take just a",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 481.92,
+        "index": 97
+    },
+    {
+        "start": 481.92,
+        "end": 483.41,
+        "script": "you can add other things",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 483.42,
+        "index": 98
+    },
+    {
+        "start": 483.42,
+        "end": 485.29,
+        "script": "i suppose you want to add color",
+        "low_label": "subgoal",
+        "high_label": "step",
+        "next_start": 486.91,
+        "index": 99
+    },
+    {
+        "start": 486.91,
+        "end": 489.57,
+        "script": "other things you can do you can customize the color",
+        "low_label": "subgoal",
+        "high_label": "step",
+        "next_start": 490.34,
+        "index": 100
+    },
+    {
+        "start": 490.34,
+        "end": 495.33,
+        "script": "suppose this this portion you can change from here",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 498.48,
+        "index": 101
+    },
+    {
+        "start": 498.48,
+        "end": 500.57,
+        "script": "you can make it blue or other things",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 501.12,
+        "index": 102
+    },
+    {
+        "start": 501.12,
+        "end": 501.97,
+        "script": "it's nice",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 502.3,
+        "index": 103
+    },
+    {
+        "start": 502.3,
+        "end": 508.16,
+        "script": "ok this one is the basic thing to make raster graphics through two vector graphics",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 508.43,
+        "index": 104
+    },
+    {
+        "start": 508.43,
+        "end": 515.16,
+        "script": "what's the benefit about the pixel graphics two or pixel or raster graphics to the victor graphics",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 515.57,
+        "index": 105
+    },
+    {
+        "start": 515.57,
+        "end": 530.73,
+        "script": "pixel graphics is that like uh that's not accurate format to print out but astrophysics vector graphics lithographics perfect for the print out",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 531.73,
+        "index": 106
+    },
+    {
+        "start": 531.73,
+        "end": 537.67,
+        "script": "and that's why sometimes we need to make russia graphic to vector graphics",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 537.68,
+        "index": 107
+    },
+    {
+        "start": 537.68,
+        "end": 542.08,
+        "script": "this one is the basic thing to make there's two graphics",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 542.15,
+        "index": 108
+    },
+    {
+        "start": 542.15,
+        "end": 545.23,
+        "script": "ok thank you so much thanks for watching my video tutorial",
+        "low_label": "closing",
+        "high_label": "greeting",
+        "next_start": 546.01,
+        "index": 109
+    },
+    {
+        "start": 546.01,
+        "end": 549.58,
+        "script": "don't forget to subscribe my channel and share with your friend till the next video",
+        "low_label": "self-promo",
+        "high_label": "misc.",
+        "next_start": 549.59,
+        "index": 110
+    },
+    {
+        "start": 549.59,
+        "end": 551.1,
+        "script": "i miss you very sending out and bye bye",
+        "low_label": "closing",
+        "high_label": "greeting",
+        "next_start": 564.8485625,
+        "index": 111
+    }
+]

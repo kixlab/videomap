@@ -1,0 +1,1055 @@
+[
+    {
+        "start": 0.37,
+        "end": 4.18,
+        "script": "hello everybody and welcome back to another videos of the day",
+        "low_label": "opening",
+        "high_label": "greeting",
+        "next_start": 4.19,
+        "index": 0
+    },
+    {
+        "start": 4.19,
+        "end": 8.38,
+        "script": "i'll be showing you all how to make cloud slime without any fake snow",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 8.45,
+        "index": 1
+    },
+    {
+        "start": 8.45,
+        "end": 10.42,
+        "script": "and this recipe is really really simple",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 10.43,
+        "index": 2
+    },
+    {
+        "start": 10.43,
+        "end": 14.26,
+        "script": "you can literally get all of these ingredients from dollar tree",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 14.33,
+        "index": 3
+    },
+    {
+        "start": 14.33,
+        "end": 16.68,
+        "script": "we're like ingredients similar to these",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 16.75,
+        "index": 4
+    },
+    {
+        "start": 16.75,
+        "end": 20.4,
+        "script": "so yeah it's a really simple and affordable recipe so let's just get to it",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 20.41,
+        "index": 5
+    },
+    {
+        "start": 20.41,
+        "end": 23.98,
+        "script": "first you will need a bowl and something to mix with",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 23.99,
+        "index": 6
+    },
+    {
+        "start": 23.99,
+        "end": 25.62,
+        "script": "you also need some glue",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 25.63,
+        "index": 7
+    },
+    {
+        "start": 25.63,
+        "end": 29.82,
+        "script": "it doesn't matter if you use white glue or clear glue just some glue",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 30.13,
+        "index": 8
+    },
+    {
+        "start": 30.13,
+        "end": 32.77,
+        "script": "you think some motion just to make my friend softer but you don't have to do this",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 32.84,
+        "index": 9
+    },
+    {
+        "start": 32.84,
+        "end": 35.25,
+        "script": "and also i'm going to be adding some free coloring",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 35.26,
+        "index": 10
+    },
+    {
+        "start": 35.26,
+        "end": 36.98,
+        "script": "but like once again you don't have to do this",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 36.99,
+        "index": 11
+    },
+    {
+        "start": 36.99,
+        "end": 38.83,
+        "script": "you'll need a slime activator",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 38.84,
+        "index": 12
+    },
+    {
+        "start": 38.84,
+        "end": 44.01,
+        "script": "and i am using one tablespoon of borax mixed with one cup of water",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 44.06,
+        "index": 13
+    },
+    {
+        "start": 44.06,
+        "end": 49.01,
+        "script": "so yeah and as the alternative for fake snow i'm using some diapers",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 49.02,
+        "index": 14
+    },
+    {
+        "start": 49.02,
+        "end": 52.63,
+        "script": "and one diaper makes a lot of fake snow",
+        "low_label": "tool spec.",
+        "high_label": "step",
+        "next_start": 52.64,
+        "index": 15
+    },
+    {
+        "start": 52.64,
+        "end": 54.04,
+        "script": "so you don't need a lot",
+        "low_label": "tool spec.",
+        "high_label": "step",
+        "next_start": 54.05,
+        "index": 16
+    },
+    {
+        "start": 54.05,
+        "end": 59.75,
+        "script": "and i got this from dollar tree and i just noticed that there's many teams so that's really cool",
+        "low_label": "tool spec.",
+        "high_label": "step",
+        "next_start": 59.8,
+        "index": 17
+    },
+    {
+        "start": 59.8,
+        "end": 61.57,
+        "script": "so yeah we need diapers",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 61.62,
+        "index": 18
+    },
+    {
+        "start": 61.62,
+        "end": 69.35,
+        "script": "so first you are going to be putting the desired amount of glue into your bowl and this is a basic slime recipe",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 69.36,
+        "index": 19
+    },
+    {
+        "start": 69.36,
+        "end": 76.25,
+        "script": "the only difference is that you're adding a bit more activated than you usually do and then after it's that",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 76.26,
+        "index": 20
+    },
+    {
+        "start": 76.26,
+        "end": 83.17,
+        "script": "you're going to add in some of your food coloring or lotion and this step is totally optional you can choose to skip it or not",
+        "low_label": "instruction",
+        "high_label": "description",
+        "next_start": 83.28,
+        "index": 21
+    },
+    {
+        "start": 83.28,
+        "end": 88.19,
+        "script": "and once you've done that then you are going to add in some of your activated and once again",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 88.45,
+        "index": 22
+    },
+    {
+        "start": 88.45,
+        "end": 92.6,
+        "script": "but in more than you usually would be to over activate it",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 94.22,
+        "index": 23
+    },
+    {
+        "start": 94.22,
+        "end": 97.49,
+        "script": "alright so i am now done over activating my side",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 97.5,
+        "index": 24
+    },
+    {
+        "start": 97.5,
+        "end": 101.53,
+        "script": "and by over activating i mean like adding too much activator",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 101.54,
+        "index": 25
+    },
+    {
+        "start": 101.54,
+        "end": 106.29,
+        "script": "so it's not super stretchy it ripped apart pretty easily but this time just felt anyway",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 106.3,
+        "index": 26
+    },
+    {
+        "start": 106.3,
+        "end": 108.85,
+        "script": "so yeah i am done doing that",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 108.86,
+        "index": 27
+    },
+    {
+        "start": 108.86,
+        "end": 112.15,
+        "script": "so now i'm going to like set it inside i'm going to put it right there",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 112.68,
+        "index": 28
+    },
+    {
+        "start": 112.68,
+        "end": 116.25,
+        "script": "and now i'm going to take your bull again and fill it up with water",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 116.26,
+        "index": 29
+    },
+    {
+        "start": 116.26,
+        "end": 120.28,
+        "script": "so i now have a bowl of water you need about that much",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 120.29,
+        "index": 30
+    },
+    {
+        "start": 120.29,
+        "end": 125.7,
+        "script": "you need like a enough amount of water so your whole diaper in",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 125.71,
+        "index": 31
+    },
+    {
+        "start": 125.71,
+        "end": 127.63,
+        "script": "so i'm going to open my diaper",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 127.64,
+        "index": 32
+    },
+    {
+        "start": 127.64,
+        "end": 128.67,
+        "script": "so here it is",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 128.68,
+        "index": 33
+    },
+    {
+        "start": 128.68,
+        "end": 130.5,
+        "script": "you're just going to go ahead and open it up",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 130.51,
+        "index": 34
+    },
+    {
+        "start": 130.51,
+        "end": 131.88,
+        "script": "i don't even know how to work diapers",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 131.89,
+        "index": 35
+    },
+    {
+        "start": 131.89,
+        "end": 133.66,
+        "script": "whoa this is big",
+        "low_label": "tool spec.",
+        "high_label": "misc.",
+        "next_start": 133.75,
+        "index": 36
+    },
+    {
+        "start": 133.75,
+        "end": 140.99,
+        "script": "ok maybe i do need a bigger bowl for this",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 141.0,
+        "index": 37
+    },
+    {
+        "start": 141.0,
+        "end": 144.89,
+        "script": "i might need a bigger bowl for this but we really need to get a bigger one anyway",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 144.9,
+        "index": 38
+    },
+    {
+        "start": 144.9,
+        "end": 147.41,
+        "script": "so now i'm just going to pop it into your water",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 147.58,
+        "index": 39
+    },
+    {
+        "start": 147.58,
+        "end": 149.27,
+        "script": "and i guess i'm going to like",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 150.28,
+        "index": 40
+    },
+    {
+        "start": 150.28,
+        "end": 159.83,
+        "script": "i'm not sure what i'm going to do but just pop it into your water and then make sure like all the areas are soaked and everything and just leave it there to soak for a bit",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 159.84,
+        "index": 41
+    },
+    {
+        "start": 159.84,
+        "end": 163.81,
+        "script": "it is all done you're going to go take your scissors",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 163.82,
+        "index": 42
+    },
+    {
+        "start": 163.82,
+        "end": 168.71,
+        "script": "i feel like i should probably let it some more but i don't feel like getting more water",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 168.72,
+        "index": 43
+    },
+    {
+        "start": 168.72,
+        "end": 170.75,
+        "script": "so we're going to take your scissors",
+        "low_label": "subgoal",
+        "high_label": "step",
+        "next_start": 170.85,
+        "index": 44
+    },
+    {
+        "start": 170.85,
+        "end": 173.93,
+        "script": "and then you're going to cut open the diaper",
+        "low_label": "subgoal",
+        "high_label": "step",
+        "next_start": 174.52,
+        "index": 45
+    },
+    {
+        "start": 174.52,
+        "end": 178.82,
+        "script": "so take like this upper they're like layer this",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 178.83,
+        "index": 46
+    },
+    {
+        "start": 178.83,
+        "end": 180.12,
+        "script": "kind of hard to show you guys",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 180.39,
+        "index": 47
+    },
+    {
+        "start": 180.39,
+        "end": 184.9,
+        "script": "take this like upper area and make a sniff in it and start cutting",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 186.63,
+        "index": 48
+    },
+    {
+        "start": 186.63,
+        "end": 187.96,
+        "script": "make a credible actually",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 188.87,
+        "index": 49
+    },
+    {
+        "start": 188.87,
+        "end": 189.43,
+        "script": "oh this is one",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 191.33,
+        "index": 50
+    },
+    {
+        "start": 191.33,
+        "end": 193.24,
+        "script": "it's kind of open like",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 193.25,
+        "index": 51
+    },
+    {
+        "start": 193.25,
+        "end": 195.5,
+        "script": "so this three part you want to get rid of",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 195.51,
+        "index": 52
+    },
+    {
+        "start": 195.51,
+        "end": 201.3,
+        "script": "i don't need this part just keep on cutting it open until you see all this stuff",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 202.66,
+        "index": 53
+    },
+    {
+        "start": 202.66,
+        "end": 205.4,
+        "script": "this is what you will need for",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 205.41,
+        "index": 54
+    },
+    {
+        "start": 205.41,
+        "end": 211.76,
+        "script": "um the actual yeah this was i can't speak properly",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 211.81,
+        "index": 55
+    },
+    {
+        "start": 211.81,
+        "end": 213.44,
+        "script": "so this is what you'll need for the fake snow",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 213.45,
+        "index": 56
+    },
+    {
+        "start": 213.45,
+        "end": 220.24,
+        "script": "so there are some like tiny like paper parts and you do not want that you're gonna throw that out",
+        "low_label": "warning",
+        "high_label": "supplementary",
+        "next_start": 220.79,
+        "index": 57
+    },
+    {
+        "start": 220.79,
+        "end": 222.28,
+        "script": "but the other parts you want",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 222.29,
+        "index": 58
+    },
+    {
+        "start": 222.29,
+        "end": 228.42,
+        "script": "so i'm going to go ahead and just pump it all in falling out into my bowl",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 228.43,
+        "index": 59
+    },
+    {
+        "start": 228.43,
+        "end": 232.26,
+        "script": "ok so i think i am done emptying it all out",
+        "low_label": "bridge",
+        "high_label": "misc.",
+        "next_start": 232.27,
+        "index": 60
+    },
+    {
+        "start": 232.27,
+        "end": 234.3,
+        "script": "so here's all the fake snow i got",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 234.31,
+        "index": 61
+    },
+    {
+        "start": 234.31,
+        "end": 235.7,
+        "script": "actually got a lot",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 235.77,
+        "index": 62
+    },
+    {
+        "start": 235.77,
+        "end": 245.15,
+        "script": "so i'm going to make a bit more slim off camera just because i don't think i had enough for the amount of you know fix now i got",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 245.4,
+        "index": 63
+    },
+    {
+        "start": 245.4,
+        "end": 249.25,
+        "script": "but make sure you don't want any of this like paper stuff i don't know if you can see it",
+        "low_label": "warning",
+        "high_label": "supplementary",
+        "next_start": 249.26,
+        "index": 64
+    },
+    {
+        "start": 249.26,
+        "end": 250.93,
+        "script": "but it's like wet paper",
+        "low_label": "warning",
+        "high_label": "supplementary",
+        "next_start": 250.94,
+        "index": 65
+    },
+    {
+        "start": 250.94,
+        "end": 252.46,
+        "script": "you do not want that stuff in your slides",
+        "low_label": "warning",
+        "high_label": "supplementary",
+        "next_start": 252.47,
+        "index": 66
+    },
+    {
+        "start": 252.47,
+        "end": 253.69,
+        "script": "let's go ahead and do it out",
+        "low_label": "warning",
+        "high_label": "supplementary",
+        "next_start": 253.76,
+        "index": 67
+    },
+    {
+        "start": 253.76,
+        "end": 255.45,
+        "script": "you just want like the regular",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 257.12,
+        "index": 68
+    },
+    {
+        "start": 257.12,
+        "end": 262.15,
+        "script": "i don't even know what this stuff is but yeah so just sort it out and then i'm gonna make a bit more slime",
+        "low_label": "early instruction",
+        "high_label": "step",
+        "next_start": 262.16,
+        "index": 69
+    },
+    {
+        "start": 262.16,
+        "end": 264.13,
+        "script": "and then we're gonna put it in here",
+        "low_label": "early instruction",
+        "high_label": "step",
+        "next_start": 264.17,
+        "index": 70
+    },
+    {
+        "start": 264.17,
+        "end": 264.95,
+        "script": "so be ok",
+        "low_label": "filler",
+        "high_label": "misc.",
+        "next_start": 264.96,
+        "index": 71
+    },
+    {
+        "start": 264.96,
+        "end": 272.39,
+        "script": "so i have made a bit more slime and you can see i didn't mix it very well because it's kind of hard to mix",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 272.4,
+        "index": 72
+    },
+    {
+        "start": 272.4,
+        "end": 274.71,
+        "script": "you know pretty hard slime together",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 274.72,
+        "index": 73
+    },
+    {
+        "start": 274.72,
+        "end": 280.85,
+        "script": "anyway so now it's the moment of truth so i'm going to go ahead and i guess just pop it in there",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 280.86,
+        "index": 74
+    },
+    {
+        "start": 280.86,
+        "end": 292.6,
+        "script": "ok so now i'm just going to mix it around try to make it all stick or feels so weird",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 292.61,
+        "index": 75
+    },
+    {
+        "start": 292.61,
+        "end": 297.07,
+        "script": "i feel like i shouldn't be playing with this stuff but i mean it's ok",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 297.13,
+        "index": 76
+    },
+    {
+        "start": 297.13,
+        "end": 300.22,
+        "script": "it's gonna play with it because why not",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 301.67,
+        "index": 77
+    },
+    {
+        "start": 301.67,
+        "end": 304.48,
+        "script": "so just go ahead and mix it in and i'll be back",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 304.55,
+        "index": 78
+    },
+    {
+        "start": 304.55,
+        "end": 308.84,
+        "script": "once i'm done i'm done making my clothes on and this did make a bit of a mess",
+        "low_label": "tip",
+        "high_label": "supplementary",
+        "next_start": 308.85,
+        "index": 79
+    },
+    {
+        "start": 308.85,
+        "end": 314.28,
+        "script": "but so yeah just make sure to do it over like a surface that you can easily clean up",
+        "low_label": "tip",
+        "high_label": "supplementary",
+        "next_start": 314.34,
+        "index": 80
+    },
+    {
+        "start": 314.34,
+        "end": 318.43,
+        "script": "but anyways here it is and this took forever to mix in and make people down there",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 318.44,
+        "index": 81
+    },
+    {
+        "start": 318.44,
+        "end": 320.84,
+        "script": "anyways just a little like mixing",
+        "low_label": "tip",
+        "high_label": "supplementary",
+        "next_start": 320.91,
+        "index": 82
+    },
+    {
+        "start": 320.91,
+        "end": 323.54,
+        "script": "tip i guess i would like grab it and i'll twist it",
+        "low_label": "tip",
+        "high_label": "supplementary",
+        "next_start": 323.61,
+        "index": 83
+    },
+    {
+        "start": 323.61,
+        "end": 325.5,
+        "script": "it'll just like speed up the mixing process",
+        "low_label": "tip",
+        "high_label": "supplementary",
+        "next_start": 325.77,
+        "index": 84
+    },
+    {
+        "start": 325.77,
+        "end": 326.98,
+        "script": "so yeah just do that",
+        "low_label": "tip",
+        "high_label": "supplementary",
+        "next_start": 327.09,
+        "index": 85
+    },
+    {
+        "start": 327.09,
+        "end": 328.94,
+        "script": "anyways so here it is all done",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 328.95,
+        "index": 86
+    },
+    {
+        "start": 328.95,
+        "end": 332.41,
+        "script": "i love it so so much and it did get a bit a bit sticky",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 332.48,
+        "index": 87
+    },
+    {
+        "start": 332.48,
+        "end": 335.93,
+        "script": "wanna see me in because you know the diaper stuff did have a bit of water in it",
+        "low_label": "instruction",
+        "high_label": "conclusion",
+        "next_start": 336.28,
+        "index": 88
+    },
+    {
+        "start": 336.28,
+        "end": 338.03,
+        "script": "so just add some activator",
+        "low_label": "instruction",
+        "high_label": "conclusion",
+        "next_start": 338.1,
+        "index": 89
+    },
+    {
+        "start": 338.1,
+        "end": 342.93,
+        "script": "and also if you are experiencing some like fallout as i am right now like some of the deeper stuff is falling out",
+        "low_label": "instruction",
+        "high_label": "conclusion",
+        "next_start": 342.94,
+        "index": 90
+    },
+    {
+        "start": 342.94,
+        "end": 346.03,
+        "script": "just add a bit more slime into it and then it's just fix it",
+        "low_label": "instruction",
+        "high_label": "conclusion",
+        "next_start": 346.16,
+        "index": 91
+    },
+    {
+        "start": 346.16,
+        "end": 347.65,
+        "script": "but this slime is heavenly",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 347.66,
+        "index": 92
+    },
+    {
+        "start": 347.66,
+        "end": 352.59,
+        "script": "i love it so much it's exactly like cloud slime and also it made a lot of fun",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 352.6,
+        "index": 93
+    },
+    {
+        "start": 352.6,
+        "end": 354.01,
+        "script": "like this is my hand",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 354.02,
+        "index": 94
+    },
+    {
+        "start": 354.02,
+        "end": 356.61,
+        "script": "my hand by the way is pretty big and like it's",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 356.62,
+        "index": 95
+    },
+    {
+        "start": 356.62,
+        "end": 358.16,
+        "script": "it's a big big fun",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 358.17,
+        "index": 96
+    },
+    {
+        "start": 358.17,
+        "end": 358.86,
+        "script": "a lot of fun",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 359.16,
+        "index": 97
+    },
+    {
+        "start": 359.16,
+        "end": 361.43,
+        "script": "and if you're wondering are you size four diapers",
+        "low_label": "tool spec.",
+        "high_label": "conclusion",
+        "next_start": 361.44,
+        "index": 98
+    },
+    {
+        "start": 361.44,
+        "end": 362.62,
+        "script": "i don't know if size four diapers",
+        "low_label": "tool spec.",
+        "high_label": "conclusion",
+        "next_start": 362.72,
+        "index": 99
+    },
+    {
+        "start": 362.72,
+        "end": 363.41,
+        "script": "they are not",
+        "low_label": "tool spec.",
+        "high_label": "conclusion",
+        "next_start": 363.46,
+        "index": 100
+    },
+    {
+        "start": 363.46,
+        "end": 367.91,
+        "script": "but mess aside i use and you could get this from a like from the dollar tree",
+        "low_label": "tool spec.",
+        "high_label": "conclusion",
+        "next_start": 367.92,
+        "index": 101
+    },
+    {
+        "start": 367.92,
+        "end": 369.79,
+        "script": "like a five can't speak",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 369.8,
+        "index": 102
+    },
+    {
+        "start": 369.8,
+        "end": 370.77,
+        "script": "i'm not surprised",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 370.84,
+        "index": 103
+    },
+    {
+        "start": 370.84,
+        "end": 374.97,
+        "script": "i'm behind packs from dollar tree and one diaper makes you this much",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 374.98,
+        "index": 104
+    },
+    {
+        "start": 374.98,
+        "end": 376.39,
+        "script": "slime this much cloud slime",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 376.44,
+        "index": 105
+    },
+    {
+        "start": 376.44,
+        "end": 377.39,
+        "script": "it's insane",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 378.24,
+        "index": 106
+    },
+    {
+        "start": 378.24,
+        "end": 382.07,
+        "script": "i'm not sure if this is in focus right now just like bending down and i don't see my camera now",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 382.12,
+        "index": 107
+    },
+    {
+        "start": 382.12,
+        "end": 385.71,
+        "script": "but it's absolutely amazing love this time so much",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 386.52,
+        "index": 108
+    },
+    {
+        "start": 386.52,
+        "end": 389.67,
+        "script": "but yeah i hope you guys enjoy this recipe and this video",
+        "low_label": "closing",
+        "high_label": "greeting",
+        "next_start": 389.72,
+        "index": 109
+    },
+    {
+        "start": 389.72,
+        "end": 395.68,
+        "script": "sorry if you hear back noise with us my parents i'm talking that i love so much",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 395.75,
+        "index": 110
+    },
+    {
+        "start": 395.75,
+        "end": 398.08,
+        "script": "coming down below if you like this recipe or not",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 398.15,
+        "index": 111
+    },
+    {
+        "start": 398.15,
+        "end": 400.0,
+        "script": "and if you did please hit that fine",
+        "low_label": "self-promo",
+        "high_label": "misc.",
+        "next_start": 400.01,
+        "index": 112
+    },
+    {
+        "start": 400.01,
+        "end": 401.1,
+        "script": "like bunda find subscribe",
+        "low_label": "self-promo",
+        "high_label": "misc.",
+        "next_start": 401.11,
+        "index": 113
+    },
+    {
+        "start": 401.11,
+        "end": 407.6,
+        "script": "and comment below and we're really starts and then once again if this recipe worked for you and how you like this song because it's amazing",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 407.65,
+        "index": 114
+    },
+    {
+        "start": 407.65,
+        "end": 413.14,
+        "script": "but yeah i hope you guys enjoy this video and i guess i'll see you all later",
+        "low_label": "closing",
+        "high_label": "greeting",
+        "next_start": 413.2,
+        "index": 115
+    },
+    {
+        "start": 413.2,
+        "end": 414.0,
+        "script": "bye",
+        "low_label": "closing",
+        "high_label": "greeting",
+        "next_start": 444.94075,
+        "index": 116
+    }
+]
