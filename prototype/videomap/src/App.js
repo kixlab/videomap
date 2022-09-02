@@ -202,13 +202,14 @@ function App() {
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
   // TODO: fix bug
-  // useEffect(() => {
-  //   console.log (selectedIndex);
-  //   if (selectedIndex !== -1){
-  //     var target_sentence = document.getElementById(selectedIndex);
-  //     target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
-  //   }
-  // }, [selectedIndex]);
+  useEffect(() => {
+    // console.log (selectedIndex);
+    if (selectedIndex !== -1){
+      var target_sentence = document.getElementsByClassName(selectedIndex)[0];
+      console.log(target_sentence);
+      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
+    }
+  }, [selectedIndex]);
   
   const updateIndex = (currentTime) => {
     for (var i = 0; i < processedScript.length; i++) {
@@ -311,7 +312,7 @@ function App() {
   width: '850',
   playerVars: {
       autoplay: 0,
-      controls: 0,
+      controls: 1,
       },
   };
 

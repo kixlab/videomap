@@ -111,7 +111,7 @@ function Script({
             <div className="script_block" onScroll={onScroll}>
                 {filteredScript &&
                     filteredScript.map ((item, ind) => (
-                    <div key={ind} id={ind} className={selectedIndex == item.index ? "selected" : "default"} onClick={() => handleSentenceClick(item.index)}>
+                    <div key={ind} id={ind} className={selectedIndex == item.index ? "selected " + item.index : "default " + item.index} onClick={() => handleSentenceClick(item.index)}>
                         <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} showLabelInfo={showLabelInfo} hideLabelInfo={hideLabelInfo}/>
                     </div>))
                 }
