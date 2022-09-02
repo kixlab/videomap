@@ -13,15 +13,15 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels, logData, video
 
     useEffect(()=>{
         for (var key in selectStatus){
-            if (selectStatus[key] == 0){
-                const target = document.getElementById(key);
-                onUnselectGroup(target);
-                target.classList.remove("selected");
-            }
-            else if(selectStatus[key] == fullSelectStatus[key]){
+            if(selectStatus[key] == fullSelectStatus[key]){
                 const target = document.getElementById(key);
                 onSelectGroup(target);
                 target.classList.add("selected");
+            }
+            else {
+                const target = document.getElementById(key);
+                onUnselectGroup(target);
+                target.classList.remove("selected");
             }
         }
     }, [selectStatus]);
