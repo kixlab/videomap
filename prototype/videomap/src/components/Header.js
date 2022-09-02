@@ -43,7 +43,7 @@ function Header({videoId, setVideoId, userId, setUserId, taskId, setTaskId}){
             {/* <h3>VIDEO MAP</h3> */}
             {showInput &&
             <div>
-                <TextField 
+                {/* <TextField 
                     InputLabelProps={{ shrink: true }}
                     id="outlined-basic" 
                     label="VIDEO ID" 
@@ -53,7 +53,7 @@ function Header({videoId, setVideoId, userId, setUserId, taskId, setTaskId}){
                     onChange={handleInputVideoIdChange}
                 />
                 <Button variant="contained" onClick={clickVideoIdChangeButton} style={{marginLeft: "5px"}}>Change</Button>
-            
+             */}
                 <div className="bottom_input_wrapper">
                     <TextField 
                         InputLabelProps={{ shrink: true }}

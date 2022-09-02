@@ -1,0 +1,1262 @@
+[
+    {
+        "start": 1.82,
+        "end": 7.81,
+        "script": "i'm free to greet you and i'm back home in la and ready to show you more cosplay stuff",
+        "low_label": "opening",
+        "high_label": "greeting",
+        "next_start": 7.9,
+        "index": 0
+    },
+    {
+        "start": 7.9,
+        "end": 8.47,
+        "script": "today",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 8.48,
+        "index": 1
+    },
+    {
+        "start": 8.48,
+        "end": 12.75,
+        "script": "we're gonna look at my batgirl costume specifically",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 13.0,
+        "index": 2
+    },
+    {
+        "start": 13.0,
+        "end": 17.71,
+        "script": "but girl of burnside this is she",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 19.63,
+        "index": 3
+    },
+    {
+        "start": 19.63,
+        "end": 22.74,
+        "script": "i chose her because they think she's a cool character",
+        "low_label": "motivation",
+        "high_label": "overview",
+        "next_start": 22.81,
+        "index": 4
+    },
+    {
+        "start": 22.81,
+        "end": 29.62,
+        "script": "i like the fact that she's young and hip and she wears all leather not spandex",
+        "low_label": "motivation",
+        "high_label": "overview",
+        "next_start": 29.75,
+        "index": 5
+    },
+    {
+        "start": 29.75,
+        "end": 33.18,
+        "script": "today we're gonna be taking a look at how i made the jacket",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 33.41,
+        "index": 6
+    },
+    {
+        "start": 33.41,
+        "end": 37.7,
+        "script": "i chose to buy the base of the jacket because i didn't have time to make my own",
+        "low_label": "tool spec.",
+        "high_label": "overview",
+        "next_start": 37.87,
+        "index": 7
+    },
+    {
+        "start": 37.87,
+        "end": 41.08,
+        "script": "i made this entire costume in thirteen days",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 41.39,
+        "index": 8
+    },
+    {
+        "start": 41.39,
+        "end": 42.16,
+        "script": "mental",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 42.63,
+        "index": 9
+    },
+    {
+        "start": 42.63,
+        "end": 44.9,
+        "script": "the jacket i got i bought from amazon",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 44.99,
+        "index": 10
+    },
+    {
+        "start": 44.99,
+        "end": 47.86,
+        "script": "i leave the link below if it's still available",
+        "low_label": "tool spec.",
+        "high_label": "step",
+        "next_start": 48.05,
+        "index": 11
+    },
+    {
+        "start": 48.05,
+        "end": 53.91,
+        "script": "the image i used to make the stencil or the back or a logo i've made myself on photoshop",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 53.96,
+        "index": 12
+    },
+    {
+        "start": 53.96,
+        "end": 57.39,
+        "script": "i will leave the link below in case you wanna use it too",
+        "low_label": "tool spec.",
+        "high_label": "step",
+        "next_start": 58.85,
+        "index": 13
+    },
+    {
+        "start": 58.85,
+        "end": 62.0,
+        "script": "making this jacket took seven and a half hours",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 62.47,
+        "index": 14
+    },
+    {
+        "start": 62.47,
+        "end": 63.54,
+        "script": "not too bad",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 63.73,
+        "index": 15
+    },
+    {
+        "start": 63.73,
+        "end": 67.84,
+        "script": "but remember if i can do it you can do it",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 68.09,
+        "index": 16
+    },
+    {
+        "start": 68.09,
+        "end": 70.2,
+        "script": "and now let's see what i mean",
+        "low_label": "bridge",
+        "high_label": "misc.",
+        "next_start": 83.55,
+        "index": 17
+    },
+    {
+        "start": 83.55,
+        "end": 87.36,
+        "script": "i chose this jacket because i thought the color was going to be pretty easy to match",
+        "low_label": "tool spec.",
+        "high_label": "misc.",
+        "next_start": 87.37,
+        "index": 18
+    },
+    {
+        "start": 87.37,
+        "end": 94.44,
+        "script": "i also loved a lot of the details like the neckline and the button the seam along the side and the pockets",
+        "low_label": "tool spec.",
+        "high_label": "misc.",
+        "next_start": 94.51,
+        "index": 19
+    },
+    {
+        "start": 94.51,
+        "end": 97.88,
+        "script": "which i thought matched babb's jacket very well",
+        "low_label": "tool spec.",
+        "high_label": "misc.",
+        "next_start": 97.97,
+        "index": 20
+    },
+    {
+        "start": 97.97,
+        "end": 100.94,
+        "script": "the pin i'm using like the jacket i got from amazon",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 100.95,
+        "index": 21
+    },
+    {
+        "start": 100.95,
+        "end": 103.07,
+        "script": "it's the angello's leather paint",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 103.08,
+        "index": 22
+    },
+    {
+        "start": 103.08,
+        "end": 107.03,
+        "script": "i'm just using it the way it comes out of the bottle with this sponge brush",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 107.1,
+        "index": 23
+    },
+    {
+        "start": 107.1,
+        "end": 108.41,
+        "script": "yay",
+        "low_label": "filler",
+        "high_label": "misc.",
+        "next_start": 108.76,
+        "index": 24
+    },
+    {
+        "start": 108.76,
+        "end": 113.97,
+        "script": "i'm using the color purple and i will leave a link to where you can find it in the description",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 115.24,
+        "index": 25
+    },
+    {
+        "start": 115.24,
+        "end": 127.93,
+        "script": "i had forgotten to cover up my dress form so i grabbed a piece of leftover plastic sheet and i pinned it all around the dress form in what i call my plastic gown ",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 128.0,
+        "index": 26
+    },
+    {
+        "start": 128.0,
+        "end": 136.87,
+        "script": "so that the dress form itself would be protected from paint and i wouldn't have to pay so much attention when i was painting the edges of the jacket",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 137.17,
+        "index": 27
+    },
+    {
+        "start": 137.17,
+        "end": 140.23,
+        "script": "no back to the painting itself like you saw",
+        "low_label": "bridge",
+        "high_label": "misc.",
+        "next_start": 140.24,
+        "index": 28
+    },
+    {
+        "start": 140.24,
+        "end": 147.3,
+        "script": "i just poured the pain in a plastic plate and then i smother it all over the jacket with my brush",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 147.65,
+        "index": 29
+    },
+    {
+        "start": 147.65,
+        "end": 156.18,
+        "script": "when i was painting around all the little details like the button at the top or all of the zippers i switched to a smaller brush ",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 156.23,
+        "index": 30
+    },
+    {
+        "start": 156.23,
+        "end": 165.18,
+        "script": "so that i could have a little bit more control over the amount of pain that i was putting on and i wouldn't have to pay so much attention",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 165.25,
+        "index": 31
+    },
+    {
+        "start": 165.25,
+        "end": 166.95,
+        "script": "not to get those thirty",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 168.0,
+        "index": 32
+    },
+    {
+        "start": 168.0,
+        "end": 178.62,
+        "script": "and here i keep going over and over and over and around and around the jacket until the very first layer of paint is applied",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 179.64,
+        "index": 33
+    },
+    {
+        "start": 179.64,
+        "end": 191.82,
+        "script": "as you can see there's a lot of seams and a lot of panels so i'm making sure that i'm applying the paint very thoroughly to cover any threads or any crevices or any vents in the leather",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 193.13,
+        "index": 34
+    },
+    {
+        "start": 193.13,
+        "end": 195.21,
+        "script": "fake leather's that is",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 195.94,
+        "index": 35
+    },
+    {
+        "start": 195.94,
+        "end": 202.65,
+        "script": "as you can see the first layer of paint is already doing a pretty good job and i'm really happy that i decided to paint over blue",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 202.66,
+        "index": 36
+    },
+    {
+        "start": 202.66,
+        "end": 205.45,
+        "script": "oh here comes spano my prince",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 208.5,
+        "index": 37
+    },
+    {
+        "start": 208.5,
+        "end": 209.63,
+        "script": "cute",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 209.7,
+        "index": 38
+    },
+    {
+        "start": 209.7,
+        "end": 216.23,
+        "script": "well anyway i'm really happy that i decided to paint over blue rather than a white or a cream color",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 216.24,
+        "index": 39
+    },
+    {
+        "start": 216.24,
+        "end": 224.83,
+        "script": "which i actually considered for a little bit because i think over white or cream i would have had to use a lot more paint and this is what the jacket looks like",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 224.84,
+        "index": 40
+    },
+    {
+        "start": 224.84,
+        "end": 231.19,
+        "script": "after the first coat of paint i think the color took pretty well but there was still a little blue undertone",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 231.24,
+        "index": 41
+    },
+    {
+        "start": 231.24,
+        "end": 234.54,
+        "script": "so i went over it once more",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 234.88,
+        "index": 42
+    },
+    {
+        "start": 234.88,
+        "end": 236.79,
+        "script": "second code here we go",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 238.54,
+        "index": 43
+    },
+    {
+        "start": 238.54,
+        "end": 239.37,
+        "script": "oopsie",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 239.41,
+        "index": 44
+    },
+    {
+        "start": 239.41,
+        "end": 244.26,
+        "script": "like i said i didn't want to pay too much attention but i still had to pay some",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 244.27,
+        "index": 45
+    },
+    {
+        "start": 244.27,
+        "end": 248.89,
+        "script": "evidently i didn't hear so i got a little bit of the zipper dirty but as you saw",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 248.9,
+        "index": 46
+    },
+    {
+        "start": 248.9,
+        "end": 254.97,
+        "script": "i just grabbed a piece of dry paper towel and just rubbed it over it and the paint came right off",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 255.24,
+        "index": 47
+    },
+    {
+        "start": 255.24,
+        "end": 262.47,
+        "script": "now i'm painting the inside of the jacket then no one will ever see like the obsessive ocd person that i am",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 262.84,
+        "index": 48
+    },
+    {
+        "start": 262.84,
+        "end": 267.73,
+        "script": "but i figured heck go big or go home right",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 268.49,
+        "index": 49
+    },
+    {
+        "start": 268.49,
+        "end": 275.46,
+        "script": "i finished a third layer of paint over the dress form cleaning up a bit of a mess that i kept making here as you can see",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 275.51,
+        "index": 50
+    },
+    {
+        "start": 275.51,
+        "end": 278.3,
+        "script": "and then i move the jacket flat on my table",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 278.31,
+        "index": 51
+    },
+    {
+        "start": 278.31,
+        "end": 288.01,
+        "script": "i protected it with the same plastic from my gown and then they painted the underarms and the sides with three more layers of paint to match the rest of the jacket",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 288.53,
+        "index": 52
+    },
+    {
+        "start": 288.53,
+        "end": 294.72,
+        "script": "and here comes the roxy who helped me assemble the jacket and the cake",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 294.78,
+        "index": 53
+    },
+    {
+        "start": 294.78,
+        "end": 296.06,
+        "script": "just wait and see",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 296.13,
+        "index": 54
+    },
+    {
+        "start": 296.13,
+        "end": 300.34,
+        "script": "ooh ooh here is some random modeling for you",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 300.41,
+        "index": 55
+    },
+    {
+        "start": 300.41,
+        "end": 302.14,
+        "script": "ooh get it",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 302.27,
+        "index": 56
+    },
+    {
+        "start": 302.27,
+        "end": 304.13,
+        "script": "and here comes the cape",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 304.99,
+        "index": 57
+    },
+    {
+        "start": 304.99,
+        "end": 307.02,
+        "script": "now for installing the cape on",
+        "low_label": "bridge",
+        "high_label": "misc.",
+        "next_start": 307.03,
+        "index": 58
+    },
+    {
+        "start": 307.03,
+        "end": 313.86,
+        "script": "we're trying to figure out where we want the pieces to lay on the jacket in terms of height and orientation",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 313.97,
+        "index": 59
+    },
+    {
+        "start": 313.97,
+        "end": 319.8,
+        "script": "and in terms of making the back of the cape overlap nicely with the neckline of the jacket",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 319.89,
+        "index": 60
+    },
+    {
+        "start": 319.89,
+        "end": 321.54,
+        "script": "rocks is taking a good look",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 321.55,
+        "index": 61
+    },
+    {
+        "start": 321.55,
+        "end": 323.72,
+        "script": "she's assessing the situation",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 323.79,
+        "index": 62
+    },
+    {
+        "start": 323.79,
+        "end": 340.8,
+        "script": "she does some little minor adjustments and then with the red permanent marker she's making the two dots on each side where we want the buttons to lay on the jacket there",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 341.11,
+        "index": 63
+    },
+    {
+        "start": 341.11,
+        "end": 344.98,
+        "script": "now i'm putting pins through the marks that she's made on the jacket",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 345.03,
+        "index": 64
+    },
+    {
+        "start": 345.03,
+        "end": 350.66,
+        "script": "the pins are going to help me in installing the snaps that i will use to attach the cave to the jacket",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 350.75,
+        "index": 65
+    },
+    {
+        "start": 350.75,
+        "end": 356.62,
+        "script": "and here's the snap fastening tool kit that i'm using for the first time and you can see me read the instructions",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 356.69,
+        "index": 66
+    },
+    {
+        "start": 356.69,
+        "end": 368.56,
+        "script": "and actually i put the pins backwards as you can see i'm turning them around because it's easier to do it if the pinhead is on the inside of the garment and you'll see why in a second",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 369.03,
+        "index": 67
+    },
+    {
+        "start": 369.03,
+        "end": 370.75,
+        "script": "this is the snap fastening tool",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 370.76,
+        "index": 68
+    },
+    {
+        "start": 370.76,
+        "end": 380.65,
+        "script": "i've loaded with half of the snap and i'm using the pointy end of the pin to line up the snap exactly with the marks we've made on the jacket",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 380.88,
+        "index": 69
+    },
+    {
+        "start": 380.88,
+        "end": 383.07,
+        "script": "i'm trying to be as precise as i can here",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 383.08,
+        "index": 70
+    },
+    {
+        "start": 383.08,
+        "end": 384.83,
+        "script": "very delicate situation",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 384.88,
+        "index": 71
+    },
+    {
+        "start": 384.88,
+        "end": 389.71,
+        "script": "now i've rolled up the edge of the jacket inside the fastening tool and here's we're having",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 389.72,
+        "index": 72
+    },
+    {
+        "start": 389.72,
+        "end": 392.07,
+        "script": "that pin flipped really helps out",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 392.18,
+        "index": 73
+    },
+    {
+        "start": 392.18,
+        "end": 395.07,
+        "script": "i use it to match up the second half of the snap",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 395.08,
+        "index": 74
+    },
+    {
+        "start": 395.08,
+        "end": 398.55,
+        "script": "and then i slip it out and close the tool on top",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 398.66,
+        "index": 75
+    },
+    {
+        "start": 398.66,
+        "end": 399.73,
+        "script": "and here it comes",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 399.74,
+        "index": 76
+    },
+    {
+        "start": 399.74,
+        "end": 403.16,
+        "script": "roxy that will smash it like a mad woman",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 403.23,
+        "index": 77
+    },
+    {
+        "start": 403.23,
+        "end": 407.68,
+        "script": "it's not really necessary to have her on it so hard but we're having fun here",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 407.69,
+        "index": 78
+    },
+    {
+        "start": 407.69,
+        "end": 409.02,
+        "script": "so we went with the flow",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 409.03,
+        "index": 79
+    },
+    {
+        "start": 409.03,
+        "end": 411.04,
+        "script": "you did it you did it",
+        "low_label": "side note ",
+        "high_label": "misc.",
+        "next_start": 414.03,
+        "index": 80
+    },
+    {
+        "start": 414.03,
+        "end": 416.72,
+        "script": "oh ok ok that's good",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 417.49,
+        "index": 81
+    },
+    {
+        "start": 417.49,
+        "end": 423.5,
+        "script": "we were really happy that we were successful in installing the first snap because that was our first time doing it",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 423.59,
+        "index": 82
+    },
+    {
+        "start": 423.59,
+        "end": 424.35,
+        "script": "ever",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 425.01,
+        "index": 83
+    },
+    {
+        "start": 425.01,
+        "end": 427.2,
+        "script": "and this is me doing it the second time",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 427.21,
+        "index": 84
+    },
+    {
+        "start": 427.21,
+        "end": 432.78,
+        "script": "i am just making sure that the second button lines up and i'm repeating the entire process",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 433.26,
+        "index": 85
+    },
+    {
+        "start": 433.26,
+        "end": 440.54,
+        "script": "except this time there is a lot more fabric to cram into the tool but also a lot more fun to be had",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 441.81,
+        "index": 86
+    },
+    {
+        "start": 441.81,
+        "end": 446.72,
+        "script": "ah office in mothers that's gonna make no money money",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 453.7,
+        "index": 87
+    },
+    {
+        "start": 453.7,
+        "end": 455.45,
+        "script": "like i said rock",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 455.46,
+        "index": 88
+    },
+    {
+        "start": 455.46,
+        "end": 459.81,
+        "script": "she really really really enjoyed smashing that thing",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 459.98,
+        "index": 89
+    },
+    {
+        "start": 459.98,
+        "end": 463.96,
+        "script": "but hey two great snaps installations in a row",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 464.71,
+        "index": 90
+    },
+    {
+        "start": 464.71,
+        "end": 466.96,
+        "script": "and just like that the capes on",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 470.34,
+        "index": 91
+    },
+    {
+        "start": 470.34,
+        "end": 470.79,
+        "script": "baby",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 470.8,
+        "index": 92
+    },
+    {
+        "start": 470.8,
+        "end": 474.57,
+        "script": "she did it bration",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 474.64,
+        "index": 93
+    },
+    {
+        "start": 474.64,
+        "end": 475.64,
+        "script": "we need it",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 475.94,
+        "index": 94
+    },
+    {
+        "start": 475.94,
+        "end": 477.01,
+        "script": "it's fantastic",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 477.02,
+        "index": 95
+    },
+    {
+        "start": 477.02,
+        "end": 479.73,
+        "script": "mango serine hey hey hey",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 479.8,
+        "index": 96
+    },
+    {
+        "start": 479.8,
+        "end": 485.49,
+        "script": "before you assume that that is not nice in italy we also mean it as a gesture of appreciation",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 485.54,
+        "index": 97
+    },
+    {
+        "start": 485.54,
+        "end": 488.27,
+        "script": "like a yeah i did it",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 488.52,
+        "index": 98
+    },
+    {
+        "start": 488.52,
+        "end": 494.33,
+        "script": "as you may know mango sirene made this costume way before me and when she did i thought to myself",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 494.4,
+        "index": 99
+    },
+    {
+        "start": 494.4,
+        "end": 496.61,
+        "script": "one day and that day is scum",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 496.62,
+        "index": 100
+    },
+    {
+        "start": 496.62,
+        "end": 498.69,
+        "script": "therefore mango sirene",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 498.74,
+        "index": 101
+    },
+    {
+        "start": 498.74,
+        "end": 500.03,
+        "script": "yeah i did it",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 500.15,
+        "index": 102
+    },
+    {
+        "start": 500.15,
+        "end": 508.26,
+        "script": "back to what i'm trying to show you the jacket wasn't necessarily tailored to perfection and it was a little wide for example on the arms",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 508.31,
+        "index": 103
+    },
+    {
+        "start": 508.31,
+        "end": 516.04,
+        "script": "so i measured about an inch in words on each sleeve marked out with safety pins then drew a line over the safety pins",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 516.05,
+        "index": 104
+    },
+    {
+        "start": 516.05,
+        "end": 521.14,
+        "script": "and i use that line to sew a seam to make the sleeves snugger",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 521.18,
+        "index": 105
+    },
+    {
+        "start": 521.18,
+        "end": 523.76,
+        "script": "so profesh",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 523.81,
+        "index": 106
+    },
+    {
+        "start": 523.81,
+        "end": 526.18,
+        "script": "and now i'm working on the bat logo",
+        "low_label": "subgoal",
+        "high_label": "step",
+        "next_start": 526.23,
+        "index": 107
+    },
+    {
+        "start": 526.23,
+        "end": 532.6,
+        "script": "like i said i couldn't find any bat logos online that resembled the one that batgirl of burnside wears",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 532.65,
+        "index": 108
+    },
+    {
+        "start": 532.65,
+        "end": 535.14,
+        "script": "so i made my own on photoshop",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 535.24,
+        "index": 109
+    },
+    {
+        "start": 535.24,
+        "end": 538.59,
+        "script": "i printed it out and then they transferred it on cardboard",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 538.64,
+        "index": 110
+    },
+    {
+        "start": 538.64,
+        "end": 543.57,
+        "script": "then they made it into a cut out on the cardboard to use it as a stencil on the jacket",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 543.66,
+        "index": 111
+    },
+    {
+        "start": 543.66,
+        "end": 549.21,
+        "script": "i've lined it up very meticulously to make sure it was straight tacked it down with paper tape",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 549.26,
+        "index": 112
+    },
+    {
+        "start": 549.26,
+        "end": 552.15,
+        "script": "and use some weights for extra secureness",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 552.2,
+        "index": 113
+    },
+    {
+        "start": 552.2,
+        "end": 557.49,
+        "script": "then i'm going in again with the angelus leather paint brand this time and color thunder yellow",
+        "low_label": "tool",
+        "high_label": "step",
+        "next_start": 557.54,
+        "index": 114
+    },
+    {
+        "start": 557.54,
+        "end": 563.75,
+        "script": "i got this from amazon as well and the link to it will be below and the plight it with a small sponge brush first",
+        "low_label": "tool spec.",
+        "high_label": "step",
+        "next_start": 563.76,
+        "index": 115
+    },
+    {
+        "start": 563.76,
+        "end": 567.4,
+        "script": "go done second coat done",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 569.53,
+        "index": 116
+    },
+    {
+        "start": 569.53,
+        "end": 572.46,
+        "script": "fair the third code took a little longer",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 572.69,
+        "index": 117
+    },
+    {
+        "start": 572.69,
+        "end": 574.56,
+        "script": "yay",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 574.61,
+        "index": 118
+    },
+    {
+        "start": 574.61,
+        "end": 575.67,
+        "script": "removal",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 576.36,
+        "index": 119
+    },
+    {
+        "start": 576.36,
+        "end": 582.47,
+        "script": "i'm carefully peeling off the tape to reveal the logo",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 582.53,
+        "index": 120
+    },
+    {
+        "start": 582.53,
+        "end": 584.19,
+        "script": "ohhh my",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 584.2,
+        "index": 121
+    },
+    {
+        "start": 584.2,
+        "end": 585.07,
+        "script": "god",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 585.14,
+        "index": 122
+    },
+    {
+        "start": 585.14,
+        "end": 587.79,
+        "script": "that's seriously gave me a heart attack",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 587.84,
+        "index": 123
+    },
+    {
+        "start": 587.84,
+        "end": 589.07,
+        "script": "but i didn't lose it",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 589.14,
+        "index": 124
+    },
+    {
+        "start": 589.14,
+        "end": 595.35,
+        "script": "i grabbed a cotton swab real fast put some water on it and then i refined the edges",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 595.7,
+        "index": 125
+    },
+    {
+        "start": 595.7,
+        "end": 599.02,
+        "script": "as you see it's working there's hope",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 599.03,
+        "index": 126
+    },
+    {
+        "start": 599.03,
+        "end": 603.91,
+        "script": "yet the paint actually came off really easily as it was still wet",
+        "low_label": "effect",
+        "high_label": "explanation",
+        "next_start": 604.1,
+        "index": 127
+    },
+    {
+        "start": 604.1,
+        "end": 607.63,
+        "script": "there is a lot of latitude for mistakes with this product",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 607.9,
+        "index": 128
+    },
+    {
+        "start": 607.9,
+        "end": 608.75,
+        "script": "at this point",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 608.76,
+        "index": 129
+    },
+    {
+        "start": 608.76,
+        "end": 617.37,
+        "script": "i took a very small brush and i went in with a little more of the thunder yellow to refine the edges and make it perfect",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 617.99,
+        "index": 130
+    },
+    {
+        "start": 617.99,
+        "end": 622.28,
+        "script": "dad took a lot of concentration but all in all it was easy",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 622.37,
+        "index": 131
+    },
+    {
+        "start": 622.37,
+        "end": 624.56,
+        "script": "and the really good save ",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 624.63,
+        "index": 132
+    },
+    {
+        "start": 624.63,
+        "end": 627.86,
+        "script": "because i'm an obsessive ocd person",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 627.87,
+        "index": 133
+    },
+    {
+        "start": 627.87,
+        "end": 634.0,
+        "script": "like we've said i also went over it again with the color purple just to clean out the lines",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 636.25,
+        "index": 134
+    },
+    {
+        "start": 636.25,
+        "end": 641.64,
+        "script": "and here we go batgirl of burnside",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 641.69,
+        "index": 135
+    },
+    {
+        "start": 641.69,
+        "end": 648.66,
+        "script": "leave a comment if you think i look even remotely comparable to mango syrine and i will love you forever",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 648.71,
+        "index": 136
+    },
+    {
+        "start": 648.71,
+        "end": 649.63,
+        "script": "hit the thumbs up",
+        "low_label": "self-promo",
+        "high_label": "misc.",
+        "next_start": 649.64,
+        "index": 137
+    },
+    {
+        "start": 649.64,
+        "end": 653.88,
+        "script": "if you like this video and subscribe for more dark nitrous fun ",
+        "low_label": "self-promo",
+        "high_label": "misc.",
+        "next_start": 654.07,
+        "index": 138
+    },
+    {
+        "start": 654.07,
+        "end": 659.06,
+        "script": "happy cosplay k",
+        "low_label": "closing",
+        "high_label": "greeting",
+        "next_start": 670.1743125,
+        "index": 139
+    }
+]

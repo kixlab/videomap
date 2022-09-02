@@ -18,7 +18,7 @@ function App() {
   const [started, setStarted] = useState(false);
   const [isPlaying, setIsPlaying] = useState (false);
 
-  const [videoId, setVideoId] = useState ('6CJryveLzvI');
+  const [videoId, setVideoId] = useState ('ZeVRqW2J3UY');
   const [videoTime, setVideoTime] = useState (0);
   const [duration, setDuration] = useState (0);
 
@@ -73,6 +73,7 @@ function App() {
 
   useEffect(()=>{
     getScript();
+    setStarted (false);
   }, [videoId]);
 
   // filter script
@@ -98,9 +99,9 @@ function App() {
     }
     if (video && selectedLabels.length == 0) {
       setIsPlaying (false);
-      video.pauseVideo();
+      video.stopVideo();
     }
-  }, [selectedLabels])
+  }, [videoId, selectedLabels])
 
   const logKeyPress = (keyCode, scriptIndex = -1) => {
     var video_timestamp = {};
@@ -232,8 +233,8 @@ function App() {
   }, [video]);
 
   const onReady = (event) => {
-      setVideo (event.target);
-      setDuration (onGetDuration());
+    setVideo (event.target);
+    setDuration (onGetDuration());
   };
 
   const onPause = () => {
@@ -258,10 +259,9 @@ function App() {
           return [ind, false];
         }
       }
-    };
-  }
+    }
+  };
 
-  
   const jumpTime = (time) => {
     // last segment in the filtered script
     var indArr = getIndexWithTime (time);
@@ -317,7 +317,6 @@ function App() {
     updateIndex();
   },[videoTime])
 
-  // TODO fix bug
   // on every video time change, call jumptime
   useEffect (() => {
     if (filteredScript.length > 0 && isPlaying) {
@@ -345,7 +344,7 @@ function App() {
   };
 
   const onGetDuration = () => {
-    if (video === null) return 0
+    if (video === null) return 0;
     return video.getDuration();
   }
 
@@ -403,6 +402,7 @@ function App() {
           />
           <Timeline
             video={video}
+            videoId={videoId}
             videoTime={videoTime}
             duration={duration}
             setVideoTime={setVideoTime}

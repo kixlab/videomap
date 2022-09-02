@@ -78,17 +78,14 @@ function LabelBox ({
             onMouseLeave={() => hideLabelInfo(item.low_label)} 
             style={{width: calWidth(item.start, item.next_start), height: "20px", backgroundColor: item.use ? colorPalette[item.low_label] : "white", cursor: !item.use && "default" }}
         >
-            {item.use 
-                ? <span className="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>
-                : <span className="tooltiptext">{posToTime(position)}</span>
-            }
-            
+            <span className="tooltiptext">{item.low_label}<br/>{posToTime(position)}</span>   
         </div>
     )
 }
 
 function Timeline({
     video, 
+    videoId,
     videoTime, 
     duration, 
     setVideoTime, 
@@ -102,7 +99,7 @@ function Timeline({
 }){
     const [position, setPosition] = useState(0);
     useEffect(() => {
-    }, [videoTime]);
+    }, [videoId, videoTime]);
 
     const getProgressLength=()=>{
         if (duration == 0) return 0;
