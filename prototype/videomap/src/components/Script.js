@@ -15,15 +15,6 @@ function SentenceBox ({item, typeLevel, colorPalette, showLabelInfo, hideLabelIn
         return "(" + minute + ":" + second + ")"
     }
 
-    const updateHoverLabel = (label) => {
-        // if (!label){
-        //     setHoverLabel("");
-        // }
-        // else {
-        //     setHoverLabel(label);
-        // }
-    }
-
     return (
         <div className="sentence_box">
             <div className="type_box">
@@ -108,6 +99,7 @@ function Script({
                     <FormControlLabel value="low" control={<Radio />} label="LOW" />
                 </RadioGroup>
             </FormControl> */}
+            {filteredScript.length == 0? <div className="warning_message">Please select at least one label.</div>:
             <div className="script_block" onScroll={onScroll}>
                 {filteredScript &&
                     filteredScript.map ((item, ind) => (
@@ -115,8 +107,8 @@ function Script({
                         <SentenceBox item={item} typeLevel = {typeLevel} colorPalette={colorPalette} showLabelInfo={showLabelInfo} hideLabelInfo={hideLabelInfo}/>
                     </div>))
                 }
-                {/* {!filteredScript && <div>Please select at least one label.</div>} */}
             </div>
+            }
         </div>
     )
 }
