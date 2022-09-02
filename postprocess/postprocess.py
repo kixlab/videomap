@@ -54,7 +54,23 @@ creation_url_list = {
     "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/14yvQZPG3dHeoZvnP_D1hEVxjciakYGcMCWJw0u0H5XE/edit#gid=0",
 }
 
-vids = ['6CJryveLzvI']
+annotation_final_url_list = {
+    "Arts and Entertainment" : "https://docs.google.com/spreadsheets/d/19KLEoEAeD4HTF2qHCjiDEWIDh9D5Vwjgl3dj1yA3MwQ/edit#gid=0",
+    "Cars & Other Vehicles" : "https://docs.google.com/spreadsheets/d/1S8N3GXHAVzF5hMhbFjGdcadaJoEF_ev0EAU5XZWdSqo/edit#gid=0",
+    "Computers and Electronics" : "https://docs.google.com/spreadsheets/d/1nyi1ggt2rc5eDLY-ulWoWcMMQiRQqib5wifOO9PHnoo/edit#gid=0",
+    "Education and Communications" : "https://docs.google.com/spreadsheets/d/1H1ftoPm2rNiQbIC2TgI3vStWAiuQmXogSeJIjWyCD9s/edit#gid=0",
+    "Food and Entertaining" : "https://docs.google.com/spreadsheets/d/1TDBm5oWqOtp9lMU5hBAmgKc01yXgIjcjawHIyMjEP3k/edit#gid=0",
+    "Health" : "https://docs.google.com/spreadsheets/d/1B7qVxewUmkdHffVJeL5wZCJjG5ruBOxmihi-UspCDW4/edit#gid=0",
+    "Hobbies and Crafts" : "https://docs.google.com/spreadsheets/d/16C5V9JHOTL-S3zT2yaX6dETZiEqxhPBheHwgfRRvnvs/edit#gid=0",
+    "Holidays and Traditions" : "https://docs.google.com/spreadsheets/d/1_tfTP4YUtC4WExwxp6yDrNdHgEkLipvx4H2dhgXCSOk/edit#gid=0",
+    "Home and Garden" : "https://docs.google.com/spreadsheets/d/1qixstHOqTMfcy5SqlBnuqUhrRTA8uYGrDFQKzdi5VEw/edit#gid=0",
+    "Personal Care and Style" : "https://docs.google.com/spreadsheets/d/1QZj_URTln1ltgTofkoaOZpFYO0MrdY7OjM4U9he_PDI/edit#gid=0",
+    "Pets and Animals" : "https://docs.google.com/spreadsheets/d/1Ic_-CCBy4J9S1q9Jx9g9EsrHvksxf3avaJWIFGZVAZ8/edit#gid=0",
+    "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/1wmVT6OY4n43b3CcNtIGhLCKNzkk8c6LnRbvznhDQ2HM/edit#gid=0", 
+}
+
+# vids = ['_Yb6xLqvsf0', 'Rcsy2HRuiyA']
+vids=['_Yb6xLqvsf0']
 
 scope = [
     'https://spreadsheets.google.com/feeds',
@@ -69,6 +85,8 @@ gc = gspread.authorize(credentials)
 
 # check whether word list and lexical script matches
 def check_script_ts (ws_dict, ts):
+    # print (ws_dict)
+    # print (ts)
     # parse lexical script into word
     words = []
     for line in ws_dict:
@@ -77,12 +95,17 @@ def check_script_ts (ws_dict, ts):
             if (word != ''):
                 words.append (word)
 
-
     ts_ind = 0
     ts_modified = []
     for word in words:
         ts_ele = ts[ts_ind]
+        # print (word.lower())
         if (word.lower() != ts[ts_ind]['word'].lower()):
+            # print (ts_ind)
+            # print (word.lower())
+            # print (ts[ts_ind]['word'].lower())
+            # print (ts[ts_ind]['start'])
+            # return
             if (ts_ind+1 < len(ts)):
                 ts_combined = ts[ts_ind]['word'] + ts[ts_ind + 1]['word']
                 if (word.lower() == ts_combined.lower()):
@@ -92,6 +115,7 @@ def check_script_ts (ws_dict, ts):
                 print ('not matched word', ts_ind)
                 print (word)
                 print (ts[ts_ind]['word'])
+                print (ts[ts_ind]['start'])
                 return
         ts_modified.append (ts_ele)
         ts_ind += 1
@@ -121,6 +145,8 @@ def check_script_ts (ws_dict, ts):
 
 def match_script_ts (ws_dict, ts):
     script_modified = []
+
+    print (ts)
 
     ts_ind = 0
     for line in ws_dict:
@@ -190,10 +216,10 @@ def simplify_script (script, duration):
 
 
 if __name__ == "__main__":
-    for category in annotation_url_list.keys():
+    for category in annotation_final_url_list.keys():
         print ('-' * 30)
         print (category)
-        spreadsheet_url = annotation_url_list [category]
+        spreadsheet_url = annotation_final_url_list [category]
         doc = gc.open_by_url (spreadsheet_url)
         worksheet_list = doc.worksheets()
         category_dir = ROOT_DIR + category + '/'
