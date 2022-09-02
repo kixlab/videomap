@@ -123,7 +123,7 @@ function App() {
         key: keyCode
       };
     }
-
+    // logging
     logData ("jump", video_timestamp, meta);
   }
 
@@ -271,10 +271,13 @@ function App() {
     }
   }
 
+  // TODO fix bug
   // on every video time change, call jumptime
   useEffect (() => {
-    if (filteredScript.length > 0 && isPlaying) jumpTime (videoTime);
-    updateIndex(videoTime);
+    if (filteredScript.length > 0 && isPlaying) {
+      jumpTime (videoTime);
+      updateIndex(videoTime);
+    }
   }, [videoTime, selectedLabels]);
 
   const onPlay = () => {
@@ -358,7 +361,6 @@ function App() {
             videoTime={videoTime}
             duration={duration}
             setVideoTime={setVideoTime}
-            script={script}
             colorPalette={colorPalette}
             logData={logData}
             showLabelInfo={showLabelInfo}

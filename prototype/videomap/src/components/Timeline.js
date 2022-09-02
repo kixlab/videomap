@@ -37,8 +37,6 @@ function LabelBox ({
     }
   
     const handleMouseMove = (event) => {
-        // console.log(event.clinetX);
-        // console.log(event.target.offsetLeft);
         setPosition(event.clientX - 300);
     };
 
@@ -60,7 +58,8 @@ function LabelBox ({
         logData ("jump", video_timestamp, meta);
 
         setSelectedIndex (item.index);
-        setVideoTime (newTime);
+
+        // setVideoTime (newTime);
         video.seekTo (newTime);
     }
 
@@ -96,7 +95,6 @@ function Timeline({
     videoTime, 
     duration, 
     setVideoTime, 
-    script, 
     colorPalette, 
     logData,
     showLabelInfo,
