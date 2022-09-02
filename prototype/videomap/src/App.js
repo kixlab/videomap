@@ -206,10 +206,13 @@ function App() {
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
   useEffect(() => {
-    if (selectedIndex !== -1){
+    if (video && selectedIndex !== -1){
       var target_sentence = document.getElementsByClassName(selectedIndex)[0];
-      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
+      target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'});
+      // setVideoTime (script[selectedIndex].start);
+      // video.seekTo (script[selectedIndex].start);
     }
+    
   }, [selectedIndex]);
   
   // TODO logic change?

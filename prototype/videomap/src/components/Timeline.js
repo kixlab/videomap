@@ -57,9 +57,6 @@ function LabelBox ({
         };
         logData ("jump", video_timestamp, meta);
 
-        setSelectedIndex (item.index);
-
-        // setVideoTime (newTime);
         video.seekTo (newTime);
     }
 

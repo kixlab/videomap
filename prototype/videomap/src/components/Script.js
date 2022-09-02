@@ -62,8 +62,6 @@ function Script({
         };
         logData ("jump", video_timestamp, meta);
 
-        // setSelectedIndex (index);
-        // setVideoTime (newTime);
         video.seekTo (newTime);
     };
 
