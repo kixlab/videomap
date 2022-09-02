@@ -274,21 +274,22 @@ function App() {
     };
     // if next element is also in use, don't jump
     if (selInd < filteredScript.length-1 && processedScript[selInd+1].use) return;
-    if (time < processedScript[selInd].start){
-      const vt = processedScript[selInd].start
-      setVideoTime (vt);
-      video.seekTo (vt);
-    }
-    else if (processedScript[selInd].end - 0.2 <= time){
-      var ind = selInd + 1;
+    console.log(selInd);
+    // if (time < processedScript[selInd].start){
+    //   const vt = processedScript[selInd].start
+    //   setVideoTime (vt);
+    //   video.seekTo (vt);
+    // }
+    // else if (processedScript[selInd].end - 0.2 <= time){
+    //   var ind = selInd + 1;
     
-      while (!processedScript[ind].use) ind += 1;
+    //   while (!processedScript[ind].use) ind += 1;
 
-      if (processedScript[ind].start > time) {
-        const vt = processedScript[ind].start
-        video.seekTo (vt);
-      }
-    }
+    //   if (processedScript[ind].start > time) {
+    //     const vt = processedScript[ind].start
+    //     video.seekTo (vt);
+    //   }
+    // }
   };
 
   useEffect (()=>{
