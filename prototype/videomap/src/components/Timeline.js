@@ -17,7 +17,8 @@ function LabelBox ({
     videoTime, 
     logData,
     showLabelInfo,
-    hideLabelInfo
+    hideLabelInfo,
+    setSelectedIndex
 }) {
 
     const calWidth = (start, end) => {
@@ -58,7 +59,7 @@ function LabelBox ({
         };
         logData ("jump", video_timestamp, meta);
 
-
+        setSelectedIndex (item.index);
         setVideoTime (newTime);
         video.seekTo (newTime);
     }
@@ -101,7 +102,8 @@ function Timeline({
     showLabelInfo,
     hideLabelInfo,
     selectedLabels,
-    processedScript
+    processedScript,
+    setSelectedIndex
 }){
     const [position, setPosition] = useState(0);
     useEffect(() => {
@@ -131,6 +133,7 @@ function Timeline({
                         logData={logData}
                         showLabelInfo={showLabelInfo}
                         hideLabelInfo={hideLabelInfo}
+                        setSelectedIndex={setSelectedIndex}
                     />
                 </div>
                 ))

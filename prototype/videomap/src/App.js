@@ -212,6 +212,7 @@ function App() {
     }
   }, [selectedIndex]);
   
+  // TODO logic change?
   const updateIndex = (currentTime) => {
     for (var i = 0; i < processedScript.length; i++) {
       if (currentTime >= processedScript[i]['start'] && currentTime <= processedScript[i]['end'] && i != selectedIndex && processedScript[i]['use'] == true) {
@@ -273,6 +274,7 @@ function App() {
   // on every video time change, call jumptime
   useEffect (() => {
     if (filteredScript.length > 0 && isPlaying) jumpTime (videoTime);
+    updateIndex(videoTime);
   }, [videoTime, selectedLabels]);
 
   const onPlay = () => {
@@ -287,7 +289,6 @@ function App() {
       const interval = setInterval(() => {
         const time = onGetCurrentTime();
         setVideoTime(time);
-        updateIndex (time);
       }, 10);
       return () => {
         clearInterval(interval);
@@ -364,6 +365,7 @@ function App() {
             hideLabelInfo={hideLabelInfo}
             selectedLabels={selectedLabels}
             processedScript={processedScript}
+            setSelectedIndex={setSelectedIndex}
           />
         </div>
         <div className='script_wrapper'>
