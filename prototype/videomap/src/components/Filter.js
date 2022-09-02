@@ -52,19 +52,19 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels, logData, video
         }
     };
 
-    const onUpdateGroup = (target, select) => {
+    const onUpdateGroup = (target, selected) => {
         var label_list = [];
         var el = target.nextSibling;
-        onClickLabel (el, select);
+        onClickLabel (el, selected);
         label_list.push(el.children[0].id);
         while (el){
             el = el.nextSibling;
             if (el){
-                onClickLabel (el, select);
+                onClickLabel (el, selected);
                 label_list.push(el.children[0].id);
             }
         }
-        if (select == "unselect") {
+        if (selected == "unselect") {
             onUnselectGroup(target);
             updateSelectedLabelList(label_list, "remove")
         }
@@ -86,9 +86,9 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels, logData, video
         target.style.color = "black";
     }
 
-    const onClickLabel = (target, select="") => {
+    const onClickLabel = (target, selected="") => {
         var select;
-        if (select == ""){
+        if (selected == ""){
             if (target.classList.contains("selected")){ //unselect
                 target.style.border = "3px solid " + colorPalette[target.children[0].id];
                 target.style.backgroundColor = "white";
@@ -119,7 +119,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels, logData, video
 
         }
         else {
-            if (select == "select"){ //select
+            if (selected == "select"){ //select
                 target.style.backgroundColor = colorPalette[target.children[0].id];
                 target.classList.add("selected");
                 updateSelectedLabel(target.children[0].id, "add");
