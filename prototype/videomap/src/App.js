@@ -244,7 +244,7 @@ function App() {
     if (time < processedScript[0].start) return [0, true];
 
     for (var i=0; i<processedScript.length; i++) {
-      if (processedScript[i].start-0.1 <= time && processedScript[i].next_start+0.1 >= time) {
+      if (processedScript[i].start <= time && processedScript[i].next_start >= time) {
         if (processedScript[i].use) {
           return [i, true];
         } else {
@@ -274,7 +274,7 @@ function App() {
 
       // play 되어야할 마지막 index -> 시간이 넘으면 멈춤
       if (selInd == filteredScript[filteredScript.length-1].index) {
-        if (time >= processedScript[selInd].end - 0.2) {
+        if (time >= processedScript[selInd].next_start) {
           setIsPlaying (false);
           video.pauseVideo();
           return;
@@ -287,7 +287,7 @@ function App() {
       } 
 
       // 지금 index에서 이제 시간이 끝남 -> 다음 play할 index를 찾아라
-      if (processedScript[selInd].next_start - 0.2 <= time){
+      if (processedScript[selInd].next_start <= time){
         var ind = selInd + 1;
         while (!processedScript[ind].use) {
           ind += 1;
