@@ -96,6 +96,10 @@ function App() {
         // filterScript();
         processScript();
     }
+    if (video && selectedLabels.length == 0) {
+      setIsPlaying (false);
+      video.pauseVideo();
+    }
   }, [selectedLabels])
 
   const logKeyPress = (keyCode, scriptIndex = -1) => {
@@ -202,7 +206,6 @@ function App() {
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
   useEffect(() => {
-    // console.log (selectedIndex);
     if (selectedIndex !== -1){
       var target_sentence = document.getElementsByClassName(selectedIndex)[0];
       target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
@@ -225,16 +228,9 @@ function App() {
     return currentTime;
   }, [video]);
 
-  const checkTime = () => {
-    console.log(videoTime);
-    // jumpTime (videoTime);
-  }
-
   const onReady = (event) => {
       setVideo (event.target);
       setDuration (onGetDuration());
-      // event.target.pauseVideo();
-      // setInterval(checkTime, 1000);
   };
 
   const onPause = () => {
@@ -248,7 +244,6 @@ function App() {
     // last segment in the filtered script
     if (selectedIndex == filteredScript[filteredScript.length-1].index) {
       if (time >= processedScript[selectedIndex].end - 0.2) {
-        console.log ("stop entered")
         setIsPlaying (false);
         video.stopVideo();
         return;

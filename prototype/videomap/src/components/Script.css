@@ -101,3 +101,10 @@
 .tooltiptext {
   z-index: 20;
 }
+
+.warning_message {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 240px;
+  margin-left: 240px;
+}
