@@ -44,7 +44,7 @@ function App() {
     if (videoId === "" || userId === "" || taskId === "") return;
 
     const save_path = '/Log' + '/' + userId + '/' + videoId + '/' + taskId;
-    const user_timestamp = firstLog ? 0 : (new Date().getTime() / 1000 - initialTimeInfo).toFixed(3);
+    const user_timestamp = (firstLog || !started) ? 0 : (new Date().getTime() / 1000 - initialTimeInfo).toFixed(3);
     const updates = {};
     updates[save_path + '/' + logIndex] = {
       action: action,
@@ -201,12 +201,10 @@ function App() {
     };
   }, [video, videoTime, scriptLoaded, selectedIndex]);
 
-  // TODO: fix bug
   useEffect(() => {
     // console.log (selectedIndex);
     if (selectedIndex !== -1){
       var target_sentence = document.getElementsByClassName(selectedIndex)[0];
-      console.log(target_sentence);
       target_sentence.scrollIntoView({behavior: 'auto', block: 'nearest'})
     }
   }, [selectedIndex]);
@@ -345,6 +343,8 @@ function App() {
           colorPalette={colorPalette} 
           selectedLabels={selectedLabels} 
           setSelectedLabels={setSelectedLabels}
+          logData={logData}
+          videoTime={videoTime}
           />
       </div>
       <div className='body_wrapper'>

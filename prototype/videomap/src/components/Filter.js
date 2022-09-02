@@ -4,10 +4,10 @@ import { Tooltip, Box } from "@material-ui/core";
 import './Filter.css';
 import { definition } from "../definition";
 import { BorderStyle } from "@material-ui/icons";
+import { labelMapping } from "../labelMapping";
 
-const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
+const Filter = ({colorPalette, selectedLabels, setSelectedLabels, logData, videoTime}) => {
     const [selectStatus, setSelectStatus] = useState({'greeting_intro':1, 'overview':3, 'step': 3, 'supplementary':2, 'explanation':2, 'description':3, 'greeting_outro': 1, 'conclusion':2, 'misc':4});
-
     const fullSelectStatus = {'greeting_intro':1, 'overview':3, 'step': 3, 'supplementary':2, 'explanation':2, 'description':3, 'greeting_outro': 1, 'conclusion':2, 'misc':4};
 
 
@@ -26,18 +26,26 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
         }
     }, [selectStatus]);
 
-
-    //TODO: logging
     const onClickGroup = (target, selected = "") => {
         if (selected == ""){
+            var select;
             if (target.classList.contains("selected")){ //unselect
                 onUpdateGroup(target, "unselect");
                 target.classList.toggle("selected");
+                select = "unselect";
             }
             else {//select
                 onUpdateGroup(target, "select");
                 target.classList.toggle("selected");
+                select = "select";
             }
+            // logging
+            const meta = {
+                level: "high",
+                label: target.id,
+                select: select
+            };
+            logData ("filter", videoTime, meta);
         }
         else {
             onUpdateGroup(target, selected)
@@ -79,6 +87,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
     }
 
     const onClickLabel = (target, select="") => {
+        var select;
         if (select == ""){
             if (target.classList.contains("selected")){ //unselect
                 target.style.border = "3px solid " + colorPalette[target.children[0].id];
@@ -87,6 +96,7 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                 updateSelectedLabel(target.children[0].id, "remove");
                 const group_label = target.parentElement.children[0].id;
                 updateGroupCount (group_label, -1);
+                select = "unselect";
             }
             else { //select
                 if (target.children[0]){
@@ -95,8 +105,18 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
                     updateSelectedLabel(target.children[0].id, "add");
                     const group_label = target.parentElement.children[0].id;
                     updateGroupCount (group_label, 1);
+                    select = "select";
                 }
             }
+
+            // logging (direct low label filter)
+            const meta = {
+                level: "low",
+                label: labelMapping[target.children[0].id],
+                select: select
+            };
+            logData ("filter", videoTime, meta);
+
         }
         else {
             if (select == "select"){ //select
@@ -177,6 +197,13 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
           setSelectStatus({'greeting_intro':1, 'overview':3, 'step': 3, 'supplementary':2, 'explanation':2, 'description':3, 'greeting_outro': 1, 'conclusion':2, 'misc':4});
         }
         setSelectedLabels(["opening", "goal", "motivation", "briefing", "subgoal", "instruction", "tool", "justification", "effect", "tip", "warning", "status", "context", "tool-spec", "closing", "outcome", "reflection", "side-note", "self-promo", "bridge", "filler"]);
+
+        // logging
+        const meta = {
+            level: "all",
+            select: "select"
+        };
+        logData ("filter", videoTime, meta);
     }
 
     const onClickUnselectAll = () => {
@@ -188,6 +215,13 @@ const Filter = ({colorPalette, selectedLabels, setSelectedLabels}) => {
         }
         
         setSelectedLabels([]);
+
+        // logging
+        const meta = {
+            level: "all",
+            select: "unselect"
+        }
+        logData ("filter", videoTime, meta);
 
     }
 
