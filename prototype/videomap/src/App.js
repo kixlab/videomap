@@ -196,7 +196,7 @@ function App() {
     video.seekTo (script[index].start);
   };
 
-  useEffect(() => { //TODO: update?
+  useEffect(() => {
     if (video && scriptLoaded) {
       document.addEventListener('keydown', onKeyPress);
       return function cleanup() {
@@ -215,16 +215,6 @@ function App() {
     
   }, [selectedIndex]);
   
-  // TODO logic change?
-  // const updateIndex = (currentTime) => {
-  //   for (var i = 0; i < processedScript.length; i++) {
-  //     if (currentTime >= processedScript[i]['start'] && currentTime <= processedScript[i]['end'] && i != selectedIndex && processedScript[i]['use'] == true) {
-  //       setSelectedIndex (i);
-  //       return;
-  //     }
-  //   }
-  // }
-
   const updateIndex = () => {
     for (var i = 0; i < filteredScript.length; i++) {
       if (videoTime >= filteredScript[i]['start'] && videoTime <= filteredScript[i]['end'] && filteredScript[i].index != selectedIndex ) {
@@ -253,41 +243,73 @@ function App() {
   }
 
   const getIndexWithTime = (time) => {
-    for (var i=0; i<filteredScript.length; i++) {
-      if (filteredScript[i].start-0.1 <= time && filteredScript[i].end+0.1 >= time) {
-        return filteredScript[i].index;
+    // when time is lower than the first element starting
+    if (time < processedScript[0].start) return [0, true];
+
+    for (var i=0; i<processedScript.length; i++) {
+      if (processedScript[i].start-0.1 <= time && processedScript[i].end+0.1 >= time) {
+        if (processedScript[i].use) {
+          return [i, true];
+        } else {
+          var ind = i+1;
+          while (!processedScript[ind].use) {
+            ind += 1;
+          }
+          return [ind, false];
+        }
       }
-    }
-    return -1;
+    };
   }
 
   
   const jumpTime = (time) => {
     // last segment in the filtered script
-    const selInd = getIndexWithTime (time);
-    if (selInd == filteredScript[filteredScript.length-1].index) {
-      if (time >= processedScript[selInd].end - 0.2) {
+    var indArr = getIndexWithTime (time);
+    var selInd = indArr[0];
+    var inUse = indArr[1];
+
+    if (inUse) {
+      // play 되지 말아야할 초과 index -> 바로 멈춤
+      if (selInd > filteredScript[filteredScript.length-1].index) {
         setIsPlaying (false);
         video.stopVideo();
         return;
       }
-    };
-    // if next element is also in use, don't jump
-    if (selInd < filteredScript.length-1 && processedScript[selInd+1].use) return;
-    if (time < processedScript[selInd].start){
-      const vt = processedScript[selInd].start
-      setVideoTime (vt);
-      video.seekTo (vt);
-    }
-    else if (processedScript[selInd].end - 0.2 <= time){
-      var ind = selInd + 1;
-    
-      while (!processedScript[ind].use) ind += 1;
 
-      if (processedScript[ind].start > time) {
-        const vt = processedScript[ind].start
-        video.seekTo (vt);
+      // play 되어야할 마지막 index -> 시간이 넘으면 멈춤
+      if (selInd == filteredScript[filteredScript.length-1].index) {
+        if (time >= processedScript[selInd].end - 0.2) {
+          setIsPlaying (false);
+          video.stopVideo();
+          return;
+        }
       }
+
+      // 마지막 index가 아니고, 다음꺼도 사용한다 -> jump하지 말고 return 해라
+      if (selInd < filteredScript.length-1 && processedScript[selInd+1].use) {
+        return;
+      } 
+
+      // 지금 index에서 이제 시간이 끝남 -> 다음 play할 index를 찾아라
+      if (processedScript[selInd].end - 0.2 <= time){
+        var ind = selInd + 1;
+        while (!processedScript[ind].use) {
+          ind += 1;
+        }
+        if (processedScript[ind].start > time) {
+          const vt = processedScript[ind].start
+          video.seekTo (vt);
+        }
+      }
+    } else {
+      // play 되지 말아야할 초과 index -> 바로 멈춤
+      if (selInd > filteredScript[filteredScript.length-1].index) {
+        setIsPlaying (false);
+        video.stopVideo();
+        return;
+      }
+      const vt = processedScript[selInd].start;
+      video.seekTo (vt);
     }
   };
 
@@ -300,9 +322,8 @@ function App() {
   useEffect (() => {
     if (filteredScript.length > 0 && isPlaying) {
       jumpTime (videoTime);
-      // updateIndex(videoTime);
     }
-  }, [videoTime, filteredScript]);
+  }, [videoTime, filteredScript, processedScript, selectedLabels]);
 
   const onPlay = () => {
     // logging
