@@ -169,7 +169,7 @@ function App() {
       // logging
       logKeyPress ("left");
       vt = (parseFloat(videoTime) - 5).toFixed(3);
-      setVideoTime (vt);
+      // setVideoTime (vt);
       video.seekTo (vt);
 
     // right arrow
@@ -177,7 +177,7 @@ function App() {
       // logging
       logKeyPress ("right", ind);
       vt = (parseFloat(videoTime) + 5).toFixed(3);
-      setVideoTime (vt);
+      // setVideoTime (vt);
       video.seekTo (vt);
     // space 
     } else if (keyCode == 32) { 
@@ -192,7 +192,7 @@ function App() {
 
   const handleIndexChange = (index) => {
     setSelectedIndex (index);
-    setVideoTime (script[index].start);
+    // setVideoTime (script[index].start);
     video.seekTo (script[index].start);
   };
 
@@ -213,10 +213,19 @@ function App() {
   }, [selectedIndex]);
   
   // TODO logic change?
-  const updateIndex = (currentTime) => {
-    for (var i = 0; i < processedScript.length; i++) {
-      if (currentTime >= processedScript[i]['start'] && currentTime <= processedScript[i]['end'] && i != selectedIndex && processedScript[i]['use'] == true) {
-        setSelectedIndex (i);
+  // const updateIndex = (currentTime) => {
+  //   for (var i = 0; i < processedScript.length; i++) {
+  //     if (currentTime >= processedScript[i]['start'] && currentTime <= processedScript[i]['end'] && i != selectedIndex && processedScript[i]['use'] == true) {
+  //       setSelectedIndex (i);
+  //       return;
+  //     }
+  //   }
+  // }
+
+  const updateIndex = () => {
+    for (var i = 0; i < filteredScript.length; i++) {
+      if (videoTime >= filteredScript[i]['start'] && videoTime <= filteredScript[i]['end'] && filteredScript[i].index != selectedIndex ) {
+        setSelectedIndex (filteredScript[i].index);
         return;
       }
     }
@@ -240,45 +249,57 @@ function App() {
     logData ("pause", videoTime, {});
   }
 
+  const getIndexWithTime = (time) => {
+    for (var i=0; i<filteredScript.length; i++) {
+      if (filteredScript[i].start-0.1 <= time && filteredScript[i].end+0.1 >= time) {
+        return filteredScript[i].index;
+      }
+    }
+    return -1;
+  }
+
   
   const jumpTime = (time) => {
     // last segment in the filtered script
-    if (selectedIndex == filteredScript[filteredScript.length-1].index) {
-      if (time >= processedScript[selectedIndex].end - 0.2) {
+    const selInd = getIndexWithTime (time);
+    if (selInd == filteredScript[filteredScript.length-1].index) {
+      if (time >= processedScript[selInd].end - 0.2) {
         setIsPlaying (false);
         video.stopVideo();
         return;
       }
     };
     // if next element is also in use, don't jump
-    if (processedScript[selectedIndex+1].use) return;
-    if (time < processedScript[selectedIndex].start){
-      const vt = processedScript[selectedIndex].start
+    if (selInd < filteredScript.length-1 && processedScript[selInd+1].use) return;
+    if (time < processedScript[selInd].start){
+      const vt = processedScript[selInd].start
       setVideoTime (vt);
       video.seekTo (vt);
     }
-    else if (processedScript[selectedIndex].end - 0.2 <= time){
-      var ind = selectedIndex + 1;
+    else if (processedScript[selInd].end - 0.2 <= time){
+      var ind = selInd + 1;
     
       while (!processedScript[ind].use) ind += 1;
 
       if (processedScript[ind].start > time) {
         const vt = processedScript[ind].start
-        setVideoTime (vt);
         video.seekTo (vt);
       }
-
     }
-  }
+  };
+
+  useEffect (()=>{
+    updateIndex();
+  },[videoTime])
 
   // TODO fix bug
   // on every video time change, call jumptime
   useEffect (() => {
     if (filteredScript.length > 0 && isPlaying) {
       jumpTime (videoTime);
-      updateIndex(videoTime);
+      // updateIndex(videoTime);
     }
-  }, [videoTime, selectedLabels]);
+  }, [videoTime, filteredScript]);
 
   const onPlay = () => {
     // logging
@@ -291,7 +312,7 @@ function App() {
       setInitialTimeInfo (new Date().getTime() / 1000);
       const interval = setInterval(() => {
         const time = onGetCurrentTime();
-        setVideoTime(time);
+        setVideoTime (time);
       }, 10);
       return () => {
         clearInterval(interval);
