@@ -213,7 +213,7 @@ function App() {
   
   const updateIndex = () => {
     for (var i = 0; i < filteredScript.length; i++) {
-      if (videoTime >= filteredScript[i]['start'] && videoTime <= filteredScript[i]['end'] && filteredScript[i].index != selectedIndex ) {
+      if (videoTime >= filteredScript[i]['start'] && videoTime <= filteredScript[i]['next_start'] && filteredScript[i].index != selectedIndex ) {
         setSelectedIndex (filteredScript[i].index);
         return;
       }

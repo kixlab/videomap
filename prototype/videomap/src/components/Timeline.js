@@ -102,9 +102,6 @@ function Timeline({
     }, [videoTime]);
 
     const getProgressLength=()=>{
-        console.log (duration)
-        console.log (videoTime)
-        console.log (videoTime * 850 / duration)
         if (duration == 0) return 0;
         return videoTime * 850 / duration;
     }
