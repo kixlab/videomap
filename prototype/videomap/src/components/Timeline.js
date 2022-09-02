@@ -106,6 +106,17 @@ function Timeline({
         return videoTime * 850 / duration;
     }
 
+    const posToLabel=()=>{
+        if (processedScript.length == 0) return "";
+        if (videoTime <= processedScript[0].start) return processedScript[0].low_label;
+        for (var i=0;i<processedScript.length;i++){
+            if (processedScript[i].start < videoTime && videoTime <= processedScript[i].next_start) {
+                if (processedScript[i].use) return processedScript[i].low_label;
+                else return "";
+            }
+        }
+    }
+
     return(
         <div className="timeline_wrapper">
             {/* <div className="timeline" onClick={handleTimelineClick} onMouseMove={handleMouseMove}/> */}
@@ -134,6 +145,7 @@ function Timeline({
             <div className="progressbar_wrapper">
                 <div className="progressbar" style={{width: `${getProgressLength()}px`}} />
                 <div className="pin"><img src={pinImage} width="10px" height="50px"></img></div>
+                <span className="label_tooltip">{posToLabel()}</span>   
             </div>
         </div>
 

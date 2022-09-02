@@ -46,6 +46,11 @@
   z-index: 20;
 }
 
+.label_tooltip {
+  margin-top: 35px;
+  margin-left: -30px;
+}
+
 .label_box {
   position: relative;
   display: inline-block;
