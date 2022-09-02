@@ -247,7 +247,7 @@ function App() {
     if (time < processedScript[0].start) return [0, true];
 
     for (var i=0; i<processedScript.length; i++) {
-      if (processedScript[i].start-0.1 <= time && processedScript[i].end+0.1 >= time) {
+      if (processedScript[i].start-0.1 <= time && processedScript[i].next_start+0.1 >= time) {
         if (processedScript[i].use) {
           return [i, true];
         } else {
@@ -291,7 +291,7 @@ function App() {
       } 
 
       // 지금 index에서 이제 시간이 끝남 -> 다음 play할 index를 찾아라
-      if (processedScript[selInd].end - 0.2 <= time){
+      if (processedScript[selInd].next_start - 0.2 <= time){
         var ind = selInd + 1;
         while (!processedScript[ind].use) {
           ind += 1;
