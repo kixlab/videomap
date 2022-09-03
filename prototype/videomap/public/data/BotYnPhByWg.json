@@ -282,7 +282,7 @@
         "start": 115.83,
         "end": 122.08,
         "script": "so what you've seen me do there is just fit the tubing over the headset part of this unit",
-        "low_label": "late instruction",
+        "low_label": "instruction",
         "high_label": "description",
         "next_start": 122.15,
         "index": 31
