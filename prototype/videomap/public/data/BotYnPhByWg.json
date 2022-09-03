@@ -1,0 +1,767 @@
+[
+    {
+        "start": 0.87,
+        "end": 2.44,
+        "script": "and welcome to this product demonstration",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 2.45,
+        "index": 0
+    },
+    {
+        "start": 2.45,
+        "end": 2.82,
+        "script": "video",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 2.83,
+        "index": 1
+    },
+    {
+        "start": 2.83,
+        "end": 3.92,
+        "script": "for the value med",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 4.39,
+        "index": 2
+    },
+    {
+        "start": 4.39,
+        "end": 6.61,
+        "script": "dual head stethoscope packaging",
+        "low_label": "goal",
+        "high_label": "overview",
+        "next_start": 6.62,
+        "index": 3
+    },
+    {
+        "start": 6.62,
+        "end": 12.9,
+        "script": "when it comes to it's going to be a flat packed unit in a sealed plastic zip case like this",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 12.95,
+        "index": 4
+    },
+    {
+        "start": 12.95,
+        "end": 14.52,
+        "script": "the one demonstrated in front of you",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 14.53,
+        "index": 5
+    },
+    {
+        "start": 14.53,
+        "end": 17.78,
+        "script": "you've got the chess piece here the tubing",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 17.79,
+        "index": 6
+    },
+    {
+        "start": 17.79,
+        "end": 19.36,
+        "script": "this one's a red one obviously",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 19.43,
+        "index": 7
+    },
+    {
+        "start": 19.43,
+        "end": 23.02,
+        "script": "and on the other side you've got the sprung steel headset",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 23.03,
+        "index": 8
+    },
+    {
+        "start": 23.03,
+        "end": 25.98,
+        "script": "so if we just take this out of the packaging to show you it more clearly",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 31.65,
+        "index": 9
+    },
+    {
+        "start": 31.65,
+        "end": 34.88,
+        "script": "ok now first thing to demonstrate to you is the the headset",
+        "low_label": "subgoal",
+        "high_label": "step",
+        "next_start": 34.97,
+        "index": 10
+    },
+    {
+        "start": 34.97,
+        "end": 38.0,
+        "script": "this is a light steel headset with a spring",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 38.35,
+        "index": 11
+    },
+    {
+        "start": 38.35,
+        "end": 40.02,
+        "script": "that's what keeps it in your ears",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 40.09,
+        "index": 12
+    },
+    {
+        "start": 40.09,
+        "end": 42.6,
+        "script": "and the alignment on this is the important thing to look at",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 42.61,
+        "index": 13
+    },
+    {
+        "start": 42.61,
+        "end": 49.57,
+        "script": "if you just pull it slightly apart and align it slightly then you will see that they are slightly pointing forward",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 49.58,
+        "index": 14
+    },
+    {
+        "start": 49.58,
+        "end": 55.17,
+        "script": "now some people will want that adjusting slightly so that they're just a little more pointing forward",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 55.22,
+        "index": 15
+    },
+    {
+        "start": 55.22,
+        "end": 63.01,
+        "script": "the way to do that is to grip the sprung steel central section and just very gently rotate these",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 63.02,
+        "index": 16
+    },
+    {
+        "start": 63.02,
+        "end": 65.73,
+        "script": "you'll see they will rotate quite easily within the grips",
+        "low_label": "effect",
+        "high_label": "explanation",
+        "next_start": 65.78,
+        "index": 17
+    },
+    {
+        "start": 65.78,
+        "end": 73.25,
+        "script": "very important not to overdo it though or strain those grips because once the tension on those grips is lost",
+        "low_label": "warning",
+        "high_label": "supplementary",
+        "next_start": 73.3,
+        "index": 18
+    },
+    {
+        "start": 73.3,
+        "end": 77.24,
+        "script": "then it's very difficult even replies to reapply that tension there",
+        "low_label": "warning",
+        "high_label": "supplementary",
+        "next_start": 77.25,
+        "index": 19
+    },
+    {
+        "start": 77.25,
+        "end": 77.5,
+        "script": "you see",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 77.51,
+        "index": 20
+    },
+    {
+        "start": 77.51,
+        "end": 77.7,
+        "script": "i've",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 77.71,
+        "index": 21
+    },
+    {
+        "start": 77.71,
+        "end": 85.56,
+        "script": "i've adjusted that so they're slightly more pointing forward and that's going to give you a far more comfortable fit in the ear canals when you're actually using these units",
+        "low_label": "status",
+        "high_label": "description",
+        "next_start": 85.83,
+        "index": 22
+    },
+    {
+        "start": 85.83,
+        "end": 91.32,
+        "script": "a lot of complaints but moaning we get about these units is or they're not very comfortable with",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 91.33,
+        "index": 23
+    },
+    {
+        "start": 91.33,
+        "end": 97.62,
+        "script": "feedback we see on them is when they haven't been adjusted properly and they're basically pointing backwards along the ear canal",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 97.83,
+        "index": 24
+    },
+    {
+        "start": 97.83,
+        "end": 101.8,
+        "script": "they have got firm eartips on them rather than soft rubber eartips",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 101.81,
+        "index": 25
+    },
+    {
+        "start": 101.81,
+        "end": 102.8,
+        "script": "those can be replaced",
+        "low_label": "tool spec.",
+        "high_label": "description",
+        "next_start": 102.81,
+        "index": 26
+    },
+    {
+        "start": 102.81,
+        "end": 104.56,
+        "script": "they're simple push fit units",
+        "low_label": "tool spec.",
+        "high_label": "description",
+        "next_start": 104.91,
+        "index": 27
+    },
+    {
+        "start": 104.91,
+        "end": 105.62,
+        "script": "but these units",
+        "low_label": "tool spec.",
+        "high_label": "description",
+        "next_start": 105.63,
+        "index": 28
+    },
+    {
+        "start": 105.63,
+        "end": 108.76,
+        "script": "you gotta remember you're only paying two or three round four plus the delivery",
+        "low_label": "tool spec.",
+        "high_label": "description",
+        "next_start": 108.77,
+        "index": 29
+    },
+    {
+        "start": 108.77,
+        "end": 115.78,
+        "script": "so you're not going to get the comfort or manufacturing quality or a set of soft ear tips supplied with them",
+        "low_label": "tool spec.",
+        "high_label": "description",
+        "next_start": 115.83,
+        "index": 30
+    },
+    {
+        "start": 115.83,
+        "end": 122.08,
+        "script": "so what you've seen me do there is just fit the tubing over the headset part of this unit",
+        "low_label": "late instruction",
+        "high_label": "description",
+        "next_start": 122.15,
+        "index": 31
+    },
+    {
+        "start": 122.15,
+        "end": 123.36,
+        "script": "you push it nice and firmly",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 123.37,
+        "index": 32
+    },
+    {
+        "start": 123.37,
+        "end": 130.42,
+        "script": "it can go right up try and get them certainly match on either side because that's going to reduce the tension on the actual tubing",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 130.49,
+        "index": 33
+    },
+    {
+        "start": 130.49,
+        "end": 134.04,
+        "script": "and then it's just a matter of fitting the dual head",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 134.11,
+        "index": 34
+    },
+    {
+        "start": 134.11,
+        "end": 138.25,
+        "script": "this is a double head chest piece onto the other side of the tube",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 138.26,
+        "index": 35
+    },
+    {
+        "start": 138.26,
+        "end": 142.01,
+        "script": "and now if you have a look at this you've got a standard dual head",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 142.08,
+        "index": 36
+    },
+    {
+        "start": 142.08,
+        "end": 143.79,
+        "script": "this is called a bell and diaphragm model",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 143.8,
+        "index": 37
+    },
+    {
+        "start": 143.8,
+        "end": 148.23,
+        "script": "it's an adult size which is approximately five five and a half centimeters across",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 148.52,
+        "index": 38
+    },
+    {
+        "start": 148.52,
+        "end": 151.45,
+        "script": "this is a diaphragm side with the diaphragm in place",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 151.46,
+        "index": 39
+    },
+    {
+        "start": 151.46,
+        "end": 152.61,
+        "script": "it comes ready constructed",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 152.62,
+        "index": 40
+    },
+    {
+        "start": 152.62,
+        "end": 157.55,
+        "script": "the diaphragm can be removed by removing this diaphragm ring that unscrews",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 157.7,
+        "index": 41
+    },
+    {
+        "start": 157.7,
+        "end": 161.77,
+        "script": "and on this side you've got the bell side with an anti chill ring in place",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 161.82,
+        "index": 42
+    },
+    {
+        "start": 161.82,
+        "end": 164.55,
+        "script": "now to select which side you're going to listen through",
+        "low_label": "subgoal",
+        "high_label": "step",
+        "next_start": 164.56,
+        "index": 43
+    },
+    {
+        "start": 164.56,
+        "end": 165.76,
+        "script": "the whole thing rotates",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 165.77,
+        "index": 44
+    },
+    {
+        "start": 165.77,
+        "end": 172.99,
+        "script": "if you see me holding that central bevel and you might just hear that clicking it locks into place",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 173.04,
+        "index": 45
+    },
+    {
+        "start": 173.04,
+        "end": 177.33,
+        "script": "but basically if you look through here i don't know whether the video is gonna pick this up",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 177.34,
+        "index": 46
+    },
+    {
+        "start": 177.34,
+        "end": 181.59,
+        "script": "but if i adjust it you can see the lumen opening there and then closing as i adjust it",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 181.66,
+        "index": 47
+    },
+    {
+        "start": 181.66,
+        "end": 185.04,
+        "script": "that's obviously got to be in the right alignment to use it so this is a line",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 185.05,
+        "index": 48
+    },
+    {
+        "start": 185.05,
+        "end": 193.95,
+        "script": "now for that to be put onto the skin for us quotation to use the diaphragm you have to rotate it around that way now to fit this on again",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 193.96,
+        "index": 49
+    },
+    {
+        "start": 193.96,
+        "end": 195.43,
+        "script": "it's just a simple push fit",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 195.44,
+        "index": 50
+    },
+    {
+        "start": 195.44,
+        "end": 197.26,
+        "script": "onto the bottom of the tubing",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 197.44,
+        "index": 51
+    },
+    {
+        "start": 197.44,
+        "end": 199.36,
+        "script": "sometimes these can be very tight as you see",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 199.37,
+        "index": 52
+    },
+    {
+        "start": 199.37,
+        "end": 202.36,
+        "script": "this one is if that's the case and you want bit of assistance",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 202.37,
+        "index": 53
+    },
+    {
+        "start": 202.37,
+        "end": 207.6,
+        "script": "best thing to do is just to warm up the tubing by putting it into some warm just off boiling water",
+        "low_label": "instruction",
+        "high_label": "explanation",
+        "next_start": 207.61,
+        "index": 54
+    },
+    {
+        "start": 207.61,
+        "end": 211.9,
+        "script": "just for a couple of seconds just so it's softens and then dry it completely",
+        "low_label": "effect",
+        "high_label": "explanation",
+        "next_start": 211.91,
+        "index": 55
+    },
+    {
+        "start": 211.91,
+        "end": 214.38,
+        "script": "because you won't get a grip on it and push it right on",
+        "low_label": "justification",
+        "high_label": "explanation",
+        "next_start": 214.39,
+        "index": 56
+    },
+    {
+        "start": 214.39,
+        "end": 217.74,
+        "script": "in this case right to the end where you've got the bevel on this design ",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 217.83,
+        "index": 57
+    },
+    {
+        "start": 217.83,
+        "end": 225.32,
+        "script": "some of them won't have that they'll just have two little lines engraved into the actual tube that you push into the rubber tubing",
+        "low_label": "context",
+        "high_label": "description",
+        "next_start": 225.61,
+        "index": 58
+    },
+    {
+        "start": 225.61,
+        "end": 227.17,
+        "script": "if that's the case just follow the guide",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 227.18,
+        "index": 59
+    },
+    {
+        "start": 227.18,
+        "end": 231.04,
+        "script": "it should be up to the second line on the bevel",
+        "low_label": "instruction",
+        "high_label": "step",
+        "next_start": 231.23,
+        "index": 60
+    },
+    {
+        "start": 231.23,
+        "end": 232.0,
+        "script": "so there we go",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 232.08,
+        "index": 61
+    },
+    {
+        "start": 232.08,
+        "end": 234.56,
+        "script": "that's a fully constructed dual head stethoscope",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 234.61,
+        "index": 62
+    },
+    {
+        "start": 234.61,
+        "end": 236.4,
+        "script": "key thing here in the construction",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 236.41,
+        "index": 63
+    },
+    {
+        "start": 236.41,
+        "end": 243.38,
+        "script": "when you get it to make it comfortable and functional well is one to get the alignment right on that headset",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 243.39,
+        "index": 64
+    },
+    {
+        "start": 243.39,
+        "end": 251.29,
+        "script": "so you've got some four forward twists on the the headset that goes into your ears just like that",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 251.3,
+        "index": 65
+    },
+    {
+        "start": 251.3,
+        "end": 253.03,
+        "script": "now that's a personal setting",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 253.12,
+        "index": 66
+    },
+    {
+        "start": 253.12,
+        "end": 256.91,
+        "script": "you may want it a little more or you may want it a little less than that",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 257.0,
+        "index": 67
+    },
+    {
+        "start": 257.0,
+        "end": 268.09,
+        "script": "but if they are directly pointing at one another when they're relaxed then that's not going to sit in the normal alignment of the air canal to be comfortable",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 268.16,
+        "index": 68
+    },
+    {
+        "start": 268.16,
+        "end": 275.14,
+        "script": "but four degree slant of between ten and twenty degrees like that is probably going to be ideal for most users",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 275.34,
+        "index": 69
+    },
+    {
+        "start": 275.34,
+        "end": 276.23,
+        "script": "and that's it",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 276.4,
+        "index": 70
+    },
+    {
+        "start": 276.4,
+        "end": 277.75,
+        "script": "simple to construct",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 279.34,
+        "index": 71
+    },
+    {
+        "start": 279.34,
+        "end": 284.74,
+        "script": "for the money this is a an excellent value general news ward stethoscope",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 285.65,
+        "index": 72
+    },
+    {
+        "start": 285.65,
+        "end": 289.08,
+        "script": "it will give you basic chest and heart auscultation",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 289.09,
+        "index": 73
+    },
+    {
+        "start": 289.09,
+        "end": 296.4,
+        "script": "it won't give you high quality auscultation that you'd get with a cardiology model or a more expensive doctor stethoscope",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 296.45,
+        "index": 74
+    },
+    {
+        "start": 296.45,
+        "end": 299.08,
+        "script": "the lumen diameter on this simply isn't big enough",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 299.09,
+        "index": 75
+    },
+    {
+        "start": 299.09,
+        "end": 306.04,
+        "script": "but for doing blood pressures listening to chests for gross sounds or pathology this is ideal",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 306.05,
+        "index": 76
+    },
+    {
+        "start": 306.05,
+        "end": 310.28,
+        "script": "it's a cheap unit you've got to remember you're paying three four pounds for this",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 310.35,
+        "index": 77
+    },
+    {
+        "start": 310.35,
+        "end": 313.72,
+        "script": "even with delivery you're probably going to be getting it for under a fiver",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 314.21,
+        "index": 78
+    },
+    {
+        "start": 314.21,
+        "end": 318.18,
+        "script": "so it is a a good value budget starting unit",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 318.19,
+        "index": 79
+    },
+    {
+        "start": 318.19,
+        "end": 321.76,
+        "script": "don't expect the world from it but from value it's excellent",
+        "low_label": "reflection",
+        "high_label": "conclusion",
+        "next_start": 321.81,
+        "index": 80
+    },
+    {
+        "start": 321.81,
+        "end": 322.58,
+        "script": "so there you have it",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 322.59,
+        "index": 81
+    },
+    {
+        "start": 322.59,
+        "end": 325.23,
+        "script": "value met dual head stethoscope",
+        "low_label": "outcome",
+        "high_label": "conclusion",
+        "next_start": 325.24,
+        "index": 82
+    },
+    {
+        "start": 325.24,
+        "end": 327.34,
+        "script": "available in a whole range of color tubes",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 327.41,
+        "index": 83
+    },
+    {
+        "start": 327.41,
+        "end": 329.32,
+        "script": "take your pick off the value med website",
+        "low_label": "side note",
+        "high_label": "misc.",
+        "next_start": 329.351875,
+        "index": 84
+    }
+]
