@@ -624,7 +624,7 @@
         "start": 257.12,
         "end": 262.15,
         "script": "i don't even know what this stuff is but yeah so just sort it out and then i'm gonna make a bit more slime",
-        "low_label": "early instruction",
+        "low_label": "instruction",
         "high_label": "step",
         "next_start": 262.16,
         "index": 69
@@ -633,7 +633,7 @@
         "start": 262.16,
         "end": 264.13,
         "script": "and then we're gonna put it in here",
-        "low_label": "early instruction",
+        "low_label": "instruction",
         "high_label": "step",
         "next_start": 264.17,
         "index": 70
