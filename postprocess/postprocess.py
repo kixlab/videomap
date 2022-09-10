@@ -1,7 +1,6 @@
 import os
 import json
 from pydub import AudioSegment
-from re import L
 import gspread
 from gspread.cell import Cell
 from oauth2client.service_account import ServiceAccountCredentials
@@ -35,18 +34,18 @@ cat_hierarchy = {
 
 
 annotation_final_url_list = {
-    # "Arts and Entertainment" : "https://docs.google.com/spreadsheets/d/19KLEoEAeD4HTF2qHCjiDEWIDh9D5Vwjgl3dj1yA3MwQ/edit#gid=0",
-    # "Cars & Other Vehicles" : "https://docs.google.com/spreadsheets/d/1S8N3GXHAVzF5hMhbFjGdcadaJoEF_ev0EAU5XZWdSqo/edit#gid=0",
-    # "Computers and Electronics" : "https://docs.google.com/spreadsheets/d/1nyi1ggt2rc5eDLY-ulWoWcMMQiRQqib5wifOO9PHnoo/edit#gid=0",
-    # "Education and Communications" : "https://docs.google.com/spreadsheets/d/1H1ftoPm2rNiQbIC2TgI3vStWAiuQmXogSeJIjWyCD9s/edit#gid=0",
-    # "Food and Entertaining" : "https://docs.google.com/spreadsheets/d/1TDBm5oWqOtp9lMU5hBAmgKc01yXgIjcjawHIyMjEP3k/edit#gid=0",
-    # "Health" : "https://docs.google.com/spreadsheets/d/1B7qVxewUmkdHffVJeL5wZCJjG5ruBOxmihi-UspCDW4/edit#gid=0",
+    "Arts and Entertainment" : "https://docs.google.com/spreadsheets/d/19KLEoEAeD4HTF2qHCjiDEWIDh9D5Vwjgl3dj1yA3MwQ/edit#gid=0",
+    "Cars & Other Vehicles" : "https://docs.google.com/spreadsheets/d/1S8N3GXHAVzF5hMhbFjGdcadaJoEF_ev0EAU5XZWdSqo/edit#gid=0",
+    "Computers and Electronics" : "https://docs.google.com/spreadsheets/d/1nyi1ggt2rc5eDLY-ulWoWcMMQiRQqib5wifOO9PHnoo/edit#gid=0",
+    "Education and Communications" : "https://docs.google.com/spreadsheets/d/1H1ftoPm2rNiQbIC2TgI3vStWAiuQmXogSeJIjWyCD9s/edit#gid=0",
+    "Food and Entertaining" : "https://docs.google.com/spreadsheets/d/1TDBm5oWqOtp9lMU5hBAmgKc01yXgIjcjawHIyMjEP3k/edit#gid=0",
+    "Health" : "https://docs.google.com/spreadsheets/d/1B7qVxewUmkdHffVJeL5wZCJjG5ruBOxmihi-UspCDW4/edit#gid=0",
     "Hobbies and Crafts" : "https://docs.google.com/spreadsheets/d/16C5V9JHOTL-S3zT2yaX6dETZiEqxhPBheHwgfRRvnvs/edit#gid=0",
-    # "Holidays and Traditions" : "https://docs.google.com/spreadsheets/d/1_tfTP4YUtC4WExwxp6yDrNdHgEkLipvx4H2dhgXCSOk/edit#gid=0",
-    # "Home and Garden" : "https://docs.google.com/spreadsheets/d/1qixstHOqTMfcy5SqlBnuqUhrRTA8uYGrDFQKzdi5VEw/edit#gid=0",
-    # "Personal Care and Style" : "https://docs.google.com/spreadsheets/d/1QZj_URTln1ltgTofkoaOZpFYO0MrdY7OjM4U9he_PDI/edit#gid=0",
-    # "Pets and Animals" : "https://docs.google.com/spreadsheets/d/1Ic_-CCBy4J9S1q9Jx9g9EsrHvksxf3avaJWIFGZVAZ8/edit#gid=0",
-    # "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/1wmVT6OY4n43b3CcNtIGhLCKNzkk8c6LnRbvznhDQ2HM/edit#gid=0", 
+    "Holidays and Traditions" : "https://docs.google.com/spreadsheets/d/1_tfTP4YUtC4WExwxp6yDrNdHgEkLipvx4H2dhgXCSOk/edit#gid=0",
+    "Home and Garden" : "https://docs.google.com/spreadsheets/d/1qixstHOqTMfcy5SqlBnuqUhrRTA8uYGrDFQKzdi5VEw/edit#gid=0",
+    "Personal Care and Style" : "https://docs.google.com/spreadsheets/d/1QZj_URTln1ltgTofkoaOZpFYO0MrdY7OjM4U9he_PDI/edit#gid=0",
+    "Pets and Animals" : "https://docs.google.com/spreadsheets/d/1Ic_-CCBy4J9S1q9Jx9g9EsrHvksxf3avaJWIFGZVAZ8/edit#gid=0",
+    "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/1wmVT6OY4n43b3CcNtIGhLCKNzkk8c6LnRbvznhDQ2HM/edit#gid=0", 
 }
 
 vids = ['XN3N5K2axpw', 'WIIjq2GexIw']
@@ -326,6 +325,7 @@ if __name__ == "__main__":
             
             # simplified_save_fp = save_category_dir + ws.title + '(simplified).json'
             # write_json (simplified_save_fp, simplifed_script)
+        time.sleep (15)
 
     print (error_vids)
 
