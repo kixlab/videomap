@@ -17,7 +17,14 @@ def write_json (fp, script):
 
 
 # analyze total videos
+# input data = [script1, script2, ...]
 def analyze_total (data):
+
+
+
+    for script in data:
+        print (script)
+
     return
 
 ROOT_DIR = './data/analysis/'

@@ -11,6 +11,10 @@ ROOT_DIR = './data/transcript/'
 SAVE_DIR = './data/processed/'
 AUDIO_DIR = './data/audio/'
 
+TYPES = {'opening', 'closing', 'goal', 'motivation', 'briefing', 'subgoal', 'instruction', 'tool', 'warning', 'tip', 'justification', 'effect', 'status', 'context', 'tool specification', 'outcome', 'reflection', 'side note', 'self-promo', 'bridge', 'filler'}
+CATEGORIES = {'greeting', 'overview', 'step', 'supplementary', 'explanation', 'description', 'conclusion', 'misc.'}
+SECTIONS = {'intro', 'procedure', 'outro', 'misc.'}
+
 section_hierarchy = {
     "intro": ["opening", "overview"],
     "procedure": ["step", "supplementary", "explanation", "description"],
@@ -24,43 +28,11 @@ cat_hierarchy = {
     "step": ["subgoal", "instruction", "tool"],
     "supplementary": ["warning", "tip"],
     "explanation": ["justification", "effect"],
-    "description": ["status", "context"],
+    "description": ["status", "context", "tool specification"],
     "conclusion": ["outcome", "reflection"],
     "misc.": ["side note", "self-promo", "bridge", "filler"]
 }
 
-# # annotation folder sheet url
-# annotation_url_list = {
-#     "Arts and Entertainment" : "https://docs.google.com/spreadsheets/d/1J2MGMJV6IzPbbk3977qkPrAn3oPvP9Seijnhv_q6T3o/edit#gid=0",
-#     "Cars & Other Vehicles" : "https://docs.google.com/spreadsheets/d/1z-69U6L64xeSs0hYCzbKaeHUdyaLkL96_adbuqiJgAU/edit#gid=0",
-#     "Computers and Electronics" : "https://docs.google.com/spreadsheets/d/1hJssaIb1UUsU1oIKo_f9y0yKpJZs4sOE2Xnn0xrGvJg/edit#gid=0",
-#     "Education and Communications" : "https://docs.google.com/spreadsheets/d/147OH4e32Cq_Ck1tchfSaqlXDqOtbe8UoGKlm2NIv-CI/edit#gid=0",
-#     "Food and Entertaining" : "https://docs.google.com/spreadsheets/d/1Ol9vbQbs7r9WdKIyfSxHPf4uMJnbz5HM9q9ycvlJlcs/edit#gid=0",
-#     "Health" : "https://docs.google.com/spreadsheets/d/1Ggy4xg6vHXjoXwdI2KyRWnbPhMa_9XZKpVA5Won5FME/edit#gid=0",
-#     "Hobbies and Crafts" : "https://docs.google.com/spreadsheets/d/18ncJdLNYhU_5pjHraUEmTmOj0z7az2PXJTIcBTM4Qao/edit#gid=0",
-#     "Holidays and Traditions" : "https://docs.google.com/spreadsheets/d/11FtXuT3EVHa_Dnl5dQ4L2HWS9kEbNKgMWo3oIyjT07Y/edit#gid=0",
-#     "Home and Garden" : "https://docs.google.com/spreadsheets/d/1SFRBrJihrQvbOoIVdFiSBAHAZRgHQ60serfe8ab58o4/edit#gid=0",
-#     "Personal Care and Style" : "https://docs.google.com/spreadsheets/d/1MdYGz2gVMd6-_Oor_NhQEMYDCLNQLB7uj_hEOkPoJLA/edit#gid=0",
-#     "Pets and Animals" : "https://docs.google.com/spreadsheets/d/1m9e0m-Tcgn2eG2i4u6aYP3VJCY7i_bJ7KOzvgIZj2NA/edit#gid=0",
-#     "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/1Ks9TvkliBd_D-MNfEq2tlQQWxFDQ9mZNcp951or1O8Q/edit#gid=0",
-#     "Tutorial": "https://docs.google.com/spreadsheets/d/17X9jVbUvmzptkdf_WnLdizXKm2yLFXY4Dtdv27RaABw/edit#gid=0",
-# }
-
-# # creation folder sheet url
-# creation_url_list = {
-#     "Arts and Entertainment" : "https://docs.google.com/spreadsheets/d/1ph_wb_kCzhBR6lRyyv1dNyKc1XSf08lXpYFW72E5vxY/edit#gid=0",
-#     "Cars & Other Vehicles" : "https://docs.google.com/spreadsheets/d/1lQp0oLgORhVes3v7PIs5RZhYQ4d1mMM169YdTqDTn5w/edit#gid=0",
-#     "Computers and Electronics" : "https://docs.google.com/spreadsheets/d/1lkdoBQLMdKAJQfgvW0S7V1dVUQ_VdMRTLxBc91HWH2s/edit#gid=0",
-#     "Education and Communications" : "https://docs.google.com/spreadsheets/d/1y7BSPcDSHP9rpy4KhTfT60PDPE1d6QHVYWZnDKRUkcA/edit#gid=0",
-#     "Food and Entertaining" : "https://docs.google.com/spreadsheets/d/1mfM4WlbLiMvNYZ3cOK3uW9STZrfNVMfn6A1KKhDDOzU/edit#gid=0",
-#     "Health" : "https://docs.google.com/spreadsheets/d/1Xj8_efKCi1gYPqV3pTKXzZQ6fSfNdrNzX2T0Nps8sD0/edit#gid=0",
-#     "Hobbies and Crafts" : "https://docs.google.com/spreadsheets/d/1kuCAeJpCUrYbYxkMnFEA_dr4nudRhy9s1Js4K3mAhI4/edit#gid=0",
-#     "Holidays and Traditions" : "https://docs.google.com/spreadsheets/d/1P4-bZtp-UTYV7xO-LK0xgWLNV4PAD-uc-CuYUX_B3Yc/edit#gid=0",
-#     "Home and Garden" : "https://docs.google.com/spreadsheets/d/1V_HVlxXqD0-GBSMlWsU3vMHlF1F6CUVIoH2YLxC4p0A/edit#gid=0",
-#     "Personal Care and Style" : "https://docs.google.com/spreadsheets/d/1QqUL7U_AkEG4lqX2NJVn4KqFBdaJnGR5Bdunmf_0GbU/edit#gid=0",
-#     "Pets and Animals" : "https://docs.google.com/spreadsheets/d/1Hoy8pIOGqSlaj1OxYhq8nyqxUT37Ke62s8lBUzp1xF4/edit#gid=0",
-#     "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/14yvQZPG3dHeoZvnP_D1hEVxjciakYGcMCWJw0u0H5XE/edit#gid=0",
-# }
 
 annotation_final_url_list = {
     # "Arts and Entertainment" : "https://docs.google.com/spreadsheets/d/19KLEoEAeD4HTF2qHCjiDEWIDh9D5Vwjgl3dj1yA3MwQ/edit#gid=0",
@@ -69,23 +41,15 @@ annotation_final_url_list = {
     # "Education and Communications" : "https://docs.google.com/spreadsheets/d/1H1ftoPm2rNiQbIC2TgI3vStWAiuQmXogSeJIjWyCD9s/edit#gid=0",
     # "Food and Entertaining" : "https://docs.google.com/spreadsheets/d/1TDBm5oWqOtp9lMU5hBAmgKc01yXgIjcjawHIyMjEP3k/edit#gid=0",
     # "Health" : "https://docs.google.com/spreadsheets/d/1B7qVxewUmkdHffVJeL5wZCJjG5ruBOxmihi-UspCDW4/edit#gid=0",
-    # "Hobbies and Crafts" : "https://docs.google.com/spreadsheets/d/16C5V9JHOTL-S3zT2yaX6dETZiEqxhPBheHwgfRRvnvs/edit#gid=0",
+    "Hobbies and Crafts" : "https://docs.google.com/spreadsheets/d/16C5V9JHOTL-S3zT2yaX6dETZiEqxhPBheHwgfRRvnvs/edit#gid=0",
     # "Holidays and Traditions" : "https://docs.google.com/spreadsheets/d/1_tfTP4YUtC4WExwxp6yDrNdHgEkLipvx4H2dhgXCSOk/edit#gid=0",
     # "Home and Garden" : "https://docs.google.com/spreadsheets/d/1qixstHOqTMfcy5SqlBnuqUhrRTA8uYGrDFQKzdi5VEw/edit#gid=0",
     # "Personal Care and Style" : "https://docs.google.com/spreadsheets/d/1QZj_URTln1ltgTofkoaOZpFYO0MrdY7OjM4U9he_PDI/edit#gid=0",
     # "Pets and Animals" : "https://docs.google.com/spreadsheets/d/1Ic_-CCBy4J9S1q9Jx9g9EsrHvksxf3avaJWIFGZVAZ8/edit#gid=0",
-    "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/1wmVT6OY4n43b3CcNtIGhLCKNzkk8c6LnRbvznhDQ2HM/edit#gid=0", 
+    # "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/1wmVT6OY4n43b3CcNtIGhLCKNzkk8c6LnRbvznhDQ2HM/edit#gid=0", 
 }
 
-# vids = ['_Yb6xLqvsf0', 'Rcsy2HRuiyA']
-# vids=['BotYnPhByWg']
-
-# Pets and Animals
-pna = ['Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'OcjCNqfRgP0', 'WoDZQRGyuHA', 'wvC3_Rs4mXs', 'bxXXCP0AE5A', '2xXPSfQBP-w', 'yeT52sDtYEU', 'Y84sqS2Nljs']
-# sports and fitness
-snf = ['XFYHIg8U--4', 'm0H56KpKLHA', '1dALzTPQWJg', 'ygRQRgR11Zg', 'jGsEBwiKnCI', 'kNsjE4HO7tE', 'mj1Fu3-XQpI', 'CdZQF4DDAxM', 'UriwETsgsqg', 'b2EZggyT5O4']
-
-
+vids = ['XN3N5K2axpw', 'WIIjq2GexIw']
 scope = [
     'https://spreadsheets.google.com/feeds',
     'https://www.googleapis.com/auth/drive',
@@ -99,50 +63,53 @@ gc = gspread.authorize(credentials)
 
 # check whether word list and lexical script matches
 def check_script_ts (ws_dict, ts):
-    # print (ws_dict)
-    # print (ts)
+
     # parse lexical script into word
     words = []
     for line in ws_dict:
         words_tmp = line['Script'].strip().split (' ')
         for word in words_tmp:
             if (word != ''):
-                words.append (word)
+                words.append (word.lower().strip())
 
     ts_ind = 0
     ts_modified = []
     for word in words:
+        
         ts_ele = ts[ts_ind]
-        # print (word.lower())
-        if (word.lower() != ts[ts_ind]['word'].lower()):
+        ts_word = ts_ele['word'].lower().strip()
+
+        if (word != ts_word):
             # print (ts_ind)
             # print (word.lower())
             # print (ts[ts_ind]['word'].lower())
             # print (ts[ts_ind]['start'])
             # return
             if (ts_ind+1 < len(ts)):
-                ts_combined = ts[ts_ind]['word'] + ts[ts_ind + 1]['word']
-                if (word.lower() == ts_combined.lower()):
+                ts_combined = ts_word + ts[ts_ind + 1]['word'].lower().strip()
+                if (word == ts_combined.lower().strip()):
                     ts_ind += 1
                     ts_ele = {"word": ts_combined, "start": ts[ts_ind]['start'], "end": ts[ts_ind+1]['end']}
+                else:
+                    print (word)
+                    print (ts_ele)
+                    return False
             else:
-                # if (ts_ind+1 != len (ts)):
                 print ('not matched word', ts_ind)
                 print (word)
                 print (ts[ts_ind]['word'])
                 print (ts[ts_ind]['start'])
-                return
-                # else:
-                #     ts_modified.append (ts_ele)
-                #     break
+                return False
+
         ts_modified.append (ts_ele)
         ts_ind += 1
 
     # if ts word left after comparison
-    if (ts_ind != len(ts)):
+    if (ts_ind < len(ts)):
+        # if the left word is not K, i, ....
         if (len (ts[ts_ind]['word']) > 1):
             print ("ts left: ", ts[ts_ind]['word'])
-            return
+            return False
 
 
     print ("all words matched")
@@ -164,8 +131,6 @@ def check_script_ts (ws_dict, ts):
 def match_script_ts (ws_dict, ts):
     script_modified = []
 
-    # print (ts)
-
     ts_ind = 0
     for line in ws_dict:
         script = line['Script'].strip().split(' ')
@@ -180,42 +145,30 @@ def match_script_ts (ws_dict, ts):
         ts_sentence = ts[ts_ind : ts_ind + words_len]
         ts_start = ts_sentence[0]
         ts_end = ts_sentence[-1]
-        if (script[0].lower() == ts_start['word'].lower()):
+        if (script[0].lower().strip() == ts_start['word'].lower().strip()):
             start = ts_sentence[0]['start']
         else:
             print (script)
             for tmp in ts_sentence:
                 print (tmp['word']) 
             print ('start not matched')
-            return
+            return False
 
         if (script[-1].lower().strip() == ts_end['word'].lower().strip()):
             end = ts_sentence[-1]['end']
         else:
-            print ('-' * 30)
             print (script)
             for tmp in ts_sentence:
                 print (tmp['word']) 
             print ('end not matched')
-            return
+            return False
 
-        # add category
-        type = line['Final']
-        for cat in cat_hierarchy:
-            if type in cat_hierarchy[cat]:
-                category = cat
-
-        # add section
-        for sec in section_hierarchy:
-            if category in section_hierarchy[sec] or type in section_hierarchy[sec]:
-                section = sec
-
-        script_obj = {'start': start, 'end': end, 'script': line['Script'], 'type': type, 'category': category, 'section': section}
+        type = line['Final'].strip().lower()
+        script_obj = {'start': start, 'end': end, 'script': line['Script'], 'type': type}
         script_modified.append (script_obj)
 
         ts_ind += words_len
 
-    # print (script_modified)
     return script_modified
 
 def write_json (fp, script):
@@ -229,13 +182,39 @@ def process_matched_script (script):
     for line in script:
 
         type = line['type'].strip()
+        
         # delete early, late
         if 'early' in type or 'late' in type:
-            line['type'] = 'instruction'
+            type = 'instruction'
         
         # delete multiple, optional
         if '(' in type:
-            line['type'] = type.split ('(')[0].strip()
+            type = type.split ('(')[0].strip()
+
+
+        if '\x08' in type:
+            type = type.strip('\x08').strip()
+
+        # print (type)
+        # print (line)
+        assert type in TYPES
+
+        for cat in cat_hierarchy:
+            if type in cat_hierarchy[cat]:
+                category = cat
+
+        assert category in CATEGORIES
+
+        # add section
+        for sec in section_hierarchy:
+            if category in section_hierarchy[sec] or type in section_hierarchy[sec]:
+                section = sec
+
+        assert section in SECTIONS
+
+        line['type'] = type
+        line['category'] = category
+        line['section'] = section
 
     return script   
         
@@ -296,6 +275,9 @@ def get_sentence():
     print ("total count: ", total_count)
 
 if __name__ == "__main__":
+
+    error_vids = []
+
     for category in annotation_final_url_list.keys():
         print ('*' * 30)
         print (category)
@@ -311,17 +293,26 @@ if __name__ == "__main__":
         audio_category_dir = AUDIO_DIR + category + '/'
  
         for ws in worksheet_list:
-            if (ws.title in snf):
+            # if (ws.title in vids):
+            if True:
                 print ('-' * 30)
-                print (ws)
+                print (ws.title)
                 ws_dicts = ws.get_all_records()
                 ts_path = category_dir + ws.title + '_ts.json'
+
                 
                 with open (ts_path, 'r') as t:
                     ts = json.load (t)
                 
                 ts_modified = check_script_ts (ws_dicts, ts)
+                if (not ts_modified): 
+                    error_vids.append (ws.title)
+                    continue
+
                 matched_script = match_script_ts (ws_dicts, ts_modified)
+                if (not matched_script): 
+                    error_vids.append (ws.title)
+                    continue
                 processed_script = process_matched_script (matched_script)
 
 
@@ -335,6 +326,8 @@ if __name__ == "__main__":
             
             # simplified_save_fp = save_category_dir + ws.title + '(simplified).json'
             # write_json (simplified_save_fp, simplifed_script)
+
+    print (error_vids)
 
 
 
