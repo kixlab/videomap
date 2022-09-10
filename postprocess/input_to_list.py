@@ -1,4 +1,4 @@
-N = 10
+N = 4
 list_input = []
 for i in range (N):
     list_input.append (input())

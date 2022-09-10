@@ -77,16 +77,19 @@ def analyze_count (data):
 
 # analyze time portion for each vid
 # level = {type, category, section}
-def analyze_time_portion (data, duration):
+def analyze_time_portion (data):
     types = {}
     categories = {}
     sections = {}
+
+    audio_duration = 0
 
     for line in data:
         type = line['type']
         category = line['category']
         section = line['section']
         line_duration = line['end'] - line['start']
+        audio_duration += line_duration
 
         # type
         if type not in types.keys():
@@ -114,10 +117,10 @@ def analyze_time_portion (data, duration):
         # types, cateogries, sections
         for item in times[level]:
             times[level][item]['time'] = times[level][item]['time']
-            times[level][item]['portion'] = times[level][item]['time'] / duration
+            times[level][item]['portion'] = times[level][item]['time'] / audio_duration
     
     # print (times)
-    return times
+    return audio_duration, times
 
 # count unique number of types
 # level = {type, category, section}
@@ -174,7 +177,8 @@ if __name__ == "__main__":
             for file in files:
                 vid = file.split('.')[0]
 
-                if vid in vids:
+                # if vid in vids:
+                if True:
                     print (vid)
                     fp = os.path.join (cat_dir, file)
                     script_data = read_json (fp)
@@ -185,11 +189,11 @@ if __name__ == "__main__":
 
 
                     count = analyze_count (script_data)
-                    time_portion = analyze_time_portion (script_data, duration)
+                    audio_duration, time_portion = analyze_time_portion (script_data)
                     # unique count
                     unique_count = get_unique_number (script_data)
 
-                    analysis_data = {'vid': vid, 'total': len(script_data), 'duration': duration, 'count': count, 'time_portion': time_portion, 'unique_count': unique_count}
+                    analysis_data = {'vid': vid, 'total': len(script_data), 'duration': duration, 'audio_duration': audio_duration, 'count': count, 'time_portion': time_portion, 'unique_count': unique_count}
 
                     save_fp = os.path.join (save_cat_dir, file)
                     write_json (save_fp, analysis_data)

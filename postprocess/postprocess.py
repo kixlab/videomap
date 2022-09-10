@@ -48,13 +48,12 @@ annotation_final_url_list = {
     "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/1wmVT6OY4n43b3CcNtIGhLCKNzkk8c6LnRbvznhDQ2HM/edit#gid=0", 
 }
 
-vids = ['XN3N5K2axpw', 'WIIjq2GexIw']
 scope = [
     'https://spreadsheets.google.com/feeds',
     'https://www.googleapis.com/auth/drive',
 ]
 
-json_file_name = 'videomap-taxonomy-f38ec095e98c.json'
+json_file_name = './videomap-taxonomy-f38ec095e98c.json'
 credentials = ServiceAccountCredentials.from_json_keyfile_name(
     json_file_name, scope)
 
