@@ -1,5 +1,6 @@
 import os
 import json
+from xml.dom.minidom import Element
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -169,39 +170,43 @@ def visualize_time_data (data):
 
     for t in data['types'].keys():
         types_data[t] = data['types'][t]
-
-
     for c in data['categories'].keys():
         categories_data[c] = data['categories'][c]
     for s in data['sections'].keys():
         sections_data[s] = data['sections'][s]
 
     types_df = pd.DataFrame(types_data)
-
     categories_df = pd.DataFrame (categories_data)
     sections_df = pd.DataFrame (sections_data)
 
-    types_df.set_index('time')
+    types_dfm = types_df.melt('time', var_name = 'type', value_name='counts')
+    categories_dfm = categories_df.melt('time', var_name = 'category', value_name='counts')
+    sections_dfm = sections_df.melt('time', var_name = 'section', value_name='counts')
 
-    print (types_df.head())
+    # sns.kdeplot(data=types_dfm, x="time", y="counts", hue="type")
+    # sns.kdeplot(data=categories_dfm, x="time", y="counts", hue="category")
+    # sns.kdeplot(data=sections_dfm, x="time", y="counts", hue="section")
 
-    # for col in types_df.columns:
-    #     sns.displot (types_df[col], kde=True, rug=True)
+    # histogram
+    # sns.displot (sections_dfm, x="time", y="counts", hue="section", bins=100)
 
-    # plt.show()
+    # line
+    sns.replot (data = sections_dfm, x="time", y="counts", kind="line")
 
-            
-    # sns.kdeplot(data=types_df, x="time")
-    # sns.rugplot(data=types_df, x="time")
+    # kernel density
+    # sns.displot (sections_dfm, x="time", y="counts", hue="section", kde=True)
 
-    # plt.savefig("time_types.png")
+    # sns.displot(data=categories_dfm, x="time", y="counts", hue="category", kind="kde")
+    # sns.rugplot(data=sections_dfm, x="time", y="counts", hue="section")
+
+    plt.show()
             
 
 
 ROOT_DIR = './data/analysis/'
 SAVE_DIR = './data/final/'
 
-# styles
+### styles ###
 # 1st
 first_vids = ['1oiCLxngvBo', 'uUBVc8Ugz0k', '2OoebJA2mnE', '-xCtbeecgKQ', 'z1Xv6Pa0toE', '9mjXFA1TMTI', 'QzS7Z80poKo', 'bwxvH99sLqw', 'ZORD4y7dL08', '-szevr-BRZE', 'KLLqGcgxQEw', 'Czi_ZirnzRo', '73lxEIKyX8M', 'eDG1c6a6uqc', 'Rcsy2HRuiyA', 'CxdRXDN1fkA', 'dJ_qCDWNvXU', 'BzxPDw6ezEc', 'h281yamVFDc', '5AU2vJU-QJM', 'rqBiByEbMHc', 'sM81wJ7GDrI', 'sij_wNj0doI', 'BotYnPhByWg', 'A_qivvTkijw', 'S0luUzNRtq0', 'kPGwDxo5Yf4', 'bg3orsnRCVE', 'Xh_Awznyc7s', 'cGn_oZPotZA', 'Cvv1wiqKMHc', 'AnWGek4P_dY', '7IcOJEEObA0', 'IICwmc4WX2E', 'Eeu5uL6r2rg', 'k0koOhfXv_s', '4WaXJs9RR3E', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '2Xyfgwj92v0', 'zMqzjMrxNR0', 'AbhW9YbQ0fM', 'Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'OcjCNqfRgP0', 'bxXXCP0AE5A', 'Y84sqS2Nljs', 'm0H56KpKLHA', 'ygRQRgR11Zg', 'kNsjE4HO7tE', 'CdZQF4DDAxM']
 # 3rd
@@ -223,31 +228,48 @@ dubbing_vids = ['XN3N5K2axpw', 'WIIjq2GexIw', 'ZT1dvq6yacQ', 'uUBVc8Ugz0k', 'ZeV
 # both
 narration_both_vids = ['z1Xv6Pa0toE', '1Ni8KOzRzuI', 'yu-G9kEKdTo', 'oe7Cz-dxSBY']
 
-vids = [first_vids, third_vids, view_both_vids, screencast_vids, static_move_vids, view_zoom_change_vids, talking_vids, dubbing_vids, narration_both_vids]
+
+### categories ###
+# ane = ['mZZJYDfmgeg', 'XN3N5K2axpw', 'WIIjq2GexIw', '1oiCLxngvBo', 'ZT1dvq6yacQ', 'PyWZYHy17As', 'uUBVc8Ugz0k', 'Nu_By3eTpoc', 'ZeVRqW2J3UY', 'u00iLnvVgFc']
+# cnov = ['2OoebJA2mnE', '-xCtbeecgKQ', '-6tnn1G1dRg', 'z1Xv6Pa0toE', 'T622Ec77ZPY', '9mjXFA1TMTI', 'jhAklPzn0XQ', 'QzS7Z80poKo', 'bwxvH99sLqw', 'mUq6l7N6zuk']
+# cne = ['0SMzqWV6xxs', '_Yb6xLqvsf0', 'nnzPJv5XIws', 'ZORD4y7dL08', '-szevr-BRZE', 'KLLqGcgxQEw', 'Czi_ZirnzRo', 'GFd7kLvhc2Q', '73lxEIKyX8M', 'eDG1c6a6uqc']
+# enc = ['Rcsy2HRuiyA', 'Ag6D8RGQnjw', 'CxdRXDN1fkA', 'dJ_qCDWNvXU', 'VDMOFa8iRqo', 'mQjCKgEPs8k', 'BzxPDw6ezEc', 'pn81__TovpY', 'ZmTxw3UbMO4', 'kz5dJ9SCu4M']
+# fne = ['yJ7VzfG2ONo', 'JNznnqX6SsE', 'dKUomyn1TYQ', 'h281yamVFDc', '5AU2vJU-QJM', 'yYOysPt5gic', '6CJryveLzvI', 'ZY11rbwCaMM', 'xTARWxkTJw0', 'WcD8bG2VB_s']
+# health = ['ta5IB2wy6ic', 'rqBiByEbMHc', '5ywy531EMNA', 'sM81wJ7GDrI', '0TLQg_b1v5Q', '1Ni8KOzRzuI', 'Vrz25x3qnTY', 'sij_wNj0doI', 'BotYnPhByWg', 'djvLEfwwQPU']
+# hnc = ['A_qivvTkijw', 'S0luUzNRtq0', 'eyD2iwXOeFM', 'kPGwDxo5Yf4', 'bg3orsnRCVE', 'HFp5uH12wkc', 'Xh_Awznyc7s', 'cGn_oZPotZA', 'ynmdOz_D1R4', 'yu-G9kEKdTo']
+# hnt = ['Cvv1wiqKMHc', 'EnjZHOb6qNE', 'r6JmI35r5E8', 'AnWGek4P_dY', '7IcOJEEObA0', '-wlSMSl02Xs', 'IICwmc4WX2E', 'Eeu5uL6r2rg', 'k0koOhfXv_s', '4WaXJs9RR3E']
+# hng = ['tb1L7Rsm1U8', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '2Xyfgwj92v0', 'mwpb65gm1e0', 'oe7Cz-dxSBY', 'zMqzjMrxNR0', 'UZJ0nmB3epQ', 'T5MbMuoNQ1k', '0fxL8v2dMho']
+# pcns = ['8DgsLNa3ums', 'N3c81EPZ51Q', 'e3StC_4qemI', 'ntYwKXN82QU', 's4coMAU80U4', '7oXrT1CqLCY', 'uMgpr6X5asI', 'AbhW9YbQ0fM', 'bQKTjz0JKhg', 'SXQHgJHYQgc']
+# pna = ['Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'OcjCNqfRgP0', 'WoDZQRGyuHA', 'wvC3_Rs4mXs', 'bxXXCP0AE5A', '2xXPSfQBP-w', 'yeT52sDtYEU', 'Y84sqS2Nljs']
+# snf = ['XFYHIg8U--4', 'm0H56KpKLHA', '1dALzTPQWJg', 'ygRQRgR11Zg', 'jGsEBwiKnCI', 'kNsjE4HO7tE', 'mj1Fu3-XQpI', 'CdZQF4DDAxM', 'UriwETsgsqg', 'b2EZggyT5O4']
 
 if __name__ == "__main__":
 
     scripts = []
 
+    # selected_dir = "Sports and Fitness"
+
     for root, dirs, files in os.walk (ROOT_DIR):
         for dir_name in dirs:
+            # if (dir_name == selected_dir):
+            if True:
 
-            print ('*' * 30)
-            print ('directory :', dir_name)
+                print ('*' * 30)
+                print ('directory :', dir_name)
 
-            cat_dir = os.path.join (ROOT_DIR, dir_name)
-            files = os.listdir(cat_dir)
-            for file in files:
-                vid = file.split('.')[0]
-                # if vid in narration_both_vids:
-                if True:
-                    print (vid)
-                    fp = os.path.join (cat_dir, file)
-                    script_data = read_json (fp)
-                    scripts.append (script_data)
+                cat_dir = os.path.join (ROOT_DIR, dir_name)
+                files = os.listdir(cat_dir)
+                for file in files:
+                    vid = file.split('.')[0]
+                    # if vid in narration_both_vids:
+                    if True:
+                        print (vid)
+                        fp = os.path.join (cat_dir, file)
+                        script_data = read_json (fp)
+                        scripts.append (script_data)
 
     # analyzed_data = analyze_total (scripts)
-    # fn = os.path.join (SAVE_DIR, 'analyzed_narration_both.json')
+    # fn = os.path.join (SAVE_DIR, 'analyzed_' + selected_dir + '.json')
     # write_json (fn, analyzed_data)
 
     time_type_data = analyze_type_with_time (scripts)

@@ -43,21 +43,21 @@ def analyze_count (data):
 
         # type
         if type not in types.keys():
-            types[type] = {'count': 0, 'portion': 0}
+            types[type] = {'count': 0}
             types[type]['count']=1
         else:
             types[type]['count']+=1
 
         # category
         if category not in categories.keys():
-            categories[category] = {'count': 0, 'portion': 0}
+            categories[category] = {'count': 0}
             categories[category]['count']=1
         else:
             categories[category]['count']+=1   
         
         # section
         if section not in sections.keys():
-            sections[section] = {'count': 0, 'portion': 0}
+            sections[section] = {'count': 0}
             sections[section]['count']=1
         else:
             sections[section]['count']+=1  
@@ -93,21 +93,21 @@ def analyze_time_portion (data):
 
         # type
         if type not in types.keys():
-            types[type] = {'time': 0, 'portion': 0}
+            types[type] = {'time': 0}
             types[type]['time']=line_duration
         else:
             types[type]['time']+=line_duration
 
         # category
         if category not in categories.keys():
-            categories[category] = {'time': 0, 'portion': 0}
+            categories[category] = {'time': 0}
             categories[category]['time']=line_duration
         else:
             categories[category]['time']+=line_duration   
         
         # section
         if section not in sections.keys():
-            sections[section] = {'time': 0, 'portion': 0}
+            sections[section] = {'time': 0}
             sections[section]['time']=line_duration
         else:
             sections[section]['time']+=line_duration
@@ -116,8 +116,9 @@ def analyze_time_portion (data):
     for level in times:
         # types, cateogries, sections
         for item in times[level]:
-            times[level][item]['time'] = times[level][item]['time']
-            times[level][item]['portion'] = times[level][item]['time'] / audio_duration
+            time = times[level][item]['time']
+            portion = time / audio_duration
+            times[level][item]['portion'] = portion
     
     # print (times)
     return audio_duration, times
@@ -125,26 +126,23 @@ def analyze_time_portion (data):
 # count unique number of types
 # level = {type, category, section}
 def get_unique_number (data):
-    types = []
-    categories = []
-    sections = []
+    types = set()
+    categories = set()
+    sections = set()
     for line in data:
         type = line['type']
         category = line['category']
         section = line['section']
 
-        # assert type in TYPES
-        # assert category in CATEGORIES
-        # assert section in SECTIONS
+        assert type in TYPES
+        assert category in CATEGORIES
+        assert section in SECTIONS
 
-        if type not in types:
-            types.append (type)
-        if category not in categories:
-            categories.append (category)
-        if section not in sections:
-            sections.append (section)
+        types.add (type)
+        categories.add (category)
+        sections.add (section)
 
-    unique_count = {'types': {'items': types, 'number': len (types)}, 'categories': {'items': categories, 'number': len (categories)}, 'sections': {'items': sections, 'number': len (sections)}}
+    unique_count = {'types': {'items': list(types), 'number': len (types)}, 'categories': {'items': list(categories), 'number': len (categories)}, 'sections': {'items': list(sections), 'number': len (sections)}}
     
     return unique_count
 
