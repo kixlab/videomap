@@ -1,0 +1,378 @@
+{
+    "vids": [
+        "2xXPSfQBP-w",
+        "wvC3_Rs4mXs",
+        "Y84sqS2Nljs",
+        "WoDZQRGyuHA",
+        "bxXXCP0AE5A",
+        "yeT52sDtYEU",
+        "ntwi2Unh3JQ",
+        "Df9F8ettY8k",
+        "OcjCNqfRgP0",
+        "ysHg9vOMe_4",
+        "A_qivvTkijw",
+        "eyD2iwXOeFM",
+        "Xh_Awznyc7s",
+        "yu-G9kEKdTo",
+        "S0luUzNRtq0",
+        "bg3orsnRCVE",
+        "kPGwDxo5Yf4",
+        "HFp5uH12wkc",
+        "cGn_oZPotZA",
+        "ynmdOz_D1R4",
+        "sij_wNj0doI",
+        "ta5IB2wy6ic",
+        "1Ni8KOzRzuI",
+        "BotYnPhByWg",
+        "djvLEfwwQPU",
+        "rqBiByEbMHc",
+        "Vrz25x3qnTY",
+        "sM81wJ7GDrI",
+        "0TLQg_b1v5Q",
+        "5ywy531EMNA",
+        "AnWGek4P_dY",
+        "4WaXJs9RR3E",
+        "EnjZHOb6qNE",
+        "Eeu5uL6r2rg",
+        "Cvv1wiqKMHc",
+        "-wlSMSl02Xs",
+        "r6JmI35r5E8",
+        "7IcOJEEObA0",
+        "IICwmc4WX2E",
+        "k0koOhfXv_s",
+        "1dALzTPQWJg",
+        "mj1Fu3-XQpI",
+        "ygRQRgR11Zg",
+        "b2EZggyT5O4",
+        "kNsjE4HO7tE",
+        "UriwETsgsqg",
+        "XFYHIg8U--4",
+        "jGsEBwiKnCI",
+        "CdZQF4DDAxM",
+        "m0H56KpKLHA",
+        "0fxL8v2dMho",
+        "UZJ0nmB3epQ",
+        "mwpb65gm1e0",
+        "T1j7Yq5-cIs",
+        "oe7Cz-dxSBY",
+        "zMqzjMrxNR0",
+        "T5MbMuoNQ1k",
+        "2Xyfgwj92v0",
+        "ihCwjLj31hY",
+        "tb1L7Rsm1U8",
+        "uMgpr6X5asI",
+        "e3StC_4qemI",
+        "N3c81EPZ51Q",
+        "8DgsLNa3ums",
+        "7oXrT1CqLCY",
+        "bQKTjz0JKhg",
+        "SXQHgJHYQgc",
+        "s4coMAU80U4",
+        "ntYwKXN82QU",
+        "AbhW9YbQ0fM",
+        "Czi_ZirnzRo",
+        "KLLqGcgxQEw",
+        "0SMzqWV6xxs",
+        "nnzPJv5XIws",
+        "eDG1c6a6uqc",
+        "GFd7kLvhc2Q",
+        "_Yb6xLqvsf0",
+        "73lxEIKyX8M",
+        "-szevr-BRZE",
+        "ZORD4y7dL08",
+        "ZT1dvq6yacQ",
+        "WIIjq2GexIw",
+        "Nu_By3eTpoc",
+        "XN3N5K2axpw",
+        "uUBVc8Ugz0k",
+        "mZZJYDfmgeg",
+        "1oiCLxngvBo",
+        "ZeVRqW2J3UY",
+        "u00iLnvVgFc",
+        "PyWZYHy17As",
+        "dJ_qCDWNvXU",
+        "pn81__TovpY",
+        "BzxPDw6ezEc",
+        "kz5dJ9SCu4M",
+        "mQjCKgEPs8k",
+        "VDMOFa8iRqo",
+        "Rcsy2HRuiyA",
+        "CxdRXDN1fkA",
+        "Ag6D8RGQnjw",
+        "ZmTxw3UbMO4",
+        "z1Xv6Pa0toE",
+        "mUq6l7N6zuk",
+        "2OoebJA2mnE",
+        "T622Ec77ZPY",
+        "-xCtbeecgKQ",
+        "QzS7Z80poKo",
+        "jhAklPzn0XQ",
+        "-6tnn1G1dRg",
+        "9mjXFA1TMTI",
+        "bwxvH99sLqw",
+        "5AU2vJU-QJM",
+        "yYOysPt5gic",
+        "WcD8bG2VB_s",
+        "JNznnqX6SsE",
+        "h281yamVFDc",
+        "ZY11rbwCaMM",
+        "dKUomyn1TYQ",
+        "6CJryveLzvI",
+        "yJ7VzfG2ONo",
+        "xTARWxkTJw0"
+    ],
+    "total_count": 9925,
+    "audio_duration": 41890.12,
+    "count": {
+        "types": {
+            "motivation": {
+                "count": 2.35,
+                "portion": 0.02841309823677582
+            },
+            "opening": {
+                "count": 1.4166666666666667,
+                "portion": 0.01712846347607053
+            },
+            "context": {
+                "count": 6.025,
+                "portion": 0.0728463476070529
+            },
+            "instruction": {
+                "count": 27.375,
+                "portion": 0.3309823677581864
+            },
+            "justification": {
+                "count": 2.2583333333333333,
+                "portion": 0.02730478589420655
+            },
+            "effect": {
+                "count": 1.3083333333333333,
+                "portion": 0.015818639798488666
+            },
+            "bridge": {
+                "count": 2.2416666666666667,
+                "portion": 0.027103274559193955
+            },
+            "tool": {
+                "count": 4.316666666666666,
+                "portion": 0.05219143576826196
+            },
+            "tool specification": {
+                "count": 4.55,
+                "portion": 0.055012594458438285
+            },
+            "subgoal": {
+                "count": 2.433333333333333,
+                "portion": 0.02942065491183879
+            },
+            "side note": {
+                "count": 7.316666666666666,
+                "portion": 0.08846347607052897
+            },
+            "status": {
+                "count": 6.233333333333333,
+                "portion": 0.07536523929471033
+            },
+            "tip": {
+                "count": 1.5083333333333333,
+                "portion": 0.0182367758186398
+            },
+            "closing": {
+                "count": 2.2916666666666665,
+                "portion": 0.027707808564231738
+            },
+            "self-promo": {
+                "count": 1.7333333333333334,
+                "portion": 0.020957178841309824
+            },
+            "warning": {
+                "count": 1.2916666666666667,
+                "portion": 0.015617128463476071
+            },
+            "goal": {
+                "count": 1.7333333333333334,
+                "portion": 0.020957178841309824
+            },
+            "outcome": {
+                "count": 2.45,
+                "portion": 0.029622166246851385
+            },
+            "briefing": {
+                "count": 0.44166666666666665,
+                "portion": 0.005340050377833753
+            },
+            "filler": {
+                "count": 0.31666666666666665,
+                "portion": 0.003828715365239295
+            },
+            "reflection": {
+                "count": 3.1166666666666667,
+                "portion": 0.03768261964735516
+            }
+        },
+        "categories": {
+            "overview": {
+                "count": 4.525,
+                "portion": 0.054710327455919396
+            },
+            "greeting": {
+                "count": 3.7083333333333335,
+                "portion": 0.044836272040302265
+            },
+            "description": {
+                "count": 16.808333333333334,
+                "portion": 0.2032241813602015
+            },
+            "step": {
+                "count": 34.125,
+                "portion": 0.4125944584382871
+            },
+            "explanation": {
+                "count": 3.566666666666667,
+                "portion": 0.043123425692695214
+            },
+            "misc.": {
+                "count": 11.608333333333333,
+                "portion": 0.14035264483627205
+            },
+            "supplementary": {
+                "count": 2.8,
+                "portion": 0.03385390428211587
+            },
+            "conclusion": {
+                "count": 5.566666666666666,
+                "portion": 0.06730478589420655
+            }
+        },
+        "sections": {
+            "intro": {
+                "count": 5.941666666666666,
+                "portion": 0.07183879093198993
+            },
+            "procedure": {
+                "count": 57.3,
+                "portion": 0.6927959697732997
+            },
+            "misc.": {
+                "count": 11.608333333333333,
+                "portion": 0.14035264483627205
+            },
+            "outro": {
+                "count": 7.858333333333333,
+                "portion": 0.0950125944584383
+            }
+        }
+    },
+    "time_portion": {
+        "types": {
+            "motivation": {
+                "time": 0.030339134860439647
+            },
+            "opening": {
+                "time": 0.009508447337940304
+            },
+            "context": {
+                "time": 0.07785009925968223
+            },
+            "instruction": {
+                "time": 0.3922975155000749
+            },
+            "justification": {
+                "time": 0.02883400668224394
+            },
+            "effect": {
+                "time": 0.017001144900038463
+            },
+            "bridge": {
+                "time": 0.014001392213724852
+            },
+            "tool": {
+                "time": 0.05111181347773652
+            },
+            "tool specification": {
+                "time": 0.05507599405301297
+            },
+            "subgoal": {
+                "time": 0.026938332952973168
+            },
+            "side note": {
+                "time": 0.06912154942501957
+            },
+            "status": {
+                "time": 0.06485562705478048
+            },
+            "tip": {
+                "time": 0.018294051198707473
+            },
+            "closing": {
+                "time": 0.013565728625270099
+            },
+            "self-promo": {
+                "time": 0.019745706147416147
+            },
+            "warning": {
+                "time": 0.015310531457059571
+            },
+            "goal": {
+                "time": 0.024677179248949403
+            },
+            "outcome": {
+                "time": 0.026839264246557405
+            },
+            "briefing": {
+                "time": 0.006633783813462458
+            },
+            "filler": {
+                "time": 0.0007875365360614864
+            },
+            "reflection": {
+                "time": 0.03721116100884886
+            }
+        },
+        "categories": {
+            "overview": {
+                "time": 0.06165009792285149
+            },
+            "greeting": {
+                "time": 0.023074175963210406
+            },
+            "description": {
+                "time": 0.19778172036747563
+            },
+            "step": {
+                "time": 0.4703476619307846
+            },
+            "explanation": {
+                "time": 0.045835151582282414
+            },
+            "misc.": {
+                "time": 0.10365618432222208
+            },
+            "supplementary": {
+                "time": 0.03360458265576705
+            },
+            "conclusion": {
+                "time": 0.06405042525540623
+            }
+        },
+        "sections": {
+            "intro": {
+                "time": 0.07115854526079181
+            },
+            "procedure": {
+                "time": 0.74756911653631
+            },
+            "misc.": {
+                "time": 0.10365618432222208
+            },
+            "outro": {
+                "time": 0.07761615388067636
+            }
+        }
+    },
+    "unique_count": {
+        "types": 14.57,
+        "categories": 7.25,
+        "sections": 3.97
+    }
+}
