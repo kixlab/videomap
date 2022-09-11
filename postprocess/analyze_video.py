@@ -23,7 +23,7 @@ def video_duration (path):
 # ----------------------------------------------------#
 # ------------------ Analysis 1 ----------------------#
 # ----------------------------------------------------#
-TYPES = {'opening', 'closing', 'goal', 'motivation', 'briefing', 'subgoal', 'instruction', 'tool', 'warning', 'tip', 'justification', 'effect', 'status', 'context', 'outcome', 'reflection', 'side note', 'self-promo', 'bridge', 'filler'}
+TYPES = {'opening', 'closing', 'goal', 'motivation', 'briefing', 'subgoal', 'instruction', 'tool', 'warning', 'tip', 'justification', 'effect', 'status', 'context', 'tool specification', 'outcome', 'reflection', 'side note', 'self-promo', 'bridge', 'filler'}
 CATEGORIES = {'greeting', 'overview', 'step', 'supplementary', 'explanation', 'description', 'conclusion', 'misc.'}
 SECTIONS = {'intro', 'procedure', 'outro', 'misc.'}
 
@@ -150,8 +150,37 @@ def get_unique_number (data):
 
 
 # ----------------------------------------------------#
-# ------------------ Analysis 2 ----------------------#
+# ------------------ Analysis 3 ----------------------#
 # ----------------------------------------------------#
+
+def get_normalized_time (data, duration):
+    
+    ts_axis = [i/1000 for i in range (1000)]
+
+    norm_ts_list = []
+    for ts in ts_axis:
+        norm_ts_obj = {}
+        check = False
+        for line in data:
+            start = line['start'] / duration
+            end = line['end'] / duration
+            norm_ts_obj['norm_time'] = ts
+            if start <= ts and ts < end:
+                norm_ts_obj['type'] = line['type']
+                norm_ts_obj['category'] = line['category']
+                norm_ts_obj['section'] = line['section']
+                check = True
+                break
+        if (not check):
+            norm_ts_obj['type'] = 'none'
+            norm_ts_obj['category'] = 'none'
+            norm_ts_obj['section'] = 'none'
+
+        norm_ts_list.append (norm_ts_obj)
+
+    # print (norm_ts_list)
+    return norm_ts_list
+
 
 ROOT_DIR = './data/processed/'
 SAVE_DIR = './data/analysis/'
@@ -180,6 +209,7 @@ if __name__ == "__main__":
                 # if vid in vids:
                 if True:
                     print (vid)
+
                     fp = os.path.join (cat_dir, file)
                     script_data = read_json (fp)
                     # print (script_data)
@@ -193,10 +223,23 @@ if __name__ == "__main__":
                     # unique count
                     unique_count = get_unique_number (script_data)
 
-                    analysis_data = {'vid': vid, 'total': len(script_data), 'duration': duration, 'audio_duration': audio_duration, 'count': count, 'time_portion': time_portion, 'unique_count': unique_count}
+
+                    normalized_ts = get_normalized_time (script_data, duration)
+                    analysis_data = {
+                        'vid': vid, 
+                        'total': len(script_data), 
+                        'duration': duration, 
+                        'audio_duration': audio_duration, 
+                        'count': count, 
+                        'time_portion': time_portion, 
+                        'unique_count': unique_count,
+                        'normalzied_ts': normalized_ts
+                    }
 
                     save_fp = os.path.join (save_cat_dir, file)
                     write_json (save_fp, analysis_data)
                     
+
+
 
 
