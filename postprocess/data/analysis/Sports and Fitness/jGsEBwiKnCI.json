@@ -1,0 +1,290 @@
+{
+    "vid": "jGsEBwiKnCI",
+    "total": 124,
+    "duration": 745.685625,
+    "count": {
+        "types": {
+            "opening": {
+                "count": 1,
+                "portion": 0.008064516129032258
+            },
+            "goal": {
+                "count": 2,
+                "portion": 0.016129032258064516
+            },
+            "bridge": {
+                "count": 12,
+                "portion": 0.0967741935483871
+            },
+            "side note": {
+                "count": 11,
+                "portion": 0.08870967741935484
+            },
+            "tool": {
+                "count": 15,
+                "portion": 0.12096774193548387
+            },
+            "tool specification": {
+                "count": 12,
+                "portion": 0.0967741935483871
+            },
+            "instruction": {
+                "count": 12,
+                "portion": 0.0967741935483871
+            },
+            "status": {
+                "count": 20,
+                "portion": 0.16129032258064516
+            },
+            "context": {
+                "count": 10,
+                "portion": 0.08064516129032258
+            },
+            "subgoal": {
+                "count": 2,
+                "portion": 0.016129032258064516
+            },
+            "effect": {
+                "count": 1,
+                "portion": 0.008064516129032258
+            },
+            "filler": {
+                "count": 3,
+                "portion": 0.024193548387096774
+            },
+            "outcome": {
+                "count": 4,
+                "portion": 0.03225806451612903
+            },
+            "reflection": {
+                "count": 9,
+                "portion": 0.07258064516129033
+            },
+            "warning": {
+                "count": 9,
+                "portion": 0.07258064516129033
+            },
+            "closing": {
+                "count": 1,
+                "portion": 0.008064516129032258
+            }
+        },
+        "categories": {
+            "greeting": {
+                "count": 2,
+                "portion": 0.016129032258064516
+            },
+            "overview": {
+                "count": 2,
+                "portion": 0.016129032258064516
+            },
+            "misc.": {
+                "count": 32,
+                "portion": 0.25806451612903225
+            },
+            "step": {
+                "count": 24,
+                "portion": 0.1935483870967742
+            },
+            "description": {
+                "count": 36,
+                "portion": 0.2903225806451613
+            },
+            "explanation": {
+                "count": 1,
+                "portion": 0.008064516129032258
+            },
+            "conclusion": {
+                "count": 18,
+                "portion": 0.14516129032258066
+            },
+            "supplementary": {
+                "count": 9,
+                "portion": 0.07258064516129033
+            }
+        },
+        "sections": {
+            "intro": {
+                "count": 3,
+                "portion": 0.024193548387096774
+            },
+            "misc.": {
+                "count": 32,
+                "portion": 0.25806451612903225
+            },
+            "procedure": {
+                "count": 70,
+                "portion": 0.5645161290322581
+            },
+            "outro": {
+                "count": 19,
+                "portion": 0.1532258064516129
+            }
+        }
+    },
+    "time_portion": {
+        "types": {
+            "opening": {
+                "time": 4.470000000000001,
+                "portion": 0.005994483264981809
+            },
+            "goal": {
+                "time": 4.4,
+                "portion": 0.0059006099252617355
+            },
+            "bridge": {
+                "time": 25.880000000000074,
+                "portion": 0.0347063147422214
+            },
+            "side note": {
+                "time": 30.619999999999877,
+                "portion": 0.041062880888980365
+            },
+            "tool": {
+                "time": 59.05999999999999,
+                "portion": 0.07920227776953591
+            },
+            "tool specification": {
+                "time": 54.86999999999996,
+                "portion": 0.07358328786343436
+            },
+            "instruction": {
+                "time": 70.11000000000004,
+                "portion": 0.09402085496820466
+            },
+            "status": {
+                "time": 92.79999999999981,
+                "portion": 0.12444922751461089
+            },
+            "context": {
+                "time": 33.80999999999986,
+                "portion": 0.0453408230847951
+            },
+            "subgoal": {
+                "time": 6.959999999999894,
+                "portion": 0.009333692063595694
+            },
+            "effect": {
+                "time": 6.25,
+                "portion": 0.008381548189292237
+            },
+            "filler": {
+                "time": 1.5200000000000387,
+                "portion": 0.002038392519635924
+            },
+            "outcome": {
+                "time": 21.470000000000084,
+                "portion": 0.028792294339856805
+            },
+            "reflection": {
+                "time": 41.80999999999983,
+                "portion": 0.056069204767089126
+            },
+            "warning": {
+                "time": 33.900000000000034,
+                "portion": 0.045461517378721145
+            },
+            "closing": {
+                "time": 1.2999999999999545,
+                "portion": 0.0017433620233727244
+            }
+        },
+        "categories": {
+            "greeting": {
+                "time": 5.769999999999955,
+                "portion": 0.007737845288354533
+            },
+            "overview": {
+                "time": 4.4,
+                "portion": 0.0059006099252617355
+            },
+            "misc.": {
+                "time": 89.48000000000002,
+                "portion": 0.11999694911645913
+            },
+            "step": {
+                "time": 101.98999999999987,
+                "portion": 0.13677345597214627
+            },
+            "description": {
+                "time": 160.39999999999966,
+                "portion": 0.21510405272999553
+            },
+            "explanation": {
+                "time": 6.25,
+                "portion": 0.008381548189292237
+            },
+            "conclusion": {
+                "time": 87.0399999999999,
+                "portion": 0.1167247927033593
+            },
+            "supplementary": {
+                "time": 33.900000000000034,
+                "portion": 0.045461517378721145
+            }
+        },
+        "sections": {
+            "intro": {
+                "time": 8.870000000000001,
+                "portion": 0.011895093190243544
+            },
+            "misc.": {
+                "time": 89.48000000000002,
+                "portion": 0.11999694911645913
+            },
+            "procedure": {
+                "time": 302.53999999999957,
+                "portion": 0.4057205742701552
+            },
+            "outro": {
+                "time": 88.33999999999986,
+                "portion": 0.11846815472673201
+            }
+        }
+    },
+    "unique_count": {
+        "types": {
+            "items": [
+                "opening",
+                "goal",
+                "bridge",
+                "side note",
+                "tool",
+                "tool specification",
+                "instruction",
+                "status",
+                "context",
+                "subgoal",
+                "effect",
+                "filler",
+                "outcome",
+                "reflection",
+                "warning",
+                "closing"
+            ],
+            "number": 16
+        },
+        "categories": {
+            "items": [
+                "greeting",
+                "overview",
+                "misc.",
+                "step",
+                "description",
+                "explanation",
+                "conclusion",
+                "supplementary"
+            ],
+            "number": 8
+        },
+        "sections": {
+            "items": [
+                "intro",
+                "misc.",
+                "procedure",
+                "outro"
+            ],
+            "number": 4
+        }
+    }
+}
