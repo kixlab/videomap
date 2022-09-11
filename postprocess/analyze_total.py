@@ -1,10 +1,20 @@
 import os
 import json
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 
 # ----------------------------------------------------#
 # --------------- Helper functions -------------------#
 # ----------------------------------------------------#
+
+TYPES = {'opening', 'closing', 'goal', 'motivation', 'briefing', 'subgoal', 'instruction', 'tool', 'warning', 'tip', 'justification', 'effect', 'status', 'context', 'tool specification', 'outcome', 'reflection', 'side note', 'self-promo', 'bridge', 'filler', 'none'}
+CATEGORIES = {'greeting', 'overview', 'step', 'supplementary', 'explanation', 'description', 'conclusion', 'misc.', 'none'}
+SECTIONS = {'intro', 'procedure', 'outro', 'misc.', 'none'}
+
+
 def read_json (fp):
     with open (fp, 'r') as s:
         script = json.load (s)
@@ -119,6 +129,75 @@ def analyze_total (data):
     data_obj = {"vids": vids, "total_count": type_total, "audio_duration": audio_duration_total, 'count': counts, 'time_portion': times, "unique_count": unique_counts}
     return data_obj
 
+
+def analyze_type_with_time (data):
+    iter = 1000
+
+    types_data = {}
+    categories_data = {}
+    sections_data = {}
+
+    for t in TYPES:
+        types_data[t] = [0 for _ in range (iter)]
+
+    for c in CATEGORIES:
+        categories_data[c] = [0 for _ in range (iter)]
+
+    for s in SECTIONS:
+        sections_data[s] = [0 for _ in range (iter)]
+
+    time = [i/1000 for i in range (1000)]
+
+    for script in data:
+        norm_ts_data = script['normalzied_ts']
+        for i, item in enumerate(norm_ts_data):
+            types_data[item['type']][i]+= 1
+            categories_data[item['category']][i]+=1
+            sections_data[item['section']][i]+=1
+
+    return {'time': time, 'types': types_data, 'categories': categories_data, 'sections': sections_data}
+
+def visualize_time_data (data):
+
+    types_data = {}
+    categories_data = {}
+    sections_data = {}
+
+    types_data['time'] = data['time']
+    categories_data['time'] = data['time']
+    sections_data['time'] = data['time']
+
+    for t in data['types'].keys():
+        types_data[t] = data['types'][t]
+
+
+    for c in data['categories'].keys():
+        categories_data[c] = data['categories'][c]
+    for s in data['sections'].keys():
+        sections_data[s] = data['sections'][s]
+
+    types_df = pd.DataFrame(types_data)
+
+    categories_df = pd.DataFrame (categories_data)
+    sections_df = pd.DataFrame (sections_data)
+
+    types_df.set_index('time')
+
+    print (types_df.head())
+
+    # for col in types_df.columns:
+    #     sns.displot (types_df[col], kde=True, rug=True)
+
+    # plt.show()
+
+            
+    # sns.kdeplot(data=types_df, x="time")
+    # sns.rugplot(data=types_df, x="time")
+
+    # plt.savefig("time_types.png")
+            
+
+
 ROOT_DIR = './data/analysis/'
 SAVE_DIR = './data/final/'
 
@@ -149,6 +228,7 @@ vids = [first_vids, third_vids, view_both_vids, screencast_vids, static_move_vid
 if __name__ == "__main__":
 
     scripts = []
+
     for root, dirs, files in os.walk (ROOT_DIR):
         for dir_name in dirs:
 
@@ -159,16 +239,19 @@ if __name__ == "__main__":
             files = os.listdir(cat_dir)
             for file in files:
                 vid = file.split('.')[0]
-                if vid in narration_both_vids:
-                # if True:
+                # if vid in narration_both_vids:
+                if True:
                     print (vid)
                     fp = os.path.join (cat_dir, file)
                     script_data = read_json (fp)
                     scripts.append (script_data)
 
-    analyzed_data = analyze_total (scripts)
-    fn = os.path.join (SAVE_DIR, 'analyzed_narration_both.json')
-    write_json (fn, analyzed_data)
+    # analyzed_data = analyze_total (scripts)
+    # fn = os.path.join (SAVE_DIR, 'analyzed_narration_both.json')
+    # write_json (fn, analyzed_data)
+
+    time_type_data = analyze_type_with_time (scripts)
+    visualize_time_data (time_type_data)
 
 
     # assertion
