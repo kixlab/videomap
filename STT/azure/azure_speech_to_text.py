@@ -206,13 +206,13 @@ if __name__ == "__main__":
     #                 recognize_from_file (vid, audio_category_dir, save_category_dir)
 
 
-    new_vids = ['T5MbMuoNQ1k', 'ynmdOz_D1R4']
-    # audio_path = '/Users/sangkyung/Desktop/Starlab/videomap/STT/audio/Hobbies and Crafts'
+    new_vids = ['5ywy531EMNA']
+    audio_path = '/Users/sangkyung/Desktop/Starlab/videomap/STT/audio/Health'
 
-    # for vid in new_vids:
-    #     fp = audio_path + '/' + vid + '.mp3'
-    #     download_mp3 (audio_path, vid)
-    #     mp3_to_wav (fp)
+    for vid in new_vids:
+        fp = audio_path + '/' + vid + '.mp3'
+        download_mp3 (audio_path, vid)
+        mp3_to_wav (fp)
 
     for root, dirs, files in os.walk (input_root):
         for dir_name in dirs:

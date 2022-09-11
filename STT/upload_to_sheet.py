@@ -27,7 +27,7 @@ input_root = './azure/final/'
 # vids_creation_2 = ['yJ7VzfG2ONo', 'JNznnqX6SsE', 'dKUomyn1TYQ', 'A_qivvTkijw', 'S0luUzNRtq0', 'eyD2iwXOeFM', 'Cvv1wiqKMHc', 'EnjZHOb6qNE', 'r6JmI35r5E8', 'ta5IB2wy6ic', 'rqBiByEbMHc', '2YGEDsl7PO8']
 # vids_creation_3 = ['tb1L7Rsm1U8', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '8DgsLNa3ums', 'N3c81EPZ51Q', 'e3StC_4qemI', 'Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'XFYHIg8U--4', 'm0H56KpKLHA', '1dALzTPQWJg']
 
-new_vids = ['T5MbMuoNQ1k', 'ynmdOz_D1R4']
+new_vids = ['5ywy531EMNA']
 
 # annotation folder sheet url
 annotation_url_list = {
@@ -62,6 +62,8 @@ annotation_url_list = {
 #     "Sports and Fitness" : "https://docs.google.com/spreadsheets/d/14yvQZPG3dHeoZvnP_D1hEVxjciakYGcMCWJw0u0H5XE/edit#gid=0",
 # }
 
+url="https://docs.google.com/spreadsheets/d/1B7qVxewUmkdHffVJeL5wZCJjG5ruBOxmihi-UspCDW4/edit#gid=1195835470"
+
 scope = [
     'https://spreadsheets.google.com/feeds',
     'https://www.googleapis.com/auth/drive',
@@ -74,16 +76,17 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name(
 gc = gspread.authorize(credentials)
 
 for category in annotation_url_list.keys():
+    if (category != "Health"): continue
     print ('-' * 30)
     print (category)
     spreadsheet_url = annotation_url_list [category]
-    doc = gc.open_by_url (spreadsheet_url)
+    doc = gc.open_by_url (url)
     worksheet_list = doc.worksheets()
     category_dir = input_root + category + '/'
     print (category_dir)
 
     for ws in worksheet_list:
-        if (ws.title in vids_0805):
+        if (ws.title in new_vids):
             print (ws.title)
             script_fp = category_dir + ws.title + '.json'
 
@@ -97,7 +100,6 @@ for category in annotation_url_list.keys():
             cells.append(Cell(row=1, col=4, value='P1'))
             cells.append(Cell(row=1, col=5, value='P2'))
             cells.append(Cell(row=1, col=6, value='Final'))
-            cells.append(Cell(row=1, col=7, value='Match'))
 
             for ind, sentence in enumerate (script):
                 cells.append(Cell(row=ind+2, col=1, value=sentence['start']))

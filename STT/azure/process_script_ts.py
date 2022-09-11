@@ -29,7 +29,7 @@ save_root = "./final/"   #output file path
 # vids_creation_3 = ['tb1L7Rsm1U8', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '8DgsLNa3ums', 'N3c81EPZ51Q', 'e3StC_4qemI', 'Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'XFYHIg8U--4', 'm0H56KpKLHA', '1dALzTPQWJg']
 
 # new_vids = ['YmHGiLGINV4', 'u00iLnvVgFc', 'cvZMHEu_Ojk', '1oiCLxngvBo', 'mmGVeV-BvhU']
-new_vids = ['ynmdOz_D1R4']
+new_vids = ['5ywy531EMNA']
 
 # input : list of text segments, timestamp for words
 # output : list of object with text, start, end

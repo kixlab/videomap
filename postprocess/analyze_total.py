@@ -183,6 +183,11 @@ def visualize_time_data (data):
     categories_dfm = categories_df.melt('time', var_name = 'category', value_name='counts')
     sections_dfm = sections_df.melt('time', var_name = 'section', value_name='counts')
 
+
+    print (types_dfm.head())
+    print (categories_dfm.head())
+    print (sections_dfm.head())
+
     # sns.kdeplot(data=types_dfm, x="time", y="counts", hue="type")
     # sns.kdeplot(data=categories_dfm, x="time", y="counts", hue="category")
     # sns.kdeplot(data=sections_dfm, x="time", y="counts", hue="section")
@@ -191,7 +196,7 @@ def visualize_time_data (data):
     # sns.displot (sections_dfm, x="time", y="counts", hue="section", bins=100)
 
     # line
-    sns.replot (data = sections_dfm, x="time", y="counts", kind="line")
+    # sns.replot (data = sections_dfm, x="time", y="counts", kind="line")
 
     # kernel density
     # sns.displot (sections_dfm, x="time", y="counts", hue="section", kde=True)
@@ -199,7 +204,7 @@ def visualize_time_data (data):
     # sns.displot(data=categories_dfm, x="time", y="counts", hue="category", kind="kde")
     # sns.rugplot(data=sections_dfm, x="time", y="counts", hue="section")
 
-    plt.show()
+    # plt.show()
             
 
 
