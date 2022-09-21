@@ -1,10 +1,10 @@
 import os
 import json
-from xml.dom.minidom import Element
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from scipy.interpolate import make_interp_spline, BSpline
 
 
 # ----------------------------------------------------#
@@ -164,9 +164,9 @@ def visualize_time_data (data):
     categories_data = {}
     sections_data = {}
 
-    types_data['time'] = data['time']
-    categories_data['time'] = data['time']
-    sections_data['time'] = data['time']
+    types_data['time'] = [item * 1000 for item in data['time']]
+    categories_data['time'] = [item * 1000 for item in data['time']]
+    sections_data['time'] = [item * 1000 for item in data['time']]
 
     for t in data['types'].keys():
         types_data[t] = data['types'][t]
@@ -179,24 +179,75 @@ def visualize_time_data (data):
     categories_df = pd.DataFrame (categories_data)
     sections_df = pd.DataFrame (sections_data)
 
-    types_dfm = types_df.melt('time', var_name = 'type', value_name='counts')
-    categories_dfm = categories_df.melt('time', var_name = 'category', value_name='counts')
-    sections_dfm = sections_df.melt('time', var_name = 'section', value_name='counts')
+    # columns to delete
+    types_df = types_df.drop(['none'], axis = 1)
+    categories_df = categories_df.drop(['none'], axis = 1)
+    sections_df = sections_df.drop(['none'], axis = 1)
+
+    categories_df.set_index('time', inplace=True)
+    sections_df.set_index('time', inplace=True)
+
+    categories_df = categories_df[['greeting', 'overview', 'step', 'supplementary', 'explanation', 'description', 'conclusion', 'misc.']]
+    sections_df = sections_df[['intro', 'procedure', 'outro', 'misc.']]
+
+    categories_df.rename(columns = {'greeting':'Greeting', 'overview':'Overview', 'step': 'Method', 'supplementary': 'Supplementary', 'explanation':'Explanation', 'descrption': 'Description', 'conclusion': 'Conclusion', 'misc.': 'Misc.'}, inplace=True)
+    sections_df.rename(columns={'intro': 'Intro', 'procedure': 'Procedure', 'outro': 'Outro', 'misc.': 'Misc.'})
+
+    plt.subplot (1, 2, 1)
+    plt.plot(sections_df)
+    plt.ylabel ('Number of Labels', fontsize=25)
+    plt.xlabel ('Normalized Time (sec)', fontsize=25)
+    plt.xticks (fontsize=23)
+    plt.yticks (fontsize=23)
+    plt.ylim (0, 115)
+    plt.legend(['Intro', 'Procedure', 'Outro', 'Misc.'], fontsize=20)
+
+    plt.subplot (1, 2, 2)
+    plt.plot(categories_df)
+    # plt.ylabel ('Number of Labels', fontsize=22)
+    plt.xlabel ('Normalized Time (sec)', fontsize=25)
+    plt.xticks (fontsize=23)
+    plt.yticks (fontsize=23)
+    plt.ylim (0, 115)
+    plt.legend(['Greeting', 'Overview', 'Method', 'Supplementary', 'Explanation', 'Description', 'Conclusion', 'Misc.'], fontsize=20, ncol=2, loc="upper right")
 
 
-    print (types_dfm.head())
-    print (categories_dfm.head())
-    print (sections_dfm.head())
+
+    plt.tight_layout()
+    plt.show()
+
+    # save as csv
+    # types_df.to_csv ('./data/final/types_df.csv')
+    # categories_df.to_csv ('./data/final/categories_df.csv')
+    # sections_df.to_csv ('./data/final/sections_df.csv'
+
+    # sections_df['intro'].plot (style = 'r--', label= "line")
+    # sections_df['intro'].ewm(span=1000).mean().plot(style='b', label="ema")
+
+    # types_dfm = types_df.melt('time', var_name = 'type', value_name='counts')
+    # categories_dfm = categories_df.melt('time', var_name = 'category', value_name='counts')
+    # sections_dfm = sections_df.melt('time', var_name = 'section', value_name='counts')
+
+
+    # print (types_dfm.head())
+    # print (categories_dfm.head())
+    # print (sections_dfm.head())
 
     # sns.kdeplot(data=types_dfm, x="time", y="counts", hue="type")
     # sns.kdeplot(data=categories_dfm, x="time", y="counts", hue="category")
     # sns.kdeplot(data=sections_dfm, x="time", y="counts", hue="section")
 
     # histogram
-    # sns.displot (sections_dfm, x="time", y="counts", hue="section", bins=100)
+    # sns.displot (sections_dfm, x="time", hue="section", kind='kde', multiple='stack')
 
     # line
-    # sns.replot (data = sections_dfm, x="time", y="counts", kind="line")
+    # sns.lineplot (data = types_dfm, x="time", y="counts", hue="type")
+    # sns.lineplot (data = categories_dfm, x="time", y="counts", hue="category")
+    # sns.lineplot (data = sections_dfm, x="time", y="counts", hue="section")
+
+    # step_df = categories_df[['time', 'step']]
+    #histogram
+    # sns.histplot(data=step_df, x="step", bins=100, kde=True)
 
     # kernel density
     # sns.displot (sections_dfm, x="time", y="counts", hue="section", kde=True)
@@ -205,8 +256,7 @@ def visualize_time_data (data):
     # sns.rugplot(data=sections_dfm, x="time", y="counts", hue="section")
 
     # plt.show()
-            
-
+    # plt.savefig ('./data/figures/category_time.png')
 
 ROOT_DIR = './data/analysis/'
 SAVE_DIR = './data/final/'
@@ -228,29 +278,43 @@ view_zoom_change_vids = ['mZZJYDfmgeg', 'XN3N5K2axpw', 'WIIjq2GexIw', 'ZT1dvq6ya
 
 # talking
 talking_vids = ['mZZJYDfmgeg', '1oiCLxngvBo', 'PyWZYHy17As', 'Nu_By3eTpoc', 'u00iLnvVgFc', '2OoebJA2mnE', '-xCtbeecgKQ', '-6tnn1G1dRg', 'T622Ec77ZPY', '9mjXFA1TMTI', 'jhAklPzn0XQ', 'QzS7Z80poKo', 'bwxvH99sLqw', 'mUq6l7N6zuk', '0SMzqWV6xxs', 'nnzPJv5XIws', 'ZORD4y7dL08', 'Czi_ZirnzRo', 'GFd7kLvhc2Q', '73lxEIKyX8M', 'eDG1c6a6uqc', 'Rcsy2HRuiyA', 'Ag6D8RGQnjw', 'CxdRXDN1fkA', 'VDMOFa8iRqo', 'kz5dJ9SCu4M', 'yJ7VzfG2ONo', 'JNznnqX6SsE', 'dKUomyn1TYQ', 'h281yamVFDc', '6CJryveLzvI', 'ZY11rbwCaMM', 'xTARWxkTJw0', 'WcD8bG2VB_s', '5ywy531EMNA', '0TLQg_b1v5Q', 'Vrz25x3qnTY', 'sij_wNj0doI', 'BotYnPhByWg', 'A_qivvTkijw', 'S0luUzNRtq0', 'HFp5uH12wkc', 'ynmdOz_D1R4', 'r6JmI35r5E8', '7IcOJEEObA0', '-wlSMSl02Xs', 'IICwmc4WX2E', 'Eeu5uL6r2rg', 'mwpb65gm1e0', 'zMqzjMrxNR0', 'UZJ0nmB3epQ', 'T5MbMuoNQ1k', '0fxL8v2dMho', '8DgsLNa3ums', 'e3StC_4qemI', 'ntYwKXN82QU', 's4coMAU80U4', '7oXrT1CqLCY', 'uMgpr6X5asI', 'AbhW9YbQ0fM', 'bQKTjz0JKhg', 'SXQHgJHYQgc', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'OcjCNqfRgP0', 'WoDZQRGyuHA', 'wvC3_Rs4mXs', 'bxXXCP0AE5A', '2xXPSfQBP-w', 'yeT52sDtYEU', 'Y84sqS2Nljs', 'XFYHIg8U--4', '1dALzTPQWJg', 'jGsEBwiKnCI', 'kNsjE4HO7tE', 'mj1Fu3-XQpI', 'CdZQF4DDAxM', 'b2EZggyT5O4']
-# dubbing
-dubbing_vids = ['XN3N5K2axpw', 'WIIjq2GexIw', 'ZT1dvq6yacQ', 'uUBVc8Ugz0k', 'ZeVRqW2J3UY', '_Yb6xLqvsf0', '-szevr-BRZE', 'KLLqGcgxQEw', 'dJ_qCDWNvXU', 'mQjCKgEPs8k', 'BzxPDw6ezEc', 'pn81__TovpY', 'ZmTxw3UbMO4', '5AU2vJU-QJM', 'yYOysPt5gic', 'ta5IB2wy6ic', 'rqBiByEbMHc', 'sM81wJ7GDrI', 'djvLEfwwQPU', 'eyD2iwXOeFM', 'kPGwDxo5Yf4', 'bg3orsnRCVE', 'Xh_Awznyc7s', 'cGn_oZPotZA', 'Cvv1wiqKMHc', 'EnjZHOb6qNE', 'AnWGek4P_dY', 'k0koOhfXv_s', '4WaXJs9RR3E', 'tb1L7Rsm1U8', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '2Xyfgwj92v0', 'N3c81EPZ51Q', 'Df9F8ettY8k', 'm0H56KpKLHA', 'ygRQRgR11Zg', 'UriwETsgsqg']
-# both
-narration_both_vids = ['z1Xv6Pa0toE', '1Ni8KOzRzuI', 'yu-G9kEKdTo', 'oe7Cz-dxSBY']
+# non talking
+non_talking_vids = ['XN3N5K2axpw', 'WIIjq2GexIw', 'ZT1dvq6yacQ', 'uUBVc8Ugz0k', 'ZeVRqW2J3UY', '_Yb6xLqvsf0', '-szevr-BRZE', 'KLLqGcgxQEw', 'dJ_qCDWNvXU', 'mQjCKgEPs8k', 'BzxPDw6ezEc', 'pn81__TovpY', 'ZmTxw3UbMO4', '5AU2vJU-QJM', 'yYOysPt5gic', 'ta5IB2wy6ic', 'rqBiByEbMHc', 'sM81wJ7GDrI', 'djvLEfwwQPU', 'eyD2iwXOeFM', 'kPGwDxo5Yf4', 'bg3orsnRCVE', 'Xh_Awznyc7s', 'cGn_oZPotZA', 'Cvv1wiqKMHc', 'EnjZHOb6qNE', 'AnWGek4P_dY', 'k0koOhfXv_s', '4WaXJs9RR3E', 'tb1L7Rsm1U8', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '2Xyfgwj92v0', 'N3c81EPZ51Q', 'Df9F8ettY8k', 'm0H56KpKLHA', 'ygRQRgR11Zg', 'UriwETsgsqg', 'z1Xv6Pa0toE', '1Ni8KOzRzuI', 'yu-G9kEKdTo', 'oe7Cz-dxSBY']
+
+
+### task type ###
+# 82
+create = ['mZZJYDfmgeg', 'XN3N5K2axpw', 'WIIjq2GexIw', 'ZT1dvq6yacQ', 'uUBVc8Ugz0k', 'Nu_By3eTpoc', 'ZeVRqW2J3UY', 'nnzPJv5XIws', '-szevr-BRZE', 'KLLqGcgxQEw', 'GFd7kLvhc2Q', '73lxEIKyX8M', 'eDG1c6a6uqc', 'Rcsy2HRuiyA', 'Ag6D8RGQnjw', 'CxdRXDN1fkA', 'dJ_qCDWNvXU', 'VDMOFa8iRqo', 'mQjCKgEPs8k', 'pn81__TovpY', 'ZmTxw3UbMO4', 'kz5dJ9SCu4M', 'yJ7VzfG2ONo', 'JNznnqX6SsE', 'dKUomyn1TYQ', 'h281yamVFDc', '5AU2vJU-QJM', 'yYOysPt5gic', '6CJryveLzvI', 'ZY11rbwCaMM', 'xTARWxkTJw0', 'WcD8bG2VB_s', 'ta5IB2wy6ic', '5ywy531EMNA', 'sM81wJ7GDrI', '1Ni8KOzRzuI', 'sij_wNj0doI', 'A_qivvTkijw', 'S0luUzNRtq0', 'eyD2iwXOeFM', 'kPGwDxo5Yf4', 'bg3orsnRCVE', 'HFp5uH12wkc', 'Xh_Awznyc7s', 'cGn_oZPotZA', 'ynmdOz_D1R4', 'Cvv1wiqKMHc', 'EnjZHOb6qNE', 'r6JmI35r5E8', 'AnWGek4P_dY', '7IcOJEEObA0', '-wlSMSl02Xs', 'IICwmc4WX2E', 'Eeu5uL6r2rg', 'k0koOhfXv_s', '4WaXJs9RR3E', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '2Xyfgwj92v0', 'oe7Cz-dxSBY', 'UZJ0nmB3epQ', 'T5MbMuoNQ1k', 'N3c81EPZ51Q', 's4coMAU80U4', '7oXrT1CqLCY', 'uMgpr6X5asI', 'AbhW9YbQ0fM', 'bQKTjz0JKhg', 'SXQHgJHYQgc', 'Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'OcjCNqfRgP0', 'WoDZQRGyuHA', 'bxXXCP0AE5A', 'yeT52sDtYEU', 'Y84sqS2Nljs', 'XFYHIg8U--4', 'jGsEBwiKnCI', 'kNsjE4HO7tE', 'UriwETsgsqg', 'b2EZggyT5O4']
+# 27
+fix = ['1oiCLxngvBo', 'PyWZYHy17As', '2OoebJA2mnE', '-xCtbeecgKQ', 'z1Xv6Pa0toE', 'T622Ec77ZPY', '9mjXFA1TMTI', 'jhAklPzn0XQ', 'QzS7Z80poKo', 'bwxvH99sLqw', 'mUq6l7N6zuk', 'ZORD4y7dL08', 'Czi_ZirnzRo', 'BzxPDw6ezEc', 'yu-G9kEKdTo', 'tb1L7Rsm1U8', 'mwpb65gm1e0', 'zMqzjMrxNR0', '0fxL8v2dMho', '8DgsLNa3ums', 'e3StC_4qemI', 'ntYwKXN82QU', '2xXPSfQBP-w', 'm0H56KpKLHA', '1dALzTPQWJg', 'ygRQRgR11Zg', 'mj1Fu3-XQpI']
+# 11
+use = ['u00iLnvVgFc', '-6tnn1G1dRg', '0SMzqWV6xxs', '_Yb6xLqvsf0', 'rqBiByEbMHc', '0TLQg_b1v5Q', 'Vrz25x3qnTY', 'BotYnPhByWg', 'djvLEfwwQPU', 'wvC3_Rs4mXs', 'CdZQF4DDAxM']
 
 
 ### categories ###
-# ane = ['mZZJYDfmgeg', 'XN3N5K2axpw', 'WIIjq2GexIw', '1oiCLxngvBo', 'ZT1dvq6yacQ', 'PyWZYHy17As', 'uUBVc8Ugz0k', 'Nu_By3eTpoc', 'ZeVRqW2J3UY', 'u00iLnvVgFc']
-# cnov = ['2OoebJA2mnE', '-xCtbeecgKQ', '-6tnn1G1dRg', 'z1Xv6Pa0toE', 'T622Ec77ZPY', '9mjXFA1TMTI', 'jhAklPzn0XQ', 'QzS7Z80poKo', 'bwxvH99sLqw', 'mUq6l7N6zuk']
-# cne = ['0SMzqWV6xxs', '_Yb6xLqvsf0', 'nnzPJv5XIws', 'ZORD4y7dL08', '-szevr-BRZE', 'KLLqGcgxQEw', 'Czi_ZirnzRo', 'GFd7kLvhc2Q', '73lxEIKyX8M', 'eDG1c6a6uqc']
-# enc = ['Rcsy2HRuiyA', 'Ag6D8RGQnjw', 'CxdRXDN1fkA', 'dJ_qCDWNvXU', 'VDMOFa8iRqo', 'mQjCKgEPs8k', 'BzxPDw6ezEc', 'pn81__TovpY', 'ZmTxw3UbMO4', 'kz5dJ9SCu4M']
-# fne = ['yJ7VzfG2ONo', 'JNznnqX6SsE', 'dKUomyn1TYQ', 'h281yamVFDc', '5AU2vJU-QJM', 'yYOysPt5gic', '6CJryveLzvI', 'ZY11rbwCaMM', 'xTARWxkTJw0', 'WcD8bG2VB_s']
-# health = ['ta5IB2wy6ic', 'rqBiByEbMHc', '5ywy531EMNA', 'sM81wJ7GDrI', '0TLQg_b1v5Q', '1Ni8KOzRzuI', 'Vrz25x3qnTY', 'sij_wNj0doI', 'BotYnPhByWg', 'djvLEfwwQPU']
-# hnc = ['A_qivvTkijw', 'S0luUzNRtq0', 'eyD2iwXOeFM', 'kPGwDxo5Yf4', 'bg3orsnRCVE', 'HFp5uH12wkc', 'Xh_Awznyc7s', 'cGn_oZPotZA', 'ynmdOz_D1R4', 'yu-G9kEKdTo']
-# hnt = ['Cvv1wiqKMHc', 'EnjZHOb6qNE', 'r6JmI35r5E8', 'AnWGek4P_dY', '7IcOJEEObA0', '-wlSMSl02Xs', 'IICwmc4WX2E', 'Eeu5uL6r2rg', 'k0koOhfXv_s', '4WaXJs9RR3E']
-# hng = ['tb1L7Rsm1U8', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '2Xyfgwj92v0', 'mwpb65gm1e0', 'oe7Cz-dxSBY', 'zMqzjMrxNR0', 'UZJ0nmB3epQ', 'T5MbMuoNQ1k', '0fxL8v2dMho']
-# pcns = ['8DgsLNa3ums', 'N3c81EPZ51Q', 'e3StC_4qemI', 'ntYwKXN82QU', 's4coMAU80U4', '7oXrT1CqLCY', 'uMgpr6X5asI', 'AbhW9YbQ0fM', 'bQKTjz0JKhg', 'SXQHgJHYQgc']
-# pna = ['Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'OcjCNqfRgP0', 'WoDZQRGyuHA', 'wvC3_Rs4mXs', 'bxXXCP0AE5A', '2xXPSfQBP-w', 'yeT52sDtYEU', 'Y84sqS2Nljs']
-# snf = ['XFYHIg8U--4', 'm0H56KpKLHA', '1dALzTPQWJg', 'ygRQRgR11Zg', 'jGsEBwiKnCI', 'kNsjE4HO7tE', 'mj1Fu3-XQpI', 'CdZQF4DDAxM', 'UriwETsgsqg', 'b2EZggyT5O4']
+ane = ['mZZJYDfmgeg', 'XN3N5K2axpw', 'WIIjq2GexIw', '1oiCLxngvBo', 'ZT1dvq6yacQ', 'PyWZYHy17As', 'uUBVc8Ugz0k', 'Nu_By3eTpoc', 'ZeVRqW2J3UY', 'u00iLnvVgFc']
+cnov = ['2OoebJA2mnE', '-xCtbeecgKQ', '-6tnn1G1dRg', 'z1Xv6Pa0toE', 'T622Ec77ZPY', '9mjXFA1TMTI', 'jhAklPzn0XQ', 'QzS7Z80poKo', 'bwxvH99sLqw', 'mUq6l7N6zuk']
+cne = ['0SMzqWV6xxs', '_Yb6xLqvsf0', 'nnzPJv5XIws', 'ZORD4y7dL08', '-szevr-BRZE', 'KLLqGcgxQEw', 'Czi_ZirnzRo', 'GFd7kLvhc2Q', '73lxEIKyX8M', 'eDG1c6a6uqc']
+enc = ['Rcsy2HRuiyA', 'Ag6D8RGQnjw', 'CxdRXDN1fkA', 'dJ_qCDWNvXU', 'VDMOFa8iRqo', 'mQjCKgEPs8k', 'BzxPDw6ezEc', 'pn81__TovpY', 'ZmTxw3UbMO4', 'kz5dJ9SCu4M']
+fne = ['yJ7VzfG2ONo', 'JNznnqX6SsE', 'dKUomyn1TYQ', 'h281yamVFDc', '5AU2vJU-QJM', 'yYOysPt5gic', '6CJryveLzvI', 'ZY11rbwCaMM', 'xTARWxkTJw0', 'WcD8bG2VB_s']
+health = ['ta5IB2wy6ic', 'rqBiByEbMHc', '5ywy531EMNA', 'sM81wJ7GDrI', '0TLQg_b1v5Q', '1Ni8KOzRzuI', 'Vrz25x3qnTY', 'sij_wNj0doI', 'BotYnPhByWg', 'djvLEfwwQPU']
+hnc = ['A_qivvTkijw', 'S0luUzNRtq0', 'eyD2iwXOeFM', 'kPGwDxo5Yf4', 'bg3orsnRCVE', 'HFp5uH12wkc', 'Xh_Awznyc7s', 'cGn_oZPotZA', 'ynmdOz_D1R4', 'yu-G9kEKdTo']
+hnt = ['Cvv1wiqKMHc', 'EnjZHOb6qNE', 'r6JmI35r5E8', 'AnWGek4P_dY', '7IcOJEEObA0', '-wlSMSl02Xs', 'IICwmc4WX2E', 'Eeu5uL6r2rg', 'k0koOhfXv_s', '4WaXJs9RR3E']
+hng = ['tb1L7Rsm1U8', 'T1j7Yq5-cIs', 'ihCwjLj31hY', '2Xyfgwj92v0', 'mwpb65gm1e0', 'oe7Cz-dxSBY', 'zMqzjMrxNR0', 'UZJ0nmB3epQ', 'T5MbMuoNQ1k', '0fxL8v2dMho']
+pcns = ['8DgsLNa3ums', 'N3c81EPZ51Q', 'e3StC_4qemI', 'ntYwKXN82QU', 's4coMAU80U4', '7oXrT1CqLCY', 'uMgpr6X5asI', 'AbhW9YbQ0fM', 'bQKTjz0JKhg', 'SXQHgJHYQgc']
+pna = ['Df9F8ettY8k', 'ntwi2Unh3JQ', 'ysHg9vOMe_4', 'OcjCNqfRgP0', 'WoDZQRGyuHA', 'wvC3_Rs4mXs', 'bxXXCP0AE5A', '2xXPSfQBP-w', 'yeT52sDtYEU', 'Y84sqS2Nljs']
+snf = ['XFYHIg8U--4', 'm0H56KpKLHA', '1dALzTPQWJg', 'ygRQRgR11Zg', 'jGsEBwiKnCI', 'kNsjE4HO7tE', 'mj1Fu3-XQpI', 'CdZQF4DDAxM', 'UriwETsgsqg', 'b2EZggyT5O4']
+
+
+## 42 videos for IRR ##
+irr_vids = ['Nu_By3eTpoc', 'ZeVRqW2J3UY', 'u00iLnvVgFc', 'QzS7Z80poKo', 'bwxvH99sLqw', 'mUq6l7N6zuk', 'Czi_ZirnzRo', 'GFd7kLvhc2Q', '73lxEIKyX8M', 'eDG1c6a6uqc', 'BzxPDw6ezEc', 'pn81__TovpY', 'ZmTxw3UbMO4', 'kz5dJ9SCu4M', 'ZY11rbwCaMM', 'xTARWxkTJw0', 'WcD8bG2VB_s', 'Vrz25x3qnTY', 'sij_wNj0doI', 'BotYnPhByWg', 'djvLEfwwQPU', 'cGn_oZPotZA', 'ynmdOz_D1R4', 'yu-G9kEKdTo', 'IICwmc4WX2E', 'Eeu5uL6r2rg', 'k0koOhfXv_s', '4WaXJs9RR3E', 'UZJ0nmB3epQ', 'T5MbMuoNQ1k', '0fxL8v2dMho', 'AbhW9YbQ0fM', 'bQKTjz0JKhg', 'SXQHgJHYQgc', 'bxXXCP0AE5A', '2xXPSfQBP-w', 'yeT52sDtYEU', 'Y84sqS2Nljs', 'mj1Fu3-XQpI', 'CdZQF4DDAxM', 'UriwETsgsqg', 'b2EZggyT5O4']
+
 
 if __name__ == "__main__":
 
     scripts = []
+
+    num_types = []
 
     # selected_dir = "Sports and Fitness"
 
@@ -266,19 +330,24 @@ if __name__ == "__main__":
                 files = os.listdir(cat_dir)
                 for file in files:
                     vid = file.split('.')[0]
-                    # if vid in narration_both_vids:
+                    # if vid in irr_vids:
                     if True:
-                        print (vid)
+                        print (vid) 
                         fp = os.path.join (cat_dir, file)
                         script_data = read_json (fp)
+                        # if (script_data['audio_portion'] <= 0.8):
                         scripts.append (script_data)
+                        num_types.append (script_data['total'])
 
+    # print (len(scripts))
     # analyzed_data = analyze_total (scripts)
-    # fn = os.path.join (SAVE_DIR, 'analyzed_' + selected_dir + '.json')
+    # fn = os.path.join (SAVE_DIR, 'analyzed_irr_42.json')
     # write_json (fn, analyzed_data)
 
     time_type_data = analyze_type_with_time (scripts)
     visualize_time_data (time_type_data)
+
+    # print (num_types)
 
 
     # assertion

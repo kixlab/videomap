@@ -228,6 +228,7 @@ if __name__ == "__main__":
                         'total': len(script_data), 
                         'duration': duration, 
                         'audio_duration': audio_duration, 
+                        'audio_portion': audio_duration / duration,
                         'count': count, 
                         'time_portion': time_portion, 
                         'unique_count': unique_count,

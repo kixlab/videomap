@@ -1,6 +1,16 @@
-N = 10
-list_input = []
-for i in range (N):
-    list_input.append (input())
+### for convenience of handling input
 
-print (list_input)
+N = 240
+vid = []
+dates = []
+for i in range (N):
+    if i<120:
+        vid.append(input())
+    else:
+        dates.append (input())
+
+date_dict={}
+for i in range (120):
+    date_dict[vid[i]] = dates[i]
+
+print (date_dict)
