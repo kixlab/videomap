@@ -38,7 +38,8 @@ def modify_script (data):
         line['script'] = line['script'].strip()
         line['type'] = line['type'].strip()
         line['category'] = line['category'].strip()
-        line['section'] = line['section'].strip()
+        # line['section'] = line['section'].strip()
+        del line['section']
 
         if line['category'] == 'step':
             line['category'] = 'method'
@@ -46,8 +47,8 @@ def modify_script (data):
         if line['category'] == 'misc.':
             line['category'] = "miscellaneous"
 
-        if line['section'] == 'misc.':
-            line['section'] = 'miscellaneous'
+        # if line['section'] == 'misc.':
+        #     line['section'] = 'miscellaneous'
 
     return data
 
@@ -56,7 +57,7 @@ def check_validity (data):
     for line in data:
         assert line['type'] in TYPES
         assert line['category'] in CATEGORIES
-        assert line['section'] in SECTIONS
+        # assert line['section'] in SECTIONS
 
 
 ROOT_DIR = './data/processed/'
@@ -90,7 +91,7 @@ if __name__ == "__main__":
 
                 fixed_script = {}
                 fixed_script['id'] = vid
-                fixed_script['publication_data'] = date_dict[vid]
+                fixed_script['publication_date'] = date_dict[vid]
                 fixed_script['genre'] = dir_name
                 fixed_script['duration'] = duration
                 fixed_script['data'] = script_data
@@ -98,4 +99,4 @@ if __name__ == "__main__":
                 count+=1
 
     print (count)
-    write_json(SAVE_DIR+'HTM-TYPE', dataset)
+    write_json(SAVE_DIR+'HTM-TYPE_new.json', dataset)
