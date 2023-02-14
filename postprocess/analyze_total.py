@@ -349,13 +349,13 @@ def visualize_time_data (data):
     # plt.legend(['Intro', 'Procedure', 'Outro', 'Misc.'], fontsize=20)
 
     # plt.subplot (1, 2, 2)
-    plt.plot(new_cat_df)
+    plt.plot(new_cat_df, linewidth=3)
     # plt.ylabel ('Number of Labels', fontsize=22)
-    plt.xlabel ('Normalized Time (sec)', fontsize=25)
-    plt.xticks (fontsize=23)
-    plt.yticks (fontsize=23)
+    plt.xlabel ('Normalized Time (sec)', fontsize=31)
+    plt.xticks (fontsize=26)
+    plt.yticks (fontsize=26)
     plt.ylim (0, 115)
-    plt.legend(['Greeting', 'Overview', 'Method', 'Supplementary', 'Explanation', 'Description', 'Conclusion', 'Misc.'], fontsize=20, ncol=2, loc="upper right")
+    plt.legend(['Greeting', 'Overview', 'Method', 'Supplementary', 'Explanation', 'Description', 'Conclusion', 'Misc.'], fontsize=26, ncol=2, loc="upper right")
 
 
 
@@ -493,7 +493,8 @@ if __name__ == "__main__":
                 for file in files:
                     vid = file.split('.')[0]
                     # if vid in audio_q4:
-                    if vid in creation:
+                    # if vid in creation:
+                    if True:
                         print (vid) 
                         fp = os.path.join (cat_dir, file)
                         script_data = read_json (fp)
@@ -516,10 +517,10 @@ if __name__ == "__main__":
     # detail = analyze_detail_info (scripts)
 
 
-    print (len(scripts))
-    analyzed_data = analyze_total (scripts)
-    fn = os.path.join (SAVE_DIR, 'analyzed_creation_dataset.json')
-    write_json (fn, analyzed_data)
+    # print (len(scripts))
+    # analyzed_data = analyze_total (scripts)
+    # fn = os.path.join (SAVE_DIR, 'analyzed_creation_dataset.json')
+    # write_json (fn, analyzed_data)
 
 
     # audio_durations = [audio_durations_q1, audio_durations_q2, audio_durations_q3, audio_durations_q4]
@@ -527,9 +528,9 @@ if __name__ == "__main__":
     #     print ('*********')
     #     print (audio_durations[i])
 
-    ## For visualization
-    # time_type_data = analyze_type_with_time (scripts)
-    # visualize_time_data (time_type_data)
+    # For visualization
+    time_type_data = analyze_type_with_time (scripts)
+    visualize_time_data (time_type_data)
 
     # print (num_types)
 
